@@ -1,4 +1,4 @@
-package libreria;
+package org.controldepersonal.conector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
