@@ -16,12 +16,16 @@ public class conector {
 	/*
 	 * Constructor
 	 */
-	public conector(String loginUsuario, String loginContrasena, String urlBD) {
-		// Paso 1: Obtener valores de la interfaz grafica.
+	public conector(String urlBD,String loginUsuario, String loginContrasena) {
+		//DEBUG - Para hacer testing localmente.
+                urlBD = "jdbc:mysql://127.0.0.1/controldepersonal";
+                System.out.println("Usuario:"+loginUsuario);
+                System.out.println("Contrasena:"+loginContrasena);
+                // Paso 1: Obtener valores de la interfaz grafica.
 		String[] datosConexion = new String[3];
 		datosConexion[0] = urlBD;
-		datosConexion[1] = loginContrasena;
-		datosConexion[2] = urlBD;
+		datosConexion[1] = loginUsuario;
+                datosConexion[2] = loginContrasena;
 		// Paso 2: Obtener el objeto conexion.
 		conexion = dameConexion(datosConexion);
 		if (conexion == null) {
@@ -49,7 +53,7 @@ public class conector {
 			} else if (datosConexion[1].equals("")) {
 				System.out
 						.println("Error en funcion dameConexion:El valor de contrase�a no puede ser Campo vacio.");
-			} else if (datosConexion[3].equals("")) {
+			} else if (datosConexion[2].equals("")) {
 				System.out
 						.println("Error en funcion dameConexion:No se ha indicado ruta de la BD, llego en blanco.");
 			} else {

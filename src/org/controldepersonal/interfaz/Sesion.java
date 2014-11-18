@@ -5,18 +5,22 @@
  */
 package org.controldepersonal.interfaz;
 
+import org.controldepersonal.conector.conector;
+
 /**
  *
  * @author Miguel
  */
 public class Sesion extends javax.swing.JFrame {
-
+//Atributos
+    conector conexionactual;
     /**
      * Creates new form Sesion
      */
     public Sesion() {
         super("Iniciar sesión");
-        initComponents();        
+        initComponents();      
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -39,6 +43,9 @@ public class Sesion extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Acceso al Sistema");
+        setAlwaysOnTop(true);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Usuario:");
@@ -78,9 +85,9 @@ public class Sesion extends javax.swing.JFrame {
             JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanelLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
@@ -113,6 +120,10 @@ public class Sesion extends javax.swing.JFrame {
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
         String pwd = new String(txtPassword.getPassword());
         /* Conectar a la base de datos y validar usuario y contraseña */
+        conexionactual = new conector("no importa", txtUsuario.getText(),pwd);
+        //inicializacion de la interfaz principal
+        new framePrincipal(conexionactual).setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnContinuarActionPerformed
     
 
