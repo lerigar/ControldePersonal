@@ -36,78 +36,124 @@ conector conexionactual;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnPanel1 = new javax.swing.JButton();
-        btnPanel2 = new javax.swing.JButton();
+        btnElemento = new javax.swing.JButton();
+        btnDoc = new javax.swing.JButton();
+        btnServicios = new javax.swing.JButton();
+        btnAsistencia = new javax.swing.JButton();
+        btnEquipo = new javax.swing.JButton();
         cardPanel = new javax.swing.JPanel();
         Panel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         Panel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        Panel3 = new javax.swing.JPanel();
+        Panel4 = new javax.swing.JPanel();
+        Panel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnPanel1.setText("Panel 1");
-        btnPanel1.setName("btnPanel1"); // NOI18N
-        btnPanel1.addActionListener(new java.awt.event.ActionListener() {
+        btnElemento.setText("Elemento");
+        btnElemento.setName("btnElemento"); // NOI18N
+        btnElemento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPanel1ActionPerformed(evt);
+                btnElementoActionPerformed(evt);
             }
         });
 
-        btnPanel2.setText("Panel 2");
-        btnPanel2.addActionListener(new java.awt.event.ActionListener() {
+        btnDoc.setText("Doc general");
+        btnDoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPanel2ActionPerformed(evt);
+                btnDocActionPerformed(evt);
+            }
+        });
+
+        btnServicios.setText("Clientes/Servicios");
+        btnServicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnServiciosActionPerformed(evt);
+            }
+        });
+
+        btnAsistencia.setText("Asistencia Nómina");
+        btnAsistencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsistenciaActionPerformed(evt);
+            }
+        });
+
+        btnEquipo.setText("Equipo");
+        btnEquipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEquipoActionPerformed(evt);
             }
         });
 
         cardPanel.setLayout(new java.awt.CardLayout());
 
-        jButton1.setText("Panel1");
+        Panel1.setName(""); // NOI18N
 
         javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
         Panel1.setLayout(Panel1Layout);
         Panel1Layout.setHorizontalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel1Layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jButton1)
-                .addContainerGap(198, Short.MAX_VALUE))
+            .addGap(0, 431, Short.MAX_VALUE)
         );
         Panel1Layout.setVerticalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel1Layout.createSequentialGroup()
-                .addGap(145, 145, 145)
-                .addComponent(jButton1)
-                .addContainerGap(155, Short.MAX_VALUE))
+            .addGap(0, 323, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel1, "Panel1");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Panel 2");
-        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
         Panel2.setLayout(Panel2Layout);
         Panel2Layout.setHorizontalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel2Layout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
+            .addGap(0, 431, Short.MAX_VALUE)
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+            .addGap(0, 323, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel2, "Panel2");
+
+        javax.swing.GroupLayout Panel3Layout = new javax.swing.GroupLayout(Panel3);
+        Panel3.setLayout(Panel3Layout);
+        Panel3Layout.setHorizontalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 431, Short.MAX_VALUE)
+        );
+        Panel3Layout.setVerticalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 323, Short.MAX_VALUE)
+        );
+
+        cardPanel.add(Panel3, "card4");
+
+        javax.swing.GroupLayout Panel4Layout = new javax.swing.GroupLayout(Panel4);
+        Panel4.setLayout(Panel4Layout);
+        Panel4Layout.setHorizontalGroup(
+            Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 431, Short.MAX_VALUE)
+        );
+        Panel4Layout.setVerticalGroup(
+            Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 323, Short.MAX_VALUE)
+        );
+
+        cardPanel.add(Panel4, "card5");
+
+        javax.swing.GroupLayout Panel5Layout = new javax.swing.GroupLayout(Panel5);
+        Panel5.setLayout(Panel5Layout);
+        Panel5Layout.setHorizontalGroup(
+            Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 431, Short.MAX_VALUE)
+        );
+        Panel5Layout.setVerticalGroup(
+            Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 323, Short.MAX_VALUE)
+        );
+
+        cardPanel.add(Panel5, "card6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,38 +162,67 @@ conector conexionactual;
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPanel1)
-                    .addComponent(btnPanel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnElemento)
+                            .addComponent(btnDoc)
+                            .addComponent(btnServicios)
+                            .addComponent(btnEquipo))
+                        .addGap(8, 8, 8))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnAsistencia)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(cardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(btnPanel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPanel2)
-                .addGap(94, 94, 94))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(btnElemento)
+                        .addGap(45, 45, 45)
+                        .addComponent(btnDoc)
+                        .addGap(47, 47, 47)
+                        .addComponent(btnServicios)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAsistencia)
+                        .addGap(51, 51, 51)
+                        .addComponent(btnEquipo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(cardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 /* Solo es hacer el action performed en los botones, la configuración se hace en la interfaz */
-    private void btnPanel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPanel1ActionPerformed
+    private void btnElementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElementoActionPerformed
         CardLayout showPanel = (CardLayout) cardPanel.getLayout();
         showPanel.show(cardPanel, "Panel1");
-    }//GEN-LAST:event_btnPanel1ActionPerformed
+    }//GEN-LAST:event_btnElementoActionPerformed
 
-    private void btnPanel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPanel2ActionPerformed
+    private void btnDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDocActionPerformed
        CardLayout showPanel = (CardLayout) cardPanel.getLayout();
        showPanel.show(cardPanel, "Panel2");
-    }//GEN-LAST:event_btnPanel2ActionPerformed
+    }//GEN-LAST:event_btnDocActionPerformed
+
+    private void btnServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServiciosActionPerformed
+        CardLayout showPanel = (CardLayout) cardPanel.getLayout();
+        showPanel.show(cardPanel, "Panel3");
+    }//GEN-LAST:event_btnServiciosActionPerformed
+
+    private void btnAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaActionPerformed
+       CardLayout showPanel = (CardLayout) cardPanel.getLayout();
+       showPanel.show(cardPanel, "Panel4");
+    }//GEN-LAST:event_btnAsistenciaActionPerformed
+
+    private void btnEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipoActionPerformed
+       CardLayout showPanel = (CardLayout) cardPanel.getLayout();
+       showPanel.show(cardPanel, "Panel5");
+    }//GEN-LAST:event_btnEquipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,11 +262,14 @@ conector conexionactual;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
-    private javax.swing.JButton btnPanel1;
-    private javax.swing.JButton btnPanel2;
+    private javax.swing.JPanel Panel3;
+    private javax.swing.JPanel Panel4;
+    private javax.swing.JPanel Panel5;
+    private javax.swing.JButton btnAsistencia;
+    private javax.swing.JButton btnDoc;
+    private javax.swing.JButton btnElemento;
+    private javax.swing.JButton btnEquipo;
+    private javax.swing.JButton btnServicios;
     private javax.swing.JPanel cardPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
