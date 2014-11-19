@@ -138,7 +138,7 @@ conector conexionactual;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/* Solo es hacer el action performed en los botones, la configuración se hace en la interfaz */
     private void btnPanel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPanel1ActionPerformed
         CardLayout showPanel = (CardLayout) cardPanel.getLayout();
         showPanel.show(cardPanel, "Panel1");
