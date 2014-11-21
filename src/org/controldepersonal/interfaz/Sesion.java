@@ -5,6 +5,7 @@
  */
 package org.controldepersonal.interfaz;
 
+import java.awt.event.KeyEvent;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -52,6 +53,12 @@ public class Sesion extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Password:");
+
+        txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPasswordKeyPressed(evt);
+            }
+        });
 
         btnContinuar.setText("Continuar");
         btnContinuar.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +132,16 @@ public class Sesion extends javax.swing.JFrame {
         new framePrincipal(conexionactual).setVisible(true);
         dispose();
     }//GEN-LAST:event_btnContinuarActionPerformed
+
+    private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String pwd = new String(txtPassword.getPassword());
+            conexionactual = new conector("no importa", txtUsuario.getText(),pwd);
+            new framePrincipal(conexionactual).setVisible(true);
+            dispose();
+                  
+        }
+    }//GEN-LAST:event_txtPasswordKeyPressed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

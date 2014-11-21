@@ -6,6 +6,7 @@
 package org.controldepersonal.interfaz;
 
 import java.awt.CardLayout;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import org.controldepersonal.conector.conector;
 
@@ -43,6 +44,18 @@ conector conexionactual;
         btnEquipo = new javax.swing.JButton();
         cardPanel = new javax.swing.JPanel();
         Panel1 = new javax.swing.JPanel();
+        Persona = new javax.swing.JTabbedPane();
+        Registrar = new javax.swing.JPanel();
+        lblNombre = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        lblApellidoPAterno = new javax.swing.JLabel();
+        txtApellidoPaterno = new javax.swing.JTextField();
+        lblApellidoMaterno = new javax.swing.JLabel();
+        txtApellidoMaterno = new javax.swing.JTextField();
+        Buscar = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        Documentos = new javax.swing.JPanel();
         Panel2 = new javax.swing.JPanel();
         Panel3 = new javax.swing.JPanel();
         Panel4 = new javax.swing.JPanel();
@@ -90,15 +103,124 @@ conector conexionactual;
 
         Panel1.setName(""); // NOI18N
 
+        lblNombre.setText("Nombre");
+
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
+
+        lblApellidoPAterno.setText("Apellido Paterno");
+
+        txtApellidoPaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoPaternoKeyTyped(evt);
+            }
+        });
+
+        lblApellidoMaterno.setText("Apellido Materno");
+
+        txtApellidoMaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoMaternoKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout RegistrarLayout = new javax.swing.GroupLayout(Registrar);
+        Registrar.setLayout(RegistrarLayout);
+        RegistrarLayout.setHorizontalGroup(
+            RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegistrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RegistrarLayout.createSequentialGroup()
+                        .addComponent(lblNombre)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(RegistrarLayout.createSequentialGroup()
+                        .addComponent(lblApellidoPAterno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblApellidoMaterno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        RegistrarLayout.setVerticalGroup(
+            RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegistrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblApellidoPAterno)
+                    .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblApellidoMaterno)
+                    .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombre)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(263, Short.MAX_VALUE))
+        );
+
+        txtApellidoPaterno.getAccessibleContext().setAccessibleName("");
+
+        Persona.addTab("Registrar", Registrar);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "ID", "Empleado"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout BuscarLayout = new javax.swing.GroupLayout(Buscar);
+        Buscar.setLayout(BuscarLayout);
+        BuscarLayout.setHorizontalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BuscarLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 315, Short.MAX_VALUE))
+        );
+        BuscarLayout.setVerticalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+        );
+
+        Persona.addTab("Buscar", Buscar);
+
+        javax.swing.GroupLayout DocumentosLayout = new javax.swing.GroupLayout(Documentos);
+        Documentos.setLayout(DocumentosLayout);
+        DocumentosLayout.setHorizontalGroup(
+            DocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 508, Short.MAX_VALUE)
+        );
+        DocumentosLayout.setVerticalGroup(
+            DocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 320, Short.MAX_VALUE)
+        );
+
+        Persona.addTab("Documentos", Documentos);
+
         javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
         Panel1.setLayout(Panel1Layout);
         Panel1Layout.setHorizontalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Persona)
+                .addContainerGap())
         );
         Panel1Layout.setVerticalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addComponent(Persona)
         );
 
         cardPanel.add(Panel1, "Panel1");
@@ -107,11 +229,11 @@ conector conexionactual;
         Panel2.setLayout(Panel2Layout);
         Panel2Layout.setHorizontalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 348, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel2, "Panel2");
@@ -120,11 +242,11 @@ conector conexionactual;
         Panel3.setLayout(Panel3Layout);
         Panel3Layout.setHorizontalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel3Layout.setVerticalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 348, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel3, "card4");
@@ -133,11 +255,11 @@ conector conexionactual;
         Panel4.setLayout(Panel4Layout);
         Panel4Layout.setHorizontalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel4Layout.setVerticalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 348, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel4, "card5");
@@ -146,11 +268,11 @@ conector conexionactual;
         Panel5.setLayout(Panel5Layout);
         Panel5Layout.setHorizontalGroup(
             Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel5Layout.setVerticalGroup(
             Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 348, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel5, "card6");
@@ -182,14 +304,15 @@ conector conexionactual;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(btnElemento)
-                        .addGap(45, 45, 45)
+                        .addGap(18, 18, 18)
                         .addComponent(btnDoc)
-                        .addGap(47, 47, 47)
+                        .addGap(18, 18, 18)
                         .addComponent(btnServicios)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(btnAsistencia)
-                        .addGap(51, 51, 51)
-                        .addComponent(btnEquipo))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEquipo)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -223,6 +346,27 @@ conector conexionactual;
        CardLayout showPanel = (CardLayout) cardPanel.getLayout();
        showPanel.show(cardPanel, "Panel5");
     }//GEN-LAST:event_btnEquipoActionPerformed
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car !='á' && car !='é' && car !='í' && car !='ó' && car !='ú' && car !='Á' && car !='É' && car !='Í'&& car !='Ó' && car !='Ú' && (car!=(char)KeyEvent.VK_SPACE)){
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car !='á' && car !='é' && car !='í' && car !='ó' && car !='ú' && car !='Á' && car !='É' && car !='Í'&& car !='Ó' && car !='Ú' && (car!=(char)KeyEvent.VK_SPACE)){
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtApellidoPaternoKeyTyped
+
+    private void txtApellidoMaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoMaternoKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car !='á' && car !='é' && car !='í' && car !='ó' && car !='ú' && car !='Á' && car !='É' && car !='Í'&& car !='Ó' && car !='Ú' && (car!=(char)KeyEvent.VK_SPACE)){
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtApellidoMaternoKeyTyped
 
     /**
      * @param args the command line arguments
@@ -260,16 +404,28 @@ conector conexionactual;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Buscar;
+    private javax.swing.JPanel Documentos;
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
     private javax.swing.JPanel Panel3;
     private javax.swing.JPanel Panel4;
     private javax.swing.JPanel Panel5;
+    private javax.swing.JTabbedPane Persona;
+    private javax.swing.JPanel Registrar;
     private javax.swing.JButton btnAsistencia;
     private javax.swing.JButton btnDoc;
     private javax.swing.JButton btnElemento;
     private javax.swing.JButton btnEquipo;
     private javax.swing.JButton btnServicios;
     private javax.swing.JPanel cardPanel;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel lblApellidoMaterno;
+    private javax.swing.JLabel lblApellidoPAterno;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JTextField txtApellidoMaterno;
+    private javax.swing.JTextField txtApellidoPaterno;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
