@@ -8,6 +8,7 @@ package org.controldepersonal.interfaz;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import org.controldepersonal.conector.conector;
+import org.controldepersonal.controlerrores.administradorDeFallos;
 
 /**
  *
@@ -15,16 +16,18 @@ import org.controldepersonal.conector.conector;
  */
 public class framePrincipal extends javax.swing.JFrame {
 conector conexionactual;
+administradorDeFallos administradorErrores;
     /**
      * Creates new form framePrincipal
      * @param conexionactual
      */
-    public framePrincipal(conector conexionactual) {
+    public framePrincipal(conector conexionactual, administradorDeFallos administradorErrores) {
         initComponents();
         //Iniciar maximizado
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         //continuamos con la conexion provicionado por el login
         this.conexionactual = conexionactual;
+        this.administradorErrores = administradorErrores;
     }
 
     /**

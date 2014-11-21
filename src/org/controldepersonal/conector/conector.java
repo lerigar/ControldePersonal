@@ -12,13 +12,15 @@ public class conector {
 	 */
 	Connection conexion;
 	private static final int RESULTADOSMAX = 99;
-
+        private boolean estaVivo;
+        Exception ecepcion;
 	/*
 	 * Constructor
 	 */
-	public conector(String urlBD,String loginUsuario, String loginContrasena) {
-		//DEBUG - Para hacer testing localmente.
-                urlBD = "jdbc:mysql://127.0.0.1/controldepersonal";
+	public conector(String loginUsuario, String loginContrasena, String IPServidor) {
+		estaVivo = false;
+                //DEBUG - Para hacer testing localmente.
+                String urlBD = "jdbc:mysql://"+IPServidor+"/controldepersonal";
                 System.out.println("Usuario:"+loginUsuario);
                 System.out.println("Contrasena:"+loginContrasena);
                 // Paso 1: Obtener valores de la interfaz grafica.
@@ -30,8 +32,10 @@ public class conector {
 		conexion = dameConexion(datosConexion);
 		if (conexion == null) {
 			System.out.println("Algo salio mal... :(");
+                        estaVivo = false;
 		} else {
 			System.out.println("Conectado a la BD correctamente! :D");
+                        estaVivo = true;
 		}
 	}
 
@@ -60,6 +64,7 @@ public class conector {
 				try {
 					DriverManager.registerDriver(new org.gjt.mm.mysql.Driver());
 				} catch (Exception e) {
+                                    ecepcion = e;
 					System.out
 							.println("Error en funcion dameConexion: no se pudo registrar driver.");
 				}
@@ -67,7 +72,8 @@ public class conector {
 				try {
 					Class.forName("com.mysql.jdbc.Driver");
 				} catch (ClassNotFoundException e) {
-					e.printStackTrace();
+                                    ecepcion =e;
+                                    e.printStackTrace();
 					System.out
 							.println("Error en funcion dameConexion: Clase no encontrada.");
 				}
@@ -75,6 +81,7 @@ public class conector {
 					conexion = DriverManager.getConnection(datosConexion[0],
 							datosConexion[1], datosConexion[2]);
 				} catch (Exception e) {
+                                    ecepcion = e;
 					e.printStackTrace();
 					System.out
 							.println("Error en funcion dameConexion: no se pudo obtener conexion.");
@@ -94,6 +101,7 @@ public class conector {
 		try {
 			statement = conexion.createStatement();
 		} catch (SQLException e) {
+                    ecepcion = e;
 			e.printStackTrace();
 			System.out
 					.println("Error en funcion ejecutaQWERTY: error en la creacion de statement;");
@@ -104,6 +112,7 @@ public class conector {
 		try {
 			resultados = statement.executeQuery(qwerty);
 		} catch (SQLException e) {
+                    ecepcion = e;
 			e.printStackTrace();
 			System.out
 					.println("Error en funcion ejecutaQWERTY: el qwerty parece estar mal escrito.");
@@ -116,10 +125,23 @@ public class conector {
 				resultado[i] = resultados.getString(1);
 			}
 		} catch (SQLException e) {
+                    ecepcion = e;
 			e.printStackTrace();
 			System.out
 					.println("Error en funcion ejecutaQWERTY: No se pudo almacenar el resultado en variable.");
 		}
 		return resultado;
 	}
+        /*
+        *Funcion getter que devuelve true si hay conexion a la BD, false de lo contratio.
+        */
+        public boolean estasVivo(){
+            return estaVivo;
+        }
+        /*
+        Funcion que devuelve la ultima excepcion ocurridad en la clase.
+        */
+        public Exception dameExcepcion(){
+            return ecepcion;
+        }
 }
