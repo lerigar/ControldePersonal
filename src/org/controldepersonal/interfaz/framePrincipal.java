@@ -5,8 +5,9 @@
  * and open the template in the editor.
  */
 package org.controldepersonal.interfaz;
-
+/* Comentario xD */
 import java.awt.CardLayout;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
@@ -47,6 +48,12 @@ administradorDeFallos administradorErrores;
         btnEquipo = new javax.swing.JButton();
         cardPanel = new javax.swing.JPanel();
         Panel1 = new javax.swing.JPanel();
+        Persona = new javax.swing.JTabbedPane();
+        Registrar = new javax.swing.JPanel();
+        tpDatos = new javax.swing.JTabbedPane();
+        DatosPersonales = new javax.swing.JPanel();
+        Buscar = new javax.swing.JPanel();
+        Documentos = new javax.swing.JPanel();
         Panel2 = new javax.swing.JPanel();
         Panel3 = new javax.swing.JPanel();
         Panel4 = new javax.swing.JPanel();
@@ -94,15 +101,70 @@ administradorDeFallos administradorErrores;
 
         Panel1.setName(""); // NOI18N
 
+        javax.swing.GroupLayout DatosPersonalesLayout = new javax.swing.GroupLayout(DatosPersonales);
+        DatosPersonales.setLayout(DatosPersonalesLayout);
+        DatosPersonalesLayout.setHorizontalGroup(
+            DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 503, Short.MAX_VALUE)
+        );
+        DatosPersonalesLayout.setVerticalGroup(
+            DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        tpDatos.addTab("Datos Personales", DatosPersonales);
+
+        javax.swing.GroupLayout RegistrarLayout = new javax.swing.GroupLayout(Registrar);
+        Registrar.setLayout(RegistrarLayout);
+        RegistrarLayout.setHorizontalGroup(
+            RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tpDatos)
+        );
+        RegistrarLayout.setVerticalGroup(
+            RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tpDatos, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        Persona.addTab("Registrar", Registrar);
+
+        javax.swing.GroupLayout BuscarLayout = new javax.swing.GroupLayout(Buscar);
+        Buscar.setLayout(BuscarLayout);
+        BuscarLayout.setHorizontalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 508, Short.MAX_VALUE)
+        );
+        BuscarLayout.setVerticalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 328, Short.MAX_VALUE)
+        );
+
+        Persona.addTab("Buscar", Buscar);
+
+        javax.swing.GroupLayout DocumentosLayout = new javax.swing.GroupLayout(Documentos);
+        Documentos.setLayout(DocumentosLayout);
+        DocumentosLayout.setHorizontalGroup(
+            DocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 508, Short.MAX_VALUE)
+        );
+        DocumentosLayout.setVerticalGroup(
+            DocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 328, Short.MAX_VALUE)
+        );
+
+        Persona.addTab("Documentos", Documentos);
+
         javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
         Panel1.setLayout(Panel1Layout);
         Panel1Layout.setHorizontalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Persona)
+                .addContainerGap())
         );
         Panel1Layout.setVerticalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addComponent(Persona)
         );
 
         cardPanel.add(Panel1, "Panel1");
@@ -111,11 +173,11 @@ administradorDeFallos administradorErrores;
         Panel2.setLayout(Panel2Layout);
         Panel2Layout.setHorizontalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel2, "Panel2");
@@ -124,11 +186,11 @@ administradorDeFallos administradorErrores;
         Panel3.setLayout(Panel3Layout);
         Panel3Layout.setHorizontalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel3Layout.setVerticalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel3, "card4");
@@ -137,11 +199,11 @@ administradorDeFallos administradorErrores;
         Panel4.setLayout(Panel4Layout);
         Panel4Layout.setHorizontalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel4Layout.setVerticalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel4, "card5");
@@ -150,11 +212,11 @@ administradorDeFallos administradorErrores;
         Panel5.setLayout(Panel5Layout);
         Panel5Layout.setHorizontalGroup(
             Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 431, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         Panel5Layout.setVerticalGroup(
             Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel5, "card6");
@@ -186,14 +248,15 @@ administradorDeFallos administradorErrores;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(btnElemento)
-                        .addGap(45, 45, 45)
+                        .addGap(18, 18, 18)
                         .addComponent(btnDoc)
-                        .addGap(47, 47, 47)
+                        .addGap(18, 18, 18)
                         .addComponent(btnServicios)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(btnAsistencia)
-                        .addGap(51, 51, 51)
-                        .addComponent(btnEquipo))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEquipo)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -264,17 +327,23 @@ administradorDeFallos administradorErrores;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Buscar;
+    private javax.swing.JPanel DatosPersonales;
+    private javax.swing.JPanel Documentos;
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
     private javax.swing.JPanel Panel3;
     private javax.swing.JPanel Panel4;
     private javax.swing.JPanel Panel5;
+    private javax.swing.JTabbedPane Persona;
+    private javax.swing.JPanel Registrar;
     private javax.swing.JButton btnAsistencia;
     private javax.swing.JButton btnDoc;
     private javax.swing.JButton btnElemento;
     private javax.swing.JButton btnEquipo;
     private javax.swing.JButton btnServicios;
     private javax.swing.JPanel cardPanel;
+    private javax.swing.JTabbedPane tpDatos;
     // End of variables declaration//GEN-END:variables
 }
 =======

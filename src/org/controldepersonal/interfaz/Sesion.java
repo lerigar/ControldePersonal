@@ -163,10 +163,13 @@ public class Sesion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnContinuarActionPerformed
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void txtIPServidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIPServidorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIPServidorActionPerformed
 =======
+=======
+>>>>>>> origin/master
     private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             String pwd = new String(txtPassword.getPassword());
@@ -176,7 +179,10 @@ public class Sesion extends javax.swing.JFrame {
                   
         }
     }//GEN-LAST:event_txtPasswordKeyPressed
+<<<<<<< HEAD
 >>>>>>> b8d8c12c6cfacbd46374e9b796aeb5e6c63683df
+=======
+>>>>>>> origin/master
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
