@@ -9,7 +9,7 @@ import java.awt.CardLayout;
 import javax.swing.JFrame;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
-
+/* *********************** */
 /**
  *
  * @author Miguel
