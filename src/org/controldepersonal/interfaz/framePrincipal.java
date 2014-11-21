@@ -46,15 +46,9 @@ conector conexionactual;
         Panel1 = new javax.swing.JPanel();
         Persona = new javax.swing.JTabbedPane();
         Registrar = new javax.swing.JPanel();
-        lblNombre = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        lblApellidoPAterno = new javax.swing.JLabel();
-        txtApellidoPaterno = new javax.swing.JTextField();
-        lblApellidoMaterno = new javax.swing.JLabel();
-        txtApellidoMaterno = new javax.swing.JTextField();
+        tpDatos = new javax.swing.JTabbedPane();
+        DatosPersonales = new javax.swing.JPanel();
         Buscar = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         Documentos = new javax.swing.JPanel();
         Panel2 = new javax.swing.JPanel();
         Panel3 = new javax.swing.JPanel();
@@ -103,95 +97,41 @@ conector conexionactual;
 
         Panel1.setName(""); // NOI18N
 
-        lblNombre.setText("Nombre");
+        javax.swing.GroupLayout DatosPersonalesLayout = new javax.swing.GroupLayout(DatosPersonales);
+        DatosPersonales.setLayout(DatosPersonalesLayout);
+        DatosPersonalesLayout.setHorizontalGroup(
+            DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 503, Short.MAX_VALUE)
+        );
+        DatosPersonalesLayout.setVerticalGroup(
+            DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
-        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNombreKeyTyped(evt);
-            }
-        });
-
-        lblApellidoPAterno.setText("Apellido Paterno");
-
-        txtApellidoPaterno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtApellidoPaternoKeyTyped(evt);
-            }
-        });
-
-        lblApellidoMaterno.setText("Apellido Materno");
-
-        txtApellidoMaterno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtApellidoMaternoKeyTyped(evt);
-            }
-        });
+        tpDatos.addTab("Datos Personales", DatosPersonales);
 
         javax.swing.GroupLayout RegistrarLayout = new javax.swing.GroupLayout(Registrar);
         Registrar.setLayout(RegistrarLayout);
         RegistrarLayout.setHorizontalGroup(
             RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RegistrarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RegistrarLayout.createSequentialGroup()
-                        .addComponent(lblNombre)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(RegistrarLayout.createSequentialGroup()
-                        .addComponent(lblApellidoPAterno)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblApellidoMaterno)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(65, Short.MAX_VALUE))
+            .addComponent(tpDatos)
         );
         RegistrarLayout.setVerticalGroup(
             RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RegistrarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblApellidoPAterno)
-                    .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblApellidoMaterno)
-                    .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(RegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(263, Short.MAX_VALUE))
+            .addComponent(tpDatos, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        txtApellidoPaterno.getAccessibleContext().setAccessibleName("");
-
         Persona.addTab("Registrar", Registrar);
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "ID", "Empleado"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout BuscarLayout = new javax.swing.GroupLayout(Buscar);
         Buscar.setLayout(BuscarLayout);
         BuscarLayout.setHorizontalGroup(
             BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BuscarLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 315, Short.MAX_VALUE))
+            .addGap(0, 508, Short.MAX_VALUE)
         );
         BuscarLayout.setVerticalGroup(
             BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+            .addGap(0, 328, Short.MAX_VALUE)
         );
 
         Persona.addTab("Buscar", Buscar);
@@ -204,7 +144,7 @@ conector conexionactual;
         );
         DocumentosLayout.setVerticalGroup(
             DocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
+            .addGap(0, 328, Short.MAX_VALUE)
         );
 
         Persona.addTab("Documentos", Documentos);
@@ -233,7 +173,7 @@ conector conexionactual;
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 348, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel2, "Panel2");
@@ -246,7 +186,7 @@ conector conexionactual;
         );
         Panel3Layout.setVerticalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 348, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel3, "card4");
@@ -259,7 +199,7 @@ conector conexionactual;
         );
         Panel4Layout.setVerticalGroup(
             Panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 348, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel4, "card5");
@@ -272,7 +212,7 @@ conector conexionactual;
         );
         Panel5Layout.setVerticalGroup(
             Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 348, Short.MAX_VALUE)
+            .addGap(0, 356, Short.MAX_VALUE)
         );
 
         cardPanel.add(Panel5, "card6");
@@ -347,27 +287,6 @@ conector conexionactual;
        showPanel.show(cardPanel, "Panel5");
     }//GEN-LAST:event_btnEquipoActionPerformed
 
-    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
-        char car = evt.getKeyChar();        
-        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car !='á' && car !='é' && car !='í' && car !='ó' && car !='ú' && car !='Á' && car !='É' && car !='Í'&& car !='Ó' && car !='Ú' && (car!=(char)KeyEvent.VK_SPACE)){
-          evt.consume();   
-        }
-    }//GEN-LAST:event_txtNombreKeyTyped
-
-    private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped
-        char car = evt.getKeyChar();        
-        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car !='á' && car !='é' && car !='í' && car !='ó' && car !='ú' && car !='Á' && car !='É' && car !='Í'&& car !='Ó' && car !='Ú' && (car!=(char)KeyEvent.VK_SPACE)){
-          evt.consume();   
-        }
-    }//GEN-LAST:event_txtApellidoPaternoKeyTyped
-
-    private void txtApellidoMaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoMaternoKeyTyped
-        char car = evt.getKeyChar();        
-        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car !='á' && car !='é' && car !='í' && car !='ó' && car !='ú' && car !='Á' && car !='É' && car !='Í'&& car !='Ó' && car !='Ú' && (car!=(char)KeyEvent.VK_SPACE)){
-          evt.consume();   
-        }
-    }//GEN-LAST:event_txtApellidoMaternoKeyTyped
-
     /**
      * @param args the command line arguments
      */
@@ -405,6 +324,7 @@ conector conexionactual;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Buscar;
+    private javax.swing.JPanel DatosPersonales;
     private javax.swing.JPanel Documentos;
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
@@ -419,13 +339,6 @@ conector conexionactual;
     private javax.swing.JButton btnEquipo;
     private javax.swing.JButton btnServicios;
     private javax.swing.JPanel cardPanel;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JLabel lblApellidoMaterno;
-    private javax.swing.JLabel lblApellidoPAterno;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JTextField txtApellidoMaterno;
-    private javax.swing.JTextField txtApellidoPaterno;
-    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTabbedPane tpDatos;
     // End of variables declaration//GEN-END:variables
 }
