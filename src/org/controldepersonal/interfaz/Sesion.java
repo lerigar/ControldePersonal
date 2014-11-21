@@ -158,7 +158,7 @@ public class Sesion extends javax.swing.JFrame {
         new framePrincipal(conexionactual,  administradorErrores).setVisible(true);
         dispose();
         } else {
-            administradorErrores.avisarError("No fue posible establecer Conexion.\n"+conexionactual.dameExcepcion().getMessage());
+            administradorErrores.avisarError(this, "No fue posible establecer Conexion.\n"+conexionactual.dameExcepcion().getMessage());
         }
     }//GEN-LAST:event_btnContinuarActionPerformed
 

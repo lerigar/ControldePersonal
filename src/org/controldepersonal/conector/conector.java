@@ -29,14 +29,16 @@ public class conector {
 		datosConexion[1] = loginUsuario;
                 datosConexion[2] = loginContrasena;
 		// Paso 2: Obtener el objeto conexion.
-		conexion = dameConexion(datosConexion);
+                conexion = dameConexion(datosConexion);
 		if (conexion == null) {
 			System.out.println("Algo salio mal... :(");
                         estaVivo = false;
+                        ecepcion= new Exception("No Fue posible conectarse a la base de datos con los datos proporcionados. \n");
 		} else {
 			System.out.println("Conectado a la BD correctamente! :D");
                         estaVivo = true;
 		}
+               
 	}
 
 	/*
@@ -52,14 +54,11 @@ public class conector {
 		if (datosConexion.length == 3) {// no vaya a ser que me estes mandando
 										// otra cosa.
 			if (datosConexion[0].equals("")) {
-				System.out
-						.println("Error en funcion dameConexion:La cadena Usuario no puede ser campo vacio.");
+                             ecepcion = new Exception("Error en funcion dameConexion:La cadena Usuario no puede ser campo vacio.");
 			} else if (datosConexion[1].equals("")) {
-				System.out
-						.println("Error en funcion dameConexion:El valor de contrase�a no puede ser Campo vacio.");
+				 ecepcion = new Exception("Error en funcion dameConexion:El valor de contrase�a no puede ser Campo vacio.");
 			} else if (datosConexion[2].equals("")) {
-				System.out
-						.println("Error en funcion dameConexion:No se ha indicado ruta de la BD, llego en blanco.");
+                             ecepcion = new Exception("Error en funcion dameConexion:No se ha indicado ruta de la BD, llego en blanco.");
 			} else {
 				try {
 					DriverManager.registerDriver(new org.gjt.mm.mysql.Driver());

@@ -5,6 +5,9 @@
  */
 package org.controldepersonal.controlerrores;
 
+import java.awt.Frame;
+
+
 /**
  *
  * @author Antonio
@@ -16,8 +19,7 @@ public class administradorDeFallos {
     Funcion para avisar al usuario sobreu un fallo.
     Recibe un String y el stacktrace del fallo.
     */
-    public void avisarError(String descripcion){
-        dialogo = new dialogoError(descripcion);
-        dialogo.setVisible(true);
+    public void avisarError(Frame quienTuvoError, String descripcion){
+        dialogo = new dialogoError(quienTuvoError, true, descripcion);
     }
 }
