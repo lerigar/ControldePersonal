@@ -7,7 +7,7 @@ package org.controldepersonal.controlerrores;
 
 /**
  *
- * @author Antonio
+ * @author Antonio Fonseca
  */
 public class dialogoError extends javax.swing.JFrame {
     /**
