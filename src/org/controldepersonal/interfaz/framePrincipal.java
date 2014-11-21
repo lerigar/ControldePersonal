@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package org.controldepersonal.interfaz;
-
+/* Comentario xD */
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
