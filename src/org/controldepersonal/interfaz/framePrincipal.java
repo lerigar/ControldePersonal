@@ -8,6 +8,9 @@ package org.controldepersonal.interfaz;
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.PlainDocument;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
 /* *********************** */
@@ -41,6 +44,7 @@ public class framePrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         bgSexo = new javax.swing.ButtonGroup();
+        bgCartilla = new javax.swing.ButtonGroup();
         panelBotones = new javax.swing.JPanel();
         btnElemento = new javax.swing.JButton();
         btnDoc = new javax.swing.JButton();
@@ -67,6 +71,47 @@ public class framePrincipal extends javax.swing.JFrame {
         txtStatus = new javax.swing.JTextField();
         lblEdad = new javax.swing.JLabel();
         txtEdad = new javax.swing.JTextField();
+        lblFechaNacimiento = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        lblEstado = new javax.swing.JLabel();
+        lblMunicipio = new javax.swing.JLabel();
+        lblDomicilio = new javax.swing.JLabel();
+        txtDomicilio = new javax.swing.JTextField();
+        lblInterior = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        lblExterior = new javax.swing.JLabel();
+        txtExterior = new javax.swing.JTextField();
+        lblColonia = new javax.swing.JLabel();
+        txtColonia = new javax.swing.JTextField();
+        lblPostal = new javax.swing.JLabel();
+        txtPostal = new javax.swing.JTextField();
+        lblEntreCalle = new javax.swing.JLabel();
+        txtEntreCalle = new javax.swing.JTextField();
+        lblYCalle = new javax.swing.JLabel();
+        txtYcalle = new javax.swing.JTextField();
+        lblMunicipio2 = new javax.swing.JLabel();
+        lblEstado2 = new javax.swing.JLabel();
+        lblEstadoCivil = new javax.swing.JLabel();
+        txtEstadoCivil = new javax.swing.JTextField();
+        lblRfc = new javax.swing.JLabel();
+        txtRFC = new javax.swing.JTextField();
+        lblCurp = new javax.swing.JLabel();
+        txtCurp = new javax.swing.JTextField();
+        lblCartilla = new javax.swing.JLabel();
+        panelCartilla = new javax.swing.JPanel();
+        rbNA = new javax.swing.JRadioButton();
+        rbCartilaLiberada = new javax.swing.JRadioButton();
+        rbPrecartilla = new javax.swing.JRadioButton();
+        lblNumeroC = new javax.swing.JLabel();
+        txtNumeroCartilla = new javax.swing.JTextField();
+        lblCuip = new javax.swing.JLabel();
+        txtCuip = new javax.swing.JTextField();
+        lblImss = new javax.swing.JLabel();
+        txtNumeroImss = new javax.swing.JTextField();
+        lblIfeClave = new javax.swing.JLabel();
+        txtIfeClave = new javax.swing.JTextField();
+        lblIfeFolio = new javax.swing.JLabel();
+        txtIfeFolio = new javax.swing.JTextField();
         panelBuscar = new javax.swing.JPanel();
         panelDocumentos = new javax.swing.JPanel();
         panelDoc = new javax.swing.JPanel();
@@ -216,6 +261,124 @@ public class framePrincipal extends javax.swing.JFrame {
             }
         });
 
+        lblFechaNacimiento.setText("Fecha de Nacimiento");
+
+        jTextField2.setText("DD/MM/AAAA");
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField2KeyTyped(evt);
+            }
+        });
+
+        lblEstado.setText("Estado");
+
+        lblMunicipio.setText("Municipio");
+
+        lblDomicilio.setText("Domicilio");
+
+        lblInterior.setText("Interior");
+
+        lblExterior.setText("Exterior");
+
+        lblColonia.setText("Colonia");
+
+        lblPostal.setText("Código Postal");
+
+        txtPostal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPostalKeyTyped(evt);
+            }
+        });
+
+        lblEntreCalle.setText("Entre");
+
+        lblYCalle.setText("y/e");
+
+        lblMunicipio2.setText("Municipio");
+
+        lblEstado2.setText("Estado");
+
+        lblEstadoCivil.setText("Estado civil");
+
+        lblRfc.setText("R.F.C.");
+
+        txtRFC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRFCKeyTyped(evt);
+            }
+        });
+
+        lblCurp.setText("CURP");
+
+        txtCurp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCurpKeyTyped(evt);
+            }
+        });
+
+        lblCartilla.setText("Cartilla Militar");
+
+        panelCartilla.setPreferredSize(new java.awt.Dimension(251, 27));
+
+        bgCartilla.add(rbNA);
+        rbNA.setText("No Aplica");
+
+        bgCartilla.add(rbCartilaLiberada);
+        rbCartilaLiberada.setText("Cartilla liberada");
+
+        bgCartilla.add(rbPrecartilla);
+        rbPrecartilla.setText("Precartilla");
+
+        javax.swing.GroupLayout panelCartillaLayout = new javax.swing.GroupLayout(panelCartilla);
+        panelCartilla.setLayout(panelCartillaLayout);
+        panelCartillaLayout.setHorizontalGroup(
+            panelCartillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCartillaLayout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addComponent(rbPrecartilla)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartilaLiberada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbNA))
+        );
+        panelCartillaLayout.setVerticalGroup(
+            panelCartillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCartillaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelCartillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbNA)
+                    .addComponent(rbPrecartilla)
+                    .addComponent(rbCartilaLiberada)))
+        );
+
+        lblNumeroC.setText("Número Cartilla");
+
+        txtNumeroCartilla.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNumeroCartillaKeyTyped(evt);
+            }
+        });
+
+        lblCuip.setText("CUIP");
+
+        txtCuip.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCuipKeyTyped(evt);
+            }
+        });
+
+        lblImss.setText("Número IMSS");
+
+        txtNumeroImss.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNumeroImssKeyTyped(evt);
+            }
+        });
+
+        lblIfeClave.setText("IFE Clave");
+
+        lblIfeFolio.setText("IFE Folio");
+
         javax.swing.GroupLayout panelDatosPersonalesLayout = new javax.swing.GroupLayout(panelDatosPersonales);
         panelDatosPersonales.setLayout(panelDatosPersonalesLayout);
         panelDatosPersonalesLayout.setHorizontalGroup(
@@ -224,28 +387,113 @@ public class framePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                        .addComponent(lblApellidoPaterno)
+                        .addComponent(lblFechaNacimiento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblApellidoMaterno)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblEstado)
+                        .addGap(199, 199, 199)
+                        .addComponent(lblMunicipio))
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
                         .addComponent(lblStatus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
-                        .addComponent(lblNombre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblEdad)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblEstadoCivil)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblRfc)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtRFC, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblApellidoPaterno)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblApellidoMaterno)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblNombre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtNombre))
+                            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblCurp)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCurp, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(lblIfeClave)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtIfeClave, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblIfeFolio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(lblCartilla)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(lblNumeroC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNumeroCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblCuip)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCuip, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblImss)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNumeroImss, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblEntreCalle)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEntreCalle, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblYCalle)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtYcalle))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblDomicilio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblInterior)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblExterior)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExterior, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                            .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                                    .addComponent(lblColonia)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtColonia, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(lblPostal)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtPostal, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                                    .addComponent(lblMunicipio2)
+                                    .addGap(238, 238, 238)
+                                    .addComponent(lblEstado2)))
+                            .addGap(203, 203, 203))))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         panelDatosPersonalesLayout.setVerticalGroup(
             panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,17 +504,75 @@ public class framePrincipal extends javax.swing.JFrame {
                     .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblApellidoMaterno)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblStatus))
+                    .addComponent(lblNombre)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblNombre)
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(panelSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEdad)
-                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(346, Short.MAX_VALUE))
+                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblStatus))
+                    .addComponent(panelSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFechaNacimiento)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEstado)
+                    .addComponent(lblMunicipio))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoCivil)
+                    .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRfc)
+                    .addComponent(txtRFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCurp)
+                    .addComponent(txtCurp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDomicilio)
+                    .addComponent(txtDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExterior)
+                    .addComponent(txtExterior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInterior))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblColonia)
+                    .addComponent(txtColonia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPostal)
+                    .addComponent(txtPostal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEntreCalle)
+                    .addComponent(txtEntreCalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblYCalle)
+                    .addComponent(txtYcalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMunicipio2)
+                    .addComponent(lblEstado2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(lblCartilla))
+                    .addComponent(panelCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNumeroC)
+                    .addComponent(lblCuip)
+                    .addComponent(txtCuip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblImss)
+                    .addComponent(txtNumeroImss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNumeroCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIfeClave)
+                    .addComponent(txtIfeClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblIfeFolio)
+                    .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         tpRegistrar.addTab("Datos Personales", panelDatosPersonales);
@@ -279,7 +585,7 @@ public class framePrincipal extends javax.swing.JFrame {
         );
         panelRegistrarLayout.setVerticalGroup(
             panelRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpRegistrar)
+            .addComponent(tpRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
         );
 
         tpElemento.addTab("Registrar", panelRegistrar);
@@ -288,11 +594,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelBuscar.setLayout(panelBuscarLayout);
         panelBuscarLayout.setHorizontalGroup(
             panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 820, Short.MAX_VALUE)
         );
         panelBuscarLayout.setVerticalGroup(
             panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 441, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tpElemento.addTab("Buscar", panelBuscar);
@@ -301,11 +607,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelDocumentos.setLayout(panelDocumentosLayout);
         panelDocumentosLayout.setHorizontalGroup(
             panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 820, Short.MAX_VALUE)
         );
         panelDocumentosLayout.setVerticalGroup(
             panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 441, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tpElemento.addTab("Documentos", panelDocumentos);
@@ -318,7 +624,7 @@ public class framePrincipal extends javax.swing.JFrame {
         );
         panelElementoLayout.setVerticalGroup(
             panelElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpElemento)
+            .addComponent(tpElemento, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelElemento, "panelElemento");
@@ -327,11 +633,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelDoc.setLayout(panelDocLayout);
         panelDocLayout.setHorizontalGroup(
             panelDocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
         panelDocLayout.setVerticalGroup(
             panelDocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelDoc, "panelDoc");
@@ -340,11 +646,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelServicios.setLayout(panelServiciosLayout);
         panelServiciosLayout.setHorizontalGroup(
             panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
         panelServiciosLayout.setVerticalGroup(
             panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelServicios, "panelServicios");
@@ -353,11 +659,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelAsistencia.setLayout(panelAsistenciaLayout);
         panelAsistenciaLayout.setHorizontalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
         panelAsistenciaLayout.setVerticalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelAsistencia, "panelAsistencias");
@@ -366,11 +672,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelEquipo.setLayout(panelEquipoLayout);
         panelEquipoLayout.setHorizontalGroup(
             panelEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
         panelEquipoLayout.setVerticalGroup(
             panelEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelEquipo, "panelEquipo");
@@ -390,7 +696,7 @@ public class framePrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(75, 75, 75)
@@ -452,11 +758,59 @@ public class framePrincipal extends javax.swing.JFrame {
 
     private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
         char car = evt.getKeyChar();
-    if(txtEdad.getText().length()>=2)
-        evt.consume();
-    if((car<'0' || car>'9'))
-        evt.consume();
+        if(txtEdad.getText().length()>=2)
+            evt.consume();
+        if((car<'0' || car>'9'))
+            evt.consume();
     }//GEN-LAST:event_txtEdadKeyTyped
+
+    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
+        char car = evt.getKeyChar();
+        if(car!='/' && (car<'0' || car>'9'))
+            evt.consume();
+    }//GEN-LAST:event_jTextField2KeyTyped
+
+    private void txtPostalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPostalKeyTyped
+        char car = evt.getKeyChar();
+        if(car<'0' || car>'9')
+            evt.consume();
+        if(txtPostal.getText().length()>=5)
+            evt.consume();
+    }//GEN-LAST:event_txtPostalKeyTyped
+
+    private void txtRFCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRFCKeyTyped
+        char c = evt.getKeyChar();
+        if(Character.isLetter(c)) {
+            evt.setKeyChar(Character.toUpperCase(c));
+        }
+    }//GEN-LAST:event_txtRFCKeyTyped
+
+    private void txtCurpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCurpKeyTyped
+        char c = evt.getKeyChar();
+        if(Character.isLetter(c)) {
+            evt.setKeyChar(Character.toUpperCase(c));
+        }
+    }//GEN-LAST:event_txtCurpKeyTyped
+
+    private void txtNumeroImssKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroImssKeyTyped
+        char car = evt.getKeyChar();
+        if((car<'0' || car>'9'))
+            evt.consume();
+    }//GEN-LAST:event_txtNumeroImssKeyTyped
+
+    private void txtCuipKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCuipKeyTyped
+        char c = evt.getKeyChar();
+        if(Character.isLetter(c)) {
+            evt.setKeyChar(Character.toUpperCase(c));
+        }
+    }//GEN-LAST:event_txtCuipKeyTyped
+
+    private void txtNumeroCartillaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroCartillaKeyTyped
+        char c = evt.getKeyChar();
+        if(Character.isLetter(c)) {
+            evt.setKeyChar(Character.toUpperCase(c));
+        }
+    }//GEN-LAST:event_txtNumeroCartillaKeyTyped
 
     /**
      * @param args the command line arguments
@@ -464,6 +818,7 @@ public class framePrincipal extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.ButtonGroup bgCartilla;
     public static javax.swing.ButtonGroup bgSexo;
     private javax.swing.JButton btnAsistencia;
     private javax.swing.JButton btnDoc;
@@ -471,15 +826,39 @@ public class framePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnEquipo;
     private javax.swing.JButton btnServicios;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblApellidoMaterno;
     private javax.swing.JLabel lblApellidoPaterno;
+    private javax.swing.JLabel lblCartilla;
+    private javax.swing.JLabel lblColonia;
+    private javax.swing.JLabel lblCuip;
+    private javax.swing.JLabel lblCurp;
+    private javax.swing.JLabel lblDomicilio;
     private javax.swing.JLabel lblEdad;
+    private javax.swing.JLabel lblEntreCalle;
+    private javax.swing.JLabel lblEstado;
+    private javax.swing.JLabel lblEstado2;
+    private javax.swing.JLabel lblEstadoCivil;
+    private javax.swing.JLabel lblExterior;
+    private javax.swing.JLabel lblFechaNacimiento;
+    private javax.swing.JLabel lblIfeClave;
+    private javax.swing.JLabel lblIfeFolio;
+    private javax.swing.JLabel lblImss;
+    private javax.swing.JLabel lblInterior;
+    private javax.swing.JLabel lblMunicipio;
+    private javax.swing.JLabel lblMunicipio2;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNumeroC;
+    private javax.swing.JLabel lblPostal;
+    private javax.swing.JLabel lblRfc;
     private javax.swing.JLabel lblSexo;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblYCalle;
     private javax.swing.JPanel panelAsistencia;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelBuscar;
+    private javax.swing.JPanel panelCartilla;
     private javax.swing.JPanel panelDatosPersonales;
     private javax.swing.JPanel panelDoc;
     private javax.swing.JPanel panelDocumentos;
@@ -489,13 +868,31 @@ public class framePrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel panelRegistrar;
     private javax.swing.JPanel panelServicios;
     private javax.swing.JPanel panelSexo;
+    private javax.swing.JRadioButton rbCartilaLiberada;
+    private javax.swing.JRadioButton rbNA;
+    private javax.swing.JRadioButton rbPrecartilla;
     private javax.swing.JRadioButton rbSexoF;
     private javax.swing.JRadioButton rbSexoM;
     private javax.swing.JTabbedPane tpElemento;
     private javax.swing.JTabbedPane tpRegistrar;
     private javax.swing.JTextField txtApellidoPaterno;
+    private javax.swing.JTextField txtColonia;
+    private javax.swing.JTextField txtCuip;
+    private javax.swing.JTextField txtCurp;
+    private javax.swing.JTextField txtDomicilio;
     private javax.swing.JTextField txtEdad;
+    private javax.swing.JTextField txtEntreCalle;
+    private javax.swing.JTextField txtEstadoCivil;
+    private javax.swing.JTextField txtExterior;
+    private javax.swing.JTextField txtIfeClave;
+    private javax.swing.JTextField txtIfeFolio;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNumeroCartilla;
+    private javax.swing.JTextField txtNumeroImss;
+    private javax.swing.JTextField txtPostal;
+    private javax.swing.JTextField txtRFC;
     private javax.swing.JTextField txtStatus;
+    private javax.swing.JTextField txtYcalle;
     // End of variables declaration//GEN-END:variables
 }
+
