@@ -7,27 +7,17 @@ package org.controldepersonal.controlerrores;
 
 /**
  *
- * @author Antonio
+ * @author Antonio Fonseca
  */
-public class dialogoError extends javax.swing.JDialog {
-/**
- * Atributos de la clase
- */
-
+public class dialogoError extends javax.swing.JFrame {
     /**
      * Creates new form dialogoError
-     * @param parent
-     * @param modal
+     * @param descripcionError
      */
-    public dialogoError(java.awt.Frame parent, boolean modal, String descripcionError) {
-        super(parent, modal);
+    public dialogoError(String descripcionError) {
         initComponents();
-        
-        consolaError.setText(descripcionError);
         setLocationRelativeTo(null);
-        setVisible(true);
-        
-        System.out.print(descripcionError);
+        consolaError.setText(descripcionError);
     }
 
     /**
@@ -39,28 +29,32 @@ public class dialogoError extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         consolaError = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        btnAdceptarError = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Oop... Algo salio mal!");
+        jButton1.setText("jButton1");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Oops! ocurrio una falla...");
         setAlwaysOnTop(true);
+        setResizable(false);
 
-        jLabel1.setText("Error");
+        jLabel1.setText("Algo salio mal.");
 
-        jLabel2.setText("Detalles:");
+        jLabel2.setText("Descripcion del Error:");
 
         consolaError.setColumns(20);
         consolaError.setRows(5);
         jScrollPane1.setViewportView(consolaError);
 
-        jButton1.setText("Aceptar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAdceptarError.setText("Aceptar");
+        btnAdceptarError.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAdceptarErrorActionPerformed(evt);
             }
         });
 
@@ -79,7 +73,7 @@ public class dialogoError extends javax.swing.JDialog {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(btnAdceptarError)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -90,19 +84,18 @@ public class dialogoError extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addComponent(btnAdceptarError))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAdceptarErrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdceptarErrorActionPerformed
         // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAdceptarErrorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,20 +124,16 @@ public class dialogoError extends javax.swing.JDialog {
         }
         //</editor-fold>
 
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(() -> {
-            dialogoError dialog = new dialogoError(new javax.swing.JFrame(), true, "TEST");
-            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                @Override
-                public void windowClosing(java.awt.event.WindowEvent e) {
-                    System.exit(0);
-                }
-            });
-            dialog.setVisible(true);
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+               // new dialogoError().setVisible(true);
+            }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdceptarError;
     private javax.swing.JTextArea consolaError;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
