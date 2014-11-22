@@ -8,6 +8,7 @@ package org.controldepersonal.interfaz;
 import java.awt.event.KeyEvent;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
+import org.controldepersonal.utelerias.configuracion;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Sesion extends javax.swing.JFrame {
 
     conector conexionactual;
     administradorDeFallos administradorErrores;
-
+    configuracion configuracion;
     /**
      * Creates new form Sesion
      */
@@ -27,6 +28,8 @@ public class Sesion extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         administradorErrores = new administradorDeFallos();
+        configuracion = new configuracion();
+        obtenerDatosConexion();
     }
 
     /**
@@ -156,10 +159,14 @@ public class Sesion extends javax.swing.JFrame {
         /* Conectar a la base de datos y validar usuario y contraseña */
         conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
         if (conexionactual.estasVivo()) {
-            //inicializacion de la interfaz principal
+             //Guarda configuracion para futuras conexiones
+            if(!configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText())){
+                administradorErrores.avisarError(this, "Tamposo fue posible crear archivo de configuracion...\n"+ configuracion.dameExcepcion().getMessage());
+            }
+        //inicializacion de la interfaz principal
             new framePrincipal(conexionactual, administradorErrores).setVisible(true);
             dispose();
-        } else {
+           } else {
             administradorErrores.avisarError(this, "No fue posible establecer Conexion.\n" + conexionactual.dameExcepcion().getMessage());
         }
     }//GEN-LAST:event_btnContinuarActionPerformed
@@ -174,15 +181,29 @@ public class Sesion extends javax.swing.JFrame {
             /* Conectar a la base de datos y validar usuario y contraseña */
             conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
             if (conexionactual.estasVivo()) {
-                //inicializacion de la interfaz principal
+                configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText());
+       //inicializacion de la interfaz principal
                 new framePrincipal(conexionactual, administradorErrores).setVisible(true);
                 dispose();
+                
+                
             } else {
                 administradorErrores.avisarError(this, "No fue posible establecer Conexion.\n" + conexionactual.dameExcepcion().getMessage());
             }
         }
     }//GEN-LAST:event_txtPasswordKeyPressed
-
+/*
+    Funcion que obtiene los datos de configuracion de un archivo ini.
+    */
+    private void obtenerDatosConexion(){
+        String[] temp = configuracion.dameConfiguracionConexion();
+        if (temp==null){
+            administradorErrores.avisarError(this, configuracion.dameExcepcion().getMessage());
+        } else{
+        txtIPServidor.setText(temp[0]);
+        txtUsuario.setText(temp[1]);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel;

@@ -1,9 +1,11 @@
 package org.controldepersonal.conector;
 
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class conector {
     /*
@@ -126,4 +128,6 @@ public class conector {
     public Exception dameExcepcion() {
         return ecepcion;
     }
+    
+   
 }
