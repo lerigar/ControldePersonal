@@ -15,14 +15,16 @@ import org.controldepersonal.controlerrores.administradorDeFallos;
  */
 public class Sesion extends javax.swing.JFrame {
 //Atributos
+
     conector conexionactual;
     administradorDeFallos administradorErrores;
+
     /**
      * Creates new form Sesion
      */
     public Sesion() {
         super("Iniciar sesión");
-        initComponents();      
+        initComponents();
         setLocationRelativeTo(null);
         administradorErrores = new administradorDeFallos();
     }
@@ -152,13 +154,13 @@ public class Sesion extends javax.swing.JFrame {
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
         String pwd = new String(txtPassword.getPassword());
         /* Conectar a la base de datos y validar usuario y contraseña */
-        conexionactual = new conector(txtUsuario.getText(),pwd, txtIPServidor.getText());
-        if (conexionactual.estasVivo()){
-        //inicializacion de la interfaz principal
-        new framePrincipal(conexionactual,  administradorErrores).setVisible(true);
-        dispose();
+        conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
+        if (conexionactual.estasVivo()) {
+            //inicializacion de la interfaz principal
+            new framePrincipal(conexionactual, administradorErrores).setVisible(true);
+            dispose();
         } else {
-            administradorErrores.avisarError("No fue posible establecer Conexion.\n"+conexionactual.dameExcepcion().getMessage());
+            administradorErrores.avisarError(this, "No fue posible establecer Conexion.\n" + conexionactual.dameExcepcion().getMessage());
         }
     }//GEN-LAST:event_btnContinuarActionPerformed
 
@@ -167,21 +169,20 @@ public class Sesion extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIPServidorActionPerformed
 
     private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             String pwd = new String(txtPassword.getPassword());
             /* Conectar a la base de datos y validar usuario y contraseña */
-            conexionactual = new conector(txtUsuario.getText(),pwd, txtIPServidor.getText());
-            if (conexionactual.estasVivo()){
-            //inicializacion de la interfaz principal
-            new framePrincipal(conexionactual,  administradorErrores).setVisible(true);
-            dispose();
+            conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
+            if (conexionactual.estasVivo()) {
+                //inicializacion de la interfaz principal
+                new framePrincipal(conexionactual, administradorErrores).setVisible(true);
+                dispose();
             } else {
-                administradorErrores.avisarError("No fue posible establecer Conexion.\n"+conexionactual.dameExcepcion().getMessage());
-            }      
+                administradorErrores.avisarError(this, "No fue posible establecer Conexion.\n" + conexionactual.dameExcepcion().getMessage());
+            }
         }
     }//GEN-LAST:event_txtPasswordKeyPressed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel;
