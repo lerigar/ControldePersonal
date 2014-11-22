@@ -29,7 +29,7 @@ public class Sesion extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         administradorErrores = new administradorDeFallos();
         configuracion = new configuracion();
-        obtenerDatosConexion();
+        //obtenerDatosConexion();
     }
 
     /**
@@ -160,9 +160,9 @@ public class Sesion extends javax.swing.JFrame {
         conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
         if (conexionactual.estasVivo()) {
              //Guarda configuracion para futuras conexiones
-            if(!configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText())){
-                administradorErrores.avisarError(this, "Tamposo fue posible crear archivo de configuracion...\n"+ configuracion.dameExcepcion().getMessage());
-            }
+            //if(!configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText())){
+                //administradorErrores.avisarError(this, "Tamposo fue posible crear archivo de configuracion...\n"+ configuracion.dameExcepcion().getMessage());
+            //}
         //inicializacion de la interfaz principal
             new framePrincipal(conexionactual, administradorErrores).setVisible(true);
             dispose();
