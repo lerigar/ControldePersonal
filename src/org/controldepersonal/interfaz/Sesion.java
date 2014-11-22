@@ -181,7 +181,7 @@ public class Sesion extends javax.swing.JFrame {
             /* Conectar a la base de datos y validar usuario y contraseña */
             conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
             if (conexionactual.estasVivo()) {
-                configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText());
+                //configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText());
        //inicializacion de la interfaz principal
                 new framePrincipal(conexionactual, administradorErrores).setVisible(true);
                 dispose();
