@@ -6,6 +6,7 @@
 package org.controldepersonal.interfaz;
 
 import java.awt.CardLayout;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
@@ -39,6 +40,7 @@ public class framePrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgSexo = new javax.swing.ButtonGroup();
         panelBotones = new javax.swing.JPanel();
         btnElemento = new javax.swing.JButton();
         btnDoc = new javax.swing.JButton();
@@ -50,7 +52,21 @@ public class framePrincipal extends javax.swing.JFrame {
         tpElemento = new javax.swing.JTabbedPane();
         panelRegistrar = new javax.swing.JPanel();
         tpRegistrar = new javax.swing.JTabbedPane();
-        panelDP = new javax.swing.JPanel();
+        panelDatosPersonales = new javax.swing.JPanel();
+        lblApellidoPaterno = new javax.swing.JLabel();
+        txtApellidoPaterno = new javax.swing.JTextField();
+        lblApellidoMaterno = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        lblNombre = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        panelSexo = new javax.swing.JPanel();
+        lblSexo = new javax.swing.JLabel();
+        rbSexoM = new javax.swing.JRadioButton();
+        rbSexoF = new javax.swing.JRadioButton();
+        lblStatus = new javax.swing.JLabel();
+        txtStatus = new javax.swing.JTextField();
+        lblEdad = new javax.swing.JLabel();
+        txtEdad = new javax.swing.JTextField();
         panelBuscar = new javax.swing.JPanel();
         panelDocumentos = new javax.swing.JPanel();
         panelDoc = new javax.swing.JPanel();
@@ -59,6 +75,7 @@ public class framePrincipal extends javax.swing.JFrame {
         panelEquipo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnElemento.setText("Elemento");
         btnElemento.addActionListener(new java.awt.event.ActionListener() {
@@ -114,31 +131,145 @@ public class framePrincipal extends javax.swing.JFrame {
             .addGroup(panelBotonesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnElemento)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(btnDoc)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(btnServicios)
-                .addGap(18, 18, 18)
+                .addGap(36, 36, 36)
                 .addComponent(btnAsistencia)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(btnEquipo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(36, 36, 36))
         );
 
         panelOpciones.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout panelDPLayout = new javax.swing.GroupLayout(panelDP);
-        panelDP.setLayout(panelDPLayout);
-        panelDPLayout.setHorizontalGroup(
-            panelDPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
+        panelDatosPersonales.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblApellidoPaterno.setText("Apellido Paterno");
+
+        txtApellidoPaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoPaternoKeyTyped(evt);
+            }
+        });
+
+        lblApellidoMaterno.setText("Apellido Materno");
+
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
+
+        lblNombre.setText("Nombre");
+
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
+
+        lblSexo.setText("Sexo");
+
+        bgSexo.add(rbSexoM);
+        rbSexoM.setText("Masculino");
+
+        bgSexo.add(rbSexoF);
+        rbSexoF.setText("Femenino");
+
+        javax.swing.GroupLayout panelSexoLayout = new javax.swing.GroupLayout(panelSexo);
+        panelSexo.setLayout(panelSexoLayout);
+        panelSexoLayout.setHorizontalGroup(
+            panelSexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSexoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSexo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSexoM)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbSexoF)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelDPLayout.setVerticalGroup(
-            panelDPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 324, Short.MAX_VALUE)
+        panelSexoLayout.setVerticalGroup(
+            panelSexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSexoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelSexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSexo)
+                    .addComponent(rbSexoM)
+                    .addComponent(rbSexoF))
+                .addGap(55, 55, 55))
         );
 
-        tpRegistrar.addTab("Datos Personales", panelDP);
+        lblStatus.setText("Status");
+
+        txtStatus.setForeground(new java.awt.Color(255, 0, 0));
+        txtStatus.setText("NO DISPONIBLE");
+        txtStatus.setEnabled(false);
+
+        lblEdad.setText("Edad");
+
+        txtEdad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEdadKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelDatosPersonalesLayout = new javax.swing.GroupLayout(panelDatosPersonales);
+        panelDatosPersonales.setLayout(panelDatosPersonalesLayout);
+        panelDatosPersonalesLayout.setHorizontalGroup(
+            panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(lblApellidoPaterno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblApellidoMaterno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblStatus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(lblNombre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblEdad)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        panelDatosPersonalesLayout.setVerticalGroup(
+            panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblApellidoPaterno)
+                    .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblApellidoMaterno)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblStatus))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblNombre)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEdad)
+                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(346, Short.MAX_VALUE))
+        );
+
+        tpRegistrar.addTab("Datos Personales", panelDatosPersonales);
 
         javax.swing.GroupLayout panelRegistrarLayout = new javax.swing.GroupLayout(panelRegistrar);
         panelRegistrar.setLayout(panelRegistrarLayout);
@@ -157,11 +288,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelBuscar.setLayout(panelBuscarLayout);
         panelBuscarLayout.setHorizontalGroup(
             panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGap(0, 627, Short.MAX_VALUE)
         );
         panelBuscarLayout.setVerticalGroup(
             panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 352, Short.MAX_VALUE)
+            .addGap(0, 441, Short.MAX_VALUE)
         );
 
         tpElemento.addTab("Buscar", panelBuscar);
@@ -170,11 +301,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelDocumentos.setLayout(panelDocumentosLayout);
         panelDocumentosLayout.setHorizontalGroup(
             panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGap(0, 627, Short.MAX_VALUE)
         );
         panelDocumentosLayout.setVerticalGroup(
             panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 352, Short.MAX_VALUE)
+            .addGap(0, 441, Short.MAX_VALUE)
         );
 
         tpElemento.addTab("Documentos", panelDocumentos);
@@ -196,11 +327,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelDoc.setLayout(panelDocLayout);
         panelDocLayout.setHorizontalGroup(
             panelDocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
+            .addGap(0, 632, Short.MAX_VALUE)
         );
         panelDocLayout.setVerticalGroup(
             panelDocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 469, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelDoc, "panelDoc");
@@ -209,11 +340,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelServicios.setLayout(panelServiciosLayout);
         panelServiciosLayout.setHorizontalGroup(
             panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
+            .addGap(0, 632, Short.MAX_VALUE)
         );
         panelServiciosLayout.setVerticalGroup(
             panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 469, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelServicios, "panelServicios");
@@ -222,11 +353,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelAsistencia.setLayout(panelAsistenciaLayout);
         panelAsistenciaLayout.setHorizontalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
+            .addGap(0, 632, Short.MAX_VALUE)
         );
         panelAsistenciaLayout.setVerticalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 469, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelAsistencia, "panelAsistencias");
@@ -235,11 +366,11 @@ public class framePrincipal extends javax.swing.JFrame {
         panelEquipo.setLayout(panelEquipoLayout);
         panelEquipoLayout.setHorizontalGroup(
             panelEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
+            .addGap(0, 632, Short.MAX_VALUE)
         );
         panelEquipoLayout.setVerticalGroup(
             panelEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 469, Short.MAX_VALUE)
         );
 
         panelOpciones.add(panelEquipo, "panelEquipo");
@@ -249,9 +380,9 @@ public class framePrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -259,10 +390,12 @@ public class framePrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -293,21 +426,61 @@ public class framePrincipal extends javax.swing.JFrame {
         card.show(panelOpciones, "panelEquipo");
     }//GEN-LAST:event_btnEquipoActionPerformed
 
+    private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtApellidoPaternoKeyTyped
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
+        char car = evt.getKeyChar();
+    if(txtEdad.getText().length()>=2)
+        evt.consume();
+    if((car<'0' || car>'9'))
+        evt.consume();
+    }//GEN-LAST:event_txtEdadKeyTyped
+
     /**
      * @param args the command line arguments
      */
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.ButtonGroup bgSexo;
     private javax.swing.JButton btnAsistencia;
     private javax.swing.JButton btnDoc;
     private javax.swing.JButton btnElemento;
     private javax.swing.JButton btnEquipo;
     private javax.swing.JButton btnServicios;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblApellidoMaterno;
+    private javax.swing.JLabel lblApellidoPaterno;
+    private javax.swing.JLabel lblEdad;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblSexo;
+    private javax.swing.JLabel lblStatus;
     private javax.swing.JPanel panelAsistencia;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelBuscar;
-    private javax.swing.JPanel panelDP;
+    private javax.swing.JPanel panelDatosPersonales;
     private javax.swing.JPanel panelDoc;
     private javax.swing.JPanel panelDocumentos;
     private javax.swing.JPanel panelElemento;
@@ -315,7 +488,14 @@ public class framePrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel panelOpciones;
     private javax.swing.JPanel panelRegistrar;
     private javax.swing.JPanel panelServicios;
+    private javax.swing.JPanel panelSexo;
+    private javax.swing.JRadioButton rbSexoF;
+    private javax.swing.JRadioButton rbSexoM;
     private javax.swing.JTabbedPane tpElemento;
     private javax.swing.JTabbedPane tpRegistrar;
+    private javax.swing.JTextField txtApellidoPaterno;
+    private javax.swing.JTextField txtEdad;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtStatus;
     // End of variables declaration//GEN-END:variables
 }
