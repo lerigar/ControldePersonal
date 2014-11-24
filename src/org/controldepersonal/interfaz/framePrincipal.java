@@ -112,6 +112,8 @@ public class framePrincipal extends javax.swing.JFrame {
         txtIfeClave = new javax.swing.JTextField();
         lblIfeFolio = new javax.swing.JLabel();
         txtIfeFolio = new javax.swing.JTextField();
+        lblPAsaporte = new javax.swing.JLabel();
+        txtPasaporte = new javax.swing.JTextField();
         panelBuscar = new javax.swing.JPanel();
         panelDocumentos = new javax.swing.JPanel();
         panelDoc = new javax.swing.JPanel();
@@ -334,7 +336,7 @@ public class framePrincipal extends javax.swing.JFrame {
         panelCartillaLayout.setHorizontalGroup(
             panelCartillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCartillaLayout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rbPrecartilla)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rbCartilaLiberada)
@@ -378,6 +380,8 @@ public class framePrincipal extends javax.swing.JFrame {
         lblIfeClave.setText("IFE Clave");
 
         lblIfeFolio.setText("IFE Folio");
+
+        lblPAsaporte.setText("Pasaporte");
 
         javax.swing.GroupLayout panelDatosPersonalesLayout = new javax.swing.GroupLayout(panelDatosPersonales);
         panelDatosPersonales.setLayout(panelDatosPersonalesLayout);
@@ -439,11 +443,15 @@ public class framePrincipal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblIfeFolio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblPAsaporte)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPasaporte, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
                         .addComponent(lblCartilla)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(panelCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelDatosPersonalesLayout.createSequentialGroup()
                         .addComponent(lblNumeroC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -566,13 +574,15 @@ public class framePrincipal extends javax.swing.JFrame {
                     .addComponent(lblImss)
                     .addComponent(txtNumeroImss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNumeroCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblIfeClave)
                     .addComponent(txtIfeClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblIfeFolio)
-                    .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(130, Short.MAX_VALUE))
+                    .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPAsaporte)
+                    .addComponent(txtPasaporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         tpRegistrar.addTab("Datos Personales", panelDatosPersonales);
@@ -585,7 +595,7 @@ public class framePrincipal extends javax.swing.JFrame {
         );
         panelRegistrarLayout.setVerticalGroup(
             panelRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+            .addComponent(tpRegistrar)
         );
 
         tpElemento.addTab("Registrar", panelRegistrar);
@@ -624,7 +634,7 @@ public class framePrincipal extends javax.swing.JFrame {
         );
         panelElementoLayout.setVerticalGroup(
             panelElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpElemento, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+            .addComponent(tpElemento)
         );
 
         panelOpciones.add(panelElemento, "panelElemento");
@@ -696,7 +706,7 @@ public class framePrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+                .addComponent(panelOpciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(75, 75, 75)
@@ -850,6 +860,7 @@ public class framePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblMunicipio2;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNumeroC;
+    private javax.swing.JLabel lblPAsaporte;
     private javax.swing.JLabel lblPostal;
     private javax.swing.JLabel lblRfc;
     private javax.swing.JLabel lblSexo;
@@ -889,6 +900,7 @@ public class framePrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNumeroCartilla;
     private javax.swing.JTextField txtNumeroImss;
+    private javax.swing.JTextField txtPasaporte;
     private javax.swing.JTextField txtPostal;
     private javax.swing.JTextField txtRFC;
     private javax.swing.JTextField txtStatus;
