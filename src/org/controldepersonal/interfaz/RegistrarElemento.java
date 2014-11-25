@@ -5,6 +5,8 @@
  */
 package org.controldepersonal.interfaz;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author Miguel
@@ -109,9 +111,27 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblApellidoPaterno.setText("Apellido Paterno");
 
+        txtApellidoPaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoPaternoKeyTyped(evt);
+            }
+        });
+
         lblApellidoMaterno.setText("Apellido Materno");
 
+        txtApellidoMaterno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoMaternoKeyTyped(evt);
+            }
+        });
+
         lblNombre.setText("Nombre");
+
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
 
         lblStatus.setText("Status");
 
@@ -148,9 +168,27 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblEdad.setText("Edad");
 
+        txtEdad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEdadKeyTyped(evt);
+            }
+        });
+
         lblEstatura.setText("Estatura");
 
+        txtEstatura.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEstaturaKeyTyped(evt);
+            }
+        });
+
         lblPeso.setText("Peso");
+
+        txtPeso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPesoKeyTyped(evt);
+            }
+        });
 
         lblKg.setText("kg.");
 
@@ -235,17 +273,59 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblDireccion.setText("Dirección");
 
+        txtDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDireccionKeyTyped(evt);
+            }
+        });
+
         lblInterior.setText("Interior");
+
+        txtInterior.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInteriorKeyTyped(evt);
+            }
+        });
 
         lblExterior.setText("Exterior");
 
+        txtExterior.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtExteriorKeyTyped(evt);
+            }
+        });
+
         lblColonia.setText("Colonia");
+
+        txtColonia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColoniaKeyTyped(evt);
+            }
+        });
 
         lblPostal.setText("Código Postal");
 
+        txtCodigoPostal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCodigoPostalKeyTyped(evt);
+            }
+        });
+
         lblEntre.setText("Entre");
 
+        txtEntre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEntreKeyTyped(evt);
+            }
+        });
+
         lblY.setText("Y");
+
+        txtY.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtYKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout pDomicilioLayout = new javax.swing.GroupLayout(pDomicilio);
         pDomicilio.setLayout(pDomicilioLayout);
@@ -489,6 +569,110 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtApellidoPaternoKeyTyped
+
+    private void txtApellidoMaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoMaternoKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtApellidoMaternoKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
+        char car = evt.getKeyChar();
+        if(txtEdad.getText().length()>=2)
+            evt.consume();
+        if((car<'0' || car>'9'))
+            evt.consume();
+    }//GEN-LAST:event_txtEdadKeyTyped
+
+    private void txtEstaturaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEstaturaKeyTyped
+        char car = evt.getKeyChar();
+        if(txtEdad.getText().length()>=4)
+            evt.consume();
+        if((car<'0' || car>'9') && car!='.')
+            evt.consume();
+    }//GEN-LAST:event_txtEstaturaKeyTyped
+
+    private void txtPesoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPesoKeyTyped
+        char car = evt.getKeyChar();
+        if(txtEdad.getText().length()>=4)
+            evt.consume();
+        if((car<'0' || car>'9') && car!='.')
+            evt.consume();
+    }//GEN-LAST:event_txtPesoKeyTyped
+
+    private void txtDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtDireccionKeyTyped
+
+    private void txtInteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'A' || car>'Z') && (car!=(char)KeyEvent.VK_SPACE) && (car<'0' || car>'9'))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtInteriorKeyTyped
+
+    private void txtExteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'A' || car>'Z') && (car!=(char)KeyEvent.VK_SPACE) && (car<'0' || car>'9'))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtExteriorKeyTyped
+
+    private void txtColoniaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtColoniaKeyTyped
+
+    private void txtCodigoPostalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoPostalKeyTyped
+        char car = evt.getKeyChar();
+        if(txtEdad.getText().length()>=5)
+            evt.consume();
+        if((car<'0' || car>'9'))
+            evt.consume();
+    }//GEN-LAST:event_txtCodigoPostalKeyTyped
+
+    private void txtEntreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEntreKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtEntreKeyTyped
+
+    private void txtYKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtYKeyTyped
+        char car = evt.getKeyChar();        
+        if((car<'a' || car>'z') && (car<'A' || car>'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car!=(char)KeyEvent.VK_SPACE))
+        {      
+          evt.consume();   
+        }
+    }//GEN-LAST:event_txtYKeyTyped
 
     /**
      * @param args the command line arguments
