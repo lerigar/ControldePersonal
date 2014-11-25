@@ -35,6 +35,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         spRegistroElemento = new javax.swing.JScrollPane();
         pRegistroElemento = new javax.swing.JPanel();
+        btnSalir = new javax.swing.JButton();
         tpRegistroElemento = new javax.swing.JTabbedPane();
         pDatosPersonales = new javax.swing.JPanel();
         lblApellidoPaterno = new javax.swing.JLabel();
@@ -43,20 +44,31 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtApellidoMaterno = new javax.swing.JTextField();
         lblNombre = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        pBotones = new javax.swing.JPanel();
-        btnSalir = new javax.swing.JButton();
+        lblStatus = new javax.swing.JLabel();
+        txtStatus = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        pRegistroElemento.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pRegistroElemento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pDatosPersonales.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        pRegistroElemento.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 110, -1));
 
         lblApellidoPaterno.setText("Apellido Paterno");
 
         lblApellidoMaterno.setText("Apellido Materno");
 
         lblNombre.setText("Nombre");
+
+        lblStatus.setText("Status");
+
+        txtStatus.setText("NO DISPONIBLE");
+        txtStatus.setEnabled(false);
 
         javax.swing.GroupLayout pDatosPersonalesLayout = new javax.swing.GroupLayout(pDatosPersonales);
         pDatosPersonales.setLayout(pDatosPersonalesLayout);
@@ -66,16 +78,20 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(lblApellidoPaterno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblApellidoMaterno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblNombre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblStatus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         pDatosPersonalesLayout.setVerticalGroup(
             pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,56 +103,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(lblApellidoMaterno)
                     .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(381, Short.MAX_VALUE))
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblStatus)
+                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Datos Personales", pDatosPersonales);
 
-        pBotones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        btnSalir.setText("Salir");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pBotonesLayout = new javax.swing.GroupLayout(pBotones);
-        pBotones.setLayout(pBotonesLayout);
-        pBotonesLayout.setHorizontalGroup(
-            pBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pBotonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
-        );
-        pBotonesLayout.setVerticalGroup(
-            pBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pBotonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnSalir)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout pRegistroElementoLayout = new javax.swing.GroupLayout(pRegistroElemento);
-        pRegistroElemento.setLayout(pRegistroElementoLayout);
-        pRegistroElementoLayout.setHorizontalGroup(
-            pRegistroElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpRegistroElemento)
-            .addGroup(pRegistroElementoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pRegistroElementoLayout.setVerticalGroup(
-            pRegistroElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pRegistroElementoLayout.createSequentialGroup()
-                .addComponent(tpRegistroElemento, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
+        pRegistroElemento.add(tpRegistroElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 450));
 
         spRegistroElemento.setViewportView(pRegistroElemento);
 
@@ -144,11 +119,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(spRegistroElemento, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
+            .addComponent(spRegistroElemento, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(spRegistroElemento, javax.swing.GroupLayout.DEFAULT_SIZE, 581, Short.MAX_VALUE)
+            .addComponent(spRegistroElemento, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
         );
 
         pack();
@@ -205,7 +180,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblApellidoMaterno;
     private javax.swing.JLabel lblApellidoPaterno;
     private javax.swing.JLabel lblNombre;
-    private javax.swing.JPanel pBotones;
+    private javax.swing.JLabel lblStatus;
     private javax.swing.JPanel pDatosPersonales;
     private javax.swing.JPanel pRegistroElemento;
     private javax.swing.JScrollPane spRegistroElemento;
@@ -213,5 +188,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtApellidoMaterno;
     private javax.swing.JTextField txtApellidoPaterno;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtStatus;
     // End of variables declaration//GEN-END:variables
 }
