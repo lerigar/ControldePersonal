@@ -159,9 +159,9 @@ public class Sesion extends javax.swing.JFrame {
         /* Conectar a la base de datos y validar usuario y contraseña */
         conexionactual = new conector(txtUsuario.getText(), pwd, txtIPServidor.getText());
         if (conexionactual.estasVivo()) {
-             //Guarda configuracion para futuras conexiones
+            //Guarda configuracion para futuras conexiones
             //if(!configuracion.crearArchivoConfiguracion(txtIPServidor.getText(), txtUsuario.getText())){
-                //administradorErrores.avisarError(this, "Tamposo fue posible crear archivo de configuracion...\n"+ configuracion.dameExcepcion().getMessage());
+            //administradorErrores.avisarError(this, "Tamposo fue posible crear archivo de configuracion...\n"+ configuracion.dameExcepcion().getMessage());
             //}
         //inicializacion de la interfaz principal
             new framePrincipal(conexionactual, administradorErrores).setVisible(true);
