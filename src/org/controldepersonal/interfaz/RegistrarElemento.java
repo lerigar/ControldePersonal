@@ -95,7 +95,113 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtEntre = new javax.swing.JTextField();
         lblY = new javax.swing.JLabel();
         txtY = new javax.swing.JTextField();
+        lblEstadoD = new javax.swing.JLabel();
+        cbEstadoD = new javax.swing.JComboBox();
+        lblMunicipioD = new javax.swing.JLabel();
+        cbMunicipioD = new javax.swing.JComboBox();
         pDocumentos = new javax.swing.JPanel();
+        lblCurp = new javax.swing.JLabel();
+        txtCurp = new javax.swing.JTextField();
+        lblRFC = new javax.swing.JLabel();
+        txtRFC = new javax.swing.JTextField();
+        lblNumeroImss = new javax.swing.JLabel();
+        txtNumeroImss = new javax.swing.JTextField();
+        pCartillaMilitar = new javax.swing.JPanel();
+        rbCartillaLiberada = new javax.swing.JRadioButton();
+        rbPreCartilla = new javax.swing.JRadioButton();
+        rbNoAplica = new javax.swing.JRadioButton();
+        lblNumeroCartilla = new javax.swing.JLabel();
+        txtNumeroCartilla = new javax.swing.JTextField();
+        lblIfeClave = new javax.swing.JLabel();
+        txtIfeClave = new javax.swing.JTextField();
+        lblIfeFolio = new javax.swing.JLabel();
+        txtIfeFolio = new javax.swing.JTextField();
+        lblCuip = new javax.swing.JLabel();
+        txtCuip = new javax.swing.JTextField();
+        lblPasaporte = new javax.swing.JLabel();
+        txtPasaporte = new javax.swing.JTextField();
+        pDocEntregados = new javax.swing.JPanel();
+        pHojaDatos = new javax.swing.JPanel();
+        rbHojaDatosEntregaO = new javax.swing.JRadioButton();
+        rbHojaDatosEntregaC = new javax.swing.JRadioButton();
+        rbHojaDatosEntregaN = new javax.swing.JRadioButton();
+        pSolicitud = new javax.swing.JPanel();
+        rbSolicitudEntregaO = new javax.swing.JRadioButton();
+        rbSolicitudEntregaC = new javax.swing.JRadioButton();
+        rbSolicitudEntregaN = new javax.swing.JRadioButton();
+        pIfe = new javax.swing.JPanel();
+        rbIfeEntregaO = new javax.swing.JRadioButton();
+        rbIfeEntregaC = new javax.swing.JRadioButton();
+        rbIfeEntregaN = new javax.swing.JRadioButton();
+        pActaNacimiento = new javax.swing.JPanel();
+        rbActaNacimientoEntregaO = new javax.swing.JRadioButton();
+        rbActaNacimientoEntregaC = new javax.swing.JRadioButton();
+        rbActaNacimientoEntregaN = new javax.swing.JRadioButton();
+        pCurpYRfc = new javax.swing.JPanel();
+        rbCurpYRfcEntregaO = new javax.swing.JRadioButton();
+        rbCurpYRfcEntregaC = new javax.swing.JRadioButton();
+        rbCurpYRfcEntregaN = new javax.swing.JRadioButton();
+        pComprobanteDom = new javax.swing.JPanel();
+        rbComprobanteDomEntregaO = new javax.swing.JRadioButton();
+        rbComprobanteDomEntregaC = new javax.swing.JRadioButton();
+        rbComprobanteDomEntregaN = new javax.swing.JRadioButton();
+        dpComprobanteDomEntrega = new org.jdesktop.swingx.JXDatePicker();
+        pCartaAntecedentes = new javax.swing.JPanel();
+        rbCartaAntecedentesEntregaO = new javax.swing.JRadioButton();
+        rbCartaAntecedentesEntregaC = new javax.swing.JRadioButton();
+        rbCartaAntecedentesEntregaN = new javax.swing.JRadioButton();
+        dpCartaAntecedentesEntrega = new org.jdesktop.swingx.JXDatePicker();
+        pComprobanteEstudios = new javax.swing.JPanel();
+        rbComprobanteEstudiosEntregaO = new javax.swing.JRadioButton();
+        rbComprobanteEstudiosEntregaC = new javax.swing.JRadioButton();
+        rbComprobanteEstudiosEntregaN = new javax.swing.JRadioButton();
+        pDocumentos2 = new javax.swing.JPanel();
+        pDocEntregados2 = new javax.swing.JPanel();
+        pCartillaEntrega = new javax.swing.JPanel();
+        rbCartillaEntregaO = new javax.swing.JRadioButton();
+        rbCartillaEntregaC = new javax.swing.JRadioButton();
+        rbCartillaEntregaN = new javax.swing.JRadioButton();
+        pContratoEntrega = new javax.swing.JPanel();
+        rbContratoEntregaO = new javax.swing.JRadioButton();
+        rbContratoEntregaC = new javax.swing.JRadioButton();
+        rbContratoEntregaN = new javax.swing.JRadioButton();
+        pCartaRecomendacionEntrega = new javax.swing.JPanel();
+        rbCartaRecomendacionEntregaO = new javax.swing.JRadioButton();
+        rbCartaRecomendacionEntregaC = new javax.swing.JRadioButton();
+        rbCartaRecomendacionEntregaN = new javax.swing.JRadioButton();
+        pNumeroImssEntrega = new javax.swing.JPanel();
+        rbNumeroImssEntregaO = new javax.swing.JRadioButton();
+        rbNumeroImssEntregaC = new javax.swing.JRadioButton();
+        rbNumeroImssEntregaN = new javax.swing.JRadioButton();
+        pSocioeconomicoEntrega = new javax.swing.JPanel();
+        rbSocioeconomicoEntregaO = new javax.swing.JRadioButton();
+        rbSocioeconomicoEntregaC = new javax.swing.JRadioButton();
+        rbSocioeconomicoEntregaN = new javax.swing.JRadioButton();
+        dpSocioeconomicoEntrega = new org.jdesktop.swingx.JXDatePicker();
+        pSocioeconomicoEntrega2 = new javax.swing.JPanel();
+        rbSocioeconomicoEntrega2O = new javax.swing.JRadioButton();
+        rbSocioeconomicoEntrega2C = new javax.swing.JRadioButton();
+        rbSocioeconomicoEntrega2N = new javax.swing.JRadioButton();
+        pPsicologicoEntrega = new javax.swing.JPanel();
+        rbPsicologicoEntregaO = new javax.swing.JRadioButton();
+        rbPsicologicoEntregaC = new javax.swing.JRadioButton();
+        rbPsicologicoEntregaN = new javax.swing.JRadioButton();
+        pComprobanteMedicoEntrega = new javax.swing.JPanel();
+        rbComprobanteMedicoEntregaO = new javax.swing.JRadioButton();
+        rbComprobanteMedicoEntregaC = new javax.swing.JRadioButton();
+        rbComprobanteMedicoEntregaN = new javax.swing.JRadioButton();
+        pToxicologicoEntrega = new javax.swing.JPanel();
+        rbToxicologicoEntregaO = new javax.swing.JRadioButton();
+        rbToxicologicoEntregaC = new javax.swing.JRadioButton();
+        rbToxicologicoEntregaN = new javax.swing.JRadioButton();
+        pCartaResguardoEntrega = new javax.swing.JPanel();
+        rbCartaResguardoEntregaO = new javax.swing.JRadioButton();
+        rbCartaResguardoEntregaC = new javax.swing.JRadioButton();
+        rbCartaResguardoEntregaN = new javax.swing.JRadioButton();
+        pMapaDomicilioEntrega = new javax.swing.JPanel();
+        rbMapaDomicilioEntregaO = new javax.swing.JRadioButton();
+        rbMapaDomicilioEntregaC = new javax.swing.JRadioButton();
+        rbMapaDomicilioEntregaN = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -327,6 +433,14 @@ public class RegistrarElemento extends javax.swing.JDialog {
             }
         });
 
+        lblEstadoD.setText("Estado");
+
+        cbEstadoD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblMunicipioD.setText("Municipio");
+
+        cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout pDomicilioLayout = new javax.swing.GroupLayout(pDomicilio);
         pDomicilio.setLayout(pDomicilioLayout);
         pDomicilioLayout.setHorizontalGroup(
@@ -363,7 +477,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblY)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtY, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtY, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pDomicilioLayout.createSequentialGroup()
+                        .addComponent(lblEstadoD)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbEstadoD, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblMunicipioD)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbMunicipioD, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         pDomicilioLayout.setVerticalGroup(
@@ -388,7 +510,13 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(txtEntre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblY)
                     .addComponent(txtY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pDomicilioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoD)
+                    .addComponent(cbEstadoD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMunicipioD)
+                    .addComponent(cbMunicipioD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pDatosPersonalesLayout = new javax.swing.GroupLayout(pDatosPersonales);
@@ -461,21 +589,21 @@ public class RegistrarElemento extends javax.swing.JDialog {
                                 .addComponent(spAlergias, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(pNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                .addComponent(pNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                        .addComponent(lblEstadoCivil)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                        .addComponent(lblStatus)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(pDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(lblEstadoCivil)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(lblStatus)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                        .addComponent(pDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pDatosPersonalesLayout.setVerticalGroup(
             pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -524,29 +652,875 @@ public class RegistrarElemento extends javax.swing.JDialog {
                         .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblEstadoCivil)
                             .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblStatus)
                             .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Datos Personales", pDatosPersonales);
+
+        lblCurp.setText("CURP");
+
+        lblRFC.setText("RFC");
+
+        lblNumeroImss.setText("Número IMSS");
+
+        pCartillaMilitar.setBorder(javax.swing.BorderFactory.createTitledBorder("Cartilla Militar"));
+
+        rbCartillaLiberada.setText("Liberada");
+
+        rbPreCartilla.setText("Pre-Cartilla");
+
+        rbNoAplica.setText("No Aplica");
+
+        lblNumeroCartilla.setText("Número");
+
+        javax.swing.GroupLayout pCartillaMilitarLayout = new javax.swing.GroupLayout(pCartillaMilitar);
+        pCartillaMilitar.setLayout(pCartillaMilitarLayout);
+        pCartillaMilitarLayout.setHorizontalGroup(
+            pCartillaMilitarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartillaMilitarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pCartillaMilitarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pCartillaMilitarLayout.createSequentialGroup()
+                        .addGroup(pCartillaMilitarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pCartillaMilitarLayout.createSequentialGroup()
+                                .addComponent(rbPreCartilla)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                .addComponent(txtNumeroCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pCartillaMilitarLayout.createSequentialGroup()
+                                .addComponent(rbNoAplica)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(pCartillaMilitarLayout.createSequentialGroup()
+                        .addComponent(rbCartillaLiberada)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblNumeroCartilla)
+                        .addGap(66, 66, 66))))
+        );
+        pCartillaMilitarLayout.setVerticalGroup(
+            pCartillaMilitarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartillaMilitarLayout.createSequentialGroup()
+                .addGroup(pCartillaMilitarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbCartillaLiberada)
+                    .addComponent(lblNumeroCartilla))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pCartillaMilitarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbPreCartilla)
+                    .addComponent(txtNumeroCartilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbNoAplica))
+        );
+
+        lblIfeClave.setText("IFE Clave");
+
+        lblIfeFolio.setText("IFE Folio");
+
+        lblCuip.setText("CUIP");
+
+        lblPasaporte.setText("Pasaporte");
+
+        pDocEntregados.setBorder(javax.swing.BorderFactory.createTitledBorder("Documentos entregados"));
+
+        pHojaDatos.setBorder(javax.swing.BorderFactory.createTitledBorder("Hoja de Datos"));
+
+        rbHojaDatosEntregaO.setText("Original");
+
+        rbHojaDatosEntregaC.setText("Copia");
+
+        rbHojaDatosEntregaN.setText("No");
+
+        javax.swing.GroupLayout pHojaDatosLayout = new javax.swing.GroupLayout(pHojaDatos);
+        pHojaDatos.setLayout(pHojaDatosLayout);
+        pHojaDatosLayout.setHorizontalGroup(
+            pHojaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pHojaDatosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pHojaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbHojaDatosEntregaO)
+                    .addComponent(rbHojaDatosEntregaC)
+                    .addComponent(rbHojaDatosEntregaN))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        pHojaDatosLayout.setVerticalGroup(
+            pHojaDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pHojaDatosLayout.createSequentialGroup()
+                .addComponent(rbHojaDatosEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbHojaDatosEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbHojaDatosEntregaN))
+        );
+
+        pSolicitud.setBorder(javax.swing.BorderFactory.createTitledBorder("Solicitud"));
+
+        rbSolicitudEntregaO.setText("Original");
+
+        rbSolicitudEntregaC.setText("Copia");
+
+        rbSolicitudEntregaN.setText("No");
+
+        javax.swing.GroupLayout pSolicitudLayout = new javax.swing.GroupLayout(pSolicitud);
+        pSolicitud.setLayout(pSolicitudLayout);
+        pSolicitudLayout.setHorizontalGroup(
+            pSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pSolicitudLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbSolicitudEntregaO)
+                    .addComponent(rbSolicitudEntregaC)
+                    .addComponent(rbSolicitudEntregaN))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        pSolicitudLayout.setVerticalGroup(
+            pSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pSolicitudLayout.createSequentialGroup()
+                .addComponent(rbSolicitudEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSolicitudEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSolicitudEntregaN))
+        );
+
+        pIfe.setBorder(javax.swing.BorderFactory.createTitledBorder("IFE"));
+
+        rbIfeEntregaO.setText("Original");
+
+        rbIfeEntregaC.setText("Copia");
+
+        rbIfeEntregaN.setText("No");
+
+        javax.swing.GroupLayout pIfeLayout = new javax.swing.GroupLayout(pIfe);
+        pIfe.setLayout(pIfeLayout);
+        pIfeLayout.setHorizontalGroup(
+            pIfeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pIfeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pIfeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbIfeEntregaO)
+                    .addComponent(rbIfeEntregaC)
+                    .addComponent(rbIfeEntregaN))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        pIfeLayout.setVerticalGroup(
+            pIfeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pIfeLayout.createSequentialGroup()
+                .addComponent(rbIfeEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbIfeEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbIfeEntregaN))
+        );
+
+        pActaNacimiento.setBorder(javax.swing.BorderFactory.createTitledBorder("Acta de Nacimiento"));
+
+        rbActaNacimientoEntregaO.setText("Original");
+
+        rbActaNacimientoEntregaC.setText("Copia");
+
+        rbActaNacimientoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pActaNacimientoLayout = new javax.swing.GroupLayout(pActaNacimiento);
+        pActaNacimiento.setLayout(pActaNacimientoLayout);
+        pActaNacimientoLayout.setHorizontalGroup(
+            pActaNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pActaNacimientoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pActaNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbActaNacimientoEntregaO)
+                    .addComponent(rbActaNacimientoEntregaC)
+                    .addComponent(rbActaNacimientoEntregaN))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+        pActaNacimientoLayout.setVerticalGroup(
+            pActaNacimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pActaNacimientoLayout.createSequentialGroup()
+                .addComponent(rbActaNacimientoEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbActaNacimientoEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbActaNacimientoEntregaN))
+        );
+
+        pCurpYRfc.setBorder(javax.swing.BorderFactory.createTitledBorder("CURP y RFC"));
+
+        rbCurpYRfcEntregaO.setText("Original");
+
+        rbCurpYRfcEntregaC.setText("Copia");
+
+        rbCurpYRfcEntregaN.setText("No");
+
+        javax.swing.GroupLayout pCurpYRfcLayout = new javax.swing.GroupLayout(pCurpYRfc);
+        pCurpYRfc.setLayout(pCurpYRfcLayout);
+        pCurpYRfcLayout.setHorizontalGroup(
+            pCurpYRfcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCurpYRfcLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pCurpYRfcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbCurpYRfcEntregaO)
+                    .addComponent(rbCurpYRfcEntregaC)
+                    .addComponent(rbCurpYRfcEntregaN))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        pCurpYRfcLayout.setVerticalGroup(
+            pCurpYRfcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCurpYRfcLayout.createSequentialGroup()
+                .addComponent(rbCurpYRfcEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCurpYRfcEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCurpYRfcEntregaN))
+        );
+
+        pComprobanteDom.setBorder(javax.swing.BorderFactory.createTitledBorder("Comprobante de Domicilio"));
+
+        rbComprobanteDomEntregaO.setText("Original");
+
+        rbComprobanteDomEntregaC.setText("Copia");
+
+        rbComprobanteDomEntregaN.setText("No");
+
+        javax.swing.GroupLayout pComprobanteDomLayout = new javax.swing.GroupLayout(pComprobanteDom);
+        pComprobanteDom.setLayout(pComprobanteDomLayout);
+        pComprobanteDomLayout.setHorizontalGroup(
+            pComprobanteDomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pComprobanteDomLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pComprobanteDomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pComprobanteDomLayout.createSequentialGroup()
+                        .addComponent(rbComprobanteDomEntregaN)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pComprobanteDomLayout.createSequentialGroup()
+                        .addGroup(pComprobanteDomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbComprobanteDomEntregaO)
+                            .addComponent(rbComprobanteDomEntregaC))
+                        .addGap(18, 18, 18)
+                        .addComponent(dpComprobanteDomEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pComprobanteDomLayout.setVerticalGroup(
+            pComprobanteDomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pComprobanteDomLayout.createSequentialGroup()
+                .addGroup(pComprobanteDomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pComprobanteDomLayout.createSequentialGroup()
+                        .addComponent(rbComprobanteDomEntregaO)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rbComprobanteDomEntregaC))
+                    .addGroup(pComprobanteDomLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dpComprobanteDomEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbComprobanteDomEntregaN))
+        );
+
+        pCartaAntecedentes.setBorder(javax.swing.BorderFactory.createTitledBorder("Carta de No Antecedentes"));
+
+        rbCartaAntecedentesEntregaO.setText("Original");
+
+        rbCartaAntecedentesEntregaC.setText("Copia");
+
+        rbCartaAntecedentesEntregaN.setText("No");
+
+        javax.swing.GroupLayout pCartaAntecedentesLayout = new javax.swing.GroupLayout(pCartaAntecedentes);
+        pCartaAntecedentes.setLayout(pCartaAntecedentesLayout);
+        pCartaAntecedentesLayout.setHorizontalGroup(
+            pCartaAntecedentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartaAntecedentesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pCartaAntecedentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pCartaAntecedentesLayout.createSequentialGroup()
+                        .addComponent(rbCartaAntecedentesEntregaN)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pCartaAntecedentesLayout.createSequentialGroup()
+                        .addGroup(pCartaAntecedentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbCartaAntecedentesEntregaO)
+                            .addComponent(rbCartaAntecedentesEntregaC))
+                        .addGap(28, 28, 28)
+                        .addComponent(dpCartaAntecedentesEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pCartaAntecedentesLayout.setVerticalGroup(
+            pCartaAntecedentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartaAntecedentesLayout.createSequentialGroup()
+                .addGroup(pCartaAntecedentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pCartaAntecedentesLayout.createSequentialGroup()
+                        .addComponent(rbCartaAntecedentesEntregaO)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rbCartaAntecedentesEntregaC))
+                    .addGroup(pCartaAntecedentesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dpCartaAntecedentesEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartaAntecedentesEntregaN))
+        );
+
+        pComprobanteEstudios.setBorder(javax.swing.BorderFactory.createTitledBorder("Comprobante de estudios"));
+
+        rbComprobanteEstudiosEntregaO.setText("Original");
+
+        rbComprobanteEstudiosEntregaC.setText("Copia");
+
+        rbComprobanteEstudiosEntregaN.setText("No");
+
+        javax.swing.GroupLayout pComprobanteEstudiosLayout = new javax.swing.GroupLayout(pComprobanteEstudios);
+        pComprobanteEstudios.setLayout(pComprobanteEstudiosLayout);
+        pComprobanteEstudiosLayout.setHorizontalGroup(
+            pComprobanteEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pComprobanteEstudiosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pComprobanteEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbComprobanteEstudiosEntregaO)
+                    .addComponent(rbComprobanteEstudiosEntregaC)
+                    .addComponent(rbComprobanteEstudiosEntregaN))
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        pComprobanteEstudiosLayout.setVerticalGroup(
+            pComprobanteEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pComprobanteEstudiosLayout.createSequentialGroup()
+                .addComponent(rbComprobanteEstudiosEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbComprobanteEstudiosEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbComprobanteEstudiosEntregaN))
+        );
+
+        javax.swing.GroupLayout pDocEntregadosLayout = new javax.swing.GroupLayout(pDocEntregados);
+        pDocEntregados.setLayout(pDocEntregadosLayout);
+        pDocEntregadosLayout.setHorizontalGroup(
+            pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDocEntregadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pDocEntregadosLayout.createSequentialGroup()
+                        .addComponent(pHojaDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pComprobanteDom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pDocEntregadosLayout.createSequentialGroup()
+                        .addComponent(pIfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pActaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pCartaAntecedentes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pCurpYRfc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pComprobanteEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pDocEntregadosLayout.setVerticalGroup(
+            pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDocEntregadosLayout.createSequentialGroup()
+                .addGroup(pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pHojaDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pIfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pActaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pCurpYRfc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pDocEntregadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pComprobanteDom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pCartaAntecedentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pComprobanteEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 23, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout pDocumentosLayout = new javax.swing.GroupLayout(pDocumentos);
         pDocumentos.setLayout(pDocumentosLayout);
         pDocumentosLayout.setHorizontalGroup(
             pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGroup(pDocumentosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pDocEntregados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pDocumentosLayout.createSequentialGroup()
+                        .addComponent(pCartillaMilitar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pDocumentosLayout.createSequentialGroup()
+                                .addComponent(lblIfeClave)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtIfeClave, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pDocumentosLayout.createSequentialGroup()
+                                .addComponent(lblCuip)
+                                .addGap(27, 27, 27)
+                                .addComponent(txtCuip)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblIfeFolio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtIfeFolio))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pDocumentosLayout.createSequentialGroup()
+                        .addComponent(lblCurp)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCurp, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblRFC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtRFC, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblNumeroImss)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNumeroImss, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblPasaporte)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPasaporte, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(15, 15, 15))
         );
         pDocumentosLayout.setVerticalGroup(
             pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
+            .addGroup(pDocumentosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCurp)
+                    .addComponent(txtCurp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRFC)
+                    .addComponent(txtRFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNumeroImss)
+                    .addComponent(txtNumeroImss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPasaporte)
+                    .addComponent(txtPasaporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pCartillaMilitar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pDocumentosLayout.createSequentialGroup()
+                        .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblIfeClave)
+                            .addComponent(txtIfeClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblIfeFolio)
+                            .addComponent(txtIfeFolio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCuip)
+                            .addComponent(txtCuip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pDocEntregados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         tpRegistroElemento.addTab("Documentos", pDocumentos);
+
+        pDocEntregados2.setBorder(javax.swing.BorderFactory.createTitledBorder("Documentos entregados"));
+
+        pCartillaEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Cartilla Militar"));
+
+        rbCartillaEntregaO.setText("Original");
+
+        rbCartillaEntregaC.setText("Copia");
+
+        rbCartillaEntregaN.setText("No");
+
+        javax.swing.GroupLayout pCartillaEntregaLayout = new javax.swing.GroupLayout(pCartillaEntrega);
+        pCartillaEntrega.setLayout(pCartillaEntregaLayout);
+        pCartillaEntregaLayout.setHorizontalGroup(
+            pCartillaEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartillaEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pCartillaEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbCartillaEntregaO)
+                    .addComponent(rbCartillaEntregaC)
+                    .addComponent(rbCartillaEntregaN))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+        pCartillaEntregaLayout.setVerticalGroup(
+            pCartillaEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartillaEntregaLayout.createSequentialGroup()
+                .addComponent(rbCartillaEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartillaEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartillaEntregaN))
+        );
+
+        pContratoEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Contrato"));
+
+        rbContratoEntregaO.setText("Original");
+
+        rbContratoEntregaC.setText("Copia");
+
+        rbContratoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pContratoEntregaLayout = new javax.swing.GroupLayout(pContratoEntrega);
+        pContratoEntrega.setLayout(pContratoEntregaLayout);
+        pContratoEntregaLayout.setHorizontalGroup(
+            pContratoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pContratoEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pContratoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbContratoEntregaO)
+                    .addComponent(rbContratoEntregaC)
+                    .addComponent(rbContratoEntregaN))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        pContratoEntregaLayout.setVerticalGroup(
+            pContratoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pContratoEntregaLayout.createSequentialGroup()
+                .addComponent(rbContratoEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbContratoEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbContratoEntregaN))
+        );
+
+        pCartaRecomendacionEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Cartas de recomendación"));
+
+        rbCartaRecomendacionEntregaO.setText("Original");
+
+        rbCartaRecomendacionEntregaC.setText("Copia");
+
+        rbCartaRecomendacionEntregaN.setText("No");
+
+        javax.swing.GroupLayout pCartaRecomendacionEntregaLayout = new javax.swing.GroupLayout(pCartaRecomendacionEntrega);
+        pCartaRecomendacionEntrega.setLayout(pCartaRecomendacionEntregaLayout);
+        pCartaRecomendacionEntregaLayout.setHorizontalGroup(
+            pCartaRecomendacionEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartaRecomendacionEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pCartaRecomendacionEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbCartaRecomendacionEntregaO)
+                    .addComponent(rbCartaRecomendacionEntregaC)
+                    .addComponent(rbCartaRecomendacionEntregaN))
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+        pCartaRecomendacionEntregaLayout.setVerticalGroup(
+            pCartaRecomendacionEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartaRecomendacionEntregaLayout.createSequentialGroup()
+                .addComponent(rbCartaRecomendacionEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartaRecomendacionEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartaRecomendacionEntregaN))
+        );
+
+        pNumeroImssEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Imss"));
+
+        rbNumeroImssEntregaO.setText("Original");
+
+        rbNumeroImssEntregaC.setText("Copia");
+
+        rbNumeroImssEntregaN.setText("No");
+
+        javax.swing.GroupLayout pNumeroImssEntregaLayout = new javax.swing.GroupLayout(pNumeroImssEntrega);
+        pNumeroImssEntrega.setLayout(pNumeroImssEntregaLayout);
+        pNumeroImssEntregaLayout.setHorizontalGroup(
+            pNumeroImssEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pNumeroImssEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pNumeroImssEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbNumeroImssEntregaO)
+                    .addComponent(rbNumeroImssEntregaC)
+                    .addComponent(rbNumeroImssEntregaN))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        pNumeroImssEntregaLayout.setVerticalGroup(
+            pNumeroImssEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pNumeroImssEntregaLayout.createSequentialGroup()
+                .addComponent(rbNumeroImssEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbNumeroImssEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbNumeroImssEntregaN))
+        );
+
+        pSocioeconomicoEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Estudio socioeconómico"));
+
+        rbSocioeconomicoEntregaO.setText("Original");
+
+        rbSocioeconomicoEntregaC.setText("Copia");
+
+        rbSocioeconomicoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pSocioeconomicoEntregaLayout = new javax.swing.GroupLayout(pSocioeconomicoEntrega);
+        pSocioeconomicoEntrega.setLayout(pSocioeconomicoEntregaLayout);
+        pSocioeconomicoEntregaLayout.setHorizontalGroup(
+            pSocioeconomicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pSocioeconomicoEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pSocioeconomicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbSocioeconomicoEntregaN)
+                    .addGroup(pSocioeconomicoEntregaLayout.createSequentialGroup()
+                        .addGroup(pSocioeconomicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbSocioeconomicoEntregaO)
+                            .addComponent(rbSocioeconomicoEntregaC))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(dpSocioeconomicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pSocioeconomicoEntregaLayout.setVerticalGroup(
+            pSocioeconomicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pSocioeconomicoEntregaLayout.createSequentialGroup()
+                .addGroup(pSocioeconomicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pSocioeconomicoEntregaLayout.createSequentialGroup()
+                        .addComponent(rbSocioeconomicoEntregaO)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rbSocioeconomicoEntregaC))
+                    .addGroup(pSocioeconomicoEntregaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dpSocioeconomicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSocioeconomicoEntregaN))
+        );
+
+        pSocioeconomicoEntrega2.setBorder(javax.swing.BorderFactory.createTitledBorder("Foto estudio socioeconómico"));
+
+        rbSocioeconomicoEntrega2O.setText("Original");
+
+        rbSocioeconomicoEntrega2C.setText("Copia");
+
+        rbSocioeconomicoEntrega2N.setText("No");
+
+        javax.swing.GroupLayout pSocioeconomicoEntrega2Layout = new javax.swing.GroupLayout(pSocioeconomicoEntrega2);
+        pSocioeconomicoEntrega2.setLayout(pSocioeconomicoEntrega2Layout);
+        pSocioeconomicoEntrega2Layout.setHorizontalGroup(
+            pSocioeconomicoEntrega2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pSocioeconomicoEntrega2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pSocioeconomicoEntrega2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbSocioeconomicoEntrega2O)
+                    .addComponent(rbSocioeconomicoEntrega2C)
+                    .addComponent(rbSocioeconomicoEntrega2N))
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+        pSocioeconomicoEntrega2Layout.setVerticalGroup(
+            pSocioeconomicoEntrega2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pSocioeconomicoEntrega2Layout.createSequentialGroup()
+                .addComponent(rbSocioeconomicoEntrega2O)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSocioeconomicoEntrega2C)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSocioeconomicoEntrega2N))
+        );
+
+        pPsicologicoEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Psicológico"));
+
+        rbPsicologicoEntregaO.setText("Original");
+
+        rbPsicologicoEntregaC.setText("Copia");
+
+        rbPsicologicoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pPsicologicoEntregaLayout = new javax.swing.GroupLayout(pPsicologicoEntrega);
+        pPsicologicoEntrega.setLayout(pPsicologicoEntregaLayout);
+        pPsicologicoEntregaLayout.setHorizontalGroup(
+            pPsicologicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pPsicologicoEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pPsicologicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbPsicologicoEntregaO)
+                    .addComponent(rbPsicologicoEntregaC)
+                    .addComponent(rbPsicologicoEntregaN))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        pPsicologicoEntregaLayout.setVerticalGroup(
+            pPsicologicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pPsicologicoEntregaLayout.createSequentialGroup()
+                .addComponent(rbPsicologicoEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbPsicologicoEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbPsicologicoEntregaN))
+        );
+
+        pComprobanteMedicoEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Comprobante médico"));
+
+        rbComprobanteMedicoEntregaO.setText("Original");
+
+        rbComprobanteMedicoEntregaC.setText("Copia");
+
+        rbComprobanteMedicoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pComprobanteMedicoEntregaLayout = new javax.swing.GroupLayout(pComprobanteMedicoEntrega);
+        pComprobanteMedicoEntrega.setLayout(pComprobanteMedicoEntregaLayout);
+        pComprobanteMedicoEntregaLayout.setHorizontalGroup(
+            pComprobanteMedicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pComprobanteMedicoEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pComprobanteMedicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbComprobanteMedicoEntregaO)
+                    .addComponent(rbComprobanteMedicoEntregaC)
+                    .addComponent(rbComprobanteMedicoEntregaN))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+        pComprobanteMedicoEntregaLayout.setVerticalGroup(
+            pComprobanteMedicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pComprobanteMedicoEntregaLayout.createSequentialGroup()
+                .addComponent(rbComprobanteMedicoEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbComprobanteMedicoEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbComprobanteMedicoEntregaN))
+        );
+
+        pToxicologicoEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Examen toxicológico"));
+
+        rbToxicologicoEntregaO.setText("Original");
+
+        rbToxicologicoEntregaC.setText("Copia");
+
+        rbToxicologicoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pToxicologicoEntregaLayout = new javax.swing.GroupLayout(pToxicologicoEntrega);
+        pToxicologicoEntrega.setLayout(pToxicologicoEntregaLayout);
+        pToxicologicoEntregaLayout.setHorizontalGroup(
+            pToxicologicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pToxicologicoEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pToxicologicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbToxicologicoEntregaO)
+                    .addComponent(rbToxicologicoEntregaC)
+                    .addComponent(rbToxicologicoEntregaN))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+        pToxicologicoEntregaLayout.setVerticalGroup(
+            pToxicologicoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pToxicologicoEntregaLayout.createSequentialGroup()
+                .addComponent(rbToxicologicoEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbToxicologicoEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbToxicologicoEntregaN))
+        );
+
+        pCartaResguardoEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Carta de resguardo"));
+
+        rbCartaResguardoEntregaO.setText("Original");
+
+        rbCartaResguardoEntregaC.setText("Copia");
+
+        rbCartaResguardoEntregaN.setText("No");
+
+        javax.swing.GroupLayout pCartaResguardoEntregaLayout = new javax.swing.GroupLayout(pCartaResguardoEntrega);
+        pCartaResguardoEntrega.setLayout(pCartaResguardoEntregaLayout);
+        pCartaResguardoEntregaLayout.setHorizontalGroup(
+            pCartaResguardoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartaResguardoEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pCartaResguardoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbCartaResguardoEntregaO)
+                    .addComponent(rbCartaResguardoEntregaC)
+                    .addComponent(rbCartaResguardoEntregaN))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+        pCartaResguardoEntregaLayout.setVerticalGroup(
+            pCartaResguardoEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pCartaResguardoEntregaLayout.createSequentialGroup()
+                .addComponent(rbCartaResguardoEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartaResguardoEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbCartaResguardoEntregaN))
+        );
+
+        pMapaDomicilioEntrega.setBorder(javax.swing.BorderFactory.createTitledBorder("Mapa de domicilio"));
+
+        rbMapaDomicilioEntregaO.setText("Original");
+
+        rbMapaDomicilioEntregaC.setText("Copia");
+
+        rbMapaDomicilioEntregaN.setText("No");
+
+        javax.swing.GroupLayout pMapaDomicilioEntregaLayout = new javax.swing.GroupLayout(pMapaDomicilioEntrega);
+        pMapaDomicilioEntrega.setLayout(pMapaDomicilioEntregaLayout);
+        pMapaDomicilioEntregaLayout.setHorizontalGroup(
+            pMapaDomicilioEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pMapaDomicilioEntregaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pMapaDomicilioEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbMapaDomicilioEntregaO)
+                    .addComponent(rbMapaDomicilioEntregaC)
+                    .addComponent(rbMapaDomicilioEntregaN))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+        pMapaDomicilioEntregaLayout.setVerticalGroup(
+            pMapaDomicilioEntregaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pMapaDomicilioEntregaLayout.createSequentialGroup()
+                .addComponent(rbMapaDomicilioEntregaO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbMapaDomicilioEntregaC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbMapaDomicilioEntregaN))
+        );
+
+        javax.swing.GroupLayout pDocEntregados2Layout = new javax.swing.GroupLayout(pDocEntregados2);
+        pDocEntregados2.setLayout(pDocEntregados2Layout);
+        pDocEntregados2Layout.setHorizontalGroup(
+            pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                        .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(pSocioeconomicoEntrega, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                                .addComponent(pCartillaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(pNumeroImssEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                                .addComponent(pCartaRecomendacionEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(pContratoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                                .addComponent(pSocioeconomicoEntrega2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(pPsicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                        .addComponent(pToxicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pCartaResguardoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pDocEntregados2Layout.setVerticalGroup(
+            pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDocEntregados2Layout.createSequentialGroup()
+                .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pCartillaEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pContratoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pCartaRecomendacionEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pNumeroImssEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pSocioeconomicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pSocioeconomicoEntrega2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pPsicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pToxicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pCartaResguardoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 54, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pDocumentos2Layout = new javax.swing.GroupLayout(pDocumentos2);
+        pDocumentos2.setLayout(pDocumentos2Layout);
+        pDocumentos2Layout.setHorizontalGroup(
+            pDocumentos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDocumentos2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pDocEntregados2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pDocumentos2Layout.setVerticalGroup(
+            pDocumentos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDocumentos2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pDocEntregados2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tpRegistroElemento.addTab("Documentos 2", pDocumentos2);
 
         pRegistroElemento.add(tpRegistroElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 450));
 
@@ -722,10 +1696,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbCara;
     private javax.swing.JComboBox cbColorPiel;
     private javax.swing.JComboBox cbComplexion;
+    private javax.swing.JComboBox cbEstadoD;
     private javax.swing.JComboBox cbEstados;
     private javax.swing.JComboBox cbMunicipio;
+    private javax.swing.JComboBox cbMunicipioD;
     private javax.swing.JComboBox cbSangre;
+    private org.jdesktop.swingx.JXDatePicker dpCartaAntecedentesEntrega;
+    private org.jdesktop.swingx.JXDatePicker dpComprobanteDomEntrega;
     private org.jdesktop.swingx.JXDatePicker dpFecha;
+    private org.jdesktop.swingx.JXDatePicker dpSocioeconomicoEntrega;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblAlergias;
     private javax.swing.JLabel lblApellidoMaterno;
@@ -734,32 +1713,125 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblColonia;
     private javax.swing.JLabel lblColorPiel;
     private javax.swing.JLabel lblComplexion;
+    private javax.swing.JLabel lblCuip;
+    private javax.swing.JLabel lblCurp;
     private javax.swing.JLabel lblDireccion;
     private javax.swing.JLabel lblEdad;
     private javax.swing.JLabel lblEntre;
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblEstadoCivil;
+    private javax.swing.JLabel lblEstadoD;
     private javax.swing.JLabel lblEstatura;
     private javax.swing.JLabel lblExterior;
     private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblIfeClave;
+    private javax.swing.JLabel lblIfeFolio;
     private javax.swing.JLabel lblInterior;
     private javax.swing.JLabel lblKg;
     private javax.swing.JLabel lblMts;
     private javax.swing.JLabel lblMunicipio;
+    private javax.swing.JLabel lblMunicipioD;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNumeroCartilla;
+    private javax.swing.JLabel lblNumeroImss;
+    private javax.swing.JLabel lblPasaporte;
     private javax.swing.JLabel lblPeso;
     private javax.swing.JLabel lblPostal;
+    private javax.swing.JLabel lblRFC;
     private javax.swing.JLabel lblSangre;
     private javax.swing.JLabel lblStatus;
     private javax.swing.JLabel lblY;
+    private javax.swing.JPanel pActaNacimiento;
+    private javax.swing.JPanel pCartaAntecedentes;
+    private javax.swing.JPanel pCartaRecomendacionEntrega;
+    private javax.swing.JPanel pCartaResguardoEntrega;
+    private javax.swing.JPanel pCartillaEntrega;
+    private javax.swing.JPanel pCartillaMilitar;
+    private javax.swing.JPanel pComprobanteDom;
+    private javax.swing.JPanel pComprobanteEstudios;
+    private javax.swing.JPanel pComprobanteMedicoEntrega;
+    private javax.swing.JPanel pContratoEntrega;
+    private javax.swing.JPanel pCurpYRfc;
     private javax.swing.JPanel pDatosPersonales;
+    private javax.swing.JPanel pDocEntregados;
+    private javax.swing.JPanel pDocEntregados2;
     private javax.swing.JPanel pDocumentos;
+    private javax.swing.JPanel pDocumentos2;
     private javax.swing.JPanel pDomicilio;
+    private javax.swing.JPanel pHojaDatos;
+    private javax.swing.JPanel pIfe;
+    private javax.swing.JPanel pMapaDomicilioEntrega;
     private javax.swing.JPanel pNacimiento;
+    private javax.swing.JPanel pNumeroImssEntrega;
+    private javax.swing.JPanel pPsicologicoEntrega;
     private javax.swing.JPanel pRegistroElemento;
     private javax.swing.JPanel pSexo;
+    private javax.swing.JPanel pSocioeconomicoEntrega;
+    private javax.swing.JPanel pSocioeconomicoEntrega2;
+    private javax.swing.JPanel pSolicitud;
+    private javax.swing.JPanel pToxicologicoEntrega;
+    private javax.swing.JRadioButton rbActaNacimientoEntregaC;
+    private javax.swing.JRadioButton rbActaNacimientoEntregaN;
+    private javax.swing.JRadioButton rbActaNacimientoEntregaO;
+    private javax.swing.JRadioButton rbCartaAntecedentesEntregaC;
+    private javax.swing.JRadioButton rbCartaAntecedentesEntregaN;
+    private javax.swing.JRadioButton rbCartaAntecedentesEntregaO;
+    private javax.swing.JRadioButton rbCartaRecomendacionEntregaC;
+    private javax.swing.JRadioButton rbCartaRecomendacionEntregaN;
+    private javax.swing.JRadioButton rbCartaRecomendacionEntregaO;
+    private javax.swing.JRadioButton rbCartaResguardoEntregaC;
+    private javax.swing.JRadioButton rbCartaResguardoEntregaN;
+    private javax.swing.JRadioButton rbCartaResguardoEntregaO;
+    private javax.swing.JRadioButton rbCartillaEntregaC;
+    private javax.swing.JRadioButton rbCartillaEntregaN;
+    private javax.swing.JRadioButton rbCartillaEntregaO;
+    private javax.swing.JRadioButton rbCartillaLiberada;
+    private javax.swing.JRadioButton rbComprobanteDomEntregaC;
+    private javax.swing.JRadioButton rbComprobanteDomEntregaN;
+    private javax.swing.JRadioButton rbComprobanteDomEntregaO;
+    private javax.swing.JRadioButton rbComprobanteEstudiosEntregaC;
+    private javax.swing.JRadioButton rbComprobanteEstudiosEntregaN;
+    private javax.swing.JRadioButton rbComprobanteEstudiosEntregaO;
+    private javax.swing.JRadioButton rbComprobanteMedicoEntregaC;
+    private javax.swing.JRadioButton rbComprobanteMedicoEntregaN;
+    private javax.swing.JRadioButton rbComprobanteMedicoEntregaO;
+    private javax.swing.JRadioButton rbContratoEntregaC;
+    private javax.swing.JRadioButton rbContratoEntregaN;
+    private javax.swing.JRadioButton rbContratoEntregaO;
+    private javax.swing.JRadioButton rbCurpYRfcEntregaC;
+    private javax.swing.JRadioButton rbCurpYRfcEntregaN;
+    private javax.swing.JRadioButton rbCurpYRfcEntregaO;
     private javax.swing.JRadioButton rbFemenino;
+    private javax.swing.JRadioButton rbHojaDatosEntregaC;
+    private javax.swing.JRadioButton rbHojaDatosEntregaN;
+    private javax.swing.JRadioButton rbHojaDatosEntregaO;
+    private javax.swing.JRadioButton rbIfeEntregaC;
+    private javax.swing.JRadioButton rbIfeEntregaN;
+    private javax.swing.JRadioButton rbIfeEntregaO;
+    private javax.swing.JRadioButton rbMapaDomicilioEntregaC;
+    private javax.swing.JRadioButton rbMapaDomicilioEntregaN;
+    private javax.swing.JRadioButton rbMapaDomicilioEntregaO;
     private javax.swing.JRadioButton rbMasculino;
+    private javax.swing.JRadioButton rbNoAplica;
+    private javax.swing.JRadioButton rbNumeroImssEntregaC;
+    private javax.swing.JRadioButton rbNumeroImssEntregaN;
+    private javax.swing.JRadioButton rbNumeroImssEntregaO;
+    private javax.swing.JRadioButton rbPreCartilla;
+    private javax.swing.JRadioButton rbPsicologicoEntregaC;
+    private javax.swing.JRadioButton rbPsicologicoEntregaN;
+    private javax.swing.JRadioButton rbPsicologicoEntregaO;
+    private javax.swing.JRadioButton rbSocioeconomicoEntrega2C;
+    private javax.swing.JRadioButton rbSocioeconomicoEntrega2N;
+    private javax.swing.JRadioButton rbSocioeconomicoEntrega2O;
+    private javax.swing.JRadioButton rbSocioeconomicoEntregaC;
+    private javax.swing.JRadioButton rbSocioeconomicoEntregaN;
+    private javax.swing.JRadioButton rbSocioeconomicoEntregaO;
+    private javax.swing.JRadioButton rbSolicitudEntregaC;
+    private javax.swing.JRadioButton rbSolicitudEntregaN;
+    private javax.swing.JRadioButton rbSolicitudEntregaO;
+    private javax.swing.JRadioButton rbToxicologicoEntregaC;
+    private javax.swing.JRadioButton rbToxicologicoEntregaN;
+    private javax.swing.JRadioButton rbToxicologicoEntregaO;
     private javax.swing.JScrollPane spAlergias;
     private javax.swing.JScrollPane spRegistroElemento;
     private javax.swing.JTabbedPane tpRegistroElemento;
@@ -767,15 +1839,23 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtApellidoPaterno;
     private javax.swing.JTextField txtCodigoPostal;
     private javax.swing.JTextField txtColonia;
+    private javax.swing.JTextField txtCuip;
+    private javax.swing.JTextField txtCurp;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEntre;
     private javax.swing.JComboBox txtEstadoCivil;
     private javax.swing.JTextField txtEstatura;
     private javax.swing.JTextField txtExterior;
+    private javax.swing.JTextField txtIfeClave;
+    private javax.swing.JTextField txtIfeFolio;
     private javax.swing.JTextField txtInterior;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNumeroCartilla;
+    private javax.swing.JTextField txtNumeroImss;
+    private javax.swing.JTextField txtPasaporte;
     private javax.swing.JTextField txtPeso;
+    private javax.swing.JTextField txtRFC;
     private javax.swing.JTextField txtStatus;
     private javax.swing.JTextField txtY;
     // End of variables declaration//GEN-END:variables
