@@ -248,7 +248,7 @@ public class framePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEquipoActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        RegistrarElemento registrarElemento = new RegistrarElemento(new javax.swing.JFrame(), false);
+        RegistrarElemento registrarElemento = new RegistrarElemento(new javax.swing.JFrame(), false, conexionactual);
         registrarElemento.setVisible(true);
     }//GEN-LAST:event_btnRegistrarActionPerformed
 

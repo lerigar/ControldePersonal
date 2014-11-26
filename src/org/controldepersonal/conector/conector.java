@@ -1,21 +1,20 @@
 package org.controldepersonal.conector;
 
-import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 
 public class conector {
     /*
      * Atributos de la clase
      */
 
+    private static final int RESULTADOSMAX = 999;
     Connection conexion;
-    private static final int RESULTADOSMAX = 99;
     private boolean estaVivo;
     Exception ecepcion;
+    MySQL libreriaSQL;
     /*
      * Constructor
      */
@@ -38,6 +37,7 @@ public class conector {
             estaVivo = false;
         } else {
             System.out.println("Conectado a la BD correctamente! :D");
+            libreriaSQL = new MySQL(conexion);
             estaVivo = true;
         }
     }
@@ -87,6 +87,7 @@ public class conector {
      * ingresa directamente el qwerty como cadena y regresando cualquier valor a
      * cadena. NOTA: solo regresa el valor de 1 columna.
      */
+
     public String[] ejecutaQWERTY(String qwerty) {
         java.sql.Statement statement = null;
         try {
@@ -128,6 +129,22 @@ public class conector {
     public Exception dameExcepcion() {
         return ecepcion;
     }
-    
-   
+    /*
+     Funcion que devuelve un String[] de los estados de la republica.
+     */
+
+    public String[] dameEstadosRepublica() {
+        // Los parametros son: Tabla, columna (es la tercera)
+        return libreriaSQL.dameArregloString("Estados", "nombre");
+    }
+    /*
+     Busqueda anidada que obtiene el String[] de los municiops del estado dado por parametro.
+     */
+
+    public Object[] dameMunicipios(String estado) {
+        // Los parametros son: Tabla, columna y condicion
+        return libreriaSQL.dameArregloString("municipios m, estados e WHERE m.estado_id=e.id"
+                + " AND e.nombre='" + estado + "'", "m.nombre ");
+    }
+
 }
