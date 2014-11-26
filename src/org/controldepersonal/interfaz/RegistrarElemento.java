@@ -368,7 +368,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblMunicipio.setText("Municipio");
 
-        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione estado..." }));
 
         javax.swing.GroupLayout pNacimientoLayout = new javax.swing.GroupLayout(pNacimiento);
         pNacimiento.setLayout(pNacimientoLayout);
@@ -471,7 +471,14 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblEstadoD.setText("Estado");
 
+        cbEstadoD.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));/*
         cbEstadoD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        */
+        cbEstadoD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadoDActionPerformed(evt);
+            }
+        });
 
         lblMunicipioD.setText("Municipio");
 
@@ -1855,6 +1862,12 @@ public class RegistrarElemento extends javax.swing.JDialog {
         JComboBox cbREF = (JComboBox) evt.getSource();
         cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
     }//GEN-LAST:event_cbEstadosActionPerformed
+
+    private void cbEstadoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoDActionPerformed
+        // TODO add your handling code here:
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoDActionPerformed
 
     /**
      * @param args the command line arguments
