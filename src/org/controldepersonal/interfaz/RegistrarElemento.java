@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package org.controldepersonal.interfaz;
 
 import java.awt.event.KeyEvent;
@@ -65,6 +66,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         bgToxicologicoEntrega = new javax.swing.ButtonGroup();
         bgResguardoEntrega = new javax.swing.ButtonGroup();
         bgMapaDomicilioEntrega = new javax.swing.ButtonGroup();
+        bgSepRegistroEstudios = new javax.swing.ButtonGroup();
         spRegistroElemento = new javax.swing.JScrollPane();
         pRegistroElemento = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
@@ -128,6 +130,31 @@ public class RegistrarElemento extends javax.swing.JDialog {
         cbEstadoD = new javax.swing.JComboBox();
         lblMunicipioD = new javax.swing.JLabel();
         cbMunicipioD = new javax.swing.JComboBox();
+        pEstudios = new javax.swing.JPanel();
+        pEstudiosMaximos = new javax.swing.JPanel();
+        lblEstadoEstudios = new javax.swing.JLabel();
+        lblMunicipioEstudios = new javax.swing.JLabel();
+        cbMunicipioEstudios = new javax.swing.JComboBox();
+        lblEscolaridadEstudios = new javax.swing.JLabel();
+        cbEscolaridadEstudios = new javax.swing.JComboBox();
+        cbEstadoEstudios = new javax.swing.JComboBox();
+        lblEscuelaEstudios = new javax.swing.JLabel();
+        txtNombreEstudios = new javax.swing.JTextField();
+        lblEspecialidadEstudios = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        panelRegistroSep = new javax.swing.JPanel();
+        rbSepCertificadoS = new javax.swing.JRadioButton();
+        rbSepCertificadoN = new javax.swing.JRadioButton();
+        lblCedulaEstudios = new javax.swing.JLabel();
+        txtCedulaEstudios = new javax.swing.JTextField();
+        lblIngresoEstudios = new javax.swing.JLabel();
+        txtIngresoEstudios = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        lblComprobanteEstudiosFolio = new javax.swing.JLabel();
+        txtComprobanteFolioEstudios = new javax.swing.JTextField();
+        lblPromedioEstudios = new javax.swing.JLabel();
+        txtPromedioEstudios = new javax.swing.JTextField();
         pDocumentos = new javax.swing.JPanel();
         lblCurp = new javax.swing.JLabel();
         txtCurp = new javax.swing.JTextField();
@@ -368,7 +395,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblMunicipio.setText("Municipio");
 
-        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione estado..." }));
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un estado" }));
 
         javax.swing.GroupLayout pNacimientoLayout = new javax.swing.GroupLayout(pNacimiento);
         pNacimiento.setLayout(pNacimientoLayout);
@@ -472,7 +499,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
         lblEstadoD.setText("Estado");
 
         cbEstadoD.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));/*
-        cbEstadoD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         */
         cbEstadoD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -482,7 +508,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblMunicipioD.setText("Municipio");
 
-        cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un estado" }));
+        cbMunicipioD.setToolTipText("");
 
         javax.swing.GroupLayout pDomicilioLayout = new javax.swing.GroupLayout(pDomicilio);
         pDomicilio.setLayout(pDomicilioLayout);
@@ -704,6 +731,221 @@ public class RegistrarElemento extends javax.swing.JDialog {
         );
 
         tpRegistroElemento.addTab("Datos Personales", pDatosPersonales);
+
+        pEstudiosMaximos.setBorder(javax.swing.BorderFactory.createTitledBorder("Máximo grado de estudios"));
+
+        lblEstadoEstudios.setText("Estado");
+
+        lblMunicipioEstudios.setText("Municipio");
+
+        cbMunicipioEstudios.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona el Estado" }));
+
+        lblEscolaridadEstudios.setText("Escolaridad");
+
+        cbEscolaridadEstudios.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Primaria", "Primaria Trunca", "Secundaria", "Secundaria Técnica", "Secundaria Trunca", "Bachillerato General", "Bachillerato Técnico", "Bachillerato Trunco", "Carrera", "Carrera Técnica", "Carrera Trunca" }));
+
+        cbEstadoEstudios.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstadoEstudios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadoEstudiosActionPerformed(evt);
+            }
+        });
+
+        lblEscuelaEstudios.setText("Nombre");
+
+        txtNombreEstudios.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreEstudiosKeyTyped(evt);
+            }
+        });
+
+        lblEspecialidadEstudios.setText("Especialidad");
+
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
+
+        panelRegistroSep.setBorder(javax.swing.BorderFactory.createTitledBorder("Registrada ante SEP"));
+
+        bgSepRegistroEstudios.add(rbSepCertificadoS);
+        rbSepCertificadoS.setText("Si");
+
+        bgSepRegistroEstudios.add(rbSepCertificadoN);
+        rbSepCertificadoN.setText("No");
+
+        javax.swing.GroupLayout panelRegistroSepLayout = new javax.swing.GroupLayout(panelRegistroSep);
+        panelRegistroSep.setLayout(panelRegistroSepLayout);
+        panelRegistroSepLayout.setHorizontalGroup(
+            panelRegistroSepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistroSepLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRegistroSepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRegistroSepLayout.createSequentialGroup()
+                        .addComponent(rbSepCertificadoN)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panelRegistroSepLayout.createSequentialGroup()
+                        .addComponent(rbSepCertificadoS)
+                        .addGap(66, 117, Short.MAX_VALUE))))
+        );
+        panelRegistroSepLayout.setVerticalGroup(
+            panelRegistroSepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistroSepLayout.createSequentialGroup()
+                .addComponent(rbSepCertificadoS)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbSepCertificadoN))
+        );
+
+        lblCedulaEstudios.setText("Cédula Profesional");
+
+        txtCedulaEstudios.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCedulaEstudiosKeyTyped(evt);
+            }
+        });
+
+        lblIngresoEstudios.setText("Año de ingreso");
+
+        jLabel1.setText("Año de egreso o salida");
+
+        lblComprobanteEstudiosFolio.setText("Folio de Comprobante de estudios");
+
+        txtComprobanteFolioEstudios.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtComprobanteFolioEstudiosKeyTyped(evt);
+            }
+        });
+
+        lblPromedioEstudios.setText("Promedio");
+
+        txtPromedioEstudios.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPromedioEstudiosKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pEstudiosMaximosLayout = new javax.swing.GroupLayout(pEstudiosMaximos);
+        pEstudiosMaximos.setLayout(pEstudiosMaximosLayout);
+        pEstudiosMaximosLayout.setHorizontalGroup(
+            pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                        .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                                    .addComponent(lblEstadoEstudios)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbEstadoEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(lblMunicipioEstudios)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbMunicipioEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                                    .addComponent(lblEscolaridadEstudios)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbEscolaridadEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                                    .addComponent(lblEscuelaEstudios)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtNombreEstudios)))
+                            .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                                        .addComponent(lblEspecialidadEstudios)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pEstudiosMaximosLayout.createSequentialGroup()
+                                            .addComponent(lblComprobanteEstudiosFolio)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(txtComprobanteFolioEstudios))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pEstudiosMaximosLayout.createSequentialGroup()
+                                            .addComponent(lblIngresoEstudios)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(txtIngresoEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(panelRegistroSep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                                .addComponent(lblPromedioEstudios)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPromedioEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 142, Short.MAX_VALUE))
+                    .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                        .addComponent(lblCedulaEstudios)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtCedulaEstudios)))
+                .addContainerGap())
+        );
+        pEstudiosMaximosLayout.setVerticalGroup(
+            pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoEstudios)
+                    .addComponent(lblMunicipioEstudios)
+                    .addComponent(cbMunicipioEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbEstadoEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEscolaridadEstudios)
+                    .addComponent(cbEscolaridadEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEscuelaEstudios)
+                    .addComponent(txtNombreEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
+                        .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblEspecialidadEstudios)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblIngresoEstudios)
+                            .addComponent(txtIngresoEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblComprobanteEstudiosFolio)
+                            .addComponent(txtComprobanteFolioEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(panelRegistroSep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPromedioEstudios)
+                    .addComponent(txtPromedioEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCedulaEstudios)
+                    .addComponent(txtCedulaEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(68, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pEstudiosLayout = new javax.swing.GroupLayout(pEstudios);
+        pEstudios.setLayout(pEstudiosLayout);
+        pEstudiosLayout.setHorizontalGroup(
+            pEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pEstudiosLayout.createSequentialGroup()
+                .addContainerGap(64, Short.MAX_VALUE)
+                .addComponent(pEstudiosMaximos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58))
+        );
+        pEstudiosLayout.setVerticalGroup(
+            pEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pEstudiosLayout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(pEstudiosMaximos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(110, Short.MAX_VALUE))
+        );
+
+        tpRegistroElemento.addTab("Estudios", pEstudios);
 
         lblCurp.setText("CURP");
 
@@ -1869,6 +2111,58 @@ public class RegistrarElemento extends javax.swing.JDialog {
         cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
     }//GEN-LAST:event_cbEstadoDActionPerformed
 
+    private void cbEstadoEstudiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoEstudiosActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioEstudios.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoEstudiosActionPerformed
+
+    private void txtNombreEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car!='#' && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreEstudiosKeyTyped
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    private void txtCedulaEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCedulaEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '-' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtCedulaEstudiosKeyTyped
+
+    private void txtComprobanteFolioEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtComprobanteFolioEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtComprobanteFolioEstudiosKeyTyped
+
+    private void txtPromedioEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPromedioEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '.'){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtPromedioEstudiosKeyTyped
+    
     /**
      * @param args the command line arguments
      */
@@ -1929,6 +2223,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.ButtonGroup bgNumeroImssEntrega;
     private javax.swing.ButtonGroup bgPsicologicoEntrega;
     private javax.swing.ButtonGroup bgResguardoEntrega;
+    private javax.swing.ButtonGroup bgSepRegistroEstudios;
     private javax.swing.ButtonGroup bgSexo;
     private javax.swing.ButtonGroup bgSocioeconomicoEntrega;
     private javax.swing.ButtonGroup bgSolicitudEntrega;
@@ -1937,46 +2232,61 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbCara;
     private javax.swing.JComboBox cbColorPiel;
     private javax.swing.JComboBox cbComplexion;
+    private javax.swing.JComboBox cbEscolaridadEstudios;
     private javax.swing.JComboBox cbEstadoD;
+    private javax.swing.JComboBox cbEstadoEstudios;
     private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JComboBox cbMunicipioD;
+    private javax.swing.JComboBox cbMunicipioEstudios;
     private javax.swing.JComboBox cbSangre;
     private org.jdesktop.swingx.JXDatePicker dpCartaAntecedentesEntrega;
     private org.jdesktop.swingx.JXDatePicker dpComprobanteDomEntrega;
     private org.jdesktop.swingx.JXDatePicker dpFecha;
     private org.jdesktop.swingx.JXDatePicker dpSocioeconomicoEntrega;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblAlergias;
     private javax.swing.JLabel lblApellidoMaterno;
     private javax.swing.JLabel lblApellidoPaterno;
     private javax.swing.JLabel lblCara;
+    private javax.swing.JLabel lblCedulaEstudios;
     private javax.swing.JLabel lblColonia;
     private javax.swing.JLabel lblColorPiel;
     private javax.swing.JLabel lblComplexion;
+    private javax.swing.JLabel lblComprobanteEstudiosFolio;
     private javax.swing.JLabel lblCuip;
     private javax.swing.JLabel lblCurp;
     private javax.swing.JLabel lblDireccion;
     private javax.swing.JLabel lblEdad;
     private javax.swing.JLabel lblEntre;
+    private javax.swing.JLabel lblEscolaridadEstudios;
+    private javax.swing.JLabel lblEscuelaEstudios;
+    private javax.swing.JLabel lblEspecialidadEstudios;
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblEstadoCivil;
     private javax.swing.JLabel lblEstadoD;
+    private javax.swing.JLabel lblEstadoEstudios;
     private javax.swing.JLabel lblEstatura;
     private javax.swing.JLabel lblExterior;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblIfeClave;
     private javax.swing.JLabel lblIfeFolio;
+    private javax.swing.JLabel lblIngresoEstudios;
     private javax.swing.JLabel lblInterior;
     private javax.swing.JLabel lblKg;
     private javax.swing.JLabel lblMts;
     private javax.swing.JLabel lblMunicipio;
     private javax.swing.JLabel lblMunicipioD;
+    private javax.swing.JLabel lblMunicipioEstudios;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNumeroCartilla;
     private javax.swing.JLabel lblNumeroImss;
     private javax.swing.JLabel lblPasaporte;
     private javax.swing.JLabel lblPeso;
     private javax.swing.JLabel lblPostal;
+    private javax.swing.JLabel lblPromedioEstudios;
     private javax.swing.JLabel lblRFC;
     private javax.swing.JLabel lblSangre;
     private javax.swing.JLabel lblStatus;
@@ -1998,6 +2308,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pDocumentos;
     private javax.swing.JPanel pDocumentos2;
     private javax.swing.JPanel pDomicilio;
+    private javax.swing.JPanel pEstudios;
+    private javax.swing.JPanel pEstudiosMaximos;
     private javax.swing.JPanel pHojaDatos;
     private javax.swing.JPanel pIfe;
     private javax.swing.JPanel pMapaDomicilioEntrega;
@@ -2010,6 +2322,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pSocioeconomicoEntrega2;
     private javax.swing.JPanel pSolicitud;
     private javax.swing.JPanel pToxicologicoEntrega;
+    private javax.swing.JPanel panelRegistroSep;
     private javax.swing.JRadioButton rbActaNacimientoEntregaC;
     private javax.swing.JRadioButton rbActaNacimientoEntregaN;
     private javax.swing.JRadioButton rbActaNacimientoEntregaO;
@@ -2060,6 +2373,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JRadioButton rbPsicologicoEntregaC;
     private javax.swing.JRadioButton rbPsicologicoEntregaN;
     private javax.swing.JRadioButton rbPsicologicoEntregaO;
+    private javax.swing.JRadioButton rbSepCertificadoN;
+    private javax.swing.JRadioButton rbSepCertificadoS;
     private javax.swing.JRadioButton rbSocioeconomicoEntrega2C;
     private javax.swing.JRadioButton rbSocioeconomicoEntrega2N;
     private javax.swing.JRadioButton rbSocioeconomicoEntrega2O;
@@ -2077,8 +2392,10 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTabbedPane tpRegistroElemento;
     private javax.swing.JTextField txtApellidoMaterno;
     private javax.swing.JTextField txtApellidoPaterno;
+    private javax.swing.JTextField txtCedulaEstudios;
     private javax.swing.JTextField txtCodigoPostal;
     private javax.swing.JTextField txtColonia;
+    private javax.swing.JTextField txtComprobanteFolioEstudios;
     private javax.swing.JTextField txtCuip;
     private javax.swing.JTextField txtCurp;
     private javax.swing.JTextField txtDireccion;
@@ -2089,12 +2406,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtExterior;
     private javax.swing.JTextField txtIfeClave;
     private javax.swing.JTextField txtIfeFolio;
+    private javax.swing.JTextField txtIngresoEstudios;
     private javax.swing.JTextField txtInterior;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombreEstudios;
     private javax.swing.JTextField txtNumeroCartilla;
     private javax.swing.JTextField txtNumeroImss;
     private javax.swing.JTextField txtPasaporte;
     private javax.swing.JTextField txtPeso;
+    private javax.swing.JTextField txtPromedioEstudios;
     private javax.swing.JTextField txtRFC;
     private javax.swing.JTextField txtStatus;
     private javax.swing.JTextField txtY;
