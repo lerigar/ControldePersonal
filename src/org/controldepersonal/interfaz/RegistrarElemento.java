@@ -258,6 +258,104 @@ public class RegistrarElemento extends javax.swing.JDialog {
         rbMapaDomicilioEntregaO = new javax.swing.JRadioButton();
         rbMapaDomicilioEntregaC = new javax.swing.JRadioButton();
         rbMapaDomicilioEntregaN = new javax.swing.JRadioButton();
+        pReferenciasPersonales = new javax.swing.JPanel();
+        pReferenciaPersonal1 = new javax.swing.JPanel();
+        lblNombreReferencia1 = new javax.swing.JLabel();
+        txtNombreReferencia1 = new javax.swing.JTextField();
+        lblParentescoReferencia1 = new javax.swing.JLabel();
+        lblOcupacionReferencia1 = new javax.swing.JLabel();
+        txtOcupacionReferencia1 = new javax.swing.JTextField();
+        lblTelefonoReferencia1 = new javax.swing.JLabel();
+        txtTelefonoReferencia1 = new javax.swing.JTextField();
+        lblEstadoReferencia1 = new javax.swing.JLabel();
+        cbEstadoReferencia1 = new javax.swing.JComboBox();
+        lblMunicipioReferencia1 = new javax.swing.JLabel();
+        cbMunicipioReferencia1 = new javax.swing.JComboBox();
+        lblColoniaReferencia1 = new javax.swing.JLabel();
+        txtColoniaReferencia1 = new javax.swing.JTextField();
+        lblDireccionReferencia1 = new javax.swing.JLabel();
+        txtDireccionReferencia1 = new javax.swing.JTextField();
+        lblInteriorReferencia1 = new javax.swing.JLabel();
+        txtInteriorReferencia1 = new javax.swing.JTextField();
+        lblExteriorReferencia1 = new javax.swing.JLabel();
+        txtExteriorReferencia1 = new javax.swing.JTextField();
+        lblConocerloReferencia1 = new javax.swing.JLabel();
+        txtConocerloReferencia1 = new javax.swing.JTextField();
+        lblYearsReferencia1 = new javax.swing.JLabel();
+        txtParentescoReferencia1 = new javax.swing.JTextField();
+        pReferenciaPersonal2 = new javax.swing.JPanel();
+        lblNombreReferencia2 = new javax.swing.JLabel();
+        txtNombreReferencia2 = new javax.swing.JTextField();
+        lblParentescoReferencia2 = new javax.swing.JLabel();
+        lblOcupacionReferencia2 = new javax.swing.JLabel();
+        txtOcupacionReferencia2 = new javax.swing.JTextField();
+        lblTelefonoReferencia2 = new javax.swing.JLabel();
+        txtTelefonoReferencia2 = new javax.swing.JTextField();
+        lblEstadoReferencia2 = new javax.swing.JLabel();
+        cbEstadoReferencia2 = new javax.swing.JComboBox();
+        lblMunicipioReferencia2 = new javax.swing.JLabel();
+        cbMunicipioReferencia2 = new javax.swing.JComboBox();
+        lblColoniaReferencia2 = new javax.swing.JLabel();
+        txtColoniaReferencia2 = new javax.swing.JTextField();
+        lblDireccionReferencia2 = new javax.swing.JLabel();
+        txtDireccionReferencia2 = new javax.swing.JTextField();
+        lblInteriorReferencia2 = new javax.swing.JLabel();
+        txtInteriorReferencia2 = new javax.swing.JTextField();
+        lblExteriorReferencia2 = new javax.swing.JLabel();
+        txtExteriorReferencia2 = new javax.swing.JTextField();
+        lblConocerloReferencia2 = new javax.swing.JLabel();
+        txtConocerloReferencia2 = new javax.swing.JTextField();
+        lblYearsReferencia2 = new javax.swing.JLabel();
+        txtParentescoReferencia2 = new javax.swing.JTextField();
+        pReferenciasLaborales = new javax.swing.JPanel();
+        pReferenciaPersonal3 = new javax.swing.JPanel();
+        lblNombreReferencia3 = new javax.swing.JLabel();
+        txtNombreReferencia3 = new javax.swing.JTextField();
+        lblParentescoReferencia3 = new javax.swing.JLabel();
+        lblOcupacionReferencia3 = new javax.swing.JLabel();
+        txtOcupacionReferencia3 = new javax.swing.JTextField();
+        lblTelefonoReferencia3 = new javax.swing.JLabel();
+        txtTelefonoReferencia3 = new javax.swing.JTextField();
+        lblEstadoReferencia3 = new javax.swing.JLabel();
+        cbEstadoReferencia3 = new javax.swing.JComboBox();
+        lblMunicipioReferencia3 = new javax.swing.JLabel();
+        cbMunicipioReferencia3 = new javax.swing.JComboBox();
+        lblColoniaReferencia3 = new javax.swing.JLabel();
+        txtColoniaReferencia3 = new javax.swing.JTextField();
+        lblDireccionReferencia3 = new javax.swing.JLabel();
+        txtDireccionReferencia3 = new javax.swing.JTextField();
+        lblInteriorReferencia3 = new javax.swing.JLabel();
+        txtInteriorReferencia3 = new javax.swing.JTextField();
+        lblExteriorReferencia3 = new javax.swing.JLabel();
+        txtExteriorReferencia3 = new javax.swing.JTextField();
+        lblConocerloReferencia3 = new javax.swing.JLabel();
+        txtConocerloReferencia3 = new javax.swing.JTextField();
+        lblYearsReferencia3 = new javax.swing.JLabel();
+        txtParentescoReferencia3 = new javax.swing.JTextField();
+        pReferenciaPersonal4 = new javax.swing.JPanel();
+        lblNombreReferencia4 = new javax.swing.JLabel();
+        txtNombreReferencia4 = new javax.swing.JTextField();
+        lblParentescoReferencia4 = new javax.swing.JLabel();
+        lblOcupacionReferencia4 = new javax.swing.JLabel();
+        txtOcupacionReferencia4 = new javax.swing.JTextField();
+        lblTelefonoReferencia4 = new javax.swing.JLabel();
+        txtTelefonoReferencia4 = new javax.swing.JTextField();
+        lblEstadoReferencia4 = new javax.swing.JLabel();
+        cbEstadoReferencia4 = new javax.swing.JComboBox();
+        lblMunicipioReferencia4 = new javax.swing.JLabel();
+        cbMunicipioReferencia4 = new javax.swing.JComboBox();
+        lblColoniaReferencia4 = new javax.swing.JLabel();
+        txtColoniaReferencia4 = new javax.swing.JTextField();
+        lblDireccionReferencia4 = new javax.swing.JLabel();
+        txtDireccionReferencia4 = new javax.swing.JTextField();
+        lblInteriorReferencia4 = new javax.swing.JLabel();
+        txtInteriorReferencia4 = new javax.swing.JTextField();
+        lblExteriorReferencia4 = new javax.swing.JLabel();
+        txtExteriorReferencia4 = new javax.swing.JTextField();
+        lblConocerloReferencia4 = new javax.swing.JLabel();
+        txtConocerloReferencia4 = new javax.swing.JTextField();
+        lblYearsReferencia4 = new javax.swing.JLabel();
+        txtParentescoReferencia4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -940,9 +1038,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
         pEstudiosLayout.setVerticalGroup(
             pEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pEstudiosLayout.createSequentialGroup()
-                .addGap(86, 86, 86)
+                .addGap(69, 69, 69)
                 .addComponent(pEstudiosMaximos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Estudios", pEstudios);
@@ -1861,16 +1959,16 @@ public class RegistrarElemento extends javax.swing.JDialog {
                             .addGroup(pDocEntregados2Layout.createSequentialGroup()
                                 .addComponent(pSocioeconomicoEntrega2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(pPsicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(pPsicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pDocEntregados2Layout.createSequentialGroup()
                         .addComponent(pToxicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(pCartaResguardoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         pDocEntregados2Layout.setVerticalGroup(
             pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1884,13 +1982,13 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pSocioeconomicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pSocioeconomicoEntrega2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pPsicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pPsicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pDocEntregados2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pToxicologicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pCartaResguardoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 174, Short.MAX_VALUE))
         );
 
@@ -1912,6 +2010,764 @@ public class RegistrarElemento extends javax.swing.JDialog {
         );
 
         tpRegistroElemento.addTab("Documentos 2", pDocumentos2);
+
+        pReferenciaPersonal1.setBorder(javax.swing.BorderFactory.createTitledBorder("Referencia 1"));
+
+        lblNombreReferencia1.setText("Nombre");
+
+        txtNombreReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblParentescoReferencia1.setText("Parentesco");
+
+        lblOcupacionReferencia1.setText("Ocupación");
+
+        txtOcupacionReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtOcupacionReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblTelefonoReferencia1.setText("Teléfono");
+
+        txtTelefonoReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblEstadoReferencia1.setText("Estado");
+
+        cbEstadoReferencia1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstadoReferencia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadoReferencia1ActionPerformed(evt);
+            }
+        });
+
+        lblMunicipioReferencia1.setText("Municipio");
+
+        cbMunicipioReferencia1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Estado" }));
+
+        lblColoniaReferencia1.setText("Colonia");
+
+        txtColoniaReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColoniaReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblDireccionReferencia1.setText("Dirección");
+
+        txtDireccionReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDireccionReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblInteriorReferencia1.setText("Interior");
+
+        txtInteriorReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInteriorReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblExteriorReferencia1.setText("Exterior");
+
+        txtExteriorReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtExteriorReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblConocerloReferencia1.setText("Tiempo de conocerlo");
+
+        txtConocerloReferencia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtConocerloReferencia1KeyTyped(evt);
+            }
+        });
+
+        lblYearsReferencia1.setText("años");
+
+        javax.swing.GroupLayout pReferenciaPersonal1Layout = new javax.swing.GroupLayout(pReferenciaPersonal1);
+        pReferenciaPersonal1.setLayout(pReferenciaPersonal1Layout);
+        pReferenciaPersonal1Layout.setHorizontalGroup(
+            pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                        .addGroup(pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                                .addComponent(lblDireccionReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDireccionReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblInteriorReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtInteriorReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblExteriorReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExteriorReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblColoniaReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtColoniaReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                                .addComponent(lblEstadoReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbEstadoReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblMunicipioReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbMunicipioReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                                .addComponent(lblOcupacionReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtOcupacionReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblTelefonoReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTelefonoReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblConocerloReferencia1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtConocerloReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblYearsReferencia1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                        .addComponent(lblNombreReferencia1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNombreReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblParentescoReferencia1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtParentescoReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(188, 188, 188))))
+        );
+        pReferenciaPersonal1Layout.setVerticalGroup(
+            pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombreReferencia1)
+                    .addComponent(txtNombreReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblParentescoReferencia1)
+                    .addComponent(txtParentescoReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOcupacionReferencia1)
+                    .addComponent(txtOcupacionReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTelefonoReferencia1)
+                    .addComponent(txtTelefonoReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblConocerloReferencia1)
+                    .addComponent(txtConocerloReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblYearsReferencia1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDireccionReferencia1)
+                    .addComponent(txtDireccionReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInteriorReferencia1)
+                    .addComponent(txtInteriorReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExteriorReferencia1)
+                    .addComponent(txtExteriorReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblColoniaReferencia1)
+                    .addComponent(txtColoniaReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoReferencia1)
+                    .addComponent(cbEstadoReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMunicipioReferencia1)
+                    .addComponent(cbMunicipioReferencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        pReferenciaPersonal2.setBorder(javax.swing.BorderFactory.createTitledBorder("Referencia 2"));
+
+        lblNombreReferencia2.setText("Nombre");
+
+        txtNombreReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblParentescoReferencia2.setText("Parentesco");
+
+        lblOcupacionReferencia2.setText("Ocupación");
+
+        txtOcupacionReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtOcupacionReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblTelefonoReferencia2.setText("Teléfono");
+
+        txtTelefonoReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblEstadoReferencia2.setText("Estado");
+
+        cbEstadoReferencia2.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstadoReferencia2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadoReferencia2ActionPerformed(evt);
+            }
+        });
+
+        lblMunicipioReferencia2.setText("Municipio");
+
+        cbMunicipioReferencia2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Estado" }));
+
+        lblColoniaReferencia2.setText("Colonia");
+
+        txtColoniaReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColoniaReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblDireccionReferencia2.setText("Dirección");
+
+        txtDireccionReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDireccionReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblInteriorReferencia2.setText("Interior");
+
+        txtInteriorReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInteriorReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblExteriorReferencia2.setText("Exterior");
+
+        txtExteriorReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtExteriorReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblConocerloReferencia2.setText("Tiempo de conocerlo");
+
+        txtConocerloReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtConocerloReferencia2KeyTyped(evt);
+            }
+        });
+
+        lblYearsReferencia2.setText("años");
+
+        javax.swing.GroupLayout pReferenciaPersonal2Layout = new javax.swing.GroupLayout(pReferenciaPersonal2);
+        pReferenciaPersonal2.setLayout(pReferenciaPersonal2Layout);
+        pReferenciaPersonal2Layout.setHorizontalGroup(
+            pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                        .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                                .addComponent(lblDireccionReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDireccionReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblInteriorReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtInteriorReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblExteriorReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExteriorReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblColoniaReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtColoniaReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                                .addComponent(lblEstadoReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbEstadoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblMunicipioReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbMunicipioReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                                .addComponent(lblOcupacionReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtOcupacionReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblTelefonoReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTelefonoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblConocerloReferencia2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtConocerloReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblYearsReferencia2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                        .addComponent(lblNombreReferencia2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNombreReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblParentescoReferencia2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtParentescoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(188, 188, 188))))
+        );
+        pReferenciaPersonal2Layout.setVerticalGroup(
+            pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombreReferencia2)
+                    .addComponent(txtNombreReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblParentescoReferencia2)
+                    .addComponent(txtParentescoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOcupacionReferencia2)
+                    .addComponent(txtOcupacionReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTelefonoReferencia2)
+                    .addComponent(txtTelefonoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblConocerloReferencia2)
+                    .addComponent(txtConocerloReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblYearsReferencia2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDireccionReferencia2)
+                    .addComponent(txtDireccionReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInteriorReferencia2)
+                    .addComponent(txtInteriorReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExteriorReferencia2)
+                    .addComponent(txtExteriorReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblColoniaReferencia2)
+                    .addComponent(txtColoniaReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoReferencia2)
+                    .addComponent(cbEstadoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMunicipioReferencia2)
+                    .addComponent(cbMunicipioReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pReferenciasPersonalesLayout = new javax.swing.GroupLayout(pReferenciasPersonales);
+        pReferenciasPersonales.setLayout(pReferenciasPersonalesLayout);
+        pReferenciasPersonalesLayout.setHorizontalGroup(
+            pReferenciasPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciasPersonalesLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(pReferenciasPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pReferenciaPersonal2, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pReferenciaPersonal1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        pReferenciasPersonalesLayout.setVerticalGroup(
+            pReferenciasPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciasPersonalesLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(pReferenciaPersonal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(pReferenciaPersonal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
+        );
+
+        tpRegistroElemento.addTab("Referencias Personales", pReferenciasPersonales);
+
+        pReferenciaPersonal3.setBorder(javax.swing.BorderFactory.createTitledBorder("Referencia 3"));
+
+        lblNombreReferencia3.setText("Nombre");
+
+        txtNombreReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblParentescoReferencia3.setText("Parentesco");
+
+        lblOcupacionReferencia3.setText("Ocupación");
+
+        txtOcupacionReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtOcupacionReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblTelefonoReferencia3.setText("Teléfono");
+
+        txtTelefonoReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblEstadoReferencia3.setText("Estado");
+
+        cbEstadoReferencia3.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstadoReferencia3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadoReferencia3ActionPerformed(evt);
+            }
+        });
+
+        lblMunicipioReferencia3.setText("Municipio");
+
+        cbMunicipioReferencia3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Estado" }));
+
+        lblColoniaReferencia3.setText("Colonia");
+
+        txtColoniaReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColoniaReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblDireccionReferencia3.setText("Dirección");
+
+        txtDireccionReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDireccionReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblInteriorReferencia3.setText("Interior");
+
+        txtInteriorReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInteriorReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblExteriorReferencia3.setText("Exterior");
+
+        txtExteriorReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtExteriorReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblConocerloReferencia3.setText("Tiempo de conocerlo");
+
+        txtConocerloReferencia3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtConocerloReferencia3KeyTyped(evt);
+            }
+        });
+
+        lblYearsReferencia3.setText("años");
+
+        javax.swing.GroupLayout pReferenciaPersonal3Layout = new javax.swing.GroupLayout(pReferenciaPersonal3);
+        pReferenciaPersonal3.setLayout(pReferenciaPersonal3Layout);
+        pReferenciaPersonal3Layout.setHorizontalGroup(
+            pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                        .addGroup(pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                                .addComponent(lblDireccionReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDireccionReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblInteriorReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtInteriorReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblExteriorReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExteriorReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblColoniaReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtColoniaReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                                .addComponent(lblEstadoReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbEstadoReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblMunicipioReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbMunicipioReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                                .addComponent(lblOcupacionReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtOcupacionReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblTelefonoReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTelefonoReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblConocerloReferencia3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtConocerloReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblYearsReferencia3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                        .addComponent(lblNombreReferencia3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNombreReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblParentescoReferencia3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtParentescoReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(188, 188, 188))))
+        );
+        pReferenciaPersonal3Layout.setVerticalGroup(
+            pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombreReferencia3)
+                    .addComponent(txtNombreReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblParentescoReferencia3)
+                    .addComponent(txtParentescoReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOcupacionReferencia3)
+                    .addComponent(txtOcupacionReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTelefonoReferencia3)
+                    .addComponent(txtTelefonoReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblConocerloReferencia3)
+                    .addComponent(txtConocerloReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblYearsReferencia3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDireccionReferencia3)
+                    .addComponent(txtDireccionReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInteriorReferencia3)
+                    .addComponent(txtInteriorReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExteriorReferencia3)
+                    .addComponent(txtExteriorReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblColoniaReferencia3)
+                    .addComponent(txtColoniaReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoReferencia3)
+                    .addComponent(cbEstadoReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMunicipioReferencia3)
+                    .addComponent(cbMunicipioReferencia3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        pReferenciaPersonal4.setBorder(javax.swing.BorderFactory.createTitledBorder("Referencia 4"));
+
+        lblNombreReferencia4.setText("Nombre");
+
+        txtNombreReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblParentescoReferencia4.setText("Parentesco");
+
+        lblOcupacionReferencia4.setText("Ocupación");
+
+        txtOcupacionReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtOcupacionReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblTelefonoReferencia4.setText("Teléfono");
+
+        txtTelefonoReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblEstadoReferencia4.setText("Estado");
+
+        cbEstadoReferencia4.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstadoReferencia4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadoReferencia4ActionPerformed(evt);
+            }
+        });
+
+        lblMunicipioReferencia4.setText("Municipio");
+
+        cbMunicipioReferencia4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Estado" }));
+
+        lblColoniaReferencia4.setText("Colonia");
+
+        txtColoniaReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColoniaReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblDireccionReferencia4.setText("Dirección");
+
+        txtDireccionReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDireccionReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblInteriorReferencia4.setText("Interior");
+
+        txtInteriorReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInteriorReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblExteriorReferencia4.setText("Exterior");
+
+        txtExteriorReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtExteriorReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblConocerloReferencia4.setText("Tiempo de conocerlo");
+
+        txtConocerloReferencia4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtConocerloReferencia4KeyTyped(evt);
+            }
+        });
+
+        lblYearsReferencia4.setText("años");
+
+        javax.swing.GroupLayout pReferenciaPersonal4Layout = new javax.swing.GroupLayout(pReferenciaPersonal4);
+        pReferenciaPersonal4.setLayout(pReferenciaPersonal4Layout);
+        pReferenciaPersonal4Layout.setHorizontalGroup(
+            pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                        .addGroup(pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                                .addComponent(lblDireccionReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDireccionReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblInteriorReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtInteriorReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblExteriorReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExteriorReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblColoniaReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtColoniaReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                                .addComponent(lblEstadoReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbEstadoReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblMunicipioReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbMunicipioReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                                .addComponent(lblOcupacionReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtOcupacionReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblTelefonoReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTelefonoReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblConocerloReferencia4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtConocerloReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblYearsReferencia4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                        .addComponent(lblNombreReferencia4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNombreReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblParentescoReferencia4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtParentescoReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(188, 188, 188))))
+        );
+        pReferenciaPersonal4Layout.setVerticalGroup(
+            pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciaPersonal4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombreReferencia4)
+                    .addComponent(txtNombreReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblParentescoReferencia4)
+                    .addComponent(txtParentescoReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOcupacionReferencia4)
+                    .addComponent(txtOcupacionReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTelefonoReferencia4)
+                    .addComponent(txtTelefonoReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblConocerloReferencia4)
+                    .addComponent(txtConocerloReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblYearsReferencia4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDireccionReferencia4)
+                    .addComponent(txtDireccionReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInteriorReferencia4)
+                    .addComponent(txtInteriorReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExteriorReferencia4)
+                    .addComponent(txtExteriorReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblColoniaReferencia4)
+                    .addComponent(txtColoniaReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pReferenciaPersonal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoReferencia4)
+                    .addComponent(cbEstadoReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMunicipioReferencia4)
+                    .addComponent(cbMunicipioReferencia4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pReferenciasLaboralesLayout = new javax.swing.GroupLayout(pReferenciasLaborales);
+        pReferenciasLaborales.setLayout(pReferenciasLaboralesLayout);
+        pReferenciasLaboralesLayout.setHorizontalGroup(
+            pReferenciasLaboralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciasLaboralesLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(pReferenciasLaboralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pReferenciaPersonal4, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pReferenciaPersonal3, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        pReferenciasLaboralesLayout.setVerticalGroup(
+            pReferenciasLaboralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pReferenciasLaboralesLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(pReferenciaPersonal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(pReferenciaPersonal4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(104, Short.MAX_VALUE))
+        );
+
+        tpRegistroElemento.addTab("Referencias Laborales", pReferenciasLaborales);
 
         pRegistroElemento.add(tpRegistroElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 810, 570));
 
@@ -2162,6 +3018,334 @@ public class RegistrarElemento extends javax.swing.JDialog {
             evt.consume();
         }
     }//GEN-LAST:event_txtPromedioEstudiosKeyTyped
+
+    private void txtNombreReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia1KeyTyped
+
+    private void txtOcupacionReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia1KeyTyped
+
+    private void txtTelefonoReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia1KeyTyped
+
+    private void txtConocerloReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConocerloReferencia1KeyTyped
+
+    private void txtDireccionReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtDireccionReferencia1KeyTyped
+
+    private void txtInteriorReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtInteriorReferencia1KeyTyped
+
+    private void txtExteriorReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtExteriorReferencia1KeyTyped
+
+    private void txtColoniaReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtColoniaReferencia1KeyTyped
+
+    private void cbEstadoReferencia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia1ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioReferencia1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia1ActionPerformed
+/*******************************************************************************/
+    private void txtNombreReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia2KeyTyped
+
+    private void txtOcupacionReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia2KeyTyped
+
+    private void txtTelefonoReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia2KeyTyped
+
+    private void cbEstadoReferencia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia2ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioReferencia2.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia2ActionPerformed
+
+    private void txtColoniaReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtColoniaReferencia2KeyTyped
+
+    private void txtDireccionReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtDireccionReferencia2KeyTyped
+
+    private void txtInteriorReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtInteriorReferencia2KeyTyped
+
+    private void txtExteriorReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtExteriorReferencia2KeyTyped
+
+    private void txtConocerloReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConocerloReferencia2KeyTyped
+
+    private void txtNombreReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia3KeyTyped
+
+    private void txtOcupacionReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia3KeyTyped
+
+    private void txtTelefonoReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia3KeyTyped
+
+    private void cbEstadoReferencia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia3ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioReferencia3.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia3ActionPerformed
+
+    private void txtColoniaReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtColoniaReferencia3KeyTyped
+
+    private void txtDireccionReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtDireccionReferencia3KeyTyped
+
+    private void txtInteriorReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtInteriorReferencia3KeyTyped
+
+    private void txtExteriorReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtExteriorReferencia3KeyTyped
+
+    private void txtConocerloReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConocerloReferencia3KeyTyped
+
+    private void txtNombreReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia4KeyTyped
+
+    private void txtOcupacionReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia4KeyTyped
+
+    private void txtTelefonoReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia4KeyTyped
+
+    private void cbEstadoReferencia4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia4ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioReferencia4.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia4ActionPerformed
+
+    private void txtColoniaReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtColoniaReferencia4KeyTyped
+
+    private void txtDireccionReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtDireccionReferencia4KeyTyped
+
+    private void txtInteriorReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtInteriorReferencia4KeyTyped
+
+    private void txtExteriorReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtExteriorReferencia4KeyTyped
+
+    private void txtConocerloReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConocerloReferencia4KeyTyped
     
     /**
      * @param args the command line arguments
@@ -2235,9 +3419,17 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbEscolaridadEstudios;
     private javax.swing.JComboBox cbEstadoD;
     private javax.swing.JComboBox cbEstadoEstudios;
+    private javax.swing.JComboBox cbEstadoReferencia1;
+    private javax.swing.JComboBox cbEstadoReferencia2;
+    private javax.swing.JComboBox cbEstadoReferencia3;
+    private javax.swing.JComboBox cbEstadoReferencia4;
     private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JComboBox cbMunicipioD;
     private javax.swing.JComboBox cbMunicipioEstudios;
+    private javax.swing.JComboBox cbMunicipioReferencia1;
+    private javax.swing.JComboBox cbMunicipioReferencia2;
+    private javax.swing.JComboBox cbMunicipioReferencia3;
+    private javax.swing.JComboBox cbMunicipioReferencia4;
     private javax.swing.JComboBox cbSangre;
     private org.jdesktop.swingx.JXDatePicker dpCartaAntecedentesEntrega;
     private org.jdesktop.swingx.JXDatePicker dpComprobanteDomEntrega;
@@ -2253,12 +3445,24 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblCara;
     private javax.swing.JLabel lblCedulaEstudios;
     private javax.swing.JLabel lblColonia;
+    private javax.swing.JLabel lblColoniaReferencia1;
+    private javax.swing.JLabel lblColoniaReferencia2;
+    private javax.swing.JLabel lblColoniaReferencia3;
+    private javax.swing.JLabel lblColoniaReferencia4;
     private javax.swing.JLabel lblColorPiel;
     private javax.swing.JLabel lblComplexion;
     private javax.swing.JLabel lblComprobanteEstudiosFolio;
+    private javax.swing.JLabel lblConocerloReferencia1;
+    private javax.swing.JLabel lblConocerloReferencia2;
+    private javax.swing.JLabel lblConocerloReferencia3;
+    private javax.swing.JLabel lblConocerloReferencia4;
     private javax.swing.JLabel lblCuip;
     private javax.swing.JLabel lblCurp;
     private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblDireccionReferencia1;
+    private javax.swing.JLabel lblDireccionReferencia2;
+    private javax.swing.JLabel lblDireccionReferencia3;
+    private javax.swing.JLabel lblDireccionReferencia4;
     private javax.swing.JLabel lblEdad;
     private javax.swing.JLabel lblEntre;
     private javax.swing.JLabel lblEscolaridadEstudios;
@@ -2268,21 +3472,49 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblEstadoCivil;
     private javax.swing.JLabel lblEstadoD;
     private javax.swing.JLabel lblEstadoEstudios;
+    private javax.swing.JLabel lblEstadoReferencia1;
+    private javax.swing.JLabel lblEstadoReferencia2;
+    private javax.swing.JLabel lblEstadoReferencia3;
+    private javax.swing.JLabel lblEstadoReferencia4;
     private javax.swing.JLabel lblEstatura;
     private javax.swing.JLabel lblExterior;
+    private javax.swing.JLabel lblExteriorReferencia1;
+    private javax.swing.JLabel lblExteriorReferencia2;
+    private javax.swing.JLabel lblExteriorReferencia3;
+    private javax.swing.JLabel lblExteriorReferencia4;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblIfeClave;
     private javax.swing.JLabel lblIfeFolio;
     private javax.swing.JLabel lblIngresoEstudios;
     private javax.swing.JLabel lblInterior;
+    private javax.swing.JLabel lblInteriorReferencia1;
+    private javax.swing.JLabel lblInteriorReferencia2;
+    private javax.swing.JLabel lblInteriorReferencia3;
+    private javax.swing.JLabel lblInteriorReferencia4;
     private javax.swing.JLabel lblKg;
     private javax.swing.JLabel lblMts;
     private javax.swing.JLabel lblMunicipio;
     private javax.swing.JLabel lblMunicipioD;
     private javax.swing.JLabel lblMunicipioEstudios;
+    private javax.swing.JLabel lblMunicipioReferencia1;
+    private javax.swing.JLabel lblMunicipioReferencia2;
+    private javax.swing.JLabel lblMunicipioReferencia3;
+    private javax.swing.JLabel lblMunicipioReferencia4;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombreReferencia1;
+    private javax.swing.JLabel lblNombreReferencia2;
+    private javax.swing.JLabel lblNombreReferencia3;
+    private javax.swing.JLabel lblNombreReferencia4;
     private javax.swing.JLabel lblNumeroCartilla;
     private javax.swing.JLabel lblNumeroImss;
+    private javax.swing.JLabel lblOcupacionReferencia1;
+    private javax.swing.JLabel lblOcupacionReferencia2;
+    private javax.swing.JLabel lblOcupacionReferencia3;
+    private javax.swing.JLabel lblOcupacionReferencia4;
+    private javax.swing.JLabel lblParentescoReferencia1;
+    private javax.swing.JLabel lblParentescoReferencia2;
+    private javax.swing.JLabel lblParentescoReferencia3;
+    private javax.swing.JLabel lblParentescoReferencia4;
     private javax.swing.JLabel lblPasaporte;
     private javax.swing.JLabel lblPeso;
     private javax.swing.JLabel lblPostal;
@@ -2290,7 +3522,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblRFC;
     private javax.swing.JLabel lblSangre;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblTelefonoReferencia1;
+    private javax.swing.JLabel lblTelefonoReferencia2;
+    private javax.swing.JLabel lblTelefonoReferencia3;
+    private javax.swing.JLabel lblTelefonoReferencia4;
     private javax.swing.JLabel lblY;
+    private javax.swing.JLabel lblYearsReferencia1;
+    private javax.swing.JLabel lblYearsReferencia2;
+    private javax.swing.JLabel lblYearsReferencia3;
+    private javax.swing.JLabel lblYearsReferencia4;
     private javax.swing.JPanel pActaNacimiento;
     private javax.swing.JPanel pCartaAntecedentes;
     private javax.swing.JPanel pCartaRecomendacionEntrega;
@@ -2316,6 +3556,12 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pNacimiento;
     private javax.swing.JPanel pNumeroImssEntrega;
     private javax.swing.JPanel pPsicologicoEntrega;
+    private javax.swing.JPanel pReferenciaPersonal1;
+    private javax.swing.JPanel pReferenciaPersonal2;
+    private javax.swing.JPanel pReferenciaPersonal3;
+    private javax.swing.JPanel pReferenciaPersonal4;
+    private javax.swing.JPanel pReferenciasLaborales;
+    private javax.swing.JPanel pReferenciasPersonales;
     private javax.swing.JPanel pRegistroElemento;
     private javax.swing.JPanel pSexo;
     private javax.swing.JPanel pSocioeconomicoEntrega;
@@ -2395,28 +3641,64 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtCedulaEstudios;
     private javax.swing.JTextField txtCodigoPostal;
     private javax.swing.JTextField txtColonia;
+    private javax.swing.JTextField txtColoniaReferencia1;
+    private javax.swing.JTextField txtColoniaReferencia2;
+    private javax.swing.JTextField txtColoniaReferencia3;
+    private javax.swing.JTextField txtColoniaReferencia4;
     private javax.swing.JTextField txtComprobanteFolioEstudios;
+    private javax.swing.JTextField txtConocerloReferencia1;
+    private javax.swing.JTextField txtConocerloReferencia2;
+    private javax.swing.JTextField txtConocerloReferencia3;
+    private javax.swing.JTextField txtConocerloReferencia4;
     private javax.swing.JTextField txtCuip;
     private javax.swing.JTextField txtCurp;
     private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtDireccionReferencia1;
+    private javax.swing.JTextField txtDireccionReferencia2;
+    private javax.swing.JTextField txtDireccionReferencia3;
+    private javax.swing.JTextField txtDireccionReferencia4;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEntre;
     private javax.swing.JComboBox txtEstadoCivil;
     private javax.swing.JTextField txtEstatura;
     private javax.swing.JTextField txtExterior;
+    private javax.swing.JTextField txtExteriorReferencia1;
+    private javax.swing.JTextField txtExteriorReferencia2;
+    private javax.swing.JTextField txtExteriorReferencia3;
+    private javax.swing.JTextField txtExteriorReferencia4;
     private javax.swing.JTextField txtIfeClave;
     private javax.swing.JTextField txtIfeFolio;
     private javax.swing.JTextField txtIngresoEstudios;
     private javax.swing.JTextField txtInterior;
+    private javax.swing.JTextField txtInteriorReferencia1;
+    private javax.swing.JTextField txtInteriorReferencia2;
+    private javax.swing.JTextField txtInteriorReferencia3;
+    private javax.swing.JTextField txtInteriorReferencia4;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombreEstudios;
+    private javax.swing.JTextField txtNombreReferencia1;
+    private javax.swing.JTextField txtNombreReferencia2;
+    private javax.swing.JTextField txtNombreReferencia3;
+    private javax.swing.JTextField txtNombreReferencia4;
     private javax.swing.JTextField txtNumeroCartilla;
     private javax.swing.JTextField txtNumeroImss;
+    private javax.swing.JTextField txtOcupacionReferencia1;
+    private javax.swing.JTextField txtOcupacionReferencia2;
+    private javax.swing.JTextField txtOcupacionReferencia3;
+    private javax.swing.JTextField txtOcupacionReferencia4;
+    private javax.swing.JTextField txtParentescoReferencia1;
+    private javax.swing.JTextField txtParentescoReferencia2;
+    private javax.swing.JTextField txtParentescoReferencia3;
+    private javax.swing.JTextField txtParentescoReferencia4;
     private javax.swing.JTextField txtPasaporte;
     private javax.swing.JTextField txtPeso;
     private javax.swing.JTextField txtPromedioEstudios;
     private javax.swing.JTextField txtRFC;
     private javax.swing.JTextField txtStatus;
+    private javax.swing.JTextField txtTelefonoReferencia1;
+    private javax.swing.JTextField txtTelefonoReferencia2;
+    private javax.swing.JTextField txtTelefonoReferencia3;
+    private javax.swing.JTextField txtTelefonoReferencia4;
     private javax.swing.JTextField txtY;
     // End of variables declaration//GEN-END:variables
 }
