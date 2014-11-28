@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package org.controldepersonal.interfaz;
 
 import java.awt.event.KeyEvent;
@@ -106,7 +105,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         lblFecha = new javax.swing.JLabel();
         dpFecha = new org.jdesktop.swingx.JXDatePicker();
         lblEstado = new javax.swing.JLabel();
-        javax.swing.JComboBox cbEstados = new javax.swing.JComboBox();
+        cbEstados = new javax.swing.JComboBox();
         lblMunicipio = new javax.swing.JLabel();
         cbMunicipio = new javax.swing.JComboBox();
         lblEstadoCivil = new javax.swing.JLabel();
@@ -285,7 +284,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtParentescoReferencia1 = new javax.swing.JTextField();
         pReferenciaPersonal2 = new javax.swing.JPanel();
         lblNombreReferencia2 = new javax.swing.JLabel();
-        txtNombreReferencia2 = new javax.swing.JTextField();
         lblParentescoReferencia2 = new javax.swing.JLabel();
         lblOcupacionReferencia2 = new javax.swing.JLabel();
         txtOcupacionReferencia2 = new javax.swing.JTextField();
@@ -307,6 +305,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtConocerloReferencia2 = new javax.swing.JTextField();
         lblYearsReferencia2 = new javax.swing.JLabel();
         txtParentescoReferencia2 = new javax.swing.JTextField();
+        txtNombreReferencia2 = new javax.swing.JTextField();
         pReferenciasLaborales = new javax.swing.JPanel();
         pReferenciaPersonal3 = new javax.swing.JPanel();
         lblNombreReferencia3 = new javax.swing.JLabel();
@@ -356,6 +355,28 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtConocerloReferencia4 = new javax.swing.JTextField();
         lblYearsReferencia4 = new javax.swing.JLabel();
         txtParentescoReferencia4 = new javax.swing.JTextField();
+        pExperienciaLaboral = new javax.swing.JPanel();
+        pTrabajoAnterior1 = new javax.swing.JPanel();
+        lblDependenciaEA1 = new javax.swing.JLabel();
+        txtDependenciaEA1 = new javax.swing.JTextField();
+        lblCorporacionEA1 = new javax.swing.JLabel();
+        txtCorporacionEA1 = new javax.swing.JTextField();
+        lblDireccionEA1 = new javax.swing.JLabel();
+        txtDireccionEA1 = new javax.swing.JTextField();
+        lblInteriorEA1 = new javax.swing.JLabel();
+        txtInteriorEA1 = new javax.swing.JTextField();
+        lblExteriorEA1 = new javax.swing.JLabel();
+        txtExteriorEA1 = new javax.swing.JTextField();
+        lblColoniaEA1 = new javax.swing.JLabel();
+        txtColoniaEA1 = new javax.swing.JTextField();
+        lblCodigoEA1 = new javax.swing.JLabel();
+        txtCodigoPostalEA1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtTelefonosEA1 = new javax.swing.JTextField();
+        lblEstadoEA1 = new javax.swing.JLabel();
+        cbEstadosEA1 = new javax.swing.JComboBox();
+        lblMunicipioEA1 = new javax.swing.JLabel();
+        cbMunicipiosEA1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -2193,12 +2214,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblNombreReferencia2.setText("Nombre");
 
-        txtNombreReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNombreReferencia2KeyTyped(evt);
-            }
-        });
-
         lblParentescoReferencia2.setText("Parentesco");
 
         lblOcupacionReferencia2.setText("Ocupación");
@@ -2272,6 +2287,12 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblYearsReferencia2.setText("años");
 
+        txtNombreReferencia2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreReferencia2KeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout pReferenciaPersonal2Layout = new javax.swing.GroupLayout(pReferenciaPersonal2);
         pReferenciaPersonal2.setLayout(pReferenciaPersonal2Layout);
         pReferenciaPersonal2Layout.setHorizontalGroup(
@@ -2322,8 +2343,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pReferenciaPersonal2Layout.createSequentialGroup()
                         .addComponent(lblNombreReferencia2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNombreReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNombreReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblParentescoReferencia2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2336,9 +2357,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombreReferencia2)
-                    .addComponent(txtNombreReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblParentescoReferencia2)
-                    .addComponent(txtParentescoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtParentescoReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNombreReferencia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pReferenciaPersonal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblOcupacionReferencia2)
@@ -2769,6 +2790,158 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         tpRegistroElemento.addTab("Referencias Laborales", pReferenciasLaborales);
 
+        pTrabajoAnterior1.setBorder(javax.swing.BorderFactory.createTitledBorder("Trabajo Anterior"));
+
+        lblDependenciaEA1.setText("Dependencia");
+
+        lblCorporacionEA1.setText("Corporación");
+
+        lblDireccionEA1.setText("Dirección");
+
+        lblInteriorEA1.setText("Interior");
+
+        txtInteriorEA1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInteriorEA1KeyTyped(evt);
+            }
+        });
+
+        lblExteriorEA1.setText("Exterior");
+
+        txtExteriorEA1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtExteriorEA1KeyTyped(evt);
+            }
+        });
+
+        lblColoniaEA1.setText("Colonia");
+
+        lblCodigoEA1.setText("Código Postal");
+
+        jLabel2.setText("Telefonos");
+
+        lblEstadoEA1.setText("Estado");
+
+        cbEstadosEA1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstadosEA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadosEA1ActionPerformed(evt);
+            }
+        });
+
+        lblMunicipioEA1.setText("Municipio");
+
+        cbMunicipiosEA1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un Estado" }));
+
+        javax.swing.GroupLayout pTrabajoAnterior1Layout = new javax.swing.GroupLayout(pTrabajoAnterior1);
+        pTrabajoAnterior1.setLayout(pTrabajoAnterior1Layout);
+        pTrabajoAnterior1Layout.setHorizontalGroup(
+            pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblDireccionEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDireccionEA1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblCorporacionEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCorporacionEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblInteriorEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtInteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblExteriorEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblEstadoEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbEstadosEA1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblColoniaEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtColoniaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblCodigoEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCodigoPostalEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTelefonosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                .addComponent(lblMunicipioEA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbMunicipiosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        pTrabajoAnterior1Layout.setVerticalGroup(
+            pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDependenciaEA1)
+                    .addComponent(txtDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCorporacionEA1)
+                    .addComponent(txtCorporacionEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDireccionEA1)
+                    .addComponent(txtDireccionEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInteriorEA1)
+                    .addComponent(txtInteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblExteriorEA1)
+                    .addComponent(txtExteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblColoniaEA1)
+                    .addComponent(txtColoniaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCodigoEA1)
+                    .addComponent(txtCodigoPostalEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtTelefonosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadoEA1)
+                    .addComponent(cbEstadosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMunicipioEA1)
+                    .addComponent(cbMunicipiosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(233, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pExperienciaLaboralLayout = new javax.swing.GroupLayout(pExperienciaLaboral);
+        pExperienciaLaboral.setLayout(pExperienciaLaboralLayout);
+        pExperienciaLaboralLayout.setHorizontalGroup(
+            pExperienciaLaboralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pExperienciaLaboralLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(pTrabajoAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        pExperienciaLaboralLayout.setVerticalGroup(
+            pExperienciaLaboralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pExperienciaLaboralLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(pTrabajoAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(142, Short.MAX_VALUE))
+        );
+
+        tpRegistroElemento.addTab("Experiencia Laboral", pExperienciaLaboral);
+
         pRegistroElemento.add(tpRegistroElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 810, 570));
 
         spRegistroElemento.setViewportView(pRegistroElemento);
@@ -2791,28 +2964,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtApellidoPaternoKeyTyped
-
-    private void txtApellidoMaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoMaternoKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtApellidoMaternoKeyTyped
-
-    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtNombreKeyTyped
-
-    private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
+    private void txtConocerloReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia4KeyTyped
         char car = evt.getKeyChar();
         if (txtEdad.getText().length() >= 2) {
             evt.consume();
@@ -2820,231 +2972,233 @@ public class RegistrarElemento extends javax.swing.JDialog {
         if ((car < '0' || car > '9')) {
             evt.consume();
         }
-    }//GEN-LAST:event_txtEdadKeyTyped
+    }//GEN-LAST:event_txtConocerloReferencia4KeyTyped
 
-    private void txtEstaturaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEstaturaKeyTyped
+    private void txtExteriorReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia4KeyTyped
         char car = evt.getKeyChar();
-        if (txtEdad.getText().length() >= 4) {
-            evt.consume();
-        }
-        if ((car < '0' || car > '9') && car != '.') {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtEstaturaKeyTyped
-
-    private void txtPesoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPesoKeyTyped
-        char car = evt.getKeyChar();
-        if (txtEdad.getText().length() >= 4) {
-            evt.consume();
-        }
-        if ((car < '0' || car > '9') && car != '.') {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtPesoKeyTyped
-
-    private void txtDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtDireccionKeyTyped
-
-    private void txtInteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE) && (car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtInteriorKeyTyped
-
-    private void txtExteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE) && (car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtExteriorKeyTyped
-
-    private void txtColoniaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtColoniaKeyTyped
-
-    private void txtCodigoPostalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoPostalKeyTyped
-        char car = evt.getKeyChar();
-        if (txtEdad.getText().length() >= 5) {
-            evt.consume();
-        }
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtCodigoPostalKeyTyped
-
-    private void txtEntreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEntreKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtEntreKeyTyped
-
-    private void txtYKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtYKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtYKeyTyped
-
-    private void txtCurpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCurpKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_txtCurpKeyTyped
+    }//GEN-LAST:event_txtExteriorReferencia4KeyTyped
 
-    private void txtRFCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRFCKeyTyped
+    private void txtInteriorReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia4KeyTyped
         char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_txtRFCKeyTyped
+    }//GEN-LAST:event_txtInteriorReferencia4KeyTyped
 
-    private void txtNumeroImssKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroImssKeyTyped
+    private void txtDireccionReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia4KeyTyped
         char car = evt.getKeyChar();
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtNumeroImssKeyTyped
-
-    private void txtPasaporteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasaporteKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_txtPasaporteKeyTyped
+    }//GEN-LAST:event_txtDireccionReferencia4KeyTyped
 
-    private void txtIfeClaveKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIfeClaveKeyTyped
+    private void txtColoniaReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia4KeyTyped
         char car = evt.getKeyChar();
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtIfeClaveKeyTyped
-
-    private void txtIfeFolioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIfeFolioKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtIfeFolioKeyTyped
-
-    private void txtNumeroCartillaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroCartillaKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_txtNumeroCartillaKeyTyped
+    }//GEN-LAST:event_txtColoniaReferencia4KeyTyped
 
-    private void cbEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosActionPerformed
-        // TODO add your handling code here:
+    private void cbEstadoReferencia4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia4ActionPerformed
         JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadosActionPerformed
+        cbMunicipioReferencia4.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia4ActionPerformed
 
-    private void cbEstadoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoDActionPerformed
-        // TODO add your handling code here:
-        JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadoDActionPerformed
-
-    private void cbEstadoEstudiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoEstudiosActionPerformed
-        JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipioEstudios.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadoEstudiosActionPerformed
-
-    private void txtNombreEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreEstudiosKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && car!='#' && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtNombreEstudiosKeyTyped
-
-    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_jTextField1KeyTyped
-
-    private void txtCedulaEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCedulaEstudiosKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && car != '-' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtCedulaEstudiosKeyTyped
-
-    private void txtComprobanteFolioEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtComprobanteFolioEstudiosKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtComprobanteFolioEstudiosKeyTyped
-
-    private void txtPromedioEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPromedioEstudiosKeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && car != '.'){
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtPromedioEstudiosKeyTyped
-
-    private void txtNombreReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia1KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtNombreReferencia1KeyTyped
-
-    private void txtOcupacionReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia1KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtOcupacionReferencia1KeyTyped
-
-    private void txtTelefonoReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia1KeyTyped
+    private void txtTelefonoReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia4KeyTyped
         char car = evt.getKeyChar();
         if ((car < '0' || car > '9')) {
             evt.consume();
         }
-    }//GEN-LAST:event_txtTelefonoReferencia1KeyTyped
+    }//GEN-LAST:event_txtTelefonoReferencia4KeyTyped
+
+    private void txtOcupacionReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia4KeyTyped
+
+    private void txtNombreReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia4KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia4KeyTyped
+
+    private void txtConocerloReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConocerloReferencia3KeyTyped
+
+    private void txtExteriorReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtExteriorReferencia3KeyTyped
+
+    private void txtInteriorReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtInteriorReferencia3KeyTyped
+
+    private void txtDireccionReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtDireccionReferencia3KeyTyped
+
+    private void txtColoniaReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtColoniaReferencia3KeyTyped
+
+    private void cbEstadoReferencia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia3ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioReferencia3.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia3ActionPerformed
+
+    private void txtTelefonoReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia3KeyTyped
+
+    private void txtOcupacionReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia3KeyTyped
+
+    private void txtNombreReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia3KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia3KeyTyped
+
+    private void txtConocerloReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConocerloReferencia2KeyTyped
+
+    private void txtExteriorReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtExteriorReferencia2KeyTyped
+
+    private void txtInteriorReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtInteriorReferencia2KeyTyped
+
+    private void txtDireccionReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtDireccionReferencia2KeyTyped
+
+    private void txtColoniaReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtColoniaReferencia2KeyTyped
+
+    private void cbEstadoReferencia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia2ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioReferencia2.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoReferencia2ActionPerformed
+
+    private void txtTelefonoReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia2KeyTyped
+
+    private void txtOcupacionReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia2KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia2KeyTyped
 
     private void txtConocerloReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia1KeyTyped
         char car = evt.getKeyChar();
@@ -3056,15 +3210,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_txtConocerloReferencia1KeyTyped
 
-    private void txtDireccionReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia1KeyTyped
+    private void txtExteriorReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia1KeyTyped
         char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_txtDireccionReferencia1KeyTyped
+    }//GEN-LAST:event_txtExteriorReferencia1KeyTyped
 
     private void txtInteriorReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia1KeyTyped
         char car = evt.getKeyChar();
@@ -3076,15 +3230,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_txtInteriorReferencia1KeyTyped
 
-    private void txtExteriorReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia1KeyTyped
+    private void txtDireccionReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia1KeyTyped
         char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_txtExteriorReferencia1KeyTyped
+    }//GEN-LAST:event_txtDireccionReferencia1KeyTyped
 
     private void txtColoniaReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia1KeyTyped
         char car = evt.getKeyChar();
@@ -3100,253 +3254,283 @@ public class RegistrarElemento extends javax.swing.JDialog {
         JComboBox cbREF = (JComboBox) evt.getSource();
         cbMunicipioReferencia1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
     }//GEN-LAST:event_cbEstadoReferencia1ActionPerformed
-/*******************************************************************************/
+
+    private void txtTelefonoReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoReferencia1KeyTyped
+
+    private void txtOcupacionReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtOcupacionReferencia1KeyTyped
+
+    private void txtNombreReferencia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreReferencia1KeyTyped
+
+    private void txtPasaporteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasaporteKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtPasaporteKeyTyped
+
+    private void txtIfeFolioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIfeFolioKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtIfeFolioKeyTyped
+
+    private void txtIfeClaveKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIfeClaveKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtIfeClaveKeyTyped
+
+    private void txtNumeroCartillaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroCartillaKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNumeroCartillaKeyTyped
+
+    private void txtNumeroImssKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroImssKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNumeroImssKeyTyped
+
+    private void txtRFCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRFCKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtRFCKeyTyped
+
+    private void txtCurpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCurpKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtCurpKeyTyped
+
+    private void txtPromedioEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPromedioEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '.'){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtPromedioEstudiosKeyTyped
+
+    private void txtComprobanteFolioEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtComprobanteFolioEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtComprobanteFolioEstudiosKeyTyped
+
+    private void txtCedulaEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCedulaEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car != '-' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtCedulaEstudiosKeyTyped
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
+
+    private void txtNombreEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreEstudiosKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < '0' || car > '9') && car!='#' && car != '-' && car != '/' && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+        if (Character.isLetter(car)) {
+            evt.setKeyChar(Character.toUpperCase(car));
+        }
+    }//GEN-LAST:event_txtNombreEstudiosKeyTyped
+
+    private void cbEstadoEstudiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoEstudiosActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioEstudios.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoEstudiosActionPerformed
+
+    private void cbEstadoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoDActionPerformed
+        // TODO add your handling code here:
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipioD.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadoDActionPerformed
+
+    private void txtYKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtYKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtYKeyTyped
+
+    private void txtEntreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEntreKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtEntreKeyTyped
+
+    private void txtCodigoPostalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoPostalKeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 5) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCodigoPostalKeyTyped
+
+    private void txtColoniaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtColoniaKeyTyped
+
+    private void txtExteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE) && (car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtExteriorKeyTyped
+
+    private void txtInteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE) && (car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtInteriorKeyTyped
+
+    private void txtDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtDireccionKeyTyped
+
+    private void cbEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosActionPerformed
+        // TODO add your handling code here:
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosActionPerformed
+
+    private void txtPesoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPesoKeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 4) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9') && car != '.') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtPesoKeyTyped
+
+    private void txtEstaturaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEstaturaKeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 4) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9') && car != '.') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtEstaturaKeyTyped
+
+    private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
+        char car = evt.getKeyChar();
+        if (txtEdad.getText().length() >= 2) {
+            evt.consume();
+        }
+        if ((car < '0' || car > '9')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtEdadKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtApellidoMaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoMaternoKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtApellidoMaternoKeyTyped
+
+    private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped
+        char car = evt.getKeyChar();
+        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtApellidoPaternoKeyTyped
+
     private void txtNombreReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia2KeyTyped
         char car = evt.getKeyChar();
         if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
         }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
     }//GEN-LAST:event_txtNombreReferencia2KeyTyped
 
-    private void txtOcupacionReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtOcupacionReferencia2KeyTyped
+    private void txtInteriorEA1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorEA1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInteriorEA1KeyTyped
 
-    private void txtTelefonoReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtTelefonoReferencia2KeyTyped
+    private void txtExteriorEA1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorEA1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtExteriorEA1KeyTyped
 
-    private void cbEstadoReferencia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia2ActionPerformed
+    private void cbEstadosEA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosEA1ActionPerformed
         JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipioReferencia2.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadoReferencia2ActionPerformed
+        cbMunicipiosEA1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosEA1ActionPerformed
 
-    private void txtColoniaReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtColoniaReferencia2KeyTyped
-
-    private void txtDireccionReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtDireccionReferencia2KeyTyped
-
-    private void txtInteriorReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtInteriorReferencia2KeyTyped
-
-    private void txtExteriorReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtExteriorReferencia2KeyTyped
-
-    private void txtConocerloReferencia2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia2KeyTyped
-        char car = evt.getKeyChar();
-        if (txtEdad.getText().length() >= 2) {
-            evt.consume();
-        }
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtConocerloReferencia2KeyTyped
-
-    private void txtNombreReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtNombreReferencia3KeyTyped
-
-    private void txtOcupacionReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtOcupacionReferencia3KeyTyped
-
-    private void txtTelefonoReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtTelefonoReferencia3KeyTyped
-
-    private void cbEstadoReferencia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia3ActionPerformed
-        JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipioReferencia3.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadoReferencia3ActionPerformed
-
-    private void txtColoniaReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtColoniaReferencia3KeyTyped
-
-    private void txtDireccionReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtDireccionReferencia3KeyTyped
-
-    private void txtInteriorReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtInteriorReferencia3KeyTyped
-
-    private void txtExteriorReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtExteriorReferencia3KeyTyped
-
-    private void txtConocerloReferencia3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia3KeyTyped
-        char car = evt.getKeyChar();
-        if (txtEdad.getText().length() >= 2) {
-            evt.consume();
-        }
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtConocerloReferencia3KeyTyped
-
-    private void txtNombreReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtNombreReferencia4KeyTyped
-
-    private void txtOcupacionReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtOcupacionReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtOcupacionReferencia4KeyTyped
-
-    private void txtTelefonoReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtTelefonoReferencia4KeyTyped
-
-    private void cbEstadoReferencia4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadoReferencia4ActionPerformed
-        JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipioReferencia4.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadoReferencia4ActionPerformed
-
-    private void txtColoniaReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColoniaReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtColoniaReferencia4KeyTyped
-
-    private void txtDireccionReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtDireccionReferencia4KeyTyped
-
-    private void txtInteriorReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtInteriorReferencia4KeyTyped
-
-    private void txtExteriorReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if ((car < '0' || car > '9') && (car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && (car != (char) KeyEvent.VK_SPACE)) {
-            evt.consume();
-        }
-        if (Character.isLetter(car)) {
-            evt.setKeyChar(Character.toUpperCase(car));
-        }
-    }//GEN-LAST:event_txtExteriorReferencia4KeyTyped
-
-    private void txtConocerloReferencia4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConocerloReferencia4KeyTyped
-        char car = evt.getKeyChar();
-        if (txtEdad.getText().length() >= 2) {
-            evt.consume();
-        }
-        if ((car < '0' || car > '9')) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtConocerloReferencia4KeyTyped
-    
+   
     /**
      * @param args the command line arguments
      */
@@ -3423,6 +3607,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbEstadoReferencia2;
     private javax.swing.JComboBox cbEstadoReferencia3;
     private javax.swing.JComboBox cbEstadoReferencia4;
+    private javax.swing.JComboBox cbEstados;
+    private javax.swing.JComboBox cbEstadosEA1;
     private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JComboBox cbMunicipioD;
     private javax.swing.JComboBox cbMunicipioEstudios;
@@ -3430,12 +3616,14 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbMunicipioReferencia2;
     private javax.swing.JComboBox cbMunicipioReferencia3;
     private javax.swing.JComboBox cbMunicipioReferencia4;
+    private javax.swing.JComboBox cbMunicipiosEA1;
     private javax.swing.JComboBox cbSangre;
     private org.jdesktop.swingx.JXDatePicker dpCartaAntecedentesEntrega;
     private org.jdesktop.swingx.JXDatePicker dpComprobanteDomEntrega;
     private org.jdesktop.swingx.JXDatePicker dpFecha;
     private org.jdesktop.swingx.JXDatePicker dpSocioeconomicoEntrega;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -3444,7 +3632,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblApellidoPaterno;
     private javax.swing.JLabel lblCara;
     private javax.swing.JLabel lblCedulaEstudios;
+    private javax.swing.JLabel lblCodigoEA1;
     private javax.swing.JLabel lblColonia;
+    private javax.swing.JLabel lblColoniaEA1;
     private javax.swing.JLabel lblColoniaReferencia1;
     private javax.swing.JLabel lblColoniaReferencia2;
     private javax.swing.JLabel lblColoniaReferencia3;
@@ -3456,9 +3646,12 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblConocerloReferencia2;
     private javax.swing.JLabel lblConocerloReferencia3;
     private javax.swing.JLabel lblConocerloReferencia4;
+    private javax.swing.JLabel lblCorporacionEA1;
     private javax.swing.JLabel lblCuip;
     private javax.swing.JLabel lblCurp;
+    private javax.swing.JLabel lblDependenciaEA1;
     private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblDireccionEA1;
     private javax.swing.JLabel lblDireccionReferencia1;
     private javax.swing.JLabel lblDireccionReferencia2;
     private javax.swing.JLabel lblDireccionReferencia3;
@@ -3471,6 +3664,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblEstadoCivil;
     private javax.swing.JLabel lblEstadoD;
+    private javax.swing.JLabel lblEstadoEA1;
     private javax.swing.JLabel lblEstadoEstudios;
     private javax.swing.JLabel lblEstadoReferencia1;
     private javax.swing.JLabel lblEstadoReferencia2;
@@ -3478,6 +3672,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblEstadoReferencia4;
     private javax.swing.JLabel lblEstatura;
     private javax.swing.JLabel lblExterior;
+    private javax.swing.JLabel lblExteriorEA1;
     private javax.swing.JLabel lblExteriorReferencia1;
     private javax.swing.JLabel lblExteriorReferencia2;
     private javax.swing.JLabel lblExteriorReferencia3;
@@ -3487,6 +3682,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblIfeFolio;
     private javax.swing.JLabel lblIngresoEstudios;
     private javax.swing.JLabel lblInterior;
+    private javax.swing.JLabel lblInteriorEA1;
     private javax.swing.JLabel lblInteriorReferencia1;
     private javax.swing.JLabel lblInteriorReferencia2;
     private javax.swing.JLabel lblInteriorReferencia3;
@@ -3495,6 +3691,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblMts;
     private javax.swing.JLabel lblMunicipio;
     private javax.swing.JLabel lblMunicipioD;
+    private javax.swing.JLabel lblMunicipioEA1;
     private javax.swing.JLabel lblMunicipioEstudios;
     private javax.swing.JLabel lblMunicipioReferencia1;
     private javax.swing.JLabel lblMunicipioReferencia2;
@@ -3550,6 +3747,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pDomicilio;
     private javax.swing.JPanel pEstudios;
     private javax.swing.JPanel pEstudiosMaximos;
+    private javax.swing.JPanel pExperienciaLaboral;
     private javax.swing.JPanel pHojaDatos;
     private javax.swing.JPanel pIfe;
     private javax.swing.JPanel pMapaDomicilioEntrega;
@@ -3568,6 +3766,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pSocioeconomicoEntrega2;
     private javax.swing.JPanel pSolicitud;
     private javax.swing.JPanel pToxicologicoEntrega;
+    private javax.swing.JPanel pTrabajoAnterior1;
     private javax.swing.JPanel panelRegistroSep;
     private javax.swing.JRadioButton rbActaNacimientoEntregaC;
     private javax.swing.JRadioButton rbActaNacimientoEntregaN;
@@ -3640,7 +3839,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtApellidoPaterno;
     private javax.swing.JTextField txtCedulaEstudios;
     private javax.swing.JTextField txtCodigoPostal;
+    private javax.swing.JTextField txtCodigoPostalEA1;
     private javax.swing.JTextField txtColonia;
+    private javax.swing.JTextField txtColoniaEA1;
     private javax.swing.JTextField txtColoniaReferencia1;
     private javax.swing.JTextField txtColoniaReferencia2;
     private javax.swing.JTextField txtColoniaReferencia3;
@@ -3650,9 +3851,12 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtConocerloReferencia2;
     private javax.swing.JTextField txtConocerloReferencia3;
     private javax.swing.JTextField txtConocerloReferencia4;
+    private javax.swing.JTextField txtCorporacionEA1;
     private javax.swing.JTextField txtCuip;
     private javax.swing.JTextField txtCurp;
+    private javax.swing.JTextField txtDependenciaEA1;
     private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtDireccionEA1;
     private javax.swing.JTextField txtDireccionReferencia1;
     private javax.swing.JTextField txtDireccionReferencia2;
     private javax.swing.JTextField txtDireccionReferencia3;
@@ -3662,6 +3866,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox txtEstadoCivil;
     private javax.swing.JTextField txtEstatura;
     private javax.swing.JTextField txtExterior;
+    private javax.swing.JTextField txtExteriorEA1;
     private javax.swing.JTextField txtExteriorReferencia1;
     private javax.swing.JTextField txtExteriorReferencia2;
     private javax.swing.JTextField txtExteriorReferencia3;
@@ -3670,6 +3875,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtIfeFolio;
     private javax.swing.JTextField txtIngresoEstudios;
     private javax.swing.JTextField txtInterior;
+    private javax.swing.JTextField txtInteriorEA1;
     private javax.swing.JTextField txtInteriorReferencia1;
     private javax.swing.JTextField txtInteriorReferencia2;
     private javax.swing.JTextField txtInteriorReferencia3;
@@ -3699,6 +3905,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtTelefonoReferencia2;
     private javax.swing.JTextField txtTelefonoReferencia3;
     private javax.swing.JTextField txtTelefonoReferencia4;
+    private javax.swing.JTextField txtTelefonosEA1;
     private javax.swing.JTextField txtY;
     // End of variables declaration//GEN-END:variables
 }

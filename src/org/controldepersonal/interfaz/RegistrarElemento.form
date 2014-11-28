@@ -3228,8 +3228,8 @@
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="lblNombreReferencia2" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtNombreReferencia2" min="-2" pref="290" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtNombreReferencia2" min="-2" pref="296" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="lblParentescoReferencia2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -3246,9 +3246,9 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lblNombreReferencia2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtNombreReferencia2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblParentescoReferencia2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtParentescoReferencia2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtNombreReferencia2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -3288,11 +3288,6 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Nombre"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txtNombreReferencia2">
-                          <Events>
-                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNombreReferencia2KeyTyped"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="lblParentescoReferencia2">
                           <Properties>
@@ -3407,6 +3402,11 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtParentescoReferencia2">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtNombreReferencia2">
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNombreReferencia2KeyTyped"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -3934,6 +3934,256 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtParentescoReferencia4">
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="pExperienciaLaboral">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Experiencia Laboral">
+                        <Property name="tabTitle" type="java.lang.String" value="Experiencia Laboral"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="pTrabajoAnterior1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="pTrabajoAnterior1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="142" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="pTrabajoAnterior1">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                            <TitledBorder title="Trabajo Anterior"/>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lblDependenciaEA1" min="-2" pref="75" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtDependenciaEA1" min="-2" pref="231" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lblDireccionEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtDireccionEA1" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lblCorporacionEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtCorporacionEA1" min="-2" pref="220" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lblInteriorEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtInteriorEA1" min="-2" pref="49" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="lblExteriorEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtExteriorEA1" min="-2" pref="47" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lblEstadoEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="cbEstadosEA1" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lblColoniaEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtColoniaEA1" min="-2" pref="190" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lblCodigoEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtCodigoPostalEA1" min="-2" pref="69" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jLabel2" min="-2" pref="55" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtTelefonosEA1" min="-2" pref="230" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lblMunicipioEA1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="cbMunicipiosEA1" min="-2" pref="200" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblDependenciaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtDependenciaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCorporacionEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCorporacionEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblDireccionEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtDireccionEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblInteriorEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtInteriorEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblExteriorEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtExteriorEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblColoniaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtColoniaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCodigoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCodigoPostalEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTelefonosEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblEstadoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cbEstadosEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblMunicipioEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cbMunicipiosEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="233" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="lblDependenciaEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Dependencia"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtDependenciaEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblCorporacionEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Corporaci&#xf3;n"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtCorporacionEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblDireccionEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtDireccionEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblInteriorEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Interior"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtInteriorEA1">
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtInteriorEA1KeyTyped"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblExteriorEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Exterior"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtExteriorEA1">
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtExteriorEA1KeyTyped"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblColoniaEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Colonia"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtColoniaEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblCodigoEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="C&#xf3;digo Postal"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtCodigoPostalEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel2">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Telefonos"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtTelefonosEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblEstadoEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Estado"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="cbEstadosEA1">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbEstadosEA1ActionPerformed"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cbEstadosEA1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblMunicipioEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Municipio"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="cbMunicipiosEA1">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="Elige un Estado"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
