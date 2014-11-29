@@ -105,7 +105,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         lblFecha = new javax.swing.JLabel();
         dpFecha = new org.jdesktop.swingx.JXDatePicker();
         lblEstado = new javax.swing.JLabel();
-        cbEstados = new javax.swing.JComboBox();
+        javax.swing.JComboBox cbEstados = new javax.swing.JComboBox();
         lblMunicipio = new javax.swing.JLabel();
         cbMunicipio = new javax.swing.JComboBox();
         lblEstadoCivil = new javax.swing.JLabel();
@@ -140,7 +140,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         lblEscuelaEstudios = new javax.swing.JLabel();
         txtNombreEstudios = new javax.swing.JTextField();
         lblEspecialidadEstudios = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtEspecialidadEstudios = new javax.swing.JTextField();
         panelRegistroSep = new javax.swing.JPanel();
         rbSepCertificadoS = new javax.swing.JRadioButton();
         rbSepCertificadoN = new javax.swing.JRadioButton();
@@ -148,8 +148,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtCedulaEstudios = new javax.swing.JTextField();
         lblIngresoEstudios = new javax.swing.JLabel();
         txtIngresoEstudios = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        lblEgresoSalida = new javax.swing.JLabel();
+        txtYearEgresoSalida = new javax.swing.JTextField();
         lblComprobanteEstudiosFolio = new javax.swing.JLabel();
         txtComprobanteFolioEstudios = new javax.swing.JTextField();
         lblPromedioEstudios = new javax.swing.JLabel();
@@ -371,12 +371,39 @@ public class RegistrarElemento extends javax.swing.JDialog {
         txtColoniaEA1 = new javax.swing.JTextField();
         lblCodigoEA1 = new javax.swing.JLabel();
         txtCodigoPostalEA1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblTelefonosEA1 = new javax.swing.JLabel();
         txtTelefonosEA1 = new javax.swing.JTextField();
         lblEstadoEA1 = new javax.swing.JLabel();
         cbEstadosEA1 = new javax.swing.JComboBox();
         lblMunicipioEA1 = new javax.swing.JLabel();
         cbMunicipiosEA1 = new javax.swing.JComboBox();
+        lblIngresoEA1 = new javax.swing.JLabel();
+        dpIngresoEA1 = new org.jdesktop.swingx.JXDatePicker();
+        lblSalidaEA1 = new javax.swing.JLabel();
+        dpSalidaEA1 = new org.jdesktop.swingx.JXDatePicker();
+        lblPuestoEA1 = new javax.swing.JLabel();
+        txtPuestoEA1 = new javax.swing.JTextField();
+        lblFuncionesEA1 = new javax.swing.JLabel();
+        txtFuncionesEA1 = new javax.swing.JTextField();
+        lblEspecialidadEA1 = new javax.swing.JLabel();
+        txtEspecialidadEA1 = new javax.swing.JTextField();
+        lblRangoCategoriaEA1 = new javax.swing.JLabel();
+        txtRangoCategoriaEA1 = new javax.swing.JTextField();
+        lblSueldoEA1 = new javax.swing.JLabel();
+        lblPlacaEA1 = new javax.swing.JLabel();
+        txtPlacaEA1 = new javax.swing.JTextField();
+        lblAreaEA1 = new javax.swing.JLabel();
+        txtAreaEA1 = new javax.swing.JTextField();
+        lblDivisionEA1 = new javax.swing.JLabel();
+        txtDivisionEA1 = new javax.swing.JTextField();
+        txtSueldoEA1 = new javax.swing.JTextField();
+        lblJefeEA1 = new javax.swing.JLabel();
+        txtJefeEA1 = new javax.swing.JTextField();
+        lblCuipEA1 = new javax.swing.JLabel();
+        txtCuipEA1 = new javax.swing.JTextField();
+        lblMotivoEA1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        taMotivoEA1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -880,9 +907,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblEspecialidadEstudios.setText("Especialidad");
 
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtEspecialidadEstudios.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField1KeyTyped(evt);
+                txtEspecialidadEstudiosKeyTyped(evt);
             }
         });
 
@@ -926,7 +953,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblIngresoEstudios.setText("Año de ingreso");
 
-        jLabel1.setText("Año de egreso o salida");
+        lblEgresoSalida.setText("Año de egreso o salida");
 
         lblComprobanteEstudiosFolio.setText("Folio de Comprobante de estudios");
 
@@ -975,7 +1002,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                                     .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
                                         .addComponent(lblEspecialidadEstudios)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtEspecialidadEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pEstudiosMaximosLayout.createSequentialGroup()
                                             .addComponent(lblComprobanteEstudiosFolio)
@@ -986,9 +1013,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addComponent(txtIngresoEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblEgresoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(txtYearEgresoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(panelRegistroSep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
@@ -1024,13 +1051,13 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addGroup(pEstudiosMaximosLayout.createSequentialGroup()
                         .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblEspecialidadEstudios)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtEspecialidadEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblIngresoEstudios)
                             .addComponent(txtIngresoEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblEgresoSalida)
+                            .addComponent(txtYearEgresoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pEstudiosMaximosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblComprobanteEstudiosFolio)
@@ -2818,7 +2845,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblCodigoEA1.setText("Código Postal");
 
-        jLabel2.setText("Telefonos");
+        lblTelefonosEA1.setText("Teléfonos");
 
         lblEstadoEA1.setText("Estado");
 
@@ -2833,6 +2860,36 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         cbMunicipiosEA1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un Estado" }));
 
+        lblIngresoEA1.setText("Fecha de ingreso");
+
+        lblSalidaEA1.setText("Fecha de salida");
+
+        lblPuestoEA1.setText("Puesto");
+
+        lblFuncionesEA1.setText("Funciones");
+
+        lblEspecialidadEA1.setText("Especialidad");
+
+        lblRangoCategoriaEA1.setText("Rango o Categoría");
+
+        lblSueldoEA1.setText("Sueldo base");
+
+        lblPlacaEA1.setText("Número de placa");
+
+        lblAreaEA1.setText("Aréa");
+
+        lblDivisionEA1.setText("División");
+
+        lblJefeEA1.setText("Jefe inmediato");
+
+        lblCuipEA1.setText("CUIP Jefe");
+
+        lblMotivoEA1.setText("Motivo de salida");
+
+        taMotivoEA1.setColumns(20);
+        taMotivoEA1.setRows(5);
+        jScrollPane1.setViewportView(taMotivoEA1);
+
         javax.swing.GroupLayout pTrabajoAnterior1Layout = new javax.swing.GroupLayout(pTrabajoAnterior1);
         pTrabajoAnterior1.setLayout(pTrabajoAnterior1Layout);
         pTrabajoAnterior1Layout.setHorizontalGroup(
@@ -2840,55 +2897,109 @@ public class RegistrarElemento extends javax.swing.JDialog {
             .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblDireccionEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtDireccionEA1)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblCorporacionEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtCorporacionEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblInteriorEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtInteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblExteriorEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtExteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblEstadoEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbEstadosEA1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblColoniaEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtColoniaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblCodigoEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtCodigoPostalEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtTelefonosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
-                                .addComponent(lblMunicipioEA1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbMunicipiosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                    .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtDependenciaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblDireccionEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtDireccionEA1)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblCorporacionEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtCorporacionEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblInteriorEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtInteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(lblExteriorEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtExteriorEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addComponent(lblIngresoEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(dpIngresoEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblSalidaEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(dpSalidaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addComponent(lblPuestoEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtPuestoEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblFuncionesEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtFuncionesEA1))
+                        .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblEstadoEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbEstadosEA1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblColoniaEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtColoniaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblCodigoEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtCodigoPostalEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(lblTelefonosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtTelefonosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                                    .addComponent(lblMunicipioEA1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbMunicipiosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addComponent(lblEspecialidadEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtEspecialidadEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblRangoCategoriaEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtRangoCategoriaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblSueldoEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtSueldoEA1))
+                        .addGroup(pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addComponent(lblPlacaEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtPlacaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblAreaEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtAreaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblDivisionEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtDivisionEA1)))
+                    .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addComponent(lblMotivoEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jScrollPane1))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pTrabajoAnterior1Layout.createSequentialGroup()
+                            .addComponent(lblJefeEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtJefeEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblCuipEA1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtCuipEA1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         pTrabajoAnterior1Layout.setVerticalGroup(
             pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2912,7 +3023,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(txtColoniaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCodigoEA1)
                     .addComponent(txtCodigoPostalEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
+                    .addComponent(lblTelefonosEA1)
                     .addComponent(txtTelefonosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2920,7 +3031,45 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(cbEstadosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblMunicipioEA1)
                     .addComponent(cbMunicipiosEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIngresoEA1)
+                    .addComponent(dpIngresoEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSalidaEA1)
+                    .addComponent(dpSalidaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPuestoEA1)
+                    .addComponent(txtPuestoEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblFuncionesEA1)
+                    .addComponent(txtFuncionesEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEspecialidadEA1)
+                    .addComponent(txtEspecialidadEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRangoCategoriaEA1)
+                    .addComponent(txtRangoCategoriaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSueldoEA1)
+                    .addComponent(txtSueldoEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPlacaEA1)
+                    .addComponent(txtPlacaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAreaEA1)
+                    .addComponent(txtAreaEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDivisionEA1)
+                    .addComponent(txtDivisionEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblJefeEA1)
+                    .addComponent(txtJefeEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCuipEA1)
+                    .addComponent(txtCuipEA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pTrabajoAnterior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMotivoEA1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pExperienciaLaboralLayout = new javax.swing.GroupLayout(pExperienciaLaboral);
@@ -2928,16 +3077,16 @@ public class RegistrarElemento extends javax.swing.JDialog {
         pExperienciaLaboralLayout.setHorizontalGroup(
             pExperienciaLaboralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pExperienciaLaboralLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(36, 36, 36)
                 .addComponent(pTrabajoAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         pExperienciaLaboralLayout.setVerticalGroup(
             pExperienciaLaboralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pExperienciaLaboralLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(45, 45, 45)
                 .addComponent(pTrabajoAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Experiencia Laboral", pExperienciaLaboral);
@@ -3370,7 +3519,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_txtCedulaEstudiosKeyTyped
 
-    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+    private void txtEspecialidadEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEspecialidadEstudiosKeyTyped
         char car = evt.getKeyChar();
         if ((car < 'a' || car > 'z') && (car < 'A' || car > 'Z') && car != 'ñ' && car != 'Ñ' && car != 'á' && car != 'é' && car != 'í' && car != 'ó' && car != 'ú' && car != 'Á' && car != 'É' && car != 'Í' && car != 'Ó' && car != 'Ú' && (car != (char) KeyEvent.VK_SPACE)) {
             evt.consume();
@@ -3378,7 +3527,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         if (Character.isLetter(car)) {
             evt.setKeyChar(Character.toUpperCase(car));
         }
-    }//GEN-LAST:event_jTextField1KeyTyped
+    }//GEN-LAST:event_txtEspecialidadEstudiosKeyTyped
 
     private void txtNombreEstudiosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreEstudiosKeyTyped
         char car = evt.getKeyChar();
@@ -3517,18 +3666,18 @@ public class RegistrarElemento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_txtNombreReferencia2KeyTyped
 
-    private void txtInteriorEA1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorEA1KeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInteriorEA1KeyTyped
+    private void cbEstadosEA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosEA1ActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipiosEA1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosEA1ActionPerformed
 
     private void txtExteriorEA1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExteriorEA1KeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_txtExteriorEA1KeyTyped
 
-    private void cbEstadosEA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosEA1ActionPerformed
-        JComboBox cbREF = (JComboBox) evt.getSource();
-        cbMunicipiosEA1.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
-    }//GEN-LAST:event_cbEstadosEA1ActionPerformed
+    private void txtInteriorEA1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInteriorEA1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInteriorEA1KeyTyped
 
    
     /**
@@ -3607,7 +3756,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbEstadoReferencia2;
     private javax.swing.JComboBox cbEstadoReferencia3;
     private javax.swing.JComboBox cbEstadoReferencia4;
-    private javax.swing.JComboBox cbEstados;
     private javax.swing.JComboBox cbEstadosEA1;
     private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JComboBox cbMunicipioD;
@@ -3621,15 +3769,15 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private org.jdesktop.swingx.JXDatePicker dpCartaAntecedentesEntrega;
     private org.jdesktop.swingx.JXDatePicker dpComprobanteDomEntrega;
     private org.jdesktop.swingx.JXDatePicker dpFecha;
+    private org.jdesktop.swingx.JXDatePicker dpIngresoEA1;
+    private org.jdesktop.swingx.JXDatePicker dpSalidaEA1;
     private org.jdesktop.swingx.JXDatePicker dpSocioeconomicoEntrega;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblAlergias;
     private javax.swing.JLabel lblApellidoMaterno;
     private javax.swing.JLabel lblApellidoPaterno;
+    private javax.swing.JLabel lblAreaEA1;
     private javax.swing.JLabel lblCara;
     private javax.swing.JLabel lblCedulaEstudios;
     private javax.swing.JLabel lblCodigoEA1;
@@ -3648,6 +3796,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblConocerloReferencia4;
     private javax.swing.JLabel lblCorporacionEA1;
     private javax.swing.JLabel lblCuip;
+    private javax.swing.JLabel lblCuipEA1;
     private javax.swing.JLabel lblCurp;
     private javax.swing.JLabel lblDependenciaEA1;
     private javax.swing.JLabel lblDireccion;
@@ -3656,10 +3805,13 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblDireccionReferencia2;
     private javax.swing.JLabel lblDireccionReferencia3;
     private javax.swing.JLabel lblDireccionReferencia4;
+    private javax.swing.JLabel lblDivisionEA1;
     private javax.swing.JLabel lblEdad;
+    private javax.swing.JLabel lblEgresoSalida;
     private javax.swing.JLabel lblEntre;
     private javax.swing.JLabel lblEscolaridadEstudios;
     private javax.swing.JLabel lblEscuelaEstudios;
+    private javax.swing.JLabel lblEspecialidadEA1;
     private javax.swing.JLabel lblEspecialidadEstudios;
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblEstadoCivil;
@@ -3678,8 +3830,10 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblExteriorReferencia3;
     private javax.swing.JLabel lblExteriorReferencia4;
     private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblFuncionesEA1;
     private javax.swing.JLabel lblIfeClave;
     private javax.swing.JLabel lblIfeFolio;
+    private javax.swing.JLabel lblIngresoEA1;
     private javax.swing.JLabel lblIngresoEstudios;
     private javax.swing.JLabel lblInterior;
     private javax.swing.JLabel lblInteriorEA1;
@@ -3687,7 +3841,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblInteriorReferencia2;
     private javax.swing.JLabel lblInteriorReferencia3;
     private javax.swing.JLabel lblInteriorReferencia4;
+    private javax.swing.JLabel lblJefeEA1;
     private javax.swing.JLabel lblKg;
+    private javax.swing.JLabel lblMotivoEA1;
     private javax.swing.JLabel lblMts;
     private javax.swing.JLabel lblMunicipio;
     private javax.swing.JLabel lblMunicipioD;
@@ -3714,15 +3870,21 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblParentescoReferencia4;
     private javax.swing.JLabel lblPasaporte;
     private javax.swing.JLabel lblPeso;
+    private javax.swing.JLabel lblPlacaEA1;
     private javax.swing.JLabel lblPostal;
     private javax.swing.JLabel lblPromedioEstudios;
+    private javax.swing.JLabel lblPuestoEA1;
     private javax.swing.JLabel lblRFC;
+    private javax.swing.JLabel lblRangoCategoriaEA1;
+    private javax.swing.JLabel lblSalidaEA1;
     private javax.swing.JLabel lblSangre;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblSueldoEA1;
     private javax.swing.JLabel lblTelefonoReferencia1;
     private javax.swing.JLabel lblTelefonoReferencia2;
     private javax.swing.JLabel lblTelefonoReferencia3;
     private javax.swing.JLabel lblTelefonoReferencia4;
+    private javax.swing.JLabel lblTelefonosEA1;
     private javax.swing.JLabel lblY;
     private javax.swing.JLabel lblYearsReferencia1;
     private javax.swing.JLabel lblYearsReferencia2;
@@ -3834,9 +3996,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JRadioButton rbToxicologicoEntregaO;
     private javax.swing.JScrollPane spAlergias;
     private javax.swing.JScrollPane spRegistroElemento;
+    private javax.swing.JTextArea taMotivoEA1;
     private javax.swing.JTabbedPane tpRegistroElemento;
     private javax.swing.JTextField txtApellidoMaterno;
     private javax.swing.JTextField txtApellidoPaterno;
+    private javax.swing.JTextField txtAreaEA1;
     private javax.swing.JTextField txtCedulaEstudios;
     private javax.swing.JTextField txtCodigoPostal;
     private javax.swing.JTextField txtCodigoPostalEA1;
@@ -3853,6 +4017,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtConocerloReferencia4;
     private javax.swing.JTextField txtCorporacionEA1;
     private javax.swing.JTextField txtCuip;
+    private javax.swing.JTextField txtCuipEA1;
     private javax.swing.JTextField txtCurp;
     private javax.swing.JTextField txtDependenciaEA1;
     private javax.swing.JTextField txtDireccion;
@@ -3861,8 +4026,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtDireccionReferencia2;
     private javax.swing.JTextField txtDireccionReferencia3;
     private javax.swing.JTextField txtDireccionReferencia4;
+    private javax.swing.JTextField txtDivisionEA1;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEntre;
+    private javax.swing.JTextField txtEspecialidadEA1;
+    private javax.swing.JTextField txtEspecialidadEstudios;
     private javax.swing.JComboBox txtEstadoCivil;
     private javax.swing.JTextField txtEstatura;
     private javax.swing.JTextField txtExterior;
@@ -3871,6 +4039,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtExteriorReferencia2;
     private javax.swing.JTextField txtExteriorReferencia3;
     private javax.swing.JTextField txtExteriorReferencia4;
+    private javax.swing.JTextField txtFuncionesEA1;
     private javax.swing.JTextField txtIfeClave;
     private javax.swing.JTextField txtIfeFolio;
     private javax.swing.JTextField txtIngresoEstudios;
@@ -3880,6 +4049,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtInteriorReferencia2;
     private javax.swing.JTextField txtInteriorReferencia3;
     private javax.swing.JTextField txtInteriorReferencia4;
+    private javax.swing.JTextField txtJefeEA1;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombreEstudios;
     private javax.swing.JTextField txtNombreReferencia1;
@@ -3898,14 +4068,19 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtParentescoReferencia4;
     private javax.swing.JTextField txtPasaporte;
     private javax.swing.JTextField txtPeso;
+    private javax.swing.JTextField txtPlacaEA1;
     private javax.swing.JTextField txtPromedioEstudios;
+    private javax.swing.JTextField txtPuestoEA1;
     private javax.swing.JTextField txtRFC;
+    private javax.swing.JTextField txtRangoCategoriaEA1;
     private javax.swing.JTextField txtStatus;
+    private javax.swing.JTextField txtSueldoEA1;
     private javax.swing.JTextField txtTelefonoReferencia1;
     private javax.swing.JTextField txtTelefonoReferencia2;
     private javax.swing.JTextField txtTelefonoReferencia3;
     private javax.swing.JTextField txtTelefonoReferencia4;
     private javax.swing.JTextField txtTelefonosEA1;
     private javax.swing.JTextField txtY;
+    private javax.swing.JTextField txtYearEgresoSalida;
     // End of variables declaration//GEN-END:variables
 }

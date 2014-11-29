@@ -926,7 +926,7 @@
                                                       <Group type="102" attributes="0">
                                                           <Component id="lblEspecialidadEstudios" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jTextField1" min="-2" pref="268" max="-2" attributes="0"/>
+                                                          <Component id="txtEspecialidadEstudios" min="-2" pref="268" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
@@ -939,9 +939,9 @@
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                               <Component id="txtIngresoEstudios" min="-2" pref="50" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jLabel1" min="-2" pref="122" max="-2" attributes="0"/>
+                                                              <Component id="lblEgresoSalida" min="-2" pref="122" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jTextField2" min="-2" pref="50" max="-2" attributes="0"/>
+                                                              <Component id="txtYearEgresoSalida" min="-2" pref="50" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
@@ -991,14 +991,14 @@
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="lblEspecialidadEstudios" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtEspecialidadEstudios" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="lblIngresoEstudios" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="txtIngresoEstudios" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblEgresoSalida" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtYearEgresoSalida" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1095,9 +1095,9 @@
                             <Property name="text" type="java.lang.String" value="Especialidad"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField1">
+                        <Component class="javax.swing.JTextField" name="txtEspecialidadEstudios">
                           <Events>
-                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField1KeyTyped"/>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEspecialidadEstudiosKeyTyped"/>
                           </Events>
                         </Component>
                         <Container class="javax.swing.JPanel" name="panelRegistroSep">
@@ -1173,12 +1173,12 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtIngresoEstudios">
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel1">
+                        <Component class="javax.swing.JLabel" name="lblEgresoSalida">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="A&#xf1;o de egreso o salida"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField2">
+                        <Component class="javax.swing.JTextField" name="txtYearEgresoSalida">
                         </Component>
                         <Component class="javax.swing.JLabel" name="lblComprobanteEstudiosFolio">
                           <Properties>
@@ -3952,18 +3952,18 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                               <Component id="pTrabajoAnterior1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                              <EmptySpace pref="41" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                               <Component id="pTrabajoAnterior1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="142" max="32767" attributes="0"/>
+                              <EmptySpace pref="97" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3984,70 +3984,132 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblDependenciaEA1" min="-2" pref="75" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtDependenciaEA1" min="-2" pref="231" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lblDependenciaEA1" min="-2" pref="75" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtDependenciaEA1" min="-2" pref="231" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="lblDireccionEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtDireccionEA1" max="32767" attributes="0"/>
+                                                  </Group>
                                               </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lblDireccionEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtDireccionEA1" max="32767" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lblCorporacionEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtCorporacionEA1" min="-2" pref="220" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lblInteriorEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtInteriorEA1" min="-2" pref="49" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="lblExteriorEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtExteriorEA1" min="-2" pref="47" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblCorporacionEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtCorporacionEA1" min="-2" pref="220" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblIngresoEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="dpIngresoEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblSalidaEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="dpSalidaEA1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="lblPuestoEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtPuestoEA1" min="-2" pref="267" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="lblFuncionesEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtFuncionesEA1" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="lblEstadoEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="cbEstadosEA1" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="lblColoniaEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtColoniaEA1" min="-2" pref="190" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblInteriorEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtInteriorEA1" min="-2" pref="49" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="lblExteriorEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtExteriorEA1" min="-2" pref="47" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lblCodigoEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtCodigoPostalEA1" min="-2" pref="69" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="lblTelefonosEA1" min="-2" pref="55" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="txtTelefonosEA1" min="-2" pref="230" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lblMunicipioEA1" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="cbMunicipiosEA1" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblEspecialidadEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtEspecialidadEA1" min="-2" pref="239" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblRangoCategoriaEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtRangoCategoriaEA1" min="-2" pref="151" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblSueldoEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtSueldoEA1" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblPlacaEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtPlacaEA1" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblAreaEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtAreaEA1" min="-2" pref="190" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblDivisionEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtDivisionEA1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lblEstadoEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="cbEstadosEA1" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lblColoniaEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtColoniaEA1" min="-2" pref="190" max="-2" attributes="0"/>
-                                              </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblMotivoEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jScrollPane1" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblCodigoEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtCodigoPostalEA1" min="-2" pref="69" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jLabel2" min="-2" pref="55" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtTelefonosEA1" min="-2" pref="230" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblMunicipioEA1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="cbMunicipiosEA1" min="-2" pref="200" max="-2" attributes="0"/>
-                                              </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblJefeEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtJefeEA1" min="-2" pref="260" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblCuipEA1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtCuipEA1" min="-2" pref="176" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                                  <EmptySpace pref="30" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4075,7 +4137,7 @@
                                       <Component id="txtColoniaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblCodigoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtCodigoPostalEA1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblTelefonosEA1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtTelefonosEA1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -4085,7 +4147,51 @@
                                       <Component id="lblMunicipioEA1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="cbMunicipiosEA1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="233" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblIngresoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="dpIngresoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblSalidaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="dpSalidaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblPuestoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtPuestoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblFuncionesEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtFuncionesEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblEspecialidadEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtEspecialidadEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblRangoCategoriaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtRangoCategoriaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblSueldoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtSueldoEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblPlacaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtPlacaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblAreaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtAreaEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDivisionEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtDivisionEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblJefeEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtJefeEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCuipEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCuipEA1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblMotivoEA1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="76" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="20" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4146,9 +4252,9 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtCodigoPostalEA1">
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel2">
+                        <Component class="javax.swing.JLabel" name="lblTelefonosEA1">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Telefonos"/>
+                            <Property name="text" type="java.lang.String" value="Tel&#xe9;fonos"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtTelefonosEA1">
@@ -4185,6 +4291,110 @@
                             </Property>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="lblIngresoEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Fecha de ingreso"/>
+                          </Properties>
+                        </Component>
+                        <Component class="org.jdesktop.swingx.JXDatePicker" name="dpIngresoEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblSalidaEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Fecha de salida"/>
+                          </Properties>
+                        </Component>
+                        <Component class="org.jdesktop.swingx.JXDatePicker" name="dpSalidaEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblPuestoEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Puesto"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtPuestoEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblFuncionesEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Funciones"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtFuncionesEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblEspecialidadEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Especialidad"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtEspecialidadEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblRangoCategoriaEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Rango o Categor&#xed;a"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtRangoCategoriaEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblSueldoEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Sueldo base"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblPlacaEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="N&#xfa;mero de placa"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtPlacaEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblAreaEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Ar&#xe9;a"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtAreaEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblDivisionEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Divisi&#xf3;n"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtDivisionEA1">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtSueldoEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblJefeEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Jefe inmediato"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtJefeEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblCuipEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="CUIP Jefe"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="txtCuipEA1">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="lblMotivoEA1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Motivo de salida"/>
+                          </Properties>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTextArea" name="taMotivoEA1">
+                              <Properties>
+                                <Property name="columns" type="int" value="20"/>
+                                <Property name="rows" type="int" value="5"/>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
                       </SubComponents>
                     </Container>
                   </SubComponents>
