@@ -30,6 +30,20 @@ public class MySQL {
     public MySQL(Connection conexion) {
         this.conexion = conexion;
     }
+        
+    public boolean borrarDatosTemporalesCursos(){
+        statement = null;
+        try{
+            statement = conexion.createStatement();
+            String query = "delete from cursosTemporal";
+            statement.executeQuery(query);
+            return true;
+        }
+        catch(SQLException e){
+            ecepcion = e;
+            return false;
+        }
+    }
 
     public String[] dameArregloString(String tabla, String columna) {
         statement = null;

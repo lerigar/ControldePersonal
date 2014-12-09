@@ -137,10 +137,15 @@ public class framePrincipal extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        panelElemento.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 125, 57));
+        panelElemento.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 180, 57));
 
         btnBuscar.setText("Buscar Elemento");
-        panelElemento.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 205, 125, 60));
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+        panelElemento.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 205, 180, 60));
 
         panelOpciones.add(panelElemento, "panelElemento");
 
@@ -251,6 +256,11 @@ public class framePrincipal extends javax.swing.JFrame {
         RegistrarElemento registrarElemento = new RegistrarElemento(new javax.swing.JFrame(), false, conexionactual);
         registrarElemento.setVisible(true);
     }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        SeleccionarBusquedaElemento buscarElemento = new SeleccionarBusquedaElemento(new javax.swing.JFrame(),false,conexionactual);
+        buscarElemento.setVisible(true);
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
