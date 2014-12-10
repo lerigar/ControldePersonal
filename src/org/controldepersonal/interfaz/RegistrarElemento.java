@@ -10,6 +10,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import javax.swing.ButtonModel;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import org.controldepersonal.conector.conector;
 
@@ -638,6 +640,23 @@ public class RegistrarElemento extends javax.swing.JDialog {
         PCursosTotales = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tCursosTomados = new javax.swing.JTable();
+        pFotos = new javax.swing.JPanel();
+        pBuscaFotos = new javax.swing.JPanel();
+        lblFotoFrente = new javax.swing.JLabel();
+        txtFotoFrente = new javax.swing.JTextField();
+        btnFotoFrente = new javax.swing.JButton();
+        lblFotoPerfilIzquierdo = new javax.swing.JLabel();
+        txtFotoPerfilIzquierdo = new javax.swing.JTextField();
+        btnFotoPerfilIzquierdo = new javax.swing.JButton();
+        lblFotoPerfilDerecho = new javax.swing.JLabel();
+        txtFotoPerfilDerecho = new javax.swing.JTextField();
+        btnFotoPerfilDerecho = new javax.swing.JButton();
+        btnFotoSocioeconomico1 = new javax.swing.JButton();
+        btnFotoSocioeconomico2 = new javax.swing.JButton();
+        txtFotoSocioeconomico2 = new javax.swing.JTextField();
+        txtFotoSocioeconomico1 = new javax.swing.JTextField();
+        lblFotoSocioeconomico1 = new javax.swing.JLabel();
+        lblFotoSocioeconomico2 = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1323,7 +1342,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
             .addGroup(pEstudiosLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addComponent(pEstudiosMaximos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Estudios", pEstudios);
@@ -1761,7 +1780,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(pComprobanteDom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pCartaAntecedentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pComprobanteEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 143, Short.MAX_VALUE))
+                .addGap(0, 127, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pDocumentosLayout = new javax.swing.GroupLayout(pDocumentos);
@@ -2272,7 +2291,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(pCartaResguardoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 174, Short.MAX_VALUE))
+                .addGap(0, 158, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pDocumentos2Layout = new javax.swing.GroupLayout(pDocumentos2);
@@ -2668,7 +2687,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addComponent(pReferenciaPersonal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pReferenciaPersonal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Referencias Personales", pReferenciasPersonales);
@@ -3047,7 +3066,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addComponent(pReferenciaPersonal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pReferenciaPersonal4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Referencias Laborales", pReferenciasLaborales);
@@ -3321,7 +3340,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
             .addGroup(pExperienciaLaboral1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(pTrabajoAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Experiencia Laboral 1", pExperienciaLaboral1);
@@ -3595,7 +3614,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
             .addGroup(pExperienciaLaboral2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(pTrabajoAnterior2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Experiencia Laboral 2", pExperienciaLaboral2);
@@ -3869,7 +3888,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
             .addGroup(pExperienciaLaboral3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(pTrabajoAnterior3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Experiencia Laboral 3", pExperienciaLaboral3);
@@ -4024,10 +4043,154 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(btnCursoAceptar))
                 .addGap(54, 54, 54)
                 .addComponent(PCursosTotales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Cursos", pCursos);
+
+        pBuscaFotos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblFotoFrente.setText("Foto de frente:");
+
+        txtFotoFrente.setEditable(false);
+
+        btnFotoFrente.setText("Buscar");
+        btnFotoFrente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFotoFrenteActionPerformed(evt);
+            }
+        });
+
+        lblFotoPerfilIzquierdo.setText("Foto de perfil Izquierdo:");
+
+        txtFotoPerfilIzquierdo.setEditable(false);
+
+        btnFotoPerfilIzquierdo.setText("Buscar");
+        btnFotoPerfilIzquierdo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFotoPerfilIzquierdoActionPerformed(evt);
+            }
+        });
+
+        lblFotoPerfilDerecho.setText("Foto Perfil Derecho:");
+
+        txtFotoPerfilDerecho.setEditable(false);
+
+        btnFotoPerfilDerecho.setText("Buscar");
+        btnFotoPerfilDerecho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFotoPerfilDerechoActionPerformed(evt);
+            }
+        });
+
+        btnFotoSocioeconomico1.setText("Buscar");
+        btnFotoSocioeconomico1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFotoSocioeconomico1ActionPerformed(evt);
+            }
+        });
+
+        btnFotoSocioeconomico2.setText("Buscar");
+        btnFotoSocioeconomico2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFotoSocioeconomico2ActionPerformed(evt);
+            }
+        });
+
+        txtFotoSocioeconomico2.setEditable(false);
+
+        txtFotoSocioeconomico1.setEditable(false);
+
+        lblFotoSocioeconomico1.setText("Foto estudio socioeconómico 1:");
+
+        lblFotoSocioeconomico2.setText("Foto estudio socioeconómico 2:");
+
+        javax.swing.GroupLayout pBuscaFotosLayout = new javax.swing.GroupLayout(pBuscaFotos);
+        pBuscaFotos.setLayout(pBuscaFotosLayout);
+        pBuscaFotosLayout.setHorizontalGroup(
+            pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pBuscaFotosLayout.createSequentialGroup()
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFotoSocioeconomico1)
+                    .addComponent(lblFotoSocioeconomico2)
+                    .addComponent(lblFotoPerfilDerecho)
+                    .addComponent(lblFotoPerfilIzquierdo)
+                    .addComponent(lblFotoFrente))
+                .addGap(4, 4, 4)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pBuscaFotosLayout.createSequentialGroup()
+                        .addComponent(txtFotoSocioeconomico1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFotoSocioeconomico1))
+                    .addGroup(pBuscaFotosLayout.createSequentialGroup()
+                        .addComponent(txtFotoSocioeconomico2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFotoSocioeconomico2))
+                    .addGroup(pBuscaFotosLayout.createSequentialGroup()
+                        .addComponent(txtFotoPerfilDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFotoPerfilDerecho))
+                    .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pBuscaFotosLayout.createSequentialGroup()
+                            .addComponent(txtFotoPerfilIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnFotoPerfilIzquierdo))
+                        .addGroup(pBuscaFotosLayout.createSequentialGroup()
+                            .addComponent(txtFotoFrente, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnFotoFrente))))
+                .addGap(63, 63, 63))
+        );
+        pBuscaFotosLayout.setVerticalGroup(
+            pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pBuscaFotosLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFotoFrente)
+                    .addComponent(txtFotoFrente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFotoFrente))
+                .addGap(18, 18, 18)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFotoPerfilIzquierdo)
+                    .addComponent(txtFotoPerfilIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFotoPerfilIzquierdo))
+                .addGap(18, 18, 18)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFotoPerfilDerecho)
+                    .addComponent(txtFotoPerfilDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFotoPerfilDerecho))
+                .addGap(18, 18, 18)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFotoSocioeconomico1)
+                    .addComponent(txtFotoSocioeconomico1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFotoSocioeconomico1))
+                .addGap(18, 18, 18)
+                .addGroup(pBuscaFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFotoSocioeconomico2)
+                    .addComponent(txtFotoSocioeconomico2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFotoSocioeconomico2))
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pFotosLayout = new javax.swing.GroupLayout(pFotos);
+        pFotos.setLayout(pFotosLayout);
+        pFotosLayout.setHorizontalGroup(
+            pFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pFotosLayout.createSequentialGroup()
+                .addContainerGap(204, Short.MAX_VALUE)
+                .addComponent(pBuscaFotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(196, 196, 196))
+        );
+        pFotosLayout.setVerticalGroup(
+            pFotosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pFotosLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(pBuscaFotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        tpRegistroElemento.addTab("Fotos", pFotos);
 
         pRegistroElemento.add(tpRegistroElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 930, 570));
 
@@ -4647,11 +4810,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
     }//GEN-LAST:event_cbEstadosEA3ActionPerformed
 
     private void btnCursoAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCursoAceptarActionPerformed
-        String fechaInicio = "";
-        String fechaFin = "";
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        fechaInicio = dateFormat.format(dpCursoInicio.getDate());
-        fechaFin = dateFormat.format(dpCursoFin.getDate());
+        String fechaInicio = dateFormat.format(dpCursoInicio.getDate());
+        String fechaFin = dateFormat.format(dpCursoFin.getDate());
         cursosArray[contadorCursos] = fechaInicio+","+fechaFin+","+txtEmpresaNombre.getText()+","+txtEstudioCurso.getText()+","+txtTipoCurso.getText()+","+txtCursoDuracion.getText()+","+bgCurso.getSelection().getActionCommand()+","+bgCursoStatus.getSelection().getActionCommand();;
         contadorCursos++;        
         modeloCursos.addRow(new Object[]{txtEmpresaNombre.getText()});
@@ -4662,6 +4823,81 @@ public class RegistrarElemento extends javax.swing.JDialog {
         bgCurso.clearSelection();
         bgCursoStatus.clearSelection();
     }//GEN-LAST:event_btnCursoAceptarActionPerformed
+
+    private void btnFotoFrenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFotoFrenteActionPerformed
+        JFileChooser file = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Imagenes jpg (*.jpg)","jpg");
+        FileNameExtensionFilter filter2 = new FileNameExtensionFilter("Imagenes png (*.png)","png");
+        FileNameExtensionFilter filter3 = new FileNameExtensionFilter("Imagenes gif (*.gif)","gif");
+        file.setFileFilter(filter);
+        file.setFileFilter(filter2);
+        file.setFileFilter(filter3);
+        int option = file.showOpenDialog(this);
+        if(option == JFileChooser.APPROVE_OPTION){
+            String path = file.getSelectedFile().getPath();
+            txtFotoFrente.setText(path);
+        }
+    }//GEN-LAST:event_btnFotoFrenteActionPerformed
+
+    private void btnFotoPerfilIzquierdoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFotoPerfilIzquierdoActionPerformed
+        JFileChooser file = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Imagenes jpg (*.jpg)","jpg");
+        FileNameExtensionFilter filter2 = new FileNameExtensionFilter("Imagenes png (*.png)","png");
+        FileNameExtensionFilter filter3 = new FileNameExtensionFilter("Imagenes gif (*.gif)","gif");
+        file.setFileFilter(filter);
+        file.setFileFilter(filter2);
+        file.setFileFilter(filter3);
+        int option = file.showOpenDialog(this);
+        if(option == JFileChooser.APPROVE_OPTION){
+            String path = file.getSelectedFile().getPath();
+            txtFotoPerfilIzquierdo.setText(path);
+        }
+    }//GEN-LAST:event_btnFotoPerfilIzquierdoActionPerformed
+
+    private void btnFotoPerfilDerechoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFotoPerfilDerechoActionPerformed
+        JFileChooser file = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Imagenes jpg (*.jpg)","jpg");
+        FileNameExtensionFilter filter2 = new FileNameExtensionFilter("Imagenes png (*.png)","png");
+        FileNameExtensionFilter filter3 = new FileNameExtensionFilter("Imagenes gif (*.gif)","gif");
+        file.setFileFilter(filter);
+        file.setFileFilter(filter2);
+        file.setFileFilter(filter3);
+        int option = file.showOpenDialog(this);
+        if(option == JFileChooser.APPROVE_OPTION){
+            String path = file.getSelectedFile().getPath();
+            txtFotoPerfilDerecho.setText(path);
+        }
+    }//GEN-LAST:event_btnFotoPerfilDerechoActionPerformed
+
+    private void btnFotoSocioeconomico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFotoSocioeconomico1ActionPerformed
+        JFileChooser file = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Imagenes jpg (*.jpg)","jpg");
+        FileNameExtensionFilter filter2 = new FileNameExtensionFilter("Imagenes png (*.png)","png");
+        FileNameExtensionFilter filter3 = new FileNameExtensionFilter("Imagenes gif (*.gif)","gif");
+        file.setFileFilter(filter);
+        file.setFileFilter(filter2);
+        file.setFileFilter(filter3);
+        int option = file.showOpenDialog(this);
+        if(option == JFileChooser.APPROVE_OPTION){
+            String path = file.getSelectedFile().getPath();
+            txtFotoSocioeconomico1.setText(path);
+        }
+    }//GEN-LAST:event_btnFotoSocioeconomico1ActionPerformed
+
+    private void btnFotoSocioeconomico2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFotoSocioeconomico2ActionPerformed
+        JFileChooser file = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Imagenes jpg (*.jpg)","jpg");
+        FileNameExtensionFilter filter2 = new FileNameExtensionFilter("Imagenes png (*.png)","png");
+        FileNameExtensionFilter filter3 = new FileNameExtensionFilter("Imagenes gif (*.gif)","gif");
+        file.setFileFilter(filter);
+        file.setFileFilter(filter2);
+        file.setFileFilter(filter3);
+        int option = file.showOpenDialog(this);
+        if(option == JFileChooser.APPROVE_OPTION){
+            String path = file.getSelectedFile().getPath();
+            txtFotoSocioeconomico2.setText(path);
+        }
+    }//GEN-LAST:event_btnFotoSocioeconomico2ActionPerformed
 
    
     /**
@@ -4699,6 +4935,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.ButtonGroup bgSolicitudEntrega;
     private javax.swing.ButtonGroup bgToxicologicoEntrega;
     private javax.swing.JButton btnCursoAceptar;
+    private javax.swing.JButton btnFotoFrente;
+    private javax.swing.JButton btnFotoPerfilDerecho;
+    private javax.swing.JButton btnFotoPerfilIzquierdo;
+    private javax.swing.JButton btnFotoSocioeconomico1;
+    private javax.swing.JButton btnFotoSocioeconomico2;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox cbCara;
@@ -4826,6 +5067,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblExteriorReferencia3;
     private javax.swing.JLabel lblExteriorReferencia4;
     private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblFotoFrente;
+    private javax.swing.JLabel lblFotoPerfilDerecho;
+    private javax.swing.JLabel lblFotoPerfilIzquierdo;
+    private javax.swing.JLabel lblFotoSocioeconomico1;
+    private javax.swing.JLabel lblFotoSocioeconomico2;
     private javax.swing.JLabel lblFuncionesEA1;
     private javax.swing.JLabel lblFuncionesEA2;
     private javax.swing.JLabel lblFuncionesEA3;
@@ -4913,6 +5159,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblYearsReferencia3;
     private javax.swing.JLabel lblYearsReferencia4;
     private javax.swing.JPanel pActaNacimiento;
+    private javax.swing.JPanel pBuscaFotos;
     private javax.swing.JPanel pCartaAntecedentes;
     private javax.swing.JPanel pCartaRecomendacionEntrega;
     private javax.swing.JPanel pCartaResguardoEntrega;
@@ -4935,6 +5182,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pExperienciaLaboral1;
     private javax.swing.JPanel pExperienciaLaboral2;
     private javax.swing.JPanel pExperienciaLaboral3;
+    private javax.swing.JPanel pFotos;
     private javax.swing.JPanel pHojaDatos;
     private javax.swing.JPanel pIfe;
     private javax.swing.JPanel pMapaDomicilioEntrega;
@@ -5098,6 +5346,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtExteriorReferencia2;
     private javax.swing.JTextField txtExteriorReferencia3;
     private javax.swing.JTextField txtExteriorReferencia4;
+    private javax.swing.JTextField txtFotoFrente;
+    private javax.swing.JTextField txtFotoPerfilDerecho;
+    private javax.swing.JTextField txtFotoPerfilIzquierdo;
+    private javax.swing.JTextField txtFotoSocioeconomico1;
+    private javax.swing.JTextField txtFotoSocioeconomico2;
     private javax.swing.JTextField txtFuncionesEA1;
     private javax.swing.JTextField txtFuncionesEA2;
     private javax.swing.JTextField txtFuncionesEA3;
