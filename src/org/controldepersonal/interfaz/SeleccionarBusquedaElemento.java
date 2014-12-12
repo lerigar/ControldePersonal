@@ -40,6 +40,7 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         panelBotones = new javax.swing.JPanel();
         btnBuscarNumero = new javax.swing.JButton();
         btnBuscarApellido = new javax.swing.JButton();
+        btnMostrarTodos = new javax.swing.JButton();
         panelOpciones = new javax.swing.JPanel();
         panelBuscarApellido = new javax.swing.JPanel();
         lblBuscarApellido = new javax.swing.JLabel();
@@ -66,15 +67,24 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
             }
         });
 
+        btnMostrarTodos.setText("Mostrar todos");
+        btnMostrarTodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarTodosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
         panelBotones.setLayout(panelBotonesLayout);
         panelBotonesLayout.setHorizontalGroup(
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotonesLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(47, 47, 47)
                 .addComponent(btnBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBuscarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnMostrarTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBotonesLayout.setVerticalGroup(
@@ -83,7 +93,8 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBuscarNumero)
-                    .addComponent(btnBuscarApellido))
+                    .addComponent(btnBuscarApellido)
+                    .addComponent(btnMostrarTodos))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -109,27 +120,26 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         panelBuscarApellidoLayout.setHorizontalGroup(
             panelBuscarApellidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscarApellidoLayout.createSequentialGroup()
+                .addGap(148, 148, 148)
                 .addGroup(panelBuscarApellidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBuscarApellidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblBuscarApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtBuscarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBuscarApellidoLayout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(panelBuscarApellidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblBuscarApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtBuscarApellido)))
-                    .addGroup(panelBuscarApellidoLayout.createSequentialGroup()
-                        .addGap(134, 134, 134)
+                        .addGap(46, 46, 46)
                         .addComponent(btnApellidoBuscar)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         panelBuscarApellidoLayout.setVerticalGroup(
             panelBuscarApellidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBuscarApellidoLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarApellidoLayout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addComponent(lblBuscarApellido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtBuscarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnApellidoBuscar)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         panelOpciones.add(panelBuscarApellido, "panelBuscarApellido");
@@ -154,27 +164,26 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         panelBuscarNumeroLayout.setHorizontalGroup(
             panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
+                .addGap(152, 152, 152)
                 .addGroup(panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblBuscarNumero)
                     .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(lblBuscarNumero))
-                    .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
-                        .addGap(141, 141, 141)
+                        .addGap(45, 45, 45)
                         .addGroup(panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNumeroBuscar)
                             .addComponent(txtBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
         panelBuscarNumeroLayout.setVerticalGroup(
             panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(lblBuscarNumero)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnNumeroBuscar)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         panelOpciones.add(panelBuscarNumero, "panelBuscarNumero");
@@ -234,8 +243,8 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         if(txtBuscarApellido.getText().isEmpty())
             JOptionPane.showMessageDialog(panelOpciones, "Ingresa una opción válida");
         else{
-            BusquedaElemento busquedaElemento = new BusquedaElemento(new javax.swing.JFrame(), false, conexionactual, txtBuscarApellido.getText());
-            busquedaElemento.setVisible(true);
+            BusquedaElementoMultiple busquedaMultiple = new BusquedaElementoMultiple(new javax.swing.JFrame(), false, conexionactual,txtBuscarApellido.getText());
+            busquedaMultiple.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_btnApellidoBuscarActionPerformed
@@ -250,11 +259,18 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btnNumeroBuscarActionPerformed
 
+    private void btnMostrarTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarTodosActionPerformed
+        BusquedaTodos busquedaTodos = new BusquedaTodos(new javax.swing.JFrame(), false, conexionactual);
+        busquedaTodos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMostrarTodosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApellidoBuscar;
     private javax.swing.JButton btnBuscarApellido;
     private javax.swing.JButton btnBuscarNumero;
+    private javax.swing.JButton btnMostrarTodos;
     private javax.swing.JButton btnNumeroBuscar;
     private javax.swing.JLabel lblBuscarApellido;
     private javax.swing.JLabel lblBuscarNumero;

@@ -28,7 +28,7 @@ public class framePrincipal extends javax.swing.JFrame {
     public framePrincipal(conector conexionactual, administradorDeFallos administradorErrores) {
         initComponents();
         //Iniciar maximizado
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
         //continuamos con la conexion provicionado por el login
         this.conexionactual = conexionactual;
         this.administradorErrores = administradorErrores;
@@ -55,6 +55,9 @@ public class framePrincipal extends javax.swing.JFrame {
         btnBuscar = new javax.swing.JButton();
         panelDoc = new javax.swing.JPanel();
         panelServicios = new javax.swing.JPanel();
+        btnRegistrarServicioCliente = new javax.swing.JButton();
+        btnMostrarServiciosClientes = new javax.swing.JButton();
+        btnAltaBajaServicioCliente = new javax.swing.JButton();
         panelAsistencia = new javax.swing.JPanel();
         panelEquipo = new javax.swing.JPanel();
 
@@ -162,15 +165,34 @@ public class framePrincipal extends javax.swing.JFrame {
 
         panelOpciones.add(panelDoc, "panelDoc");
 
+        btnRegistrarServicioCliente.setText("Registrar Servicio/Cliente");
+
+        btnMostrarServiciosClientes.setText("Mostrar Servicios/Clientes");
+
+        btnAltaBajaServicioCliente.setText("Alta/Baja de elementos");
+
         javax.swing.GroupLayout panelServiciosLayout = new javax.swing.GroupLayout(panelServicios);
         panelServicios.setLayout(panelServiciosLayout);
         panelServiciosLayout.setHorizontalGroup(
             panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 449, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelServiciosLayout.createSequentialGroup()
+                .addContainerGap(123, Short.MAX_VALUE)
+                .addGroup(panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAltaBajaServicioCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnMostrarServiciosClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRegistrarServicioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(114, 114, 114))
         );
         panelServiciosLayout.setVerticalGroup(
             panelServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 385, Short.MAX_VALUE)
+            .addGroup(panelServiciosLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(btnRegistrarServicioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(btnMostrarServiciosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(btnAltaBajaServicioCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         panelOpciones.add(panelServicios, "panelServicios");
@@ -268,12 +290,15 @@ public class framePrincipal extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAltaBajaServicioCliente;
     private javax.swing.JButton btnAsistencia;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnDoc;
     private javax.swing.JButton btnElemento;
     private javax.swing.JButton btnEquipo;
+    private javax.swing.JButton btnMostrarServiciosClientes;
     private javax.swing.JButton btnRegistrar;
+    private javax.swing.JButton btnRegistrarServicioCliente;
     private javax.swing.JButton btnServicios;
     private javax.swing.JPanel panelAsistencia;
     private javax.swing.JPanel panelBotones;

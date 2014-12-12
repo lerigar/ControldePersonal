@@ -221,7 +221,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
         lblFecha = new javax.swing.JLabel();
         dpFecha = new org.jdesktop.swingx.JXDatePicker();
         lblEstado = new javax.swing.JLabel();
-        cbEstados = new javax.swing.JComboBox();
+        javax.swing.JComboBox cbEstados = new javax.swing.JComboBox();
         lblMunicipio = new javax.swing.JLabel();
         cbMunicipio = new javax.swing.JComboBox();
         lblEstadoCivil = new javax.swing.JLabel();
@@ -245,6 +245,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
         cbEstadoD = new javax.swing.JComboBox();
         lblMunicipioD = new javax.swing.JLabel();
         cbMunicipioD = new javax.swing.JComboBox();
+        lblNumero = new javax.swing.JLabel();
+        txtNumero = new javax.swing.JTextField();
         pEstudios = new javax.swing.JPanel();
         pEstudiosMaximos = new javax.swing.JPanel();
         lblEstadoEstudios = new javax.swing.JLabel();
@@ -566,6 +568,8 @@ public class RegistrarElemento extends javax.swing.JDialog {
         lblFotoSocioeconomico1 = new javax.swing.JLabel();
         lblFotoSocioeconomico2 = new javax.swing.JLabel();
         pSocioeconomico1 = new javax.swing.JPanel();
+        pSocioeconomico2 = new javax.swing.JPanel();
+        pAsignacion = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
 
@@ -599,7 +603,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
         lblStatus.setText("Status");
 
-        txtStatus.setText("NO DISPONIBLE");
         txtStatus.setEnabled(false);
 
         pSexo.setBorder(javax.swing.BorderFactory.createTitledBorder("Sexo"));
@@ -891,6 +894,10 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
+        lblNumero.setText("Número:");
+
+        txtNumero.setEditable(false);
+
         javax.swing.GroupLayout pDatosPersonalesLayout = new javax.swing.GroupLayout(pDatosPersonales);
         pDatosPersonales.setLayout(pDatosPersonalesLayout);
         pDatosPersonalesLayout.setHorizontalGroup(
@@ -901,15 +908,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addGroup(pDatosPersonalesLayout.createSequentialGroup()
                         .addComponent(pNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                .addComponent(lblEstadoCivil)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                .addComponent(lblStatus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblEstadoCivil)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pDatosPersonalesLayout.createSequentialGroup()
                         .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -961,32 +962,47 @@ public class RegistrarElemento extends javax.swing.JDialog {
                                         .addGap(16, 16, 16)))
                                 .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                        .addComponent(lblSangre)
+                                        .addComponent(lblAlergias)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cbSangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pDatosPersonalesLayout.createSequentialGroup()
-                                            .addComponent(lblNombre)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                                            .addComponent(lblAlergias)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(spAlergias, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(spAlergias, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                                        .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                                                .addComponent(lblNombre)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                                                .addComponent(lblSangre)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(cbSangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                                                .addComponent(lblNumero)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(pDatosPersonalesLayout.createSequentialGroup()
+                                                .addComponent(lblStatus)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                             .addComponent(pDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(229, Short.MAX_VALUE))))
+                        .addContainerGap(103, Short.MAX_VALUE))))
         );
         pDatosPersonalesLayout.setVerticalGroup(
             pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pDatosPersonalesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblApellidoPaterno)
-                    .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblApellidoMaterno)
-                    .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblStatus)
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblApellidoPaterno)
+                        .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblApellidoMaterno)
+                        .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblNombre)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -997,7 +1013,9 @@ public class RegistrarElemento extends javax.swing.JDialog {
                             .addComponent(lblComplexion)
                             .addComponent(cbComplexion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblSangre)
-                            .addComponent(cbSangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbSangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblNumero)
+                            .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(pDatosPersonalesLayout.createSequentialGroup()
@@ -1019,17 +1037,12 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pDatosPersonalesLayout.createSequentialGroup()
-                        .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblEstadoCivil)
-                            .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblStatus)
-                            .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(pDatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblEstadoCivil)
+                        .addComponent(txtEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Datos Personales", pDatosPersonales);
@@ -1235,16 +1248,16 @@ public class RegistrarElemento extends javax.swing.JDialog {
         pEstudiosLayout.setHorizontalGroup(
             pEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pEstudiosLayout.createSequentialGroup()
-                .addContainerGap(184, Short.MAX_VALUE)
+                .addContainerGap(126, Short.MAX_VALUE)
                 .addComponent(pEstudiosMaximos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58))
+                .addGap(116, 116, 116))
         );
         pEstudiosLayout.setVerticalGroup(
             pEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pEstudiosLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(71, 71, 71)
                 .addComponent(pEstudiosMaximos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Estudios", pEstudios);
@@ -1682,7 +1695,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(pComprobanteDom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pCartaAntecedentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pComprobanteEstudios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 163, Short.MAX_VALUE))
+                .addGap(0, 147, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pDocumentosLayout = new javax.swing.GroupLayout(pDocumentos);
@@ -2193,7 +2206,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(pCartaResguardoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pMapaDomicilioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pComprobanteMedicoEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 194, Short.MAX_VALUE))
+                .addGap(0, 178, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pDocumentos2Layout = new javax.swing.GroupLayout(pDocumentos2);
@@ -2512,7 +2525,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addComponent(pTrabajoAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Experiencia Laboral", pExperienciaLaboral);
@@ -2891,7 +2904,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addComponent(pReferenciaPersonal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pReferenciaPersonal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Referencias Personales", pReferenciasPersonales);
@@ -3270,7 +3283,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                 .addComponent(pReferenciaPersonal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pReferenciaPersonal4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Referencias Laborales", pReferenciasLaborales);
@@ -3425,7 +3438,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
                     .addComponent(btnCursoAceptar))
                 .addGap(54, 54, 54)
                 .addComponent(PCursosTotales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Cursos", pCursos);
@@ -3569,7 +3582,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
             .addGroup(pFotosLayout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addComponent(pBuscaFotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         tpRegistroElemento.addTab("Fotos", pFotos);
@@ -3582,10 +3595,36 @@ public class RegistrarElemento extends javax.swing.JDialog {
         );
         pSocioeconomico1Layout.setVerticalGroup(
             pSocioeconomico1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 562, Short.MAX_VALUE)
+            .addGap(0, 546, Short.MAX_VALUE)
         );
 
         tpRegistroElemento.addTab("Estudio Socioeconómico 1", pSocioeconomico1);
+
+        javax.swing.GroupLayout pSocioeconomico2Layout = new javax.swing.GroupLayout(pSocioeconomico2);
+        pSocioeconomico2.setLayout(pSocioeconomico2Layout);
+        pSocioeconomico2Layout.setHorizontalGroup(
+            pSocioeconomico2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 925, Short.MAX_VALUE)
+        );
+        pSocioeconomico2Layout.setVerticalGroup(
+            pSocioeconomico2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 546, Short.MAX_VALUE)
+        );
+
+        tpRegistroElemento.addTab("Estudio Socioeconómico 2", pSocioeconomico2);
+
+        javax.swing.GroupLayout pAsignacionLayout = new javax.swing.GroupLayout(pAsignacion);
+        pAsignacion.setLayout(pAsignacionLayout);
+        pAsignacionLayout.setHorizontalGroup(
+            pAsignacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 925, Short.MAX_VALUE)
+        );
+        pAsignacionLayout.setVerticalGroup(
+            pAsignacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 546, Short.MAX_VALUE)
+        );
+
+        tpRegistroElemento.addTab("Asignación", pAsignacion);
 
         pRegistroElemento.add(tpRegistroElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 930, 590));
 
@@ -4358,7 +4397,6 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JComboBox cbEstadoReferencia2;
     private javax.swing.JComboBox cbEstadoReferencia3;
     private javax.swing.JComboBox cbEstadoReferencia4;
-    private javax.swing.JComboBox cbEstados;
     private javax.swing.JComboBox cbEstadosEA1;
     private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JComboBox cbMunicipioD;
@@ -4477,6 +4515,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblNombreReferencia2;
     private javax.swing.JLabel lblNombreReferencia3;
     private javax.swing.JLabel lblNombreReferencia4;
+    private javax.swing.JLabel lblNumero;
     private javax.swing.JLabel lblNumeroCartilla;
     private javax.swing.JLabel lblNumeroImss;
     private javax.swing.JLabel lblOcupacionReferencia1;
@@ -4511,6 +4550,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblYearsReferencia3;
     private javax.swing.JLabel lblYearsReferencia4;
     private javax.swing.JPanel pActaNacimiento;
+    private javax.swing.JPanel pAsignacion;
     private javax.swing.JPanel pBuscaFotos;
     private javax.swing.JPanel pCartaAntecedentes;
     private javax.swing.JPanel pCartaRecomendacionEntrega;
@@ -4548,6 +4588,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JPanel pRegistroElemento;
     private javax.swing.JPanel pSexo;
     private javax.swing.JPanel pSocioeconomico1;
+    private javax.swing.JPanel pSocioeconomico2;
     private javax.swing.JPanel pSocioeconomicoEntrega;
     private javax.swing.JPanel pSocioeconomicoEntrega2;
     private javax.swing.JPanel pSolicitud;
@@ -4696,6 +4737,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtNombreReferencia2;
     private javax.swing.JTextField txtNombreReferencia3;
     private javax.swing.JTextField txtNombreReferencia4;
+    private javax.swing.JTextField txtNumero;
     private javax.swing.JTextField txtNumeroCartilla;
     private javax.swing.JTextField txtNumeroImss;
     private javax.swing.JTextField txtOcupacionReferencia1;
