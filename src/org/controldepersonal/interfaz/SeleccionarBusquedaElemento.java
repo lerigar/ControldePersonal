@@ -41,7 +41,13 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         btnBuscarNumero = new javax.swing.JButton();
         btnBuscarApellido = new javax.swing.JButton();
         btnMostrarTodos = new javax.swing.JButton();
+        btnMostrarActivos = new javax.swing.JButton();
+        btnMostrarClienteServicio = new javax.swing.JButton();
         panelOpciones = new javax.swing.JPanel();
+        panelBuscarServicioCliente = new javax.swing.JPanel();
+        lblClienteServicio = new javax.swing.JLabel();
+        cbClienteServicio = new javax.swing.JComboBox();
+        btnBuscarClienteServicio = new javax.swing.JButton();
         panelBuscarApellido = new javax.swing.JPanel();
         lblBuscarApellido = new javax.swing.JLabel();
         txtBuscarApellido = new javax.swing.JTextField();
@@ -74,17 +80,33 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
             }
         });
 
+        btnMostrarActivos.setText("Mostrar activos");
+
+        btnMostrarClienteServicio.setText("Mostrar por Cliente/Servicio");
+        btnMostrarClienteServicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarClienteServicioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
         panelBotones.setLayout(panelBotonesLayout);
         panelBotonesLayout.setHorizontalGroup(
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotonesLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(btnBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnBuscarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMostrarTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBotonesLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(btnBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBuscarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnMostrarTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBotonesLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(btnMostrarActivos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnMostrarClienteServicio)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBotonesLayout.setVerticalGroup(
@@ -95,10 +117,47 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
                     .addComponent(btnBuscarNumero)
                     .addComponent(btnBuscarApellido)
                     .addComponent(btnMostrarTodos))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMostrarActivos)
+                    .addComponent(btnMostrarClienteServicio))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         panelOpciones.setLayout(new java.awt.CardLayout());
+
+        lblClienteServicio.setText("Selecciona el Cliente/Servicio:");
+
+        btnBuscarClienteServicio.setText("Buscar");
+
+        javax.swing.GroupLayout panelBuscarServicioClienteLayout = new javax.swing.GroupLayout(panelBuscarServicioCliente);
+        panelBuscarServicioCliente.setLayout(panelBuscarServicioClienteLayout);
+        panelBuscarServicioClienteLayout.setHorizontalGroup(
+            panelBuscarServicioClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarServicioClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblClienteServicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbClienteServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(73, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarServicioClienteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnBuscarClienteServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(162, 162, 162))
+        );
+        panelBuscarServicioClienteLayout.setVerticalGroup(
+            panelBuscarServicioClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscarServicioClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscarServicioClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblClienteServicio)
+                    .addComponent(cbClienteServicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscarClienteServicio)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        panelOpciones.add(panelBuscarServicioCliente, "panelBuscarServicioCliente");
 
         lblBuscarApellido.setText("Ingresa los apellidos del elemento:");
 
@@ -133,7 +192,7 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         panelBuscarApellidoLayout.setVerticalGroup(
             panelBuscarApellidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarApellidoLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblBuscarApellido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtBuscarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -164,11 +223,12 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         panelBuscarNumeroLayout.setHorizontalGroup(
             panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
-                .addGap(152, 152, 152)
                 .addGroup(panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBuscarNumero)
                     .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addGap(152, 152, 152)
+                        .addComponent(lblBuscarNumero))
+                    .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
+                        .addGap(197, 197, 197)
                         .addGroup(panelBuscarNumeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNumeroBuscar)
                             .addComponent(txtBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -179,11 +239,11 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
             .addGroup(panelBuscarNumeroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblBuscarNumero)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtBuscarNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnNumeroBuscar)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         panelOpciones.add(panelBuscarNumero, "panelBuscarNumero");
@@ -204,9 +264,9 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panelBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(panelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -265,18 +325,29 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnMostrarTodosActionPerformed
 
+    private void btnMostrarClienteServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarClienteServicioActionPerformed
+        CardLayout card = (CardLayout) panelOpciones.getLayout();
+        card.show(panelOpciones, "panelBuscarServicioCliente");
+    }//GEN-LAST:event_btnMostrarClienteServicioActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApellidoBuscar;
     private javax.swing.JButton btnBuscarApellido;
+    private javax.swing.JButton btnBuscarClienteServicio;
     private javax.swing.JButton btnBuscarNumero;
+    private javax.swing.JButton btnMostrarActivos;
+    private javax.swing.JButton btnMostrarClienteServicio;
     private javax.swing.JButton btnMostrarTodos;
     private javax.swing.JButton btnNumeroBuscar;
+    private javax.swing.JComboBox cbClienteServicio;
     private javax.swing.JLabel lblBuscarApellido;
     private javax.swing.JLabel lblBuscarNumero;
+    private javax.swing.JLabel lblClienteServicio;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelBuscarApellido;
     private javax.swing.JPanel panelBuscarNumero;
+    private javax.swing.JPanel panelBuscarServicioCliente;
     private javax.swing.JPanel panelOpciones;
     private javax.swing.JTextField txtBuscarApellido;
     private javax.swing.JTextField txtBuscarNumero;

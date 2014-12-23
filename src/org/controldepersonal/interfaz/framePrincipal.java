@@ -30,6 +30,7 @@ public class framePrincipal extends javax.swing.JFrame {
         //Iniciar maximizado
         //setExtendedState(JFrame.MAXIMIZED_BOTH);
         //continuamos con la conexion provicionado por el login
+        setTitle("Sistema de Control y Gestión de Personal (SCGP)");
         this.conexionactual = conexionactual;
         this.administradorErrores = administradorErrores;
     }
@@ -266,7 +267,7 @@ public class framePrincipal extends javax.swing.JFrame {
 
     private void btnAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaActionPerformed
         CardLayout card = (CardLayout) panelOpciones.getLayout();
-        card.show(panelOpciones, "panelAsistencia");
+        card.show(panelOpciones, "panelAsistencias");
     }//GEN-LAST:event_btnAsistenciaActionPerformed
 
     private void btnEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipoActionPerformed
