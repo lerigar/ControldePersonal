@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.controldepersonal.interfaz;
+package org.controldepresonal.interfazBusqueda;
 
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
@@ -139,9 +139,34 @@ public class BusquedaElemento extends javax.swing.JDialog {
         btnDer = new javax.swing.JButton();
         btnFrente = new javax.swing.JButton();
         btnDetalles = new javax.swing.JButton();
-        pDocumentos = new javax.swing.JPanel();
-        lblDocumentos = new javax.swing.JLabel();
-        cbDocumentos = new javax.swing.JComboBox();
+        pAsignacionEquipo = new javax.swing.JPanel();
+        lblAsignacionActual = new javax.swing.JLabel();
+        spAsignacionActual = new javax.swing.JScrollPane();
+        tAsignacionActual = new javax.swing.JTable();
+        btnNueva = new javax.swing.JButton();
+        btnDevolucion = new javax.swing.JButton();
+        btnResguardo = new javax.swing.JButton();
+        btnLicencia = new javax.swing.JButton();
+        btnExcel = new javax.swing.JButton();
+        btnHistorial = new javax.swing.JButton();
+        btnRegistro = new javax.swing.JButton();
+        btnAsignacionDetalles = new javax.swing.JButton();
+        pIncidencias = new javax.swing.JPanel();
+        lblElementoIncidencia = new javax.swing.JLabel();
+        txtNombreIncidencia = new javax.swing.JTextField();
+        spIncidencias = new javax.swing.JScrollPane();
+        tIncidencias = new javax.swing.JTable();
+        btnNuevaIncidencia = new javax.swing.JButton();
+        btnDetallesIncidencia = new javax.swing.JButton();
+        btnIncidenciaActa = new javax.swing.JButton();
+        pServicios = new javax.swing.JPanel();
+        lblNombreServicios = new javax.swing.JLabel();
+        txtNombreServicios = new javax.swing.JTextField();
+        spAsignaciones = new javax.swing.JScrollPane();
+        tAsignaciones = new javax.swing.JTable();
+        btnDetallesServicio = new javax.swing.JButton();
+        btnGeneradorDocumentos = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -149,51 +174,94 @@ public class BusquedaElemento extends javax.swing.JDialog {
 
         lblNombre.setText("Nombre:");
 
+        txtNombre.setEnabled(false);
+
         lblServicio.setText("Servicio:");
+
+        txtServicio.setEnabled(false);
 
         lblEmpresa.setText("Empresa:");
 
+        txtEmpresa.setEnabled(false);
+
         lblNumero.setText("Número:");
+
+        txtNumero.setEnabled(false);
 
         lblPuesto.setText("Puesto:");
 
+        txtPuesto.setEnabled(false);
+
         lblStatus.setText("Status:");
+
+        txtStatus.setEnabled(false);
 
         lblCiudad.setText("Ciudad:");
 
+        txtCiudad.setEnabled(false);
+
         lblEstado.setText("Estado:");
+
+        txtEstado.setEnabled(false);
 
         lblAtencion.setText("Atención RH:");
 
+        dpAtencion.setEnabled(false);
+
         lblInicioLabores.setText("Inicio de labores:");
+
+        dpInicioLabores.setEnabled(false);
 
         pRegistroSecretarias.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro ante Secretarías"));
 
         lblRegistroCESP.setText("Registro CESP:");
 
         txtRegistroCESP.setText("ACEPTADO NO");
+        txtRegistroCESP.setEnabled(false);
 
         lblCESPFecha.setText("Fecha:");
 
+        dpCESP.setEnabled(false);
+
         lblCESPOficio.setText("Oficio:");
+
+        txtCESPOficio.setEnabled(false);
 
         lblVerificacion.setText("Verificación:");
 
+        txtVerificacion.setEnabled(false);
+
         lblVerificacionFecha.setText("Fecha:");
+
+        dpVerificacionFecha.setEnabled(false);
 
         lblSSPF.setText("Registro SSPF:");
 
+        txtSSPF.setEnabled(false);
+
         lblSSPFFecha.setText("Fecha:");
+
+        dpSSPFFecha.setEnabled(false);
 
         lblRegistroSDN.setText("Registro SDN:");
 
+        txtSDNRegistro.setEnabled(false);
+
         lblSSPFOficio.setText("Oficio:");
+
+        txtSSPFOficio.setEnabled(false);
 
         lblSDNFecha.setText("Fecha:");
 
+        dpSDNFecha.setEnabled(false);
+
         lblSDNOficio.setText("Oficio:");
 
+        txtSDNOficio.setEnabled(false);
+
         lblSDN.setText("Lic Part Col:");
+
+        txtSDN.setEnabled(false);
 
         javax.swing.GroupLayout pRegistroSecretariasLayout = new javax.swing.GroupLayout(pRegistroSecretarias);
         pRegistroSecretarias.setLayout(pRegistroSecretariasLayout);
@@ -250,7 +318,7 @@ public class BusquedaElemento extends javax.swing.JDialog {
                         .addComponent(lblSDNOficio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtSDNOficio)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         pRegistroSecretariasLayout.setVerticalGroup(
             pRegistroSecretariasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,43 +420,43 @@ public class BusquedaElemento extends javax.swing.JDialog {
             pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pDatosElementoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblAtencion)
+                .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pDatosElementoLayout.createSequentialGroup()
                         .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblNombre)
-                            .addComponent(lblServicio)
-                            .addComponent(lblEmpresa)
-                            .addComponent(lblPuesto)
-                            .addComponent(lblEstado))
-                        .addGap(39, 39, 39)
-                        .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblAtencion)
                             .addGroup(pDatosElementoLayout.createSequentialGroup()
-                                .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtNombre)
-                                    .addComponent(txtServicio)
-                                    .addComponent(txtEmpresa)
-                                    .addComponent(txtPuesto)
-                                    .addComponent(txtEstado, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblCiudad)
-                                    .addComponent(lblNumero)
-                                    .addComponent(lblStatus))
-                                .addGap(18, 18, 18)
+                                    .addComponent(lblNombre)
+                                    .addComponent(lblServicio)
+                                    .addComponent(lblEmpresa)
+                                    .addComponent(lblPuesto)
+                                    .addComponent(lblEstado))
+                                .addGap(39, 39, 39)
                                 .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(pDatosElementoLayout.createSequentialGroup()
-                                .addComponent(dpAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblInicioLabores)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dpInicioLabores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                                .addComponent(btnDetalles)
-                                .addGap(24, 24, 24))))
+                                    .addGroup(pDatosElementoLayout.createSequentialGroup()
+                                        .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtNombre)
+                                            .addComponent(txtServicio)
+                                            .addComponent(txtEmpresa)
+                                            .addComponent(txtPuesto)
+                                            .addComponent(txtEstado, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblCiudad)
+                                            .addComponent(lblNumero)
+                                            .addComponent(lblStatus))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(pDatosElementoLayout.createSequentialGroup()
+                                        .addComponent(dpAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblInicioLabores)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(dpInicioLabores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(pRegistroSecretarias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,8 +466,11 @@ public class BusquedaElemento extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnFrente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnDer)))
-                .addContainerGap(186, Short.MAX_VALUE))
+                        .addComponent(btnDer))
+                    .addGroup(pDatosElementoLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(btnDetalles)))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         pDatosElementoLayout.setVerticalGroup(
             pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -412,7 +483,9 @@ public class BusquedaElemento extends javax.swing.JDialog {
                         .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnIzq)
                             .addComponent(btnDer)
-                            .addComponent(btnFrente)))
+                            .addComponent(btnFrente))
+                        .addGap(31, 31, 31)
+                        .addComponent(btnDetalles))
                     .addGroup(pDatosElementoLayout.createSequentialGroup()
                         .addGroup(pDatosElementoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblNombre)
@@ -444,41 +517,280 @@ public class BusquedaElemento extends javax.swing.JDialog {
                             .addComponent(lblAtencion)
                             .addComponent(dpAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblInicioLabores)
-                            .addComponent(dpInicioLabores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDetalles))
+                            .addComponent(dpInicioLabores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pRegistroSecretarias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         tpElemento.addTab("Datos", pDatosElemento);
 
-        pElemento.add(tpElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 460));
+        lblAsignacionActual.setText("Asignación actual:");
 
-        lblDocumentos.setText("Generar documentación:");
+        tAsignacionActual.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"", null, null}
+            },
+            new String [] {
+                "Fecha", "Tipo", "Descripción"
+            }
+        ));
+        spAsignacionActual.setViewportView(tAsignacionActual);
+        if (tAsignacionActual.getColumnModel().getColumnCount() > 0) {
+            tAsignacionActual.getColumnModel().getColumn(0).setMinWidth(90);
+            tAsignacionActual.getColumnModel().getColumn(0).setPreferredWidth(0);
+            tAsignacionActual.getColumnModel().getColumn(0).setMaxWidth(90);
+            tAsignacionActual.getColumnModel().getColumn(1).setMinWidth(140);
+            tAsignacionActual.getColumnModel().getColumn(1).setPreferredWidth(0);
+            tAsignacionActual.getColumnModel().getColumn(1).setMaxWidth(140);
+        }
 
-        javax.swing.GroupLayout pDocumentosLayout = new javax.swing.GroupLayout(pDocumentos);
-        pDocumentos.setLayout(pDocumentosLayout);
-        pDocumentosLayout.setHorizontalGroup(
-            pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pDocumentosLayout.createSequentialGroup()
+        btnNueva.setText("Nueva asignación");
+        btnNueva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevaActionPerformed(evt);
+            }
+        });
+
+        btnDevolucion.setText("Devolución de equipo");
+        btnDevolucion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDevolucionActionPerformed(evt);
+            }
+        });
+
+        btnResguardo.setText("Formato de resguardo");
+
+        btnLicencia.setText("Formato de licencia");
+
+        btnExcel.setText("Exportar a excel");
+
+        btnHistorial.setText("Historial");
+        btnHistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistorialActionPerformed(evt);
+            }
+        });
+
+        btnRegistro.setText("Formato de registro");
+
+        btnAsignacionDetalles.setText("Detalles de asignación");
+        btnAsignacionDetalles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsignacionDetallesActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pAsignacionEquipoLayout = new javax.swing.GroupLayout(pAsignacionEquipo);
+        pAsignacionEquipo.setLayout(pAsignacionEquipoLayout);
+        pAsignacionEquipoLayout.setHorizontalGroup(
+            pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pAsignacionEquipoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblDocumentos)
+                .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spAsignacionActual)
+                    .addGroup(pAsignacionEquipoLayout.createSequentialGroup()
+                        .addComponent(lblAsignacionActual)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pAsignacionEquipoLayout.createSequentialGroup()
+                .addContainerGap(129, Short.MAX_VALUE)
+                .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pAsignacionEquipoLayout.createSequentialGroup()
+                        .addComponent(btnHistorial)
+                        .addGap(93, 93, 93)
+                        .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnNueva)
+                            .addComponent(btnLicencia)
+                            .addComponent(btnRegistro))
+                        .addGap(89, 89, 89)
+                        .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnResguardo)
+                            .addComponent(btnDevolucion)
+                            .addComponent(btnAsignacionDetalles)))
+                    .addComponent(btnExcel))
+                .addGap(117, 117, 117))
+        );
+        pAsignacionEquipoLayout.setVerticalGroup(
+            pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pAsignacionEquipoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblAsignacionActual)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbDocumentos, 0, 258, Short.MAX_VALUE)
+                .addComponent(spAsignacionActual, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnHistorial)
+                    .addComponent(btnNueva)
+                    .addComponent(btnDevolucion))
+                .addGap(18, 18, 18)
+                .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnExcel)
+                    .addComponent(btnLicencia)
+                    .addComponent(btnResguardo))
+                .addGap(18, 18, 18)
+                .addGroup(pAsignacionEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistro)
+                    .addComponent(btnAsignacionDetalles))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+
+        tpElemento.addTab("Asignación de Equipo", pAsignacionEquipo);
+
+        lblElementoIncidencia.setText("Elemento:");
+
+        txtNombreIncidencia.setEnabled(false);
+
+        tIncidencias.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Número de incidencia", "Fecha", "Hora", "Tipo", "Supervisor", "Acta"
+            }
+        ));
+        spIncidencias.setViewportView(tIncidencias);
+
+        btnNuevaIncidencia.setText("Nueva incidencia");
+        btnNuevaIncidencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevaIncidenciaActionPerformed(evt);
+            }
+        });
+
+        btnDetallesIncidencia.setText("Detalles de incidencia");
+        btnDetallesIncidencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDetallesIncidenciaActionPerformed(evt);
+            }
+        });
+
+        btnIncidenciaActa.setText("Formato de Acta");
+
+        javax.swing.GroupLayout pIncidenciasLayout = new javax.swing.GroupLayout(pIncidencias);
+        pIncidencias.setLayout(pIncidenciasLayout);
+        pIncidenciasLayout.setHorizontalGroup(
+            pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pIncidenciasLayout.createSequentialGroup()
+                .addGroup(pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pIncidenciasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(spIncidencias, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+                            .addGroup(pIncidenciasLayout.createSequentialGroup()
+                                .addComponent(lblElementoIncidencia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtNombreIncidencia, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(pIncidenciasLayout.createSequentialGroup()
+                        .addGroup(pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pIncidenciasLayout.createSequentialGroup()
+                                .addGap(296, 296, 296)
+                                .addGroup(pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnNuevaIncidencia)
+                                    .addComponent(btnIncidenciaActa)))
+                            .addGroup(pIncidenciasLayout.createSequentialGroup()
+                                .addGap(286, 286, 286)
+                                .addComponent(btnDetallesIncidencia)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        pDocumentosLayout.setVerticalGroup(
-            pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pDocumentosLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(pDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDocumentos)
-                    .addComponent(cbDocumentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+        pIncidenciasLayout.setVerticalGroup(
+            pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pIncidenciasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pIncidenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblElementoIncidencia)
+                    .addComponent(txtNombreIncidencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(spIncidencias, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnIncidenciaActa)
+                .addGap(18, 18, 18)
+                .addComponent(btnNuevaIncidencia)
+                .addGap(18, 18, 18)
+                .addComponent(btnDetallesIncidencia)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
-        pElemento.add(pDocumentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 400, 80));
+        tpElemento.addTab("Incidencias", pIncidencias);
+
+        lblNombreServicios.setText("Elemento:");
+
+        txtNombreServicios.setEnabled(false);
+
+        tAsignaciones.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Asignación", "Fecha", "Cliente", "Servicio"
+            }
+        ));
+        spAsignaciones.setViewportView(tAsignaciones);
+        if (tAsignaciones.getColumnModel().getColumnCount() > 0) {
+            tAsignaciones.getColumnModel().getColumn(0).setMinWidth(70);
+            tAsignaciones.getColumnModel().getColumn(0).setPreferredWidth(70);
+            tAsignaciones.getColumnModel().getColumn(0).setMaxWidth(70);
+            tAsignaciones.getColumnModel().getColumn(1).setMinWidth(80);
+            tAsignaciones.getColumnModel().getColumn(1).setPreferredWidth(80);
+            tAsignaciones.getColumnModel().getColumn(1).setMaxWidth(80);
+        }
+
+        btnDetallesServicio.setText("Detalles");
+        btnDetallesServicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDetallesServicioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pServiciosLayout = new javax.swing.GroupLayout(pServicios);
+        pServicios.setLayout(pServiciosLayout);
+        pServiciosLayout.setHorizontalGroup(
+            pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pServiciosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spAsignaciones)
+                    .addGroup(pServiciosLayout.createSequentialGroup()
+                        .addComponent(lblNombreServicios)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNombreServicios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 493, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(pServiciosLayout.createSequentialGroup()
+                .addGap(292, 292, 292)
+                .addComponent(btnDetallesServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pServiciosLayout.setVerticalGroup(
+            pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pServiciosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombreServicios)
+                    .addComponent(txtNombreServicios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(spAsignaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnDetallesServicio)
+                .addContainerGap(106, Short.MAX_VALUE))
+        );
+
+        tpElemento.addTab("Servicios", pServicios);
+
+        pElemento.add(tpElemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 460));
+
+        btnGeneradorDocumentos.setText("Generador de documentos");
+        pElemento.add(btnGeneradorDocumentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 210, -1));
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        pElemento.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 100, -1));
 
         spElementoEncontrado.setViewportView(pElemento);
 
@@ -486,7 +798,7 @@ public class BusquedaElemento extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(spElementoEncontrado, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
+            .addComponent(spElementoEncontrado, javax.swing.GroupLayout.DEFAULT_SIZE, 778, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -494,12 +806,57 @@ public class BusquedaElemento extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDetallesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetallesActionPerformed
         DetallesElemento detallesElemento = new DetallesElemento(new javax.swing.JFrame(), false, conexionactual);
         detallesElemento.setVisible(true);
     }//GEN-LAST:event_btnDetallesActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        SeleccionarBusquedaElemento selecciona = new SeleccionarBusquedaElemento(new javax.swing.JFrame(), false, conexionactual);
+        selecciona.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialActionPerformed
+        AsignacionEquipoHistorial historial = new AsignacionEquipoHistorial(new javax.swing.JFrame(), false, conexionactual);
+        historial.setVisible(true);
+    }//GEN-LAST:event_btnHistorialActionPerformed
+
+    private void btnNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaActionPerformed
+        AsignacionEquipoNueva nueva = new AsignacionEquipoNueva(new javax.swing.JFrame(), false, conexionactual);
+        nueva.setVisible(true);
+    }//GEN-LAST:event_btnNuevaActionPerformed
+
+    private void btnNuevaIncidenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaIncidenciaActionPerformed
+        IncidenciaNueva incidencia = new IncidenciaNueva(new javax.swing.JFrame(), false, conexionactual);
+        incidencia.setVisible(true);
+    }//GEN-LAST:event_btnNuevaIncidenciaActionPerformed
+
+    private void btnDetallesIncidenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetallesIncidenciaActionPerformed
+        int row = tIncidencias.getSelectedRow();
+        IncidenciaDetalles incidencia = new IncidenciaDetalles(new javax.swing.JFrame(), false, conexionactual,row);
+        incidencia.setVisible(true);
+    }//GEN-LAST:event_btnDetallesIncidenciaActionPerformed
+
+    private void btnDetallesServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetallesServicioActionPerformed
+        int row = tAsignaciones.getSelectedRow();
+        ServiciosDetalles servicio = new ServiciosDetalles(new javax.swing.JFrame(), false, conexionactual,row);
+        servicio.setVisible(true);
+    }//GEN-LAST:event_btnDetallesServicioActionPerformed
+
+    private void btnDevolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionActionPerformed
+        AsignacionEquipoDevolucion devolucion = new AsignacionEquipoDevolucion(new javax.swing.JFrame(), false, conexionactual);
+        devolucion.setVisible(true);
+    }//GEN-LAST:event_btnDevolucionActionPerformed
+
+    private void btnAsignacionDetallesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignacionDetallesActionPerformed
+        int row = tAsignacionActual.getSelectedRow();
+        AsignacionEquipoDetalles detalles = new AsignacionEquipoDetalles(new javax.swing.JFrame(), false, conexionactual,row);
+        detalles.setVisible(true);
+    }//GEN-LAST:event_btnAsignacionDetallesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -530,26 +887,41 @@ public class BusquedaElemento extends javax.swing.JDialog {
     private javax.swing.ButtonGroup bgSocioeconomicoEntrega;
     private javax.swing.ButtonGroup bgSolicitudEntrega;
     private javax.swing.ButtonGroup bgToxicologicoEntrega;
+    private javax.swing.JButton btnAsignacionDetalles;
     private javax.swing.JButton btnDer;
     private javax.swing.JButton btnDetalles;
+    private javax.swing.JButton btnDetallesIncidencia;
+    private javax.swing.JButton btnDetallesServicio;
+    private javax.swing.JButton btnDevolucion;
+    private javax.swing.JButton btnExcel;
     private javax.swing.JButton btnFrente;
+    private javax.swing.JButton btnGeneradorDocumentos;
+    private javax.swing.JButton btnHistorial;
+    private javax.swing.JButton btnIncidenciaActa;
     private javax.swing.JButton btnIzq;
-    private javax.swing.JComboBox cbDocumentos;
+    private javax.swing.JButton btnLicencia;
+    private javax.swing.JButton btnNueva;
+    private javax.swing.JButton btnNuevaIncidencia;
+    private javax.swing.JButton btnRegistro;
+    private javax.swing.JButton btnResguardo;
+    private javax.swing.JButton btnSalir;
     private org.jdesktop.swingx.JXDatePicker dpAtencion;
     private org.jdesktop.swingx.JXDatePicker dpCESP;
     private org.jdesktop.swingx.JXDatePicker dpInicioLabores;
     private org.jdesktop.swingx.JXDatePicker dpSDNFecha;
     private org.jdesktop.swingx.JXDatePicker dpSSPFFecha;
     private org.jdesktop.swingx.JXDatePicker dpVerificacionFecha;
+    private javax.swing.JLabel lblAsignacionActual;
     private javax.swing.JLabel lblAtencion;
     private javax.swing.JLabel lblCESPFecha;
     private javax.swing.JLabel lblCESPOficio;
     private javax.swing.JLabel lblCiudad;
-    private javax.swing.JLabel lblDocumentos;
+    private javax.swing.JLabel lblElementoIncidencia;
     private javax.swing.JLabel lblEmpresa;
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblInicioLabores;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombreServicios;
     private javax.swing.JLabel lblNumero;
     private javax.swing.JLabel lblPuesto;
     private javax.swing.JLabel lblRegistroCESP;
@@ -564,21 +936,31 @@ public class BusquedaElemento extends javax.swing.JDialog {
     private javax.swing.JLabel lblStatus;
     private javax.swing.JLabel lblVerificacion;
     private javax.swing.JLabel lblVerificacionFecha;
+    private javax.swing.JPanel pAsignacionEquipo;
     private javax.swing.JPanel pDatosElemento;
-    private javax.swing.JPanel pDocumentos;
     private javax.swing.JPanel pElemento;
     private javax.swing.JPanel pFotoDerecha;
     private javax.swing.JPanel pFotoFrente;
     private javax.swing.JPanel pFotoIzquierda;
     private javax.swing.JPanel pFotos;
+    private javax.swing.JPanel pIncidencias;
     private javax.swing.JPanel pRegistroSecretarias;
+    private javax.swing.JPanel pServicios;
+    private javax.swing.JScrollPane spAsignacionActual;
+    private javax.swing.JScrollPane spAsignaciones;
     private javax.swing.JScrollPane spElementoEncontrado;
+    private javax.swing.JScrollPane spIncidencias;
+    private javax.swing.JTable tAsignacionActual;
+    private javax.swing.JTable tAsignaciones;
+    private javax.swing.JTable tIncidencias;
     private javax.swing.JTabbedPane tpElemento;
     private javax.swing.JTextField txtCESPOficio;
     private javax.swing.JTextField txtCiudad;
     private javax.swing.JTextField txtEmpresa;
     private javax.swing.JTextField txtEstado;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombreIncidencia;
+    private javax.swing.JTextField txtNombreServicios;
     private javax.swing.JTextField txtNumero;
     private javax.swing.JTextField txtPuesto;
     private javax.swing.JTextField txtRegistroCESP;

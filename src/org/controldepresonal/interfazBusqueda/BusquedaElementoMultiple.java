@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.controldepersonal.interfaz;
+package org.controldepresonal.interfazBusqueda;
 
 import javax.swing.JFrame;
 import org.controldepersonal.conector.conector;
@@ -47,6 +47,7 @@ public class BusquedaElementoMultiple extends javax.swing.JDialog {
         btnCancelarMultiple = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         tMultiple.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,6 +101,7 @@ public class BusquedaElementoMultiple extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSeleccionarMultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarMultipleActionPerformed
@@ -110,6 +112,8 @@ public class BusquedaElementoMultiple extends javax.swing.JDialog {
     }//GEN-LAST:event_btnSeleccionarMultipleActionPerformed
 
     private void btnCancelarMultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarMultipleActionPerformed
+        SeleccionarBusquedaElemento selecciona = new SeleccionarBusquedaElemento(new javax.swing.JFrame(), false, conexionactual);
+        selecciona.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCancelarMultipleActionPerformed
 

@@ -5,6 +5,7 @@
  */
 package org.controldepersonal.interfaz;
 
+import org.controldepresonal.interfazBusqueda.SeleccionarBusquedaElemento;
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
@@ -13,6 +14,8 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
+import org.controldepersonal.interfazClienteServicios.BuscaClienteServicio;
+import org.controldepersonal.interfazClienteServicios.NuevoClienteServicio;
 /* *********************** */
 /**
  *
@@ -167,8 +170,18 @@ public class framePrincipal extends javax.swing.JFrame {
         panelOpciones.add(panelDoc, "panelDoc");
 
         btnRegistrarServicioCliente.setText("Registrar Servicio/Cliente");
+        btnRegistrarServicioCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarServicioClienteActionPerformed(evt);
+            }
+        });
 
         btnMostrarServiciosClientes.setText("Mostrar Servicios/Clientes");
+        btnMostrarServiciosClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarServiciosClientesActionPerformed(evt);
+            }
+        });
 
         btnAltaBajaServicioCliente.setText("Alta/Baja de elementos");
 
@@ -285,9 +298,16 @@ public class framePrincipal extends javax.swing.JFrame {
         buscarElemento.setVisible(true);
     }//GEN-LAST:event_btnBuscarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnRegistrarServicioClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarServicioClienteActionPerformed
+        NuevoClienteServicio nuevo = new NuevoClienteServicio(new javax.swing.JFrame(), false, conexionactual);
+        nuevo.setVisible(true);
+    }//GEN-LAST:event_btnRegistrarServicioClienteActionPerformed
+
+    private void btnMostrarServiciosClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarServiciosClientesActionPerformed
+        BuscaClienteServicio busca = new BuscaClienteServicio(new javax.swing.JFrame(), false, conexionactual);
+        busca.setVisible(true);
+    }//GEN-LAST:event_btnMostrarServiciosClientesActionPerformed
+
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

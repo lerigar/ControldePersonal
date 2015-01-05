@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.controldepersonal.interfaz;
+package org.controldepresonal.interfazBusqueda;
 
 import java.awt.event.KeyEvent;
 import java.text.DateFormat;
@@ -589,6 +589,7 @@ public class DetallesElemento extends javax.swing.JDialog {
         btnActualizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         pRegistroElemento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -3998,6 +3999,7 @@ public class DetallesElemento extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtApellidoPaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPaternoKeyTyped

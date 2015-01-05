@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="spPuestoDetalles" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="spPuestoDetalles" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="spPuestoDetalles">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pPuestoDetalles">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnPuestoDetallesRegistrar" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="btnSalir" min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblPuestoDetallesLaboral" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblPuestoDetallesHorarioLaboral" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblPuestoDetallesInicio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="lblPuestoDetallesSalida" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblPuestoDetallesDescripcion" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtPuestoDetallesDescripcion" min="-2" pref="300" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblPuestoDetallesTipo" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtPuestoDetallesTipo" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblPuestoDetallesHorario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtPuestoDetallesTipoHorario" min="-2" pref="281" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="cbPuestoDetallesLunes" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cbPuestoDetallesMartes" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cbPuestoDetallesMiercoles" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cbPuestoDetallesJueves" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cbPuestoDetallesViernes" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cbPuestoDetallesSabado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cbPuestoDetallesDomingo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="txtPuestoDetallesHoraInicioLunes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtPuestoDetallesHoraInicioMartes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtPuestoDetallesHoraInicioMiercoles" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtPuestoDetallesHoraInicioJueves" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtPuestoDetallesHoraInicioViernes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtPuestoDetallesHoraInicioSabado" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtPuestoDetallesHoraInicioDomingo" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="lblPuestoDetallesVacante" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtPuestoDetallesVacante" min="-2" pref="50" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtPuestoDetallesSalidaLunes" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPuestoDetallesSalidaMartes" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPuestoDetallesSalidaMiercoles" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPuestoDetallesSalidaJueves" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPuestoDetallesSalidaViernes" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPuestoDetallesSalidaSabado" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPuestoDetallesSalidaDomingo" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="119" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPuestoDetallesDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPuestoDetallesTipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesTipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPuestoDetallesHorario" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesTipoHorario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPuestoDetallesVacante" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesVacante" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPuestoDetallesLaboral" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPuestoDetallesHorarioLaboral" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPuestoDetallesInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPuestoDetallesSalida" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesLunes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioLunes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaLunes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesMartes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioMartes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaMartes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesMiercoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioMiercoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaMiercoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesJueves" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioJueves" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaJueves" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesViernes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioViernes" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaViernes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesSabado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioSabado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaSabado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbPuestoDetallesDomingo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesHoraInicioDomingo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPuestoDetallesSalidaDomingo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPuestoDetallesRegistrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="btnSalir">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salir"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesDescripcion">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Descripci&#xf3;n:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesDescripcion">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesTipo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tipo:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesTipo">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesHorario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tipo de Horario:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesVacante">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Elementos para cubrir la vacante:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesVacante">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesTipoHorario">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesLaboral">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="D&#xed;as laborales:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesLunes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lunes"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesMartes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Martes"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesMiercoles">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Miercoles"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesJueves">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Jueves"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesViernes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Viernes"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesSabado">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="S&#xe1;bado"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="cbPuestoDetallesDomingo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Domingo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesHorarioLaboral">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Horario laboral:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesInicio">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Entrada:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioLunes">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioMartes">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioMiercoles">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioJueves">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioViernes">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioSabado">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesHoraInicioDomingo">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoDetallesSalida">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salida:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaLunes">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaMartes">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaMiercoles">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaJueves">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaViernes">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaSabado">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPuestoDetallesSalidaDomingo">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnPuestoDetallesRegistrar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registrar"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

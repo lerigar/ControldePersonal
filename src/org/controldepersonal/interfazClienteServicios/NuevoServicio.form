@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="spNuevoServicio" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="spNuevoServicio" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="spNuevoServicio">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pNuevoServicio">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="tpServicioNuevo" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnModificar" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnSalir" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioBuscaServicio" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoServicioNombre" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblServicioBuscaClienteNombre" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoClienteNombre" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioBuscaLugar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoLugar" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtServicioNuevoServicioNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblServicioBuscaServicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblServicioBuscaClienteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtServicioNuevoClienteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtServicioNuevoLugar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblServicioBuscaLugar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="tpServicioNuevo" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnModificar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="btnSalir">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salir"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblServicioBuscaServicio">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Servicio:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtServicioNuevoServicioNombre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblServicioBuscaClienteNombre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cliente:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtServicioNuevoClienteNombre">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblServicioBuscaLugar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtServicioNuevoLugar">
+            </Component>
+            <Component class="javax.swing.JButton" name="btnModificar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registrar"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JTabbedPane" name="tpServicioNuevo">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="pDatosGenerales">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Datos Generales">
+                        <Property name="tabTitle" type="java.lang.String" value="Datos Generales"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoComentarios" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoComentarios" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoInicio" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="dpServicioNuevoInicioServicio" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoElementosSolicitados" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoElementosSolicitados" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoEncargado" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoEncargado" min="-2" pref="210" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoTelefonoOficina" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoTelefonoOficina" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoCelular" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoCelular" min="-2" pref="80" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoCorreo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoCorreo" min="-2" pref="120" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoDomicilio" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoDomicilio" min="-2" pref="170" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoDomicilioEntre" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoDomicilioEntre" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoExterior" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoExterior" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoInterior" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoInterior" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoColonia" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoColonia" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoPostal" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoPostal" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="lblServicioNuevoTelefonos" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoTelefonos" min="-2" pref="201" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblServicioNuevoEmergencia" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtServicioNuevoEmergencia" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="cbServicioNuevoCarBardas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbServicioNuevoCarAlumbrado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbServicioNuevoCarBlindados" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbServicioNuevoCarExtintores" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="cbServicioNuevoCarIluminacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbServicioNuevoCarPatio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbServicioNuevoCarEstacionamiento" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbServicioNuevoCarHidrantes" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="cbServicioNuevoCarCircuito" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="lblServicioNuevoMedidasPorterior" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="cbServicioNuevoCarIncendios" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="cbServicioNuevoCarEscaleras" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="lblServicioNuevoMedidadFrente" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="cbServicioNuevoCarSalidas" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="lblServicioNuevoMedidasDerecha" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="cbServicioNuevoCarAlarmas" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="lblServicioNuevoMedidasIzq" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="lblServicioNuevoCaracteristicasLugar" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="lblServicioNuevoMedidas" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblServicioNuevoEstado" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="cbEstados" min="-2" pref="220" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="lblServicioNuevoMunicipio" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="cbMunicipios" min="-2" pref="220" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtServicioNuevoMedidasFrente" alignment="0" pref="50" max="32767" attributes="0"/>
+                                          <Component id="txtServicioNuevoMedidasPosterior" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtServicioNuevoMedidadIzquierda" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtServicioNuevoMedidadDerecha" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="75" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="dpServicioNuevoInicioServicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoElementosSolicitados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoElementosSolicitados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtServicioNuevoEncargado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoEncargado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoTelefonoOficina" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoTelefonoOficina" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoCorreo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoCorreo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoDomicilio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoDomicilio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoDomicilioEntre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoDomicilioEntre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoExterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoExterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoInterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoInterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoColonia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoColonia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoPostal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoPostal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoTelefonos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoTelefonos" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbEstados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbMunicipios" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoEmergencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoEmergencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoCaracteristicasLugar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoMedidas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbServicioNuevoCarBardas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarIluminacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarIncendios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarEscaleras" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoMedidadFrente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoMedidasFrente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbServicioNuevoCarAlumbrado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarPatio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarCircuito" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoMedidasPorterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoMedidasPosterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbServicioNuevoCarBlindados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarEstacionamiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarAlarmas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoMedidasIzq" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoMedidadIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbServicioNuevoCarExtintores" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarHidrantes" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbServicioNuevoCarSalidas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblServicioNuevoMedidasDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoMedidadDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblServicioNuevoComentarios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtServicioNuevoComentarios" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="41" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoInicio">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Inicio de Servicio:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="org.jdesktop.swingx.JXDatePicker" name="dpServicioNuevoInicioServicio">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoElementosSolicitados">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Elementos solicitados:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoElementosSolicitados">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoEncargado">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Encargado de Seguridad:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoEncargado">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoTelefonoOficina">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tel&#xe9;fono Oficina:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoTelefonoOficina">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoCelular">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Celular:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoCelular">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoCorreo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Correo:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoCorreo">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoDomicilio">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Domicilio:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoDomicilio">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoDomicilioEntre">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Entre:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoDomicilioEntre">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoExterior">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ext:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoExterior">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoInterior">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Int:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoInterior">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoColonia">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Colonia:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoColonia">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoPostal">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="C&#xf3;digo postal:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoPostal">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoTelefonos">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tel&#xe9;fonos:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoTelefonos">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoEstado">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Estado:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="cbEstados">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="1">
+                            <StringItem index="0" value="Elige un Estado"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoMunicipio">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Municipio:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="cbMunicipios">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="1">
+                            <StringItem index="0" value="Selecciona un Municipio"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoEmergencia">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tel&#xe9;fonos de emergencia:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoEmergencia">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoCaracteristicasLugar">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Caracter&#xed;sticas del lugar:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarBardas">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Bardas de protecci&#xf3;n"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarAlumbrado">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Alumbrado"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarBlindados">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cristales blindados"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarIluminacion">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Iluminaci&#xf3;n de fachada"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarPatio">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Patio"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarEstacionamiento">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Estacionamiento"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarIncendios">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Sistema contra incendios"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarCircuito">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Sistema de Circuito cerrado"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarAlarmas">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Sistema de Alarmas"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarExtintores">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Extintores"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarHidrantes">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Hidrantes"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarSalidas">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Salidas de Emergencia"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="cbServicioNuevoCarEscaleras">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Escaleras"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoMedidas">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Medidas:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoMedidadFrente">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Frente:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoMedidasPorterior">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Posterior:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoMedidasIzq">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Izq:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoMedidasDerecha">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Der:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoMedidasFrente">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoMedidasPosterior">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoMedidadIzquierda">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoMedidadDerecha">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblServicioNuevoComentarios">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Comentarios"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtServicioNuevoComentarios">
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="pConsignas">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Reglas del Servicio">
+                        <Property name="tabTitle" type="java.lang.String" value="Reglas del Servicio"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="spConsignas" alignment="0" pref="753" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblConsignas" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lblConsignas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="spConsignas" pref="353" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="lblConsignas">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Consignas Especiales del Servicio:"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="spConsignas">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="taConsignas">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="rows" type="int" value="5"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

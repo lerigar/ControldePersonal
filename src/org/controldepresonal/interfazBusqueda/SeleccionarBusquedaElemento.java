@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.controldepersonal.interfaz;
+package org.controldepresonal.interfazBusqueda;
 
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
@@ -43,6 +43,7 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         btnMostrarTodos = new javax.swing.JButton();
         btnMostrarActivos = new javax.swing.JButton();
         btnMostrarClienteServicio = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         panelOpciones = new javax.swing.JPanel();
         panelBuscarServicioCliente = new javax.swing.JPanel();
         lblClienteServicio = new javax.swing.JLabel();
@@ -58,6 +59,7 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         btnNumeroBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         btnBuscarNumero.setText("Por número");
         btnBuscarNumero.addActionListener(new java.awt.event.ActionListener() {
@@ -81,11 +83,23 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         });
 
         btnMostrarActivos.setText("Mostrar activos");
+        btnMostrarActivos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActivosActionPerformed(evt);
+            }
+        });
 
         btnMostrarClienteServicio.setText("Mostrar por Cliente/Servicio");
         btnMostrarClienteServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMostrarClienteServicioActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -103,10 +117,12 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnMostrarTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBotonesLayout.createSequentialGroup()
-                        .addGap(103, 103, 103)
+                        .addGap(21, 21, 21)
                         .addComponent(btnMostrarActivos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMostrarClienteServicio)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnMostrarClienteServicio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBotonesLayout.setVerticalGroup(
@@ -120,7 +136,8 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMostrarActivos)
-                    .addComponent(btnMostrarClienteServicio))
+                    .addComponent(btnMostrarClienteServicio)
+                    .addComponent(btnSalir))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -270,6 +287,7 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarNumeroActionPerformed
@@ -330,6 +348,16 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
         card.show(panelOpciones, "panelBuscarServicioCliente");
     }//GEN-LAST:event_btnMostrarClienteServicioActionPerformed
 
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnMostrarActivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActivosActionPerformed
+        MostrarElementosActivos activos = new MostrarElementosActivos(new javax.swing.JFrame(), false, conexionactual);
+        activos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMostrarActivosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApellidoBuscar;
@@ -340,6 +368,7 @@ public class SeleccionarBusquedaElemento extends javax.swing.JDialog {
     private javax.swing.JButton btnMostrarClienteServicio;
     private javax.swing.JButton btnMostrarTodos;
     private javax.swing.JButton btnNumeroBuscar;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox cbClienteServicio;
     private javax.swing.JLabel lblBuscarApellido;
     private javax.swing.JLabel lblBuscarNumero;
