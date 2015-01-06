@@ -14,6 +14,7 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
+import org.controldepersonal.excel.ConexionExcel;
 import org.controldepersonal.interfazClienteServicios.BuscaClienteServicio;
 import org.controldepersonal.interfazClienteServicios.NuevoClienteServicio;
 /* *********************** */

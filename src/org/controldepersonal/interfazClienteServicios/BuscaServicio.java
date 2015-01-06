@@ -5,6 +5,7 @@
  */
 package org.controldepersonal.interfazClienteServicios;
 
+import java.util.Calendar;
 import javax.swing.table.DefaultTableModel;
 import org.controldepersonal.conector.conector;
 
@@ -28,6 +29,7 @@ public class BuscaServicio extends javax.swing.JDialog {
         txtServicioBuscaClienteNombre.setText(nombreCliente);
         //Busca y rellenaa espacios
         setTitle("Detalles del Servicio");
+        System.out.println(dameHora());
     }
 
     /**
@@ -127,6 +129,7 @@ public class BuscaServicio extends javax.swing.JDialog {
         btnContratosActualizar = new javax.swing.JButton();
         btnContratadosBaja = new javax.swing.JButton();
         btnContratadosContratar = new javax.swing.JButton();
+        btnDetalles = new javax.swing.JButton();
         pCalendarizacion = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tCalendarizacion = new javax.swing.JTable();
@@ -137,6 +140,7 @@ public class BuscaServicio extends javax.swing.JDialog {
         jScrollPane2 = new javax.swing.JScrollPane();
         tHistorial = new javax.swing.JTable();
         btnHistorialDetalles = new javax.swing.JButton();
+        pAsistencia = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -582,12 +586,17 @@ public class BuscaServicio extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Puesto", "Nombre del Elemento", "Tipo de Elemento", "Horario", "Status"
+                "Puesto", "Nombre del Elemento", "Horario", "Status"
             }
         ));
         spAsignados.setViewportView(tContratados);
 
         btnContratadosAsignar.setText("Asignar");
+        btnContratadosAsignar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContratadosAsignarActionPerformed(evt);
+            }
+        });
 
         btnContratadosReasignar.setText("Re-Asignar");
 
@@ -602,6 +611,8 @@ public class BuscaServicio extends javax.swing.JDialog {
             }
         });
 
+        btnDetalles.setText("Detalles");
+
         javax.swing.GroupLayout pAsignadosLayout = new javax.swing.GroupLayout(pAsignados);
         pAsignados.setLayout(pAsignadosLayout);
         pAsignadosLayout.setHorizontalGroup(
@@ -615,7 +626,8 @@ public class BuscaServicio extends javax.swing.JDialog {
                     .addComponent(btnContratadosReasignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnContratosActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnContratadosBaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnContratadosContratar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnContratadosContratar, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(btnDetalles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         pAsignadosLayout.setVerticalGroup(
@@ -635,7 +647,9 @@ public class BuscaServicio extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addComponent(btnContratadosBaja)
                         .addGap(18, 18, 18)
-                        .addComponent(btnContratosActualizar)))
+                        .addComponent(btnContratosActualizar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDetalles)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -725,6 +739,19 @@ public class BuscaServicio extends javax.swing.JDialog {
         );
 
         tpServicioBusca.addTab("Historial", pHistorial);
+
+        javax.swing.GroupLayout pAsistenciaLayout = new javax.swing.GroupLayout(pAsistencia);
+        pAsistencia.setLayout(pAsistenciaLayout);
+        pAsistenciaLayout.setHorizontalGroup(
+            pAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 773, Short.MAX_VALUE)
+        );
+        pAsistenciaLayout.setVerticalGroup(
+            pAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 395, Short.MAX_VALUE)
+        );
+
+        tpServicioBusca.addTab("Asistencia", pAsistencia);
 
         javax.swing.GroupLayout pBuscaServicioLayout = new javax.swing.GroupLayout(pBuscaServicio);
         pBuscaServicio.setLayout(pBuscaServicioLayout);
@@ -818,10 +845,29 @@ public class BuscaServicio extends javax.swing.JDialog {
         contratar.setVisible(true);
     }//GEN-LAST:event_btnContratadosContratarActionPerformed
 
-    public static void contrataElemento(String nombreElemento, String tipoElemento){
-        //Busca al elemento y hacer la asignacion de servicio
-        System.out.println(nombreElemento+" "+tipoElemento);
-        tablaContratados.addRow(new Object[]{"",nombreElemento,tipoElemento,"",""});
+    private void btnContratadosAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratadosAsignarActionPerformed
+        int row = tContratados.getSelectedRow();
+        BuscaServicioContratadosAsignar asignar = new BuscaServicioContratadosAsignar(new javax.swing.JFrame(), false, conexionactual,row);
+        asignar.setVisible(true);
+    }//GEN-LAST:event_btnContratadosAsignarActionPerformed
+
+    public static void contrataElemento(String nombreElemento){
+        //Busca al elemento
+        System.out.println(nombreElemento);
+        tablaContratados.addRow(new Object[]{"",nombreElemento,"",""});
+    }
+    
+    public static void asignaServicioElemento(String nombreServicio,String tipoHorario,String status,int row){
+        tablaContratados.setValueAt(nombreServicio, row, 0);
+        tablaContratados.setValueAt(tipoHorario, row, 2);
+        tablaContratados.setValueAt(status, row, 3);
+    }
+    
+    private String dameHora(){
+        String hora = "";
+        Calendar calendario = Calendar.getInstance();
+        hora = Integer.toString(calendario.get(Calendar.HOUR_OF_DAY))+":"+Integer.toString(calendario.get(Calendar.MINUTE))+":"+Integer.toString(calendario.get(Calendar.SECOND));
+        return hora;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -833,6 +879,7 @@ public class BuscaServicio extends javax.swing.JDialog {
     private javax.swing.JButton btnContratadosContratar;
     private javax.swing.JButton btnContratadosReasignar;
     private javax.swing.JButton btnContratosActualizar;
+    private javax.swing.JButton btnDetalles;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnHistorialDetalles;
     private javax.swing.JButton btnModificar;
@@ -886,6 +933,7 @@ public class BuscaServicio extends javax.swing.JDialog {
     private javax.swing.JLabel lblServicioBuscaTelefonoOficina;
     private javax.swing.JLabel lblServicioBuscaTelefonos;
     private javax.swing.JPanel pAsignados;
+    private javax.swing.JPanel pAsistencia;
     private javax.swing.JPanel pBuscaServicio;
     private javax.swing.JPanel pCalendarizacion;
     private javax.swing.JPanel pConsignas;

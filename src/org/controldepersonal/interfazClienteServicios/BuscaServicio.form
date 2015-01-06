@@ -916,7 +916,8 @@
                                   <Component id="btnContratadosReasignar" max="32767" attributes="0"/>
                                   <Component id="btnContratosActualizar" max="32767" attributes="0"/>
                                   <Component id="btnContratadosBaja" max="32767" attributes="0"/>
-                                  <Component id="btnContratadosContratar" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnContratadosContratar" pref="90" max="32767" attributes="0"/>
+                                  <Component id="btnDetalles" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="31" max="32767" attributes="0"/>
                           </Group>
@@ -941,6 +942,8 @@
                                       <Component id="btnContratadosBaja" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnContratosActualizar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnDetalles" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="24" max="32767" attributes="0"/>
@@ -959,21 +962,15 @@
                         <Component class="javax.swing.JTable" name="tContratados">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="5" rowCount="0">
+                              <Table columnCount="4" rowCount="0">
                                 <Column editable="true" title="Puesto" type="java.lang.Object"/>
                                 <Column editable="true" title="Nombre del Elemento" type="java.lang.Object"/>
-                                <Column editable="true" title="Tipo de Elemento" type="java.lang.Object"/>
                                 <Column editable="true" title="Horario" type="java.lang.Object"/>
                                 <Column editable="true" title="Status" type="java.lang.Object"/>
                               </Table>
                             </Property>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                               <TableColumnModel selectionModel="0">
-                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                  <Title/>
-                                  <Editor/>
-                                  <Renderer/>
-                                </Column>
                                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                   <Title/>
                                   <Editor/>
@@ -1007,6 +1004,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Asignar"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratadosAsignarActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnContratadosReasignar">
                       <Properties>
@@ -1030,6 +1030,11 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratadosContratarActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnDetalles">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Detalles"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1246,6 +1251,28 @@
                       </Properties>
                     </Component>
                   </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="pAsistencia">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Asistencia">
+                        <Property name="tabTitle" type="java.lang.String" value="Asistencia"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="395" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
                 </Container>
               </SubComponents>
             </Container>

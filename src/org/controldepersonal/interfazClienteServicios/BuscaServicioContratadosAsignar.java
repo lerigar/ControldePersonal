@@ -11,17 +11,21 @@ import org.controldepersonal.conector.conector;
  *
  * @author Miguel
  */
-public class BuscaServicioContratadosContratar extends javax.swing.JDialog {
+public class BuscaServicioContratadosAsignar extends javax.swing.JDialog {
 
     /**
-     * Creates new form BuscaServicioContratadosContratar
+     * Creates new form BuscaServicioContratadosAsignar
      */
     conector conexionactual;
-    public BuscaServicioContratadosContratar(java.awt.Frame parent, boolean modal,conector conexionactual) {
+    private int row;
+    private String status = "ACTIVO";
+    public BuscaServicioContratadosAsignar(java.awt.Frame parent, boolean modal,conector conexionactual,int row) {
         super(parent, modal);
         this.conexionactual = conexionactual;
+        this.row = row;
         initComponents();
-        setTitle("Seleccionar elemento");
+        setTitle("Asignar Servicio");
+        
     }
 
     /**
@@ -33,22 +37,22 @@ public class BuscaServicioContratadosContratar extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        spContratarElemento = new javax.swing.JScrollPane();
-        tContratarElementos = new javax.swing.JTable();
+        spAsignarServicio = new javax.swing.JScrollPane();
+        tAsignarServicios = new javax.swing.JTable();
         btnSeleccionar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        tContratarElementos.setModel(new javax.swing.table.DefaultTableModel(
+        tAsignarServicios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"fnriveirvbiviiernvei vernvei", "cnirever ver verve"}
+                {"cbucebuceub", "completo"}
             },
             new String [] {
-                "Nombre", "Tipo de Elemento"
+                "Servicio", "Tipo de horario"
             }
         ));
-        spContratarElemento.setViewportView(tContratarElementos);
+        spAsignarServicio.setViewportView(tAsignarServicios);
 
         btnSeleccionar.setText("Seleccionar");
         btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,30 +74,28 @@ public class BuscaServicioContratadosContratar extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(spContratarElemento, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addComponent(spAsignarServicio, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSeleccionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(btnSeleccionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(spContratarElemento, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
-                        .addComponent(btnSeleccionar)
-                        .addGap(27, 27, 27)
-                        .addComponent(btnSalir)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(spAsignarServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(btnSeleccionar)
+                .addGap(37, 37, 37)
+                .addComponent(btnSalir)
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -101,18 +103,17 @@ public class BuscaServicioContratadosContratar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
-        int row = tContratarElementos.getSelectedRow();
-        String nombreElemento = tContratarElementos.getValueAt(row, 0).toString();
-        String tipoElemento = tContratarElementos.getValueAt(row, 1).toString();
-        BuscaServicio.contrataElemento(nombreElemento);
-        //Hacer modificación en la base de datos para que este elemento ya no aparezca despues
+        int row = tAsignarServicios.getSelectedRow();
+        String nombreServicio = tAsignarServicios.getValueAt(row, 0).toString();
+        String tipoHorario = tAsignarServicios.getValueAt(row, 1).toString();
+        BuscaServicio.asignaServicioElemento(nombreServicio,tipoHorario,status,row);
+        this.dispose();
     }//GEN-LAST:event_btnSeleccionarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnSeleccionar;
-    private javax.swing.JScrollPane spContratarElemento;
-    private javax.swing.JTable tContratarElementos;
+    private javax.swing.JScrollPane spAsignarServicio;
+    private javax.swing.JTable tAsignarServicios;
     // End of variables declaration//GEN-END:variables
 }
