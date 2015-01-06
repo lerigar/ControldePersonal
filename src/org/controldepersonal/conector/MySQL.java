@@ -8,6 +8,8 @@ package org.controldepersonal.conector;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import org.controldepersonal.elemento.Elemento;
 
 /**
  *
@@ -30,16 +32,15 @@ public class MySQL {
     public MySQL(Connection conexion) {
         this.conexion = conexion;
     }
-        
-    public boolean borrarDatosTemporalesCursos(){
+
+    public boolean borrarDatosTemporalesCursos() {
         statement = null;
-        try{
+        try {
             statement = conexion.createStatement();
             String query = "delete from cursosTemporal";
             statement.executeQuery(query);
             return true;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             ecepcion = e;
             return false;
         }
@@ -81,5 +82,41 @@ public class MySQL {
         }
         return resultado;
     }
+    /*
+     Funcion que llena los datos del empleado.
+     */
 
+    public Elemento obtenDatos(Elemento elemento, int IdElemento) {
+        statement = null;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException e) {
+            ecepcion = e;
+        }
+        // inicializacion de los resultados.
+        resultados = null;
+        //Se inicia el ciclo
+        for (int c = 0; c >= elemento.Campos.length; c++) {
+            //Se arma el qwerty
+            String qwerty = "SELECT " + elemento.Campos[c]
+                    + "FROM empleados_nivel1"
+                    + "WHERE id_empleado=" + IdElemento + ";";
+            // se ejecuta el qwerty:
+            System.out.println(qwerty);
+            try {
+                resultados = statement.executeQuery(qwerty);
+            } catch (SQLException e) {
+                ecepcion = e;
+            }
+            // Se almacenan los resultados en la variable de retorno.
+            try {
+                for (int i = 0; resultados.next(); i++) {
+                    elemento.insertaValor(elemento.Campos[c], resultados.getString(1));
+                }
+            } catch (SQLException e) {
+                ecepcion = e;
+            }
+        }
+        return elemento;
+    }
 }

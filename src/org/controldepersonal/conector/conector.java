@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.controldepersonal.elemento.Elemento;
 
 public class conector {
     /*
@@ -145,6 +146,10 @@ public class conector {
         // Los parametros son: Tabla, columna y condicion
         return libreriaSQL.dameArregloString("municipios m, estados e WHERE m.estado_id=e.id"
                 + " AND e.nombre='" + estado + "'", "m.nombre ");
+    }
+
+    public Elemento dameDatosElemento(int numeroElemento) {
+        return libreriaSQL.obtenDatos(new Elemento(), numeroElemento);
     }
 
 }

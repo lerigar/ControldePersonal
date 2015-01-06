@@ -14,6 +14,7 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import org.controldepersonal.conector.conector;
+import org.controldepersonal.elemento.Elemento;
 
 /**
  *
@@ -32,14 +33,17 @@ public class BusquedaElemento extends javax.swing.JDialog {
     private String[] empleoArray = new String[10];
     private int contadorEmpleos = 0;
     private DefaultTableModel modeloEmpleos;
+    Elemento elemento;
     public BusquedaElemento(java.awt.Frame parent, boolean modal,conector conexionactual,int numeroElemento) {
         super(parent, modal);
         this.conexionactual = conexionactual;
         this.numeroElemento = numeroElemento;
+        elemento = conexionactual.dameDatosElemento(numeroElemento);
         initComponents();
         setTitle("Busqueda de Personal");
         System.out.println(this.numeroElemento);
         busquedaElemento(this.numeroElemento);
+        setValoresenCampos(elemento);
     }
     
     private void busquedaElemento(int numero){
@@ -973,5 +977,28 @@ public class BusquedaElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtStatus;
     private javax.swing.JTextField txtVerificacion;
     // End of variables declaration//GEN-END:variables
+
+    private void setValoresenCampos(Elemento elemento) {
+        if(elemento!=null){
+    txtCESPOficio.setText(elemento.dameDato("Oficio Registro CESP"));
+    txtCiudad.setText(elemento.dameDato("Ciudad"));
+    txtEmpresa.setText(elemento.dameDato("Empresa"));
+    txtEstado.setText(elemento.dameDato("Estado"));
+    txtNombre.setText(elemento.dameDato("Nombre"));
+    txtNombreIncidencia.setText(elemento.dameDato("??"));
+    txtNombreServicios.setText(elemento.dameDato("??"));
+    txtNumero.setText(elemento.dameDato("Numero"));
+    txtPuesto.setText(elemento.dameDato("Puesto"));
+    txtRegistroCESP.setText(elemento.dameDato("Registro CESP"));
+    txtSDN.setText(elemento.dameDato("Registro SDN"));
+    txtSDNOficio.setText(elemento.dameDato("Oficio Registro SDN"));
+    txtSDNRegistro.setText(elemento.dameDato("Fecha Registro SDN"));
+    txtSSPF.setText(elemento.dameDato("Registro SSPF"));
+    txtSSPFOficio.setText(elemento.dameDato("Oficio Registro SSPF"));
+    txtServicio.setText(elemento.dameDato("Servicio"));
+    txtStatus.setText(elemento.dameDato("Status"));
+    txtVerificacion.setText(elemento.dameDato("Verificacion"));
+        }
+    }
 
 }
