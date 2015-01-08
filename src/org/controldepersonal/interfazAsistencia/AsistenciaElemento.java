@@ -6,6 +6,7 @@
 package org.controldepersonal.interfazAsistencia;
 
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -183,7 +184,32 @@ public class AsistenciaElemento extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAsistenciaEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaEntradaActionPerformed
-        
+        if(txtAsistenciaEntrada.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Ingresa una hora válida");
+        }
+        else{
+            String[] hora = txtAsistenciaEntrada.getText().split("\\:");
+            if(revisaHora(hora[0])){
+                if(revisaMinutos(hora[1])){
+                    if(revisaSegundos(hora[2])){
+                        txtAsistenciaEntrada.setEnabled(false);
+                        btnAsistenciaEntrada.setEnabled(false);
+                        //Guardar en la base de datos hora y dia
+                        txtAsistenciaSalida.setEnabled(true);
+                        btnAsistenciaSalida.setEnabled(true);
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(rootPane, "Ingresa una hora correcta");
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(rootPane, "Ingresa una hora correcta");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Ingresa una hora correcta");
+            }
+        }        
     }//GEN-LAST:event_btnAsistenciaEntradaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -191,17 +217,40 @@ public class AsistenciaElemento extends javax.swing.JDialog {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnAsistenciaSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaSalidaActionPerformed
-        Calendar calendario = Calendar.getInstance();
-        //Registrar en la base de datos
-        txtAsistenciaDiaSalida.setText(Integer.toString(calendario.get(Calendar.DATE))+"/"+Integer.toString(calendario.get(Calendar.MONTH)+1)+"/"+Integer.toString(calendario.get(Calendar.YEAR)));
+        if(txtAsistenciaSalida.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Ingresa una hora válida");
+        }
+        else{
+            String[] hora = txtAsistenciaSalida.getText().split("\\:");
+            if(revisaHora(hora[0])){
+                if(revisaMinutos(hora[1])){
+                    if(revisaSegundos(hora[2])){
+                        Calendar calendario = Calendar.getInstance();
+                        txtAsistenciaDiaSalida.setText(Integer.toString(calendario.get(Calendar.DATE))+"/"+Integer.toString(calendario.get(Calendar.MONTH)+1)+"/"+Integer.toString(calendario.get(Calendar.YEAR)));
+                        txtAsistenciaSalida.setEnabled(false);
+                        btnAsistenciaSalida.setEnabled(false);
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(rootPane, "Ingresa una hora correcta");
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(rootPane, "Ingresa una hora correcta");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Ingresa una hora correcta");
+            }            
+        }        
     }//GEN-LAST:event_btnAsistenciaSalidaActionPerformed
     
-    private void inicializaVentana(String nombreServicio,String nombreElemento){
-        Calendar calendario = Calendar.getInstance();
+    private void inicializaVentana(String nombreServicio,String nombreElemento){        
         txtAsistenciaElemento.setText(nombreElemento);
         txtAsistenciaServicio.setText(nombreServicio);
-        txtAsistenciaDia.setText(Integer.toString(calendario.get(Calendar.DATE))+"/"+Integer.toString(calendario.get(Calendar.MONTH)+1)+"/"+Integer.toString(calendario.get(Calendar.YEAR)));
+        //Busca hora en la base de datos y asignada a txthoraEntreda y dia         
         if(txtAsistenciaEntrada.getText().equals("")){
+            Calendar calendario = Calendar.getInstance();
+            txtAsistenciaDia.setText(Integer.toString(calendario.get(Calendar.DATE))+"/"+Integer.toString(calendario.get(Calendar.MONTH)+1)+"/"+Integer.toString(calendario.get(Calendar.YEAR)));
             txtAsistenciaEntrada.setEnabled(true);
             btnAsistenciaEntrada.setEnabled(true);
         }
@@ -213,7 +262,7 @@ public class AsistenciaElemento extends javax.swing.JDialog {
     }
     
     private boolean revisaHora(String hora){
-        if(Integer.parseInt(hora)>=0 || Integer.parseInt(hora)<=23){
+        if(Integer.parseInt(hora)>=0 && Integer.parseInt(hora)<=23){
             return true;
         }
         else{
@@ -222,7 +271,7 @@ public class AsistenciaElemento extends javax.swing.JDialog {
     }
     
     private boolean revisaMinutos(String minutos){
-        if(Integer.parseInt(minutos)>=0 || Integer.parseInt(minutos)<=59){
+        if(Integer.parseInt(minutos)>=0 && Integer.parseInt(minutos)<=59){
             return true;
         }
         else{
@@ -231,7 +280,7 @@ public class AsistenciaElemento extends javax.swing.JDialog {
     }
     
     private boolean revisaSegundos(String segundos){
-        if(Integer.parseInt(segundos)>=0 || Integer.parseInt(segundos)<=59){
+        if(Integer.parseInt(segundos)>=0 && Integer.parseInt(segundos)<=59){
             return true;
         }
         else{
