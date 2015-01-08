@@ -17,29 +17,27 @@ public class Elemento {
      * manda a que el paquete conector obtenga la informacion o la extraiga.
      */
     private final HashMap DatosElemento;
-    public String [] Campos = {"Id",
-                        "Nombre",
-                        "Status",
-                        "Empresa",
-                        "Numero",
-                        "Servicio",
-                        "Ciudad",
-                        "Puesto",
-                        "Estado",
-                        "Atencion RH",
-                        "Inicio de Labores",
-                        "Registro CESP",
-                        "Fecha registro CESP",
-                        "Oficio Registro CESP",
-                        "Verificacion",
-                        "Fecha Verificacion",
-                        "Registro SSPF",
-                        "Fecha Registro SSPF",
-                        "Oficio Registro SSPF",
-                        "Registro SDN",
-                        "Fecha Registro SDN",
-                        "Oficio Registro SDN",
-                        "Lic Part Col"};
+       public String [] DatosNivel_1 = { "`empleados_nivel1`.`id_empleado`",
+                                "`empleados_nivel1`.`nombre_empleado`",
+                                "`empleados_nivel1`.`apellido_empleado`",
+                                "`empleados_nivel1`.`status_empleado`",
+                                "`empleados_nivel1`.`verificacion`",
+                                "`empleados_nivel1`.`Status`",
+                                "`empleados_nivel1`.`Servicio`",
+                                "`empleados_nivel1`.`oficio_registro_sspf`",
+                                "`empleados_nivel1`.`registro_sspf`",
+                                "`empleados_nivel1`.`fecha_registro_sdn`",
+                                "`empleados_nivel1`.`oficio_registro_sdn`",
+                                "`empleados_nivel1`.`registro_sdn`",
+                                "`empleados_nivel1`.`registro_cesp`",
+                                "`empleados_nivel1`.`puesto`",
+                                "`empleados_nivel1`.`numero`",
+                                "`empleados_nivel1`.`Nombre`",
+                                "`empleados_nivel1`.`estado`",
+                                "`empleados_nivel1`.`empresa`",
+                                "`empleados_nivel1`.`ciudad`",
+                                "`empleados_nivel1`.`oficio_registro_cesp`"};
+                    //FROM `controldepersonal`.`empleados_nivel1`;
     /*
     Constructor
     */

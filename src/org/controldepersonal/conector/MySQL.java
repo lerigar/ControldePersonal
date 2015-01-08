@@ -98,9 +98,9 @@ public class MySQL {
         // inicializacion de los resultados.
         resultados = null;
         //Se inicia el ciclo
-        for (int c = 0; c >= elemento.Campos.length; c++) {
+        for (int c = 0; c >= elemento.DatosNivel_1.length; c++) {
             //Se arma el qwerty
-            String qwerty = "SELECT " + elemento.Campos[c]
+            String qwerty = "SELECT " + elemento.DatosNivel_1[c]
                     + "FROM empleados_nivel1"
                     + "WHERE id_empleado=" + IdElemento + ";";
             // se ejecuta el qwerty:
@@ -113,12 +113,15 @@ public class MySQL {
             // Se almacenan los resultados en la variable de retorno.
             try {
                 for (int i = 0; resultados.next(); i++) {
-                    elemento.insertaValor(elemento.Campos[c], resultados.getString(1));
+                    elemento.insertaValor(elemento.DatosNivel_1[c], resultados.getString(1));
                 }
             } catch (SQLException e) {
                 ecepcion = e;
             }
         }
         return elemento;
+    }
+      boolean guardaElementoNuevo(Elemento elementoNuevo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

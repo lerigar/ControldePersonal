@@ -167,5 +167,9 @@ public class conector {
     public String[] dameAsistenciaElementos(){
         return libreriaSQL.dameArregloString("empleados_nivel1", "apellido_empleado");
     }
+    
+        public boolean guardaDatosElemento(Elemento elementoNuevo) {
+        return libreriaSQL.guardaElementoNuevo(elementoNuevo);
+    }
 
 }
