@@ -53,7 +53,7 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
         cbPuestoNuevoSabado = new javax.swing.JCheckBox();
         cbPuestoNuevoDomingo = new javax.swing.JCheckBox();
         lblPuestoNuevoHorarioLaboral = new javax.swing.JLabel();
-        lblPuestoNuevoInicio = new javax.swing.JLabel();
+        lblPuestoNuevoEntrada = new javax.swing.JLabel();
         txtPuestoNuevoHoraInicioLunes = new javax.swing.JTextField();
         txtPuestoNuevoHoraInicioMartes = new javax.swing.JTextField();
         txtPuestoNuevoHoraInicioMiercoles = new javax.swing.JTextField();
@@ -70,6 +70,10 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
         txtPuestoNuevoSalidaSabado = new javax.swing.JTextField();
         txtPuestoNuevoSalidaDomingo = new javax.swing.JTextField();
         btnPuestoNuevoRegistrar = new javax.swing.JButton();
+        lblPuestoNuevoInicio = new javax.swing.JLabel();
+        dpPuestoNuevoInicio = new org.jdesktop.swingx.JXDatePicker();
+        lblPuestoNuevoFin = new javax.swing.JLabel();
+        dpPuestoNuevoFin = new org.jdesktop.swingx.JXDatePicker();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -106,18 +110,22 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
 
         lblPuestoNuevoHorarioLaboral.setText("Horario laboral:");
 
-        lblPuestoNuevoInicio.setText("Entrada:");
+        lblPuestoNuevoEntrada.setText("Entrada:");
 
         lblPuestoNuevoSalida.setText("Salida:");
 
         btnPuestoNuevoRegistrar.setText("Registrar");
+
+        lblPuestoNuevoInicio.setText("Inicio:");
+
+        lblPuestoNuevoFin.setText("Fin:");
 
         javax.swing.GroupLayout pNuevoPuestoLayout = new javax.swing.GroupLayout(pNuevoPuesto);
         pNuevoPuesto.setLayout(pNuevoPuestoLayout);
         pNuevoPuestoLayout.setHorizontalGroup(
             pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pNuevoPuestoLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(59, 59, 59)
                 .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pNuevoPuestoLayout.createSequentialGroup()
                         .addComponent(btnPuestoNuevoRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -129,7 +137,7 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(lblPuestoNuevoHorarioLaboral)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(lblPuestoNuevoInicio)
+                            .addComponent(lblPuestoNuevoEntrada)
                             .addGap(72, 72, 72)
                             .addComponent(lblPuestoNuevoSalida))
                         .addGroup(pNuevoPuestoLayout.createSequentialGroup()
@@ -147,6 +155,10 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
                         .addGroup(pNuevoPuestoLayout.createSequentialGroup()
                             .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(pNuevoPuestoLayout.createSequentialGroup()
+                                    .addComponent(lblPuestoNuevoVacante)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtPuestoNuevoVacante, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pNuevoPuestoLayout.createSequentialGroup()
                                     .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(cbPuestoNuevoLunes)
                                         .addComponent(cbPuestoNuevoMartes)
@@ -163,11 +175,7 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
                                         .addComponent(txtPuestoNuevoHoraInicioJueves)
                                         .addComponent(txtPuestoNuevoHoraInicioViernes)
                                         .addComponent(txtPuestoNuevoHoraInicioSabado)
-                                        .addComponent(txtPuestoNuevoHoraInicioDomingo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(pNuevoPuestoLayout.createSequentialGroup()
-                                    .addComponent(lblPuestoNuevoVacante)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txtPuestoNuevoVacante, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtPuestoNuevoHoraInicioDomingo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGap(46, 46, 46)
                             .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(txtPuestoNuevoSalidaLunes)
@@ -176,13 +184,21 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
                                 .addComponent(txtPuestoNuevoSalidaJueves)
                                 .addComponent(txtPuestoNuevoSalidaViernes)
                                 .addComponent(txtPuestoNuevoSalidaSabado)
-                                .addComponent(txtPuestoNuevoSalidaDomingo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(119, Short.MAX_VALUE))
+                                .addComponent(txtPuestoNuevoSalidaDomingo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(pNuevoPuestoLayout.createSequentialGroup()
+                            .addComponent(lblPuestoNuevoInicio)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(dpPuestoNuevoInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30)
+                            .addComponent(lblPuestoNuevoFin)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(dpPuestoNuevoFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         pNuevoPuestoLayout.setVerticalGroup(
             pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pNuevoPuestoLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(pNuevoPuestoLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPuestoNuevoDescripcion)
                     .addComponent(txtPuestoNuevoDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -196,13 +212,20 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
                     .addComponent(txtPuestoNuevoTipoHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dpPuestoNuevoInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPuestoNuevoInicio)
+                    .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(dpPuestoNuevoFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblPuestoNuevoFin)))
+                .addGap(9, 9, 9)
+                .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPuestoNuevoVacante)
                     .addComponent(txtPuestoNuevoVacante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPuestoNuevoLaboral)
                     .addComponent(lblPuestoNuevoHorarioLaboral)
-                    .addComponent(lblPuestoNuevoInicio)
+                    .addComponent(lblPuestoNuevoEntrada)
                     .addComponent(lblPuestoNuevoSalida))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -243,7 +266,7 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
                 .addGroup(pNuevoPuestoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalir)
                     .addComponent(btnPuestoNuevoRegistrar))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         spPuestoNuevo.setViewportView(pNuevoPuesto);
@@ -260,6 +283,7 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -277,7 +301,11 @@ public class BuscaServicioPuestoNuevo extends javax.swing.JDialog {
     private javax.swing.JCheckBox cbPuestoNuevoMartes;
     private javax.swing.JCheckBox cbPuestoNuevoMiercoles;
     private javax.swing.JCheckBox cbPuestoNuevoSabado;
+    private org.jdesktop.swingx.JXDatePicker dpPuestoNuevoFin;
+    private org.jdesktop.swingx.JXDatePicker dpPuestoNuevoInicio;
     private javax.swing.JLabel lblPuestoNuevoDescripcion;
+    private javax.swing.JLabel lblPuestoNuevoEntrada;
+    private javax.swing.JLabel lblPuestoNuevoFin;
     private javax.swing.JLabel lblPuestoNuevoHorario;
     private javax.swing.JLabel lblPuestoNuevoHorarioLaboral;
     private javax.swing.JLabel lblPuestoNuevoInicio;

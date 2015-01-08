@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -42,21 +42,21 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="btnPuestoNuevoRegistrar" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnSalir" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lblPuestoNuevoLaboral" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="lblPuestoNuevoHorarioLaboral" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="lblPuestoNuevoInicio" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPuestoNuevoEntrada" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   <Component id="lblPuestoNuevoSalida" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -78,6 +78,11 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
+                                          <Component id="lblPuestoNuevoVacante" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtPuestoNuevoVacante" min="-2" pref="50" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="cbPuestoNuevoLunes" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="cbPuestoNuevoMartes" min="-2" max="-2" attributes="0"/>
@@ -98,11 +103,6 @@
                                               <Component id="txtPuestoNuevoHoraInicioDomingo" min="-2" pref="70" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lblPuestoNuevoVacante" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtPuestoNuevoVacante" min="-2" pref="50" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -115,16 +115,25 @@
                                       <Component id="txtPuestoNuevoSalidaDomingo" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblPuestoNuevoInicio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="dpPuestoNuevoInicio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="lblPuestoNuevoFin" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="dpPuestoNuevoFin" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="119" max="32767" attributes="0"/>
+                      <EmptySpace pref="87" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblPuestoNuevoDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtPuestoNuevoDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -141,6 +150,15 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="dpPuestoNuevoInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPuestoNuevoInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Component id="dpPuestoNuevoFin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPuestoNuevoFin" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblPuestoNuevoVacante" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtPuestoNuevoVacante" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -148,7 +166,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblPuestoNuevoLaboral" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblPuestoNuevoHorarioLaboral" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPuestoNuevoInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPuestoNuevoEntrada" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblPuestoNuevoSalida" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -198,7 +216,7 @@
                           <Component id="btnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnPuestoNuevoRegistrar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                      <EmptySpace pref="69" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -285,7 +303,7 @@
                 <Property name="text" type="java.lang.String" value="Horario laboral:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblPuestoNuevoInicio">
+            <Component class="javax.swing.JLabel" name="lblPuestoNuevoEntrada">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Entrada:"/>
               </Properties>
@@ -327,6 +345,20 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Registrar"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoNuevoInicio">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Inicio:"/>
+              </Properties>
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dpPuestoNuevoInicio">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPuestoNuevoFin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fin:"/>
+              </Properties>
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dpPuestoNuevoFin">
             </Component>
           </SubComponents>
         </Container>

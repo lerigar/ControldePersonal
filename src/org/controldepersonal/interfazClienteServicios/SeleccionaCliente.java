@@ -46,7 +46,7 @@ public class SeleccionaCliente extends javax.swing.JDialog {
                 {"sdlfnroiv", "nvvneirvnvre"}
             },
             new String [] {
-                "Cliente", "Servicios"
+                "Cliente", "Contrato"
             }
         ));
         jScrollPane1.setViewportView(tClientes);

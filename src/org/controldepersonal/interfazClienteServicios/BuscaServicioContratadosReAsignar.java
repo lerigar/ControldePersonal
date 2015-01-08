@@ -1,31 +1,30 @@
+package org.controldepersonal.interfazClienteServicios;
+
+import org.controldepersonal.conector.conector;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.controldepersonal.interfazClienteServicios;
-
-import org.controldepersonal.conector.conector;
-
 /**
  *
  * @author Miguel
  */
-public class BuscaServicioContratadosAsignar extends javax.swing.JDialog {
+public class BuscaServicioContratadosReAsignar extends javax.swing.JDialog {
 
     /**
-     * Creates new form BuscaServicioContratadosAsignar
+     * Creates new form BuscaServicioContratadosReAsignar
      */
     conector conexionactual;
-    private int row;
     private String status = "ACTIVO";
-    public BuscaServicioContratadosAsignar(java.awt.Frame parent, boolean modal,conector conexionactual,int row) {
+    private int row;
+    public BuscaServicioContratadosReAsignar(java.awt.Frame parent, boolean modal,conector conexionactual,String servicioActual,int row) {
         super(parent, modal);
         this.conexionactual = conexionactual;
         this.row = row;
         initComponents();
-        setTitle("Asignar Servicio");
-        
+        setTitle("Re-Asignación de Personal");
     }
 
     /**
@@ -38,21 +37,21 @@ public class BuscaServicioContratadosAsignar extends javax.swing.JDialog {
     private void initComponents() {
 
         spAsignarServicio = new javax.swing.JScrollPane();
-        tAsignarServicios = new javax.swing.JTable();
+        tReAsignarServicios = new javax.swing.JTable();
         btnSeleccionar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        tAsignarServicios.setModel(new javax.swing.table.DefaultTableModel(
+        tReAsignarServicios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"cbucebuceub", "completo"}
+                {"vacio", "medio"}
             },
             new String [] {
                 "Servicio", "Tipo de horario"
             }
         ));
-        spAsignarServicio.setViewportView(tAsignarServicios);
+        spAsignarServicio.setViewportView(tReAsignarServicios);
 
         btnSeleccionar.setText("Seleccionar");
         btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
@@ -96,25 +95,22 @@ public class BuscaServicioContratadosAsignar extends javax.swing.JDialog {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
+        //Actualiza base de datos y asigna el nuevo servicio al elemento
+        BuscaServicio.reAsignaServicioElemento(row);
+        this.dispose();
+    }//GEN-LAST:event_btnSeleccionarActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
-        int row = tAsignarServicios.getSelectedRow();
-        String nombreServicio = tAsignarServicios.getValueAt(row, 0).toString();
-        String tipoHorario = tAsignarServicios.getValueAt(row, 1).toString();
-        BuscaServicio.asignaServicioElemento(nombreServicio,tipoHorario,status,row);
-        this.dispose();
-    }//GEN-LAST:event_btnSeleccionarActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnSeleccionar;
     private javax.swing.JScrollPane spAsignarServicio;
-    private javax.swing.JTable tAsignarServicios;
+    private javax.swing.JTable tReAsignarServicios;
     // End of variables declaration//GEN-END:variables
 }

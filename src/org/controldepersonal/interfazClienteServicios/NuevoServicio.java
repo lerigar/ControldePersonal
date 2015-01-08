@@ -5,6 +5,7 @@
  */
 package org.controldepersonal.interfazClienteServicios;
 
+import javax.swing.JComboBox;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -78,7 +79,7 @@ public class NuevoServicio extends javax.swing.JDialog {
         lblServicioNuevoEstado = new javax.swing.JLabel();
         cbEstados = new javax.swing.JComboBox();
         lblServicioNuevoMunicipio = new javax.swing.JLabel();
-        cbMunicipios = new javax.swing.JComboBox();
+        cbMunicipio = new javax.swing.JComboBox();
         lblServicioNuevoEmergencia = new javax.swing.JLabel();
         txtServicioNuevoEmergencia = new javax.swing.JTextField();
         lblServicioNuevoCaracteristicasLugar = new javax.swing.JLabel();
@@ -160,11 +161,16 @@ public class NuevoServicio extends javax.swing.JDialog {
 
         lblServicioNuevoEstado.setText("Estado:");
 
-        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un Estado" }));
+        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadosActionPerformed(evt);
+            }
+        });
 
         lblServicioNuevoMunicipio.setText("Municipio:");
 
-        cbMunicipios.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Municipio" }));
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Municipio" }));
 
         lblServicioNuevoEmergencia.setText("Teléfonos de emergencia:");
 
@@ -320,7 +326,7 @@ public class NuevoServicio extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblServicioNuevoMunicipio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbMunicipios, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pDatosGeneralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtServicioNuevoMedidasFrente, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -373,7 +379,7 @@ public class NuevoServicio extends javax.swing.JDialog {
                     .addComponent(lblServicioNuevoEstado)
                     .addComponent(cbEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblServicioNuevoMunicipio)
-                    .addComponent(cbMunicipios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pDatosGeneralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblServicioNuevoEmergencia)
@@ -524,12 +530,17 @@ public class NuevoServicio extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void cbEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox cbEstados;
-    private javax.swing.JComboBox cbMunicipios;
+    private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JCheckBox cbServicioNuevoCarAlarmas;
     private javax.swing.JCheckBox cbServicioNuevoCarAlumbrado;
     private javax.swing.JCheckBox cbServicioNuevoCarBardas;

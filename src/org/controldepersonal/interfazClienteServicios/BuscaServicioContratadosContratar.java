@@ -16,6 +16,7 @@ public class BuscaServicioContratadosContratar extends javax.swing.JDialog {
     /**
      * Creates new form BuscaServicioContratadosContratar
      */
+    /*Al insertar los elementos, solo insertat los disponibles*/
     conector conexionactual;
     public BuscaServicioContratadosContratar(java.awt.Frame parent, boolean modal,conector conexionactual) {
         super(parent, modal);
@@ -105,6 +106,7 @@ public class BuscaServicioContratadosContratar extends javax.swing.JDialog {
         String nombreElemento = tContratarElementos.getValueAt(row, 0).toString();
         String tipoElemento = tContratarElementos.getValueAt(row, 1).toString();
         BuscaServicio.contrataElemento(nombreElemento);
+        this.dispose();
         //Hacer modificación en la base de datos para que este elemento ya no aparezca despues
     }//GEN-LAST:event_btnSeleccionarActionPerformed
 

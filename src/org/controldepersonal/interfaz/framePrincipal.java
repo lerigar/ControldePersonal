@@ -14,7 +14,9 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
-import org.controldepersonal.excel.ConexionExcel;
+import org.controldepersonal.interfazAsistencia.AsistenciaGeneralSelecciona;
+import org.controldepersonal.interfazAsistencia.AsistenciaSeleccionaElemento;
+
 import org.controldepersonal.interfazClienteServicios.BuscaClienteServicio;
 import org.controldepersonal.interfazClienteServicios.NuevoClienteServicio;
 /* *********************** */
@@ -64,6 +66,8 @@ public class framePrincipal extends javax.swing.JFrame {
         btnMostrarServiciosClientes = new javax.swing.JButton();
         btnAltaBajaServicioCliente = new javax.swing.JButton();
         panelAsistencia = new javax.swing.JPanel();
+        btnAsistenciaAsignar = new javax.swing.JButton();
+        btnAsistenciaGeneral = new javax.swing.JButton();
         panelEquipo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -212,15 +216,42 @@ public class framePrincipal extends javax.swing.JFrame {
 
         panelOpciones.add(panelServicios, "panelServicios");
 
+        btnAsistenciaAsignar.setText("Asistencia diaria");
+        btnAsistenciaAsignar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsistenciaAsignarActionPerformed(evt);
+            }
+        });
+
+        btnAsistenciaGeneral.setText("Asistencia general");
+        btnAsistenciaGeneral.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsistenciaGeneralActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelAsistenciaLayout = new javax.swing.GroupLayout(panelAsistencia);
         panelAsistencia.setLayout(panelAsistenciaLayout);
         panelAsistenciaLayout.setHorizontalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 449, Short.MAX_VALUE)
+            .addGroup(panelAsistenciaLayout.createSequentialGroup()
+                .addGroup(panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAsistenciaLayout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(btnAsistenciaAsignar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelAsistenciaLayout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(btnAsistenciaGeneral)))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         panelAsistenciaLayout.setVerticalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 385, Short.MAX_VALUE)
+            .addGroup(panelAsistenciaLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(btnAsistenciaAsignar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(btnAsistenciaGeneral)
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         panelOpciones.add(panelAsistencia, "panelAsistencias");
@@ -309,11 +340,23 @@ public class framePrincipal extends javax.swing.JFrame {
         busca.setVisible(true);
     }//GEN-LAST:event_btnMostrarServiciosClientesActionPerformed
 
+    private void btnAsistenciaAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaAsignarActionPerformed
+        AsistenciaSeleccionaElemento asistencia = new AsistenciaSeleccionaElemento(new javax.swing.JFrame(), false, conexionactual);
+        asistencia.setVisible(true);
+    }//GEN-LAST:event_btnAsistenciaAsignarActionPerformed
+
+    private void btnAsistenciaGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaGeneralActionPerformed
+        AsistenciaGeneralSelecciona selecciona = new AsistenciaGeneralSelecciona(new javax.swing.JFrame(), false, conexionactual);
+        selecciona.setVisible(true);
+    }//GEN-LAST:event_btnAsistenciaGeneralActionPerformed
+
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAltaBajaServicioCliente;
     private javax.swing.JButton btnAsistencia;
+    private javax.swing.JButton btnAsistenciaAsignar;
+    private javax.swing.JButton btnAsistenciaGeneral;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnDoc;
     private javax.swing.JButton btnElemento;

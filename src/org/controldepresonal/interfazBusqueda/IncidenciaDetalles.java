@@ -55,6 +55,8 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
         taIncidenciaNuevaTestimonioS = new javax.swing.JTextArea();
         spIncidenciaNuevaTestimonioE = new javax.swing.JScrollPane();
         taIncidenciaNuevaTestimonioE = new javax.swing.JTextArea();
+        btnModificar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -69,6 +71,8 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
 
         lblIncidenciaNuevaHora.setText("Hora:");
 
+        txtIncidenciaNuevaHora.setEnabled(false);
+
         lblIncidenciaNuevaTipo.setText("Tipo:");
 
         rbIncidenciaNuevaTipoD.setText("Démerito");
@@ -77,11 +81,19 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
 
         lblIncidenciaNuevaCliente.setText("Cliente:");
 
+        txtIncidenciaNuevaCliente.setEnabled(false);
+
         lblIncidenciaNuevaServicio.setText("Servicio:");
+
+        txtIncidenciaNuevaServicio.setEnabled(false);
 
         lblIncidenciaNuevaActa.setText("Acta administrativa:");
 
+        txtIncidenciaNuevaActa.setEnabled(false);
+
         lblIncidenciaNuevaSupervisor.setText("Supervisor:");
+
+        txtIncidenciaNuevaSupervisor.setEnabled(false);
 
         lblIncidenciaNuevaTestimonioS.setText("Testimonio del Supervisor:");
 
@@ -89,11 +101,23 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
 
         taIncidenciaNuevaTestimonioS.setColumns(20);
         taIncidenciaNuevaTestimonioS.setRows(5);
+        taIncidenciaNuevaTestimonioS.setEnabled(false);
         spIncidenciaNuevaTestimonioS.setViewportView(taIncidenciaNuevaTestimonioS);
 
         taIncidenciaNuevaTestimonioE.setColumns(20);
         taIncidenciaNuevaTestimonioE.setRows(5);
+        taIncidenciaNuevaTestimonioE.setEnabled(false);
         spIncidenciaNuevaTestimonioE.setViewportView(taIncidenciaNuevaTestimonioE);
+
+        btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+
+        btnGuardar.setText("Guardar");
+        btnGuardar.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,7 +126,6 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(lblIncidenciaNuevaServicio)
                         .addGroup(layout.createSequentialGroup()
@@ -139,7 +162,13 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(spIncidenciaNuevaTestimonioS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(spIncidenciaNuevaTestimonioE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(spIncidenciaNuevaTestimonioE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnGuardar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnModificar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -182,7 +211,10 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
                         .addComponent(spIncidenciaNuevaTestimonioS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(spIncidenciaNuevaTestimonioE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSalir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalir)
+                    .addComponent(btnModificar)
+                    .addComponent(btnGuardar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -194,8 +226,21 @@ public class IncidenciaDetalles extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        taIncidenciaNuevaTestimonioE.setEnabled(true);
+        taIncidenciaNuevaTestimonioS.setEnabled(true);
+        txtIncidenciaNuevaActa.setEnabled(true);
+        txtIncidenciaNuevaCliente.setEnabled(true);
+        txtIncidenciaNuevaHora.setEnabled(true);
+        txtIncidenciaNuevaServicio.setEnabled(true);
+        txtIncidenciaNuevaSupervisor.setEnabled(true);
+        btnGuardar.setEnabled(true);
+    }//GEN-LAST:event_btnModificarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnSalir;
     private org.jdesktop.swingx.JXDatePicker dpIncidenciaNueva;
     private javax.swing.JLabel lblIncidenciaNuevaActa;

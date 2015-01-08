@@ -288,7 +288,7 @@
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="lblServicioNuevoMunicipio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="cbMunicipios" min="-2" pref="220" max="-2" attributes="0"/>
+                                              <Component id="cbMunicipio" min="-2" pref="220" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -353,7 +353,7 @@
                                   <Component id="lblServicioNuevoEstado" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cbEstados" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblServicioNuevoMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbMunicipios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -508,18 +508,22 @@
                     <Component class="javax.swing.JComboBox" name="cbEstados">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="1">
-                            <StringItem index="0" value="Elige un Estado"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbEstadosActionPerformed"/>
+                      </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblServicioNuevoMunicipio">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Municipio:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="cbMunicipios">
+                    <Component class="javax.swing.JComboBox" name="cbMunicipio">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="1">

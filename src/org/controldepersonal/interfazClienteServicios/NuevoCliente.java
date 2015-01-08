@@ -5,6 +5,7 @@
  */
 package org.controldepersonal.interfazClienteServicios;
 
+import javax.swing.JComboBox;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -63,7 +64,7 @@ public class NuevoCliente extends javax.swing.JDialog {
         lblEstado = new javax.swing.JLabel();
         cbEstados = new javax.swing.JComboBox();
         lblMunicipio = new javax.swing.JLabel();
-        cbMunicipios = new javax.swing.JComboBox();
+        cbMunicipio = new javax.swing.JComboBox();
         lblTelefonos = new javax.swing.JLabel();
         txtTelefonos = new javax.swing.JTextField();
         lblRepresentante = new javax.swing.JLabel();
@@ -88,33 +89,6 @@ public class NuevoCliente extends javax.swing.JDialog {
         dpVigenciaServicios = new org.jdesktop.swingx.JXDatePicker();
         lblComentarios = new javax.swing.JLabel();
         txtComentarios = new javax.swing.JTextField();
-        pPagos = new javax.swing.JPanel();
-        lblPagos = new javax.swing.JLabel();
-        txtPagos = new javax.swing.JTextField();
-        lblPagosTelOficina = new javax.swing.JLabel();
-        txtPagosTelOficina = new javax.swing.JTextField();
-        lblPagosCelular = new javax.swing.JLabel();
-        txtCelular = new javax.swing.JTextField();
-        lblCorreo = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
-        lblFacturación = new javax.swing.JLabel();
-        rbMensual = new javax.swing.JRadioButton();
-        rbQuincenal = new javax.swing.JRadioButton();
-        rbEvento = new javax.swing.JRadioButton();
-        lblRevision = new javax.swing.JLabel();
-        txtRevision = new javax.swing.JTextField();
-        lblDiaPagos = new javax.swing.JLabel();
-        txtDiaPagos = new javax.swing.JTextField();
-        pTotalFacturacion = new javax.swing.JPanel();
-        lblSubtotal = new javax.swing.JLabel();
-        lblIVA = new javax.swing.JLabel();
-        lblTotal = new javax.swing.JLabel();
-        txtFacturaSubtotal = new javax.swing.JTextField();
-        txtFacturaIVA = new javax.swing.JTextField();
-        txtFacturaTotal = new javax.swing.JTextField();
-        lblPesos1 = new javax.swing.JLabel();
-        lblPesos2 = new javax.swing.JLabel();
-        lblPesos3 = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         btnContrato = new javax.swing.JButton();
@@ -147,11 +121,16 @@ public class NuevoCliente extends javax.swing.JDialog {
 
         lblEstado.setText("Estado:");
 
-        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un estado" }));
+        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadosActionPerformed(evt);
+            }
+        });
 
         lblMunicipio.setText("Municipio:");
 
-        cbMunicipios.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un municipio" }));
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un municipio" }));
 
         lblTelefonos.setText("Teléfonos:");
 
@@ -224,7 +203,7 @@ public class NuevoCliente extends javax.swing.JDialog {
                             .addGroup(pGeneralesLayout.createSequentialGroup()
                                 .addComponent(lblMunicipio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbMunicipios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pGeneralesLayout.createSequentialGroup()
                         .addComponent(lblTelefonos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -301,7 +280,7 @@ public class NuevoCliente extends javax.swing.JDialog {
                     .addComponent(cbEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEstado)
                     .addComponent(lblMunicipio)
-                    .addComponent(cbMunicipios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pGeneralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTelefonos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -345,167 +324,6 @@ public class NuevoCliente extends javax.swing.JDialog {
         );
 
         tpDatosCliente.addTab("Datos generales", pGenerales);
-
-        lblPagos.setText("Encargado de pagar:");
-
-        lblPagosTelOficina.setText("Teléfono de Oficina:");
-
-        lblPagosCelular.setText("Celular");
-
-        lblCorreo.setText("Correo:");
-
-        lblFacturación.setText("Facturación:");
-
-        rbMensual.setText("Mensual");
-
-        rbQuincenal.setText("Quicenal");
-
-        rbEvento.setText("Por evento");
-
-        lblRevision.setText("Revisión:");
-
-        lblDiaPagos.setText("Pagos:");
-
-        lblSubtotal.setText("Factura subtotal:");
-
-        lblIVA.setText("IVA:");
-
-        lblTotal.setText("Total:");
-
-        txtFacturaTotal.setEnabled(false);
-
-        lblPesos1.setText("pesos");
-
-        lblPesos2.setText("pesos");
-
-        lblPesos3.setText("pesos");
-
-        javax.swing.GroupLayout pTotalFacturacionLayout = new javax.swing.GroupLayout(pTotalFacturacion);
-        pTotalFacturacion.setLayout(pTotalFacturacionLayout);
-        pTotalFacturacionLayout.setHorizontalGroup(
-            pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pTotalFacturacionLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTotal)
-                    .addComponent(lblIVA)
-                    .addComponent(lblSubtotal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtFacturaSubtotal)
-                    .addComponent(txtFacturaIVA)
-                    .addComponent(txtFacturaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPesos1)
-                    .addComponent(lblPesos2)
-                    .addComponent(lblPesos3))
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-        pTotalFacturacionLayout.setVerticalGroup(
-            pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pTotalFacturacionLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSubtotal)
-                    .addComponent(txtFacturaSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPesos1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIVA)
-                    .addComponent(txtFacturaIVA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPesos2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTotal)
-                    .addComponent(txtFacturaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPesos3))
-                .addContainerGap(97, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout pPagosLayout = new javax.swing.GroupLayout(pPagos);
-        pPagos.setLayout(pPagosLayout);
-        pPagosLayout.setHorizontalGroup(
-            pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pPagosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addComponent(lblPagos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addComponent(lblCorreo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pPagosLayout.createSequentialGroup()
-                            .addComponent(lblFacturación)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(rbMensual)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(rbQuincenal)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(rbEvento))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pPagosLayout.createSequentialGroup()
-                            .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblRevision)
-                                .addComponent(lblDiaPagos))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtDiaPagos)
-                                .addComponent(txtRevision)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addComponent(lblPagosTelOficina)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPagosTelOficina, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblPagosCelular)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(pTotalFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(160, Short.MAX_VALUE))
-        );
-        pPagosLayout.setVerticalGroup(
-            pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pPagosLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPagos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPagos)
-                    .addComponent(txtPagosTelOficina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPagosTelOficina)
-                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPagosCelular))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCorreo))
-                        .addGap(45, 45, 45)
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rbMensual)
-                            .addComponent(rbQuincenal)
-                            .addComponent(rbEvento)
-                            .addComponent(lblFacturación))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRevision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblRevision))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDiaPagos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDiaPagos)))
-                    .addComponent(pTotalFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-
-        tpDatosCliente.addTab("Pagos", pPagos);
 
         btnRegistrar.setText("Registrar");
 
@@ -606,6 +424,11 @@ public class NuevoCliente extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void cbEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnContrato;
@@ -613,15 +436,13 @@ public class NuevoCliente extends javax.swing.JDialog {
     private javax.swing.JButton btnSalir;
     private javax.swing.JCheckBox cbAltaCIESP;
     private javax.swing.JComboBox cbEstados;
-    private javax.swing.JComboBox cbMunicipios;
+    private javax.swing.JComboBox cbMunicipio;
     private org.jdesktop.swingx.JXDatePicker dpInicioServicios;
     private org.jdesktop.swingx.JXDatePicker dpVigenciaServicios;
     private javax.swing.JLabel lblClienteNombre;
     private javax.swing.JLabel lblCodPostal;
     private javax.swing.JLabel lblColonia;
     private javax.swing.JLabel lblComentarios;
-    private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblDiaPagos;
     private javax.swing.JLabel lblDomicilio;
     private javax.swing.JLabel lblEncCorreo;
     private javax.swing.JLabel lblEncTelCelular;
@@ -629,69 +450,44 @@ public class NuevoCliente extends javax.swing.JDialog {
     private javax.swing.JLabel lblEncargado;
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblExterior;
-    private javax.swing.JLabel lblFacturación;
     private javax.swing.JLabel lblGiro;
     private javax.swing.JLabel lblHorario;
-    private javax.swing.JLabel lblIVA;
     private javax.swing.JLabel lblInterior;
     private javax.swing.JLabel lblMunicipio;
     private javax.swing.JLabel lblNombreComercial;
-    private javax.swing.JLabel lblPagos;
-    private javax.swing.JLabel lblPagosCelular;
-    private javax.swing.JLabel lblPagosTelOficina;
-    private javax.swing.JLabel lblPesos1;
-    private javax.swing.JLabel lblPesos2;
-    private javax.swing.JLabel lblPesos3;
     private javax.swing.JLabel lblRFC;
     private javax.swing.JLabel lblRazonSocial;
     private javax.swing.JLabel lblRepCorreo;
     private javax.swing.JLabel lblRepTelCelular;
     private javax.swing.JLabel lblRepTelOficina;
     private javax.swing.JLabel lblRepresentante;
-    private javax.swing.JLabel lblRevision;
     private javax.swing.JLabel lblServiciosInicio;
-    private javax.swing.JLabel lblSubtotal;
     private javax.swing.JLabel lblTelefonos;
-    private javax.swing.JLabel lblTotal;
     private javax.swing.JLabel lblVigenciaContrato;
     private javax.swing.JPanel pGenerales;
     private javax.swing.JPanel pNuevoCliente;
-    private javax.swing.JPanel pPagos;
-    private javax.swing.JPanel pTotalFacturacion;
-    private javax.swing.JRadioButton rbEvento;
-    private javax.swing.JRadioButton rbMensual;
-    private javax.swing.JRadioButton rbQuincenal;
     private javax.swing.JScrollPane spNuevoCliente;
     private javax.swing.JTabbedPane tpDatosCliente;
-    private javax.swing.JTextField txtCelular;
     private javax.swing.JTextField txtCodPostal;
     private javax.swing.JTextField txtColonia;
     private javax.swing.JTextField txtComentarios;
-    private javax.swing.JTextField txtCorreo;
-    private javax.swing.JTextField txtDiaPagos;
     private javax.swing.JTextField txtDomicilio;
     private javax.swing.JTextField txtEncCorreo;
     private javax.swing.JTextField txtEncTelCelular;
     private javax.swing.JTextField txtEncTelOficina;
     private javax.swing.JTextField txtEncargado;
-    private javax.swing.JTextField txtFacturaIVA;
-    private javax.swing.JTextField txtFacturaSubtotal;
-    private javax.swing.JTextField txtFacturaTotal;
     private javax.swing.JTextField txtGiro;
     private javax.swing.JTextField txtHorario;
     private javax.swing.JTextField txtNombreCliente;
     private javax.swing.JTextField txtNombreComercial;
     private javax.swing.JTextField txtNumeroExterior;
     private javax.swing.JTextField txtNumeroInterior;
-    private javax.swing.JTextField txtPagos;
-    private javax.swing.JTextField txtPagosTelOficina;
     private javax.swing.JTextField txtRFC;
     private javax.swing.JTextField txtRazonSocial;
     private javax.swing.JTextField txtRepCorreo;
     private javax.swing.JTextField txtRepTelCelular;
     private javax.swing.JTextField txtRepTelOficina;
     private javax.swing.JTextField txtRepresentante;
-    private javax.swing.JTextField txtRevision;
     private javax.swing.JTextField txtTelefonos;
     // End of variables declaration//GEN-END:variables
 }

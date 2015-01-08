@@ -138,11 +138,11 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtNombre" max="32767" attributes="0"/>
-                                                          <Component id="txtServicio" max="32767" attributes="0"/>
-                                                          <Component id="txtEmpresa" max="32767" attributes="0"/>
-                                                          <Component id="txtPuesto" max="32767" attributes="0"/>
-                                                          <Component id="txtEstado" pref="200" max="32767" attributes="0"/>
+                                                          <Component id="txtEstado" max="32767" attributes="0"/>
+                                                          <Component id="txtNombre" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <Component id="txtEmpresa" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <Component id="txtServicio" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <Component id="txtPuesto" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -152,8 +152,8 @@
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="txtStatus" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                                          <Component id="txtNumero" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtStatus" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                                                          <Component id="txtNumero" min="-2" pref="132" max="-2" attributes="0"/>
                                                           <Component id="txtCiudad" min="-2" pref="132" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
@@ -376,8 +376,8 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="txtVerificacion" max="32767" attributes="0"/>
-                                              <Component id="txtRegistroCESP" pref="100" max="32767" attributes="0"/>
+                                              <Component id="txtRegistroCESP" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <Component id="txtVerificacion" min="-2" pref="100" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -388,9 +388,9 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="txtSSPF" max="32767" attributes="0"/>
-                                              <Component id="txtSDNRegistro" max="32767" attributes="0"/>
-                                              <Component id="txtSDN" pref="101" max="32767" attributes="0"/>
+                                              <Component id="txtSDN" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <Component id="txtSSPF" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <Component id="txtSDNRegistro" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -417,7 +417,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="lblSSPFOficio" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtSSPFOficio" max="32767" attributes="0"/>
+                                          <Component id="txtSSPFOficio" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="lblSDNFecha" min="-2" max="-2" attributes="0"/>
@@ -426,10 +426,10 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="lblSDNOficio" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtSDNOficio" max="32767" attributes="0"/>
+                                          <Component id="txtSDNOficio" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>

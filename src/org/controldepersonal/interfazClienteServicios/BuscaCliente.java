@@ -5,6 +5,8 @@
  */
 package org.controldepersonal.interfazClienteServicios;
 
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -62,9 +64,9 @@ public class BuscaCliente extends javax.swing.JDialog {
         lblHorario2 = new javax.swing.JLabel();
         txtHorario2 = new javax.swing.JTextField();
         lblEstado2 = new javax.swing.JLabel();
-        cbEstados2 = new javax.swing.JComboBox();
+        cbEstados = new javax.swing.JComboBox();
         lblMunicipio2 = new javax.swing.JLabel();
-        cbMunicipios2 = new javax.swing.JComboBox();
+        cbMunicipio = new javax.swing.JComboBox();
         lblTelefonos2 = new javax.swing.JLabel();
         txtTelefonos2 = new javax.swing.JTextField();
         lblRepresentante2 = new javax.swing.JLabel();
@@ -89,41 +91,13 @@ public class BuscaCliente extends javax.swing.JDialog {
         dpVigenciaServicios2 = new org.jdesktop.swingx.JXDatePicker();
         lblComentarios2 = new javax.swing.JLabel();
         txtComentarios2 = new javax.swing.JTextField();
-        pPagos = new javax.swing.JPanel();
-        lblPagos = new javax.swing.JLabel();
-        txtPagos = new javax.swing.JTextField();
-        lblPagosTelOficina = new javax.swing.JLabel();
-        txtPagosTelOficina = new javax.swing.JTextField();
-        lblPagosCelular = new javax.swing.JLabel();
-        txtCelular = new javax.swing.JTextField();
-        lblCorreo = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
-        lblFacturación = new javax.swing.JLabel();
-        rbMensual = new javax.swing.JRadioButton();
-        rbQuincenal = new javax.swing.JRadioButton();
-        rbEvento = new javax.swing.JRadioButton();
-        lblRevision = new javax.swing.JLabel();
-        txtRevision = new javax.swing.JTextField();
-        lblDiaPagos = new javax.swing.JLabel();
-        txtDiaPagos = new javax.swing.JTextField();
-        pTotalFacturacion = new javax.swing.JPanel();
-        lblSubtotal = new javax.swing.JLabel();
-        lblIVA = new javax.swing.JLabel();
-        lblTotal = new javax.swing.JLabel();
-        txtFacturaSubtotal = new javax.swing.JTextField();
-        txtFacturaIVA = new javax.swing.JTextField();
-        txtFacturaTotal = new javax.swing.JTextField();
-        lblPesos1 = new javax.swing.JLabel();
-        lblPesos2 = new javax.swing.JLabel();
-        lblPesos3 = new javax.swing.JLabel();
         pServicios = new javax.swing.JPanel();
         spServicios = new javax.swing.JScrollPane();
         tServicios = new javax.swing.JTable();
-        btnDetalles = new javax.swing.JButton();
-        btnRegistrar = new javax.swing.JButton();
-        btnSalir = new javax.swing.JButton();
+        btnDetallesServicio = new javax.swing.JButton();
         btnNuevoServicio = new javax.swing.JButton();
-        btnActualizar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        btnGuardarCambios = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -176,11 +150,16 @@ public class BuscaCliente extends javax.swing.JDialog {
 
         lblEstado2.setText("Estado:");
 
-        cbEstados2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un estado" }));
+        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadosActionPerformed(evt);
+            }
+        });
 
         lblMunicipio2.setText("Municipio:");
 
-        cbMunicipios2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un municipio" }));
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un municipio" }));
 
         lblTelefonos2.setText("Teléfonos:");
 
@@ -246,7 +225,7 @@ public class BuscaCliente extends javax.swing.JDialog {
                             .addGroup(pGeneralesBuscaLayout.createSequentialGroup()
                                 .addComponent(lblEstado2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cbEstados2, 0, 201, Short.MAX_VALUE)))
+                                .addComponent(cbEstados, 0, 201, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pGeneralesBuscaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pGeneralesBuscaLayout.createSequentialGroup()
@@ -273,7 +252,7 @@ public class BuscaCliente extends javax.swing.JDialog {
                             .addGroup(pGeneralesBuscaLayout.createSequentialGroup()
                                 .addComponent(lblMunicipio2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbMunicipios2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pGeneralesBuscaLayout.createSequentialGroup()
                         .addComponent(lblTelefonos2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -347,10 +326,10 @@ public class BuscaCliente extends javax.swing.JDialog {
                     .addComponent(txtHorario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pGeneralesBuscaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbEstados2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEstado2)
                     .addComponent(lblMunicipio2)
-                    .addComponent(cbMunicipios2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pGeneralesBuscaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTelefonos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -395,183 +374,6 @@ public class BuscaCliente extends javax.swing.JDialog {
 
         tpDatosClienteBusca.addTab("Datos generales", pGeneralesBusca);
 
-        lblPagos.setText("Encargado de pagar:");
-
-        txtPagos.setEnabled(false);
-
-        lblPagosTelOficina.setText("Teléfono de Oficina:");
-
-        txtPagosTelOficina.setEnabled(false);
-
-        lblPagosCelular.setText("Celular");
-
-        txtCelular.setEnabled(false);
-
-        lblCorreo.setText("Correo:");
-
-        txtCorreo.setEnabled(false);
-
-        lblFacturación.setText("Facturación:");
-
-        rbMensual.setText("Mensual");
-
-        rbQuincenal.setText("Quicenal");
-
-        rbEvento.setText("Por evento");
-
-        lblRevision.setText("Revisión:");
-
-        txtRevision.setEnabled(false);
-
-        lblDiaPagos.setText("Pagos:");
-
-        txtDiaPagos.setEnabled(false);
-
-        lblSubtotal.setText("Factura subtotal:");
-
-        lblIVA.setText("IVA:");
-
-        lblTotal.setText("Total:");
-
-        txtFacturaSubtotal.setEnabled(false);
-
-        txtFacturaIVA.setEnabled(false);
-
-        txtFacturaTotal.setEnabled(false);
-
-        lblPesos1.setText("pesos");
-
-        lblPesos2.setText("pesos");
-
-        lblPesos3.setText("pesos");
-
-        javax.swing.GroupLayout pTotalFacturacionLayout = new javax.swing.GroupLayout(pTotalFacturacion);
-        pTotalFacturacion.setLayout(pTotalFacturacionLayout);
-        pTotalFacturacionLayout.setHorizontalGroup(
-            pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pTotalFacturacionLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTotal)
-                    .addComponent(lblIVA)
-                    .addComponent(lblSubtotal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtFacturaSubtotal)
-                    .addComponent(txtFacturaIVA)
-                    .addComponent(txtFacturaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPesos1)
-                    .addComponent(lblPesos2)
-                    .addComponent(lblPesos3))
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-        pTotalFacturacionLayout.setVerticalGroup(
-            pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pTotalFacturacionLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSubtotal)
-                    .addComponent(txtFacturaSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPesos1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIVA)
-                    .addComponent(txtFacturaIVA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPesos2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pTotalFacturacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTotal)
-                    .addComponent(txtFacturaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPesos3))
-                .addContainerGap(97, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout pPagosLayout = new javax.swing.GroupLayout(pPagos);
-        pPagos.setLayout(pPagosLayout);
-        pPagosLayout.setHorizontalGroup(
-            pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pPagosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addComponent(lblPagos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addComponent(lblCorreo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pPagosLayout.createSequentialGroup()
-                            .addComponent(lblFacturación)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(rbMensual)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(rbQuincenal)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(rbEvento))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pPagosLayout.createSequentialGroup()
-                            .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblRevision)
-                                .addComponent(lblDiaPagos))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtDiaPagos)
-                                .addComponent(txtRevision)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addComponent(lblPagosTelOficina)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPagosTelOficina, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblPagosCelular)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(pTotalFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(160, Short.MAX_VALUE))
-        );
-        pPagosLayout.setVerticalGroup(
-            pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pPagosLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPagos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPagos)
-                    .addComponent(txtPagosTelOficina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPagosTelOficina)
-                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPagosCelular))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pPagosLayout.createSequentialGroup()
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCorreo))
-                        .addGap(45, 45, 45)
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rbMensual)
-                            .addComponent(rbQuincenal)
-                            .addComponent(rbEvento)
-                            .addComponent(lblFacturación))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRevision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblRevision))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pPagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDiaPagos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDiaPagos)))
-                    .addComponent(pTotalFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-
-        tpDatosClienteBusca.addTab("Pagos", pPagos);
-
         tServicios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"vre vr ve r", "mvmrovrn", "34", "33"},
@@ -583,39 +385,10 @@ public class BuscaCliente extends javax.swing.JDialog {
         ));
         spServicios.setViewportView(tServicios);
 
-        btnDetalles.setText("Detalles");
-
-        javax.swing.GroupLayout pServiciosLayout = new javax.swing.GroupLayout(pServicios);
-        pServicios.setLayout(pServiciosLayout);
-        pServiciosLayout.setHorizontalGroup(
-            pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pServiciosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(spServicios, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pServiciosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDetalles, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(355, 355, 355))
-        );
-        pServiciosLayout.setVerticalGroup(
-            pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pServiciosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(spServicios, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnDetalles)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-
-        tpDatosClienteBusca.addTab("Servicios", pServicios);
-
-        btnRegistrar.setText("Registrar");
-
-        btnSalir.setText("Salir");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+        btnDetallesServicio.setText("Detalles Servicio");
+        btnDetallesServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
+                btnDetallesServicioActionPerformed(evt);
             }
         });
 
@@ -626,9 +399,55 @@ public class BuscaCliente extends javax.swing.JDialog {
             }
         });
 
-        btnActualizar.setText("Actualizar Servicios");
+        javax.swing.GroupLayout pServiciosLayout = new javax.swing.GroupLayout(pServicios);
+        pServicios.setLayout(pServiciosLayout);
+        pServiciosLayout.setHorizontalGroup(
+            pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pServiciosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(spServicios, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(pServiciosLayout.createSequentialGroup()
+                .addGap(283, 283, 283)
+                .addComponent(btnDetallesServicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNuevoServicio)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pServiciosLayout.setVerticalGroup(
+            pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pServiciosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(spServicios, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pServiciosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNuevoServicio)
+                    .addComponent(btnDetallesServicio))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        tpDatosClienteBusca.addTab("Servicios", pServicios);
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
+        btnGuardarCambios.setText("Guardar cambios");
+        btnGuardarCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarCambiosActionPerformed(evt);
+            }
+        });
 
         btnModificar.setText("Actualizar datos");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pBuscaClienteLayout = new javax.swing.GroupLayout(pBuscaCliente);
         pBuscaCliente.setLayout(pBuscaClienteLayout);
@@ -642,11 +461,7 @@ public class BuscaCliente extends javax.swing.JDialog {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnModificar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnActualizar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnNuevoServicio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGuardarCambios)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pBuscaClienteLayout.createSequentialGroup()
@@ -696,9 +511,7 @@ public class BuscaCliente extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pBuscaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalir)
-                    .addComponent(btnRegistrar)
-                    .addComponent(btnNuevoServicio)
-                    .addComponent(btnActualizar)
+                    .addComponent(btnGuardarCambios)
                     .addComponent(btnModificar))
                 .addContainerGap())
         );
@@ -729,25 +542,67 @@ public class BuscaCliente extends javax.swing.JDialog {
         nuevo.setVisible(true);
     }//GEN-LAST:event_btnNuevoServicioActionPerformed
 
+    private void btnDetallesServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetallesServicioActionPerformed
+        if(tServicios.getSelectedRow() >= 0){
+            int row = tServicios.getSelectedRow();
+            BuscaServicio servicio = new BuscaServicio(new javax.swing.JFrame(), false, conexionactual,txtNombreClienteBusca.getText(),tServicios.getValueAt(row, 0).toString().toUpperCase());
+            servicio.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaCliente, "Selecciona un Elemento de la tabla");
+        }        
+    }//GEN-LAST:event_btnDetallesServicioActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        txtCodPostal2.setEnabled(true);
+        txtColonia2.setEnabled(true);
+        txtComentarios2.setEnabled(true);
+        txtDomicilio2.setEnabled(true);
+        txtEncCorreo2.setEnabled(true);
+        txtEncTelCelular2.setEnabled(true);
+        txtEncTelOficina2.setEnabled(true);
+        txtEncargado2.setEnabled(true);
+        txtGiroBusca.setEnabled(true);
+        txtHorario2.setEnabled(true);
+        txtNombreClienteBusca.setEnabled(true);
+        txtNombreComercialBusca.setEnabled(true);
+        txtNumeroExterior2.setEnabled(true);
+        txtNumeroInterior2.setEnabled(true);
+        txtRFCBusca.setEnabled(true);
+        txtRazonSocialBusca.setEnabled(true);
+        txtRepCorreo2.setEnabled(true);
+        txtRepTelCelular2.setEnabled(true);
+        txtRepTelOficina2.setEnabled(true);
+        txtRepresentante2.setEnabled(true);
+        txtTelefonos2.setEnabled(true);
+        btnSalir.setEnabled(false);
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void cbEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosActionPerformed
+
+    private void btnGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCambiosActionPerformed
+        btnSalir.setEnabled(true);
+    }//GEN-LAST:event_btnGuardarCambiosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActualizar;
-    private javax.swing.JButton btnDetalles;
+    private javax.swing.JButton btnDetallesServicio;
+    private javax.swing.JButton btnGuardarCambios;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnNuevoServicio;
-    private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JCheckBox cbAltaCIESP2;
-    private javax.swing.JComboBox cbEstados2;
-    private javax.swing.JComboBox cbMunicipios2;
+    private javax.swing.JComboBox cbEstados;
+    private javax.swing.JComboBox cbMunicipio;
     private org.jdesktop.swingx.JXDatePicker dpInicioServicios2;
     private org.jdesktop.swingx.JXDatePicker dpVigenciaServicios2;
     private javax.swing.JLabel lblClienteNombreBusca;
     private javax.swing.JLabel lblCodPostal2;
     private javax.swing.JLabel lblColonia2;
     private javax.swing.JLabel lblComentarios2;
-    private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblDiaPagos;
     private javax.swing.JLabel lblDomicilio2;
     private javax.swing.JLabel lblEncCorreo2;
     private javax.swing.JLabel lblEncTelCelular2;
@@ -755,72 +610,47 @@ public class BuscaCliente extends javax.swing.JDialog {
     private javax.swing.JLabel lblEncargado2;
     private javax.swing.JLabel lblEstado2;
     private javax.swing.JLabel lblExterior2;
-    private javax.swing.JLabel lblFacturación;
     private javax.swing.JLabel lblGiroBusca;
     private javax.swing.JLabel lblHorario2;
-    private javax.swing.JLabel lblIVA;
     private javax.swing.JLabel lblInterior2;
     private javax.swing.JLabel lblMunicipio2;
     private javax.swing.JLabel lblNombreComercialBusca;
-    private javax.swing.JLabel lblPagos;
-    private javax.swing.JLabel lblPagosCelular;
-    private javax.swing.JLabel lblPagosTelOficina;
-    private javax.swing.JLabel lblPesos1;
-    private javax.swing.JLabel lblPesos2;
-    private javax.swing.JLabel lblPesos3;
     private javax.swing.JLabel lblRFCBusca;
     private javax.swing.JLabel lblRazonSocialBusca;
     private javax.swing.JLabel lblRepCorreo2;
     private javax.swing.JLabel lblRepTelCelular2;
     private javax.swing.JLabel lblRepTelOficina2;
     private javax.swing.JLabel lblRepresentante2;
-    private javax.swing.JLabel lblRevision;
     private javax.swing.JLabel lblServiciosInicio2;
-    private javax.swing.JLabel lblSubtotal;
     private javax.swing.JLabel lblTelefonos2;
-    private javax.swing.JLabel lblTotal;
     private javax.swing.JLabel lblVigenciaContrato2;
     private javax.swing.JPanel pBuscaCliente;
     private javax.swing.JPanel pGeneralesBusca;
-    private javax.swing.JPanel pPagos;
     private javax.swing.JPanel pServicios;
-    private javax.swing.JPanel pTotalFacturacion;
-    private javax.swing.JRadioButton rbEvento;
-    private javax.swing.JRadioButton rbMensual;
-    private javax.swing.JRadioButton rbQuincenal;
     private javax.swing.JScrollPane spBuscaCliente;
     private javax.swing.JScrollPane spServicios;
     private javax.swing.JTable tServicios;
     private javax.swing.JTabbedPane tpDatosClienteBusca;
-    private javax.swing.JTextField txtCelular;
     private javax.swing.JTextField txtCodPostal2;
     private javax.swing.JTextField txtColonia2;
     private javax.swing.JTextField txtComentarios2;
-    private javax.swing.JTextField txtCorreo;
-    private javax.swing.JTextField txtDiaPagos;
     private javax.swing.JTextField txtDomicilio2;
     private javax.swing.JTextField txtEncCorreo2;
     private javax.swing.JTextField txtEncTelCelular2;
     private javax.swing.JTextField txtEncTelOficina2;
     private javax.swing.JTextField txtEncargado2;
-    private javax.swing.JTextField txtFacturaIVA;
-    private javax.swing.JTextField txtFacturaSubtotal;
-    private javax.swing.JTextField txtFacturaTotal;
     private javax.swing.JTextField txtGiroBusca;
     private javax.swing.JTextField txtHorario2;
     private javax.swing.JTextField txtNombreClienteBusca;
     private javax.swing.JTextField txtNombreComercialBusca;
     private javax.swing.JTextField txtNumeroExterior2;
     private javax.swing.JTextField txtNumeroInterior2;
-    private javax.swing.JTextField txtPagos;
-    private javax.swing.JTextField txtPagosTelOficina;
     private javax.swing.JTextField txtRFCBusca;
     private javax.swing.JTextField txtRazonSocialBusca;
     private javax.swing.JTextField txtRepCorreo2;
     private javax.swing.JTextField txtRepTelCelular2;
     private javax.swing.JTextField txtRepTelOficina2;
     private javax.swing.JTextField txtRepresentante2;
-    private javax.swing.JTextField txtRevision;
     private javax.swing.JTextField txtTelefonos2;
     // End of variables declaration//GEN-END:variables
 }

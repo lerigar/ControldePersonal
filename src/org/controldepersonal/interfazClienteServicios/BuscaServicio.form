@@ -295,7 +295,7 @@
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="lblServicioBuscaMunicipio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="cbMunicipios" min="-2" pref="220" max="-2" attributes="0"/>
+                                              <Component id="cbMunicipio" min="-2" pref="220" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -360,7 +360,7 @@
                                   <Component id="lblServicioBuscaEstado" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cbEstados" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblServicioBuscaMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbMunicipios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -551,18 +551,22 @@
                     <Component class="javax.swing.JComboBox" name="cbEstados">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="1">
-                            <StringItem index="0" value="Elige un Estado"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbEstadosActionPerformed"/>
+                      </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblServicioBuscaMunicipio">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Municipio:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="cbMunicipios">
+                    <Component class="javax.swing.JComboBox" name="cbMunicipio">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="1">
@@ -786,8 +790,7 @@
                               <EmptySpace pref="59" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnPuestosNuevo" max="32767" attributes="0"/>
-                                  <Component id="btnPuestosDetalles" max="32767" attributes="0"/>
-                                  <Component id="btnPuestosBorrar" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnPuestosDetalles" pref="90" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
@@ -806,8 +809,6 @@
                                       <Component id="btnPuestosNuevo" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnPuestosDetalles" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnPuestosBorrar" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="24" max="32767" attributes="0"/>
@@ -888,18 +889,13 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPuestosDetallesActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnPuestosBorrar">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Deshabilitar"/>
-                      </Properties>
-                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="pAsignados">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                      <JTabbedPaneConstraints tabName="Elementos Contratados">
-                        <Property name="tabTitle" type="java.lang.String" value="Elementos Contratados"/>
+                      <JTabbedPaneConstraints tabName="Elementos Asignados">
+                        <Property name="tabTitle" type="java.lang.String" value="Elementos Asignados"/>
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
@@ -911,13 +907,14 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="spAsignados" min="-2" pref="616" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnContratadosAsignar" max="32767" attributes="0"/>
-                                  <Component id="btnContratadosReasignar" max="32767" attributes="0"/>
-                                  <Component id="btnContratosActualizar" max="32767" attributes="0"/>
-                                  <Component id="btnContratadosBaja" max="32767" attributes="0"/>
-                                  <Component id="btnContratadosContratar" pref="90" max="32767" attributes="0"/>
-                                  <Component id="btnDetalles" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btnContratadosAsignar" max="32767" attributes="0"/>
+                                      <Component id="btnContratadosReasignar" max="32767" attributes="0"/>
+                                      <Component id="btnContratadosBaja" max="32767" attributes="0"/>
+                                      <Component id="btnContratadosIntegrar" pref="90" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="btnDetalles" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="31" max="32767" attributes="0"/>
                           </Group>
@@ -933,15 +930,13 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="btnContratadosContratar" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnContratadosIntegrar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnContratadosAsignar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnContratadosReasignar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnContratadosBaja" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnContratosActualizar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnDetalles" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -1012,29 +1007,33 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Re-Asignar"/>
                       </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="btnContratosActualizar">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Actualizar"/>
-                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratadosReasignarActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnContratadosBaja">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Dar de baja"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratadosBajaActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnContratadosContratar">
+                    <Component class="javax.swing.JButton" name="btnContratadosIntegrar">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Contratar"/>
+                        <Property name="text" type="java.lang.String" value="Integrar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratadosContratarActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContratadosIntegrarActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnDetalles">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Detalles"/>
+                        <Property name="text" type="java.lang.String" value="Notas Elem"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDetallesActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1249,6 +1248,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Detalles"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHistorialDetallesActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

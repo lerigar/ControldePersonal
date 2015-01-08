@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.controldepersonal.elemento.Elemento;
+import org.controldepersonal.HasMaps.Elemento;
 
 public class conector {
     /*
@@ -150,6 +150,22 @@ public class conector {
 
     public Elemento dameDatosElemento(int numeroElemento) {
         return libreriaSQL.obtenDatos(new Elemento(), numeroElemento);
+    }
+    
+    public String[] dameClientes(){
+        return libreriaSQL.dameArregloString("empresa_nivel1", "nombre_empresa");
+    }
+    
+    public Object[] dameServicios(String cliente){
+        return libreriaSQL.dameArregloString("empresa_nivel1,servicios_nivel1 where empresa_nivel1.id_empresa=servicios_nivel1.id_empresa and empresa_nivel1.nombre_empresa='"+cliente+"'", "servicios_nivel1.nombre_servicio");
+    }
+    
+    public Object[] dameElemento(String servicio){
+        return libreriaSQL.dameArregloString("empleados_nivel1,servicios_nivel1 where empleados_nivel1.id_servicios=servicios_nivel1.id_servicio and servicios_nivel1.nombre_servicio='"+servicio+"'", "empleados_nivel1.apellido_empleado");
+    }
+    
+    public String[] dameAsistenciaElementos(){
+        return libreriaSQL.dameArregloString("empleados_nivel1", "apellido_empleado");
     }
 
 }

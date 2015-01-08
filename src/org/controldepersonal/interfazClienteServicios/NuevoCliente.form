@@ -227,7 +227,7 @@
                                           <Group type="102" attributes="0">
                                               <Component id="lblMunicipio" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="cbMunicipios" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Component id="cbMunicipio" min="-2" pref="200" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -320,7 +320,7 @@
                                   <Component id="cbEstados" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblEstado" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbMunicipios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbMunicipio" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -430,18 +430,22 @@
                     <Component class="javax.swing.JComboBox" name="cbEstados">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="1">
-                            <StringItem index="0" value="Elige un estado"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbEstadosActionPerformed"/>
+                      </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblMunicipio">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Municipio:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="cbMunicipios">
+                    <Component class="javax.swing.JComboBox" name="cbMunicipio">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="1">
@@ -534,279 +538,6 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtComentarios">
                     </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="pPagos">
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                      <JTabbedPaneConstraints tabName="Pagos">
-                        <Property name="tabTitle" type="java.lang.String" value="Pagos"/>
-                      </JTabbedPaneConstraints>
-                    </Constraint>
-                  </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblPagos" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtPagos" min="-2" pref="200" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblCorreo" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtCorreo" min="-2" pref="120" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblFacturación" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="rbMensual" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rbQuincenal" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rbEvento" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblRevision" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblDiaPagos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="txtDiaPagos" max="32767" attributes="0"/>
-                                              <Component id="txtRevision" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblPagosTelOficina" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtPagosTelOficina" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="lblPagosCelular" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtCelular" min="-2" pref="90" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="pTotalFacturacion" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="160" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtPagos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblPagos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtPagosTelOficina" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblPagosTelOficina" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtCelular" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblPagosCelular" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtCorreo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblCorreo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="rbMensual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rbQuincenal" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rbEvento" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblFacturación" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtRevision" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblRevision" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtDiaPagos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblDiaPagos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="pTotalFacturacion" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="54" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="lblPagos">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Encargado de pagar:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtPagos">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="lblPagosTelOficina">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Tel&#xe9;fono de Oficina:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtPagosTelOficina">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="lblPagosCelular">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Celular"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtCelular">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="lblCorreo">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Correo:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtCorreo">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="lblFacturaci&#xf3;n">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Facturaci&#xf3;n:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JRadioButton" name="rbMensual">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Mensual"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JRadioButton" name="rbQuincenal">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Quicenal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JRadioButton" name="rbEvento">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Por evento"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="lblRevision">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Revisi&#xf3;n:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtRevision">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="lblDiaPagos">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Pagos:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="txtDiaPagos">
-                    </Component>
-                    <Container class="javax.swing.JPanel" name="pTotalFacturacion">
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="lblTotal" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblIVA" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblSubtotal" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtFacturaSubtotal" max="32767" attributes="0"/>
-                                      <Component id="txtFacturaIVA" max="32767" attributes="0"/>
-                                      <Component id="txtFacturaTotal" min="-2" pref="100" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblPesos1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPesos2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPesos3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="67" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblSubtotal" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtFacturaSubtotal" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPesos1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblIVA" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtFacturaIVA" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPesos2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblTotal" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtFacturaTotal" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPesos3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="97" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JLabel" name="lblSubtotal">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Factura subtotal:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblIVA">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="IVA:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblTotal">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Total:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txtFacturaSubtotal">
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txtFacturaIVA">
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txtFacturaTotal">
-                          <Properties>
-                            <Property name="enabled" type="boolean" value="false"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblPesos1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="pesos"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblPesos2">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="pesos"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblPesos3">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="pesos"/>
-                          </Properties>
-                        </Component>
-                      </SubComponents>
-                    </Container>
                   </SubComponents>
                 </Container>
               </SubComponents>

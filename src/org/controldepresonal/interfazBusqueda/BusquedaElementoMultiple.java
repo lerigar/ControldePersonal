@@ -6,6 +6,7 @@
 package org.controldepresonal.interfazBusqueda;
 
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -24,12 +25,15 @@ public class BusquedaElementoMultiple extends javax.swing.JDialog {
     
     conector conexionactual;
     private String apellidoBuscar;
+    private DefaultTableModel tablaMultiple;
     public BusquedaElementoMultiple(java.awt.Frame parent, boolean modal,conector conexionactual, String apellidoBuscar) {
         super(parent, modal);
         initComponents();
         this.conexionactual = conexionactual;
         this.apellidoBuscar = apellidoBuscar;
         setTitle("Busqueda por apellido");
+        tablaMultiple = (DefaultTableModel) tMultiple.getModel();
+        llenaTablaElementos(apellidoBuscar);
     }
 
     /**
@@ -104,6 +108,10 @@ public class BusquedaElementoMultiple extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void llenaTablaElementos(String apellido){
+        
+    }
+    
     private void btnSeleccionarMultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarMultipleActionPerformed
         int row = tMultiple.getSelectedRow();
         BusquedaElemento busquedaElemento = new BusquedaElemento(new javax.swing.JFrame(), false, conexionactual,Integer.parseInt(tMultiple.getValueAt(row, 0).toString()));

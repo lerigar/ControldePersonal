@@ -6,8 +6,11 @@
 package org.controldepersonal.interfazClienteServicios;
 
 import java.util.Calendar;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.controldepersonal.conector.conector;
+import org.controldepresonal.interfazBusqueda.IncidenciaNueva;
 
 /**
  *
@@ -83,7 +86,7 @@ public class BuscaServicio extends javax.swing.JDialog {
         lblServicioBuscaEstado = new javax.swing.JLabel();
         cbEstados = new javax.swing.JComboBox();
         lblServicioBuscaMunicipio = new javax.swing.JLabel();
-        cbMunicipios = new javax.swing.JComboBox();
+        cbMunicipio = new javax.swing.JComboBox();
         lblServicioBuscaEmergencia = new javax.swing.JLabel();
         txtServicioBuscaEmergencia = new javax.swing.JTextField();
         lblServicioBuscaCaracteristicasLugar = new javax.swing.JLabel();
@@ -120,15 +123,13 @@ public class BuscaServicio extends javax.swing.JDialog {
         tPuestos = new javax.swing.JTable();
         btnPuestosNuevo = new javax.swing.JButton();
         btnPuestosDetalles = new javax.swing.JButton();
-        btnPuestosBorrar = new javax.swing.JButton();
         pAsignados = new javax.swing.JPanel();
         spAsignados = new javax.swing.JScrollPane();
         tContratados = new javax.swing.JTable();
         btnContratadosAsignar = new javax.swing.JButton();
         btnContratadosReasignar = new javax.swing.JButton();
-        btnContratosActualizar = new javax.swing.JButton();
         btnContratadosBaja = new javax.swing.JButton();
-        btnContratadosContratar = new javax.swing.JButton();
+        btnContratadosIntegrar = new javax.swing.JButton();
         btnDetalles = new javax.swing.JButton();
         pCalendarizacion = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -219,11 +220,16 @@ public class BuscaServicio extends javax.swing.JDialog {
 
         lblServicioBuscaEstado.setText("Estado:");
 
-        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Elige un Estado" }));
+        cbEstados.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameEstadosRepublica()));
+        cbEstados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEstadosActionPerformed(evt);
+            }
+        });
 
         lblServicioBuscaMunicipio.setText("Municipio:");
 
-        cbMunicipios.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Municipio" }));
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciona un Municipio" }));
 
         lblServicioBuscaEmergencia.setText("Teléfonos de emergencia:");
 
@@ -391,7 +397,7 @@ public class BuscaServicio extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblServicioBuscaMunicipio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbMunicipios, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pDatosGeneralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtServicioBuscaMedidasFrente, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -444,7 +450,7 @@ public class BuscaServicio extends javax.swing.JDialog {
                     .addComponent(lblServicioBuscaEstado)
                     .addComponent(cbEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblServicioBuscaMunicipio)
-                    .addComponent(cbMunicipios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pDatosGeneralesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblServicioBuscaEmergencia)
@@ -546,8 +552,6 @@ public class BuscaServicio extends javax.swing.JDialog {
             }
         });
 
-        btnPuestosBorrar.setText("Deshabilitar");
-
         javax.swing.GroupLayout pPuestosLayout = new javax.swing.GroupLayout(pPuestos);
         pPuestos.setLayout(pPuestosLayout);
         pPuestosLayout.setHorizontalGroup(
@@ -558,8 +562,7 @@ public class BuscaServicio extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(pPuestosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnPuestosNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPuestosDetalles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPuestosBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnPuestosDetalles, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
                 .addGap(55, 55, 55))
         );
         pPuestosLayout.setVerticalGroup(
@@ -573,9 +576,7 @@ public class BuscaServicio extends javax.swing.JDialog {
                         .addGap(133, 133, 133)
                         .addComponent(btnPuestosNuevo)
                         .addGap(18, 18, 18)
-                        .addComponent(btnPuestosDetalles)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPuestosBorrar)))
+                        .addComponent(btnPuestosDetalles)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -599,19 +600,32 @@ public class BuscaServicio extends javax.swing.JDialog {
         });
 
         btnContratadosReasignar.setText("Re-Asignar");
-
-        btnContratosActualizar.setText("Actualizar");
-
-        btnContratadosBaja.setText("Dar de baja");
-
-        btnContratadosContratar.setText("Contratar");
-        btnContratadosContratar.addActionListener(new java.awt.event.ActionListener() {
+        btnContratadosReasignar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnContratadosContratarActionPerformed(evt);
+                btnContratadosReasignarActionPerformed(evt);
             }
         });
 
-        btnDetalles.setText("Detalles");
+        btnContratadosBaja.setText("Dar de baja");
+        btnContratadosBaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContratadosBajaActionPerformed(evt);
+            }
+        });
+
+        btnContratadosIntegrar.setText("Integrar");
+        btnContratadosIntegrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContratadosIntegrarActionPerformed(evt);
+            }
+        });
+
+        btnDetalles.setText("Notas Elem");
+        btnDetalles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDetallesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pAsignadosLayout = new javax.swing.GroupLayout(pAsignados);
         pAsignados.setLayout(pAsignadosLayout);
@@ -621,13 +635,13 @@ public class BuscaServicio extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(spAsignados, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addGroup(pAsignadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnContratadosAsignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnContratadosReasignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnContratosActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnContratadosBaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnContratadosContratar, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addComponent(btnDetalles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pAsignadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pAsignadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnContratadosAsignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnContratadosReasignar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnContratadosBaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnContratadosIntegrar, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
+                    .addComponent(btnDetalles, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         pAsignadosLayout.setVerticalGroup(
@@ -639,7 +653,7 @@ public class BuscaServicio extends javax.swing.JDialog {
                         .addComponent(spAsignados, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pAsignadosLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
-                        .addComponent(btnContratadosContratar)
+                        .addComponent(btnContratadosIntegrar)
                         .addGap(18, 18, 18)
                         .addComponent(btnContratadosAsignar)
                         .addGap(18, 18, 18)
@@ -647,13 +661,11 @@ public class BuscaServicio extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addComponent(btnContratadosBaja)
                         .addGap(18, 18, 18)
-                        .addComponent(btnContratosActualizar)
-                        .addGap(18, 18, 18)
                         .addComponent(btnDetalles)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        tpServicioBusca.addTab("Elementos Contratados", pAsignados);
+        tpServicioBusca.addTab("Elementos Asignados", pAsignados);
 
         tCalendarizacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -714,6 +726,11 @@ public class BuscaServicio extends javax.swing.JDialog {
         jScrollPane2.setViewportView(tHistorial);
 
         btnHistorialDetalles.setText("Detalles");
+        btnHistorialDetalles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistorialDetallesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pHistorialLayout = new javax.swing.GroupLayout(pHistorial);
         pHistorial.setLayout(pHistorialLayout);
@@ -835,21 +852,81 @@ public class BuscaServicio extends javax.swing.JDialog {
     }//GEN-LAST:event_btnPuestosNuevoActionPerformed
 
     private void btnPuestosDetallesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuestosDetallesActionPerformed
-        int row = tPuestos.getSelectedRow();
-        BuscaServicioPuestoDetalles detallesPuesto = new BuscaServicioPuestoDetalles(new javax.swing.JFrame(), false, conexionactual,tPuestos.getValueAt(row, 0).toString().toUpperCase(),txtServicioBuscaClienteNombre.getText());
-        detallesPuesto.setVisible(true);
+        if(tPuestos.getSelectedRow() >= 0){
+            int row = tPuestos.getSelectedRow();
+            BuscaServicioPuestoDetalles detallesPuesto = new BuscaServicioPuestoDetalles(new javax.swing.JFrame(), false, conexionactual,tPuestos.getValueAt(row, 0).toString().toUpperCase(),txtServicioBuscaClienteNombre.getText());
+            detallesPuesto.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaServicio, "Selecciona un Elemento de la tabla");
+        }        
     }//GEN-LAST:event_btnPuestosDetallesActionPerformed
 
-    private void btnContratadosContratarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratadosContratarActionPerformed
+    private void btnContratadosIntegrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratadosIntegrarActionPerformed
         BuscaServicioContratadosContratar contratar = new BuscaServicioContratadosContratar(new javax.swing.JFrame(), false, conexionactual);
         contratar.setVisible(true);
-    }//GEN-LAST:event_btnContratadosContratarActionPerformed
+    }//GEN-LAST:event_btnContratadosIntegrarActionPerformed
 
     private void btnContratadosAsignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratadosAsignarActionPerformed
-        int row = tContratados.getSelectedRow();
-        BuscaServicioContratadosAsignar asignar = new BuscaServicioContratadosAsignar(new javax.swing.JFrame(), false, conexionactual,row);
-        asignar.setVisible(true);
+        if(tContratados.getSelectedRow() >= 0){
+            int row = tContratados.getSelectedRow();
+            BuscaServicioContratadosAsignar asignar = new BuscaServicioContratadosAsignar(new javax.swing.JFrame(), false, conexionactual,row);
+            asignar.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaServicio, "Selecciona un Elemento de la tabla");
+        }        
     }//GEN-LAST:event_btnContratadosAsignarActionPerformed
+
+    private void cbEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEstadosActionPerformed
+        JComboBox cbREF = (JComboBox) evt.getSource();
+        cbMunicipio.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameMunicipios(cbREF.getSelectedItem().toString())));
+    }//GEN-LAST:event_cbEstadosActionPerformed
+
+    private void btnDetallesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetallesActionPerformed
+        if(tContratados.getSelectedRow() >= 0){
+            int row = tContratados.getSelectedRow();
+            BuscaServicioElementoAsignadoDetalles detalles = new BuscaServicioElementoAsignadoDetalles(new javax.swing.JFrame(), false, conexionactual,tContratados.getValueAt(row, 1).toString());
+            detalles.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaServicio, "Selecciona un Elemento de la tabla");
+        }
+    }//GEN-LAST:event_btnDetallesActionPerformed
+
+    private void btnContratadosReasignarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratadosReasignarActionPerformed
+        if(tContratados.getSelectedRow() >= 0){
+            int row = tContratados.getSelectedRow();
+            BuscaServicioContratadosReAsignar reAsignar = new BuscaServicioContratadosReAsignar(new javax.swing.JFrame(), false, conexionactual,tContratados.getValueAt(row, 0).toString(),row);
+            reAsignar.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaServicio, "Selecciona un Elemento de la tabla");
+        }
+    }//GEN-LAST:event_btnContratadosReasignarActionPerformed
+
+    private void btnContratadosBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratadosBajaActionPerformed
+        if(tContratados.getSelectedRow() >= 0){
+            int row = tContratados.getSelectedRow();
+            IncidenciaNueva nueva = new IncidenciaNueva(new javax.swing.JFrame(), false, conexionactual,txtServicioBuscaClienteNombre.getText(),txtServicioBuscaServicioNombre.getText(),tContratados.getValueAt(row, 1).toString());
+            nueva.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaServicio, "Selecciona un Elemento de la tabla");
+        }        
+        //se borra al elemento y se le asigna inactivo en la bd
+    }//GEN-LAST:event_btnContratadosBajaActionPerformed
+
+    private void btnHistorialDetallesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialDetallesActionPerformed
+        if(tHistorial.getSelectedRow() >= 0){
+            int row = tHistorial.getSelectedRow();
+            BuscaClienteHistorialDetalles detalles = new BuscaClienteHistorialDetalles(new javax.swing.JFrame(), false, conexionactual);
+            detalles.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(pBuscaServicio, "Selecciona un Elemento de la tabla");
+        }
+    }//GEN-LAST:event_btnHistorialDetallesActionPerformed
 
     public static void contrataElemento(String nombreElemento){
         //Busca al elemento
@@ -861,6 +938,10 @@ public class BuscaServicio extends javax.swing.JDialog {
         tablaContratados.setValueAt(nombreServicio, row, 0);
         tablaContratados.setValueAt(tipoHorario, row, 2);
         tablaContratados.setValueAt(status, row, 3);
+    }
+    
+    public static void reAsignaServicioElemento(int row){
+        tablaContratados.removeRow(row);
     }
     
     private String dameHora(){
@@ -876,19 +957,17 @@ public class BuscaServicio extends javax.swing.JDialog {
     private javax.swing.JButton btnCalendarizacionNuevo;
     private javax.swing.JButton btnContratadosAsignar;
     private javax.swing.JButton btnContratadosBaja;
-    private javax.swing.JButton btnContratadosContratar;
+    private javax.swing.JButton btnContratadosIntegrar;
     private javax.swing.JButton btnContratadosReasignar;
-    private javax.swing.JButton btnContratosActualizar;
     private javax.swing.JButton btnDetalles;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnHistorialDetalles;
     private javax.swing.JButton btnModificar;
-    private javax.swing.JButton btnPuestosBorrar;
     private javax.swing.JButton btnPuestosDetalles;
     private javax.swing.JButton btnPuestosNuevo;
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox cbEstados;
-    private javax.swing.JComboBox cbMunicipios;
+    private javax.swing.JComboBox cbMunicipio;
     private javax.swing.JCheckBox cbServicioBuscaCarAlarmas;
     private javax.swing.JCheckBox cbServicioBuscaCarAlumbrado;
     private javax.swing.JCheckBox cbServicioBuscaCarBardas;

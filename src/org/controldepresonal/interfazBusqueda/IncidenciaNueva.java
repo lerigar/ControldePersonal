@@ -23,6 +23,17 @@ public class IncidenciaNueva extends javax.swing.JDialog {
         initComponents();
         setTitle("Nueva incidencia");
     }
+    
+    public IncidenciaNueva(java.awt.Frame parent, boolean modal,conector conexionactual,String nombreCliente,String nombreServicio,String nombreElemento){
+        super(parent, modal);
+        this.conexionactual = conexionactual;
+        initComponents();
+        setTitle("Nueva incidencia");
+        txtIncidenciaNuevaCliente.setText(nombreCliente);
+        txtIncidenciaNuevaServicio.setText(nombreServicio);
+        txtIncidenciaNuevaCliente.setEnabled(false);
+        txtIncidenciaNuevaServicio.setEnabled(false);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,6 +66,7 @@ public class IncidenciaNueva extends javax.swing.JDialog {
         lblIncidenciaNuevaTestimonioE = new javax.swing.JLabel();
         spIncidenciaNuevaTestimonioE = new javax.swing.JScrollPane();
         taIncidenciaNuevaTestimonioE = new javax.swing.JTextArea();
+        btnGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -95,6 +107,8 @@ public class IncidenciaNueva extends javax.swing.JDialog {
         taIncidenciaNuevaTestimonioE.setRows(5);
         spIncidenciaNuevaTestimonioE.setViewportView(taIncidenciaNuevaTestimonioE);
 
+        btnGuardar.setText("Guardar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,7 +116,6 @@ public class IncidenciaNueva extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblIncidenciaNuevaServicio)
@@ -140,7 +153,11 @@ public class IncidenciaNueva extends javax.swing.JDialog {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(spIncidenciaNuevaTestimonioS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(spIncidenciaNuevaTestimonioE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(spIncidenciaNuevaTestimonioE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -183,7 +200,9 @@ public class IncidenciaNueva extends javax.swing.JDialog {
                         .addComponent(spIncidenciaNuevaTestimonioS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(spIncidenciaNuevaTestimonioE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSalir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalir)
+                    .addComponent(btnGuardar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -197,6 +216,7 @@ public class IncidenciaNueva extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnSalir;
     private org.jdesktop.swingx.JXDatePicker dpIncidenciaNueva;
     private javax.swing.JLabel lblIncidenciaNuevaActa;
