@@ -14,7 +14,6 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
-import org.controldepersonal.interfazAsistencia.AsistenciaGeneralSelecciona;
 import org.controldepersonal.interfazAsistencia.AsistenciaSeleccionaElemento;
 
 import org.controldepersonal.interfazClienteServicios.BuscaClienteServicio;
@@ -216,14 +215,14 @@ public class framePrincipal extends javax.swing.JFrame {
 
         panelOpciones.add(panelServicios, "panelServicios");
 
-        btnAsistenciaAsignar.setText("Asistencia diaria");
+        btnAsistenciaAsignar.setText("Asistencia individual");
         btnAsistenciaAsignar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAsistenciaAsignarActionPerformed(evt);
             }
         });
 
-        btnAsistenciaGeneral.setText("Asistencia general");
+        btnAsistenciaGeneral.setText("Asistencia por Servicio");
         btnAsistenciaGeneral.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAsistenciaGeneralActionPerformed(evt);
@@ -235,13 +234,10 @@ public class framePrincipal extends javax.swing.JFrame {
         panelAsistenciaLayout.setHorizontalGroup(
             panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAsistenciaLayout.createSequentialGroup()
-                .addGroup(panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelAsistenciaLayout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(btnAsistenciaAsignar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelAsistenciaLayout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(btnAsistenciaGeneral)))
+                .addGap(111, 111, 111)
+                .addGroup(panelAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAsistenciaGeneral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAsistenciaAsignar, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE))
                 .addContainerGap(113, Short.MAX_VALUE))
         );
         panelAsistenciaLayout.setVerticalGroup(
@@ -249,9 +245,9 @@ public class framePrincipal extends javax.swing.JFrame {
             .addGroup(panelAsistenciaLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(btnAsistenciaAsignar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(btnAsistenciaGeneral)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addGap(63, 63, 63)
+                .addComponent(btnAsistenciaGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         panelOpciones.add(panelAsistencia, "panelAsistencias");
@@ -346,8 +342,7 @@ public class framePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAsistenciaAsignarActionPerformed
 
     private void btnAsistenciaGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaGeneralActionPerformed
-        AsistenciaGeneralSelecciona selecciona = new AsistenciaGeneralSelecciona(new javax.swing.JFrame(), false, conexionactual);
-        selecciona.setVisible(true);
+        
     }//GEN-LAST:event_btnAsistenciaGeneralActionPerformed
 
  

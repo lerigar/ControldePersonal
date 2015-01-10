@@ -269,16 +269,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                              <Component id="btnAsistenciaAsignar" min="-2" pref="225" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
-                              <Component id="btnAsistenciaGeneral" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnAsistenciaGeneral" max="32767" attributes="0"/>
+                          <Component id="btnAsistenciaAsignar" pref="225" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="113" max="32767" attributes="0"/>
                   </Group>
@@ -289,9 +284,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Component id="btnAsistenciaAsignar" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                      <Component id="btnAsistenciaGeneral" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="155" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      <Component id="btnAsistenciaGeneral" min="-2" pref="109" max="-2" attributes="0"/>
+                      <EmptySpace pref="71" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -299,7 +294,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnAsistenciaAsignar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Asistencia diaria"/>
+                <Property name="text" type="java.lang.String" value="Asistencia individual"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAsistenciaAsignarActionPerformed"/>
@@ -307,7 +302,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnAsistenciaGeneral">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Asistencia general"/>
+                <Property name="text" type="java.lang.String" value="Asistencia por Servicio"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAsistenciaGeneralActionPerformed"/>
