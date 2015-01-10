@@ -13,6 +13,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import org.controldepersonal.HasMaps.Elemento;
 import org.controldepersonal.conector.conector;
 
 /**
@@ -4038,6 +4039,11 @@ public class RegistrarElemento extends javax.swing.JDialog {
         pRegistroElemento.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 600, 110, -1));
 
         btnRegistrar.setText("Registrar Elemento");
+        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarActionPerformed(evt);
+            }
+        });
         pRegistroElemento.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, 210, -1));
 
         spRegistroElemento.setViewportView(pRegistroElemento);
@@ -4971,6 +4977,14 @@ public class RegistrarElemento extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btnMapaDomicilioActionPerformed
 
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        if(conexionactual.guardaDatosElemento(creaElementoNuevo())){
+            System.out.println("se guardo");
+        }else {
+            System.out.println("NO se guardo");
+        }
+    }//GEN-LAST:event_btnRegistrarActionPerformed
+
    
     /**
      * @param args the command line arguments
@@ -5514,4 +5528,10 @@ public class RegistrarElemento extends javax.swing.JDialog {
     private javax.swing.JTextField txtY;
     private javax.swing.JTextField txtYearEgresoSalida;
     // End of variables declaration//GEN-END:variables
+
+    private Elemento creaElementoNuevo() {
+        Elemento elementoNuevo = new Elemento();
+        elementoNuevo.insertaValor(resguardo, ife);
+        return null;
+    }
 }

@@ -16,7 +16,7 @@ public class Elemento {
      * Clase que guarda toda la informacion de los elementos, y con la cual, se 
      * manda a que el paquete conector obtenga la informacion o la extraiga.
      */
-    private final HashMap DatosElemento;
+    private final HashMap <String, String>  DatosElemento;
        public String [] DatosNivel_1 = { "`empleados_nivel1`.`id_empleado`",
                                 "`empleados_nivel1`.`nombre_empleado`",
                                 "`empleados_nivel1`.`apellido_empleado`",

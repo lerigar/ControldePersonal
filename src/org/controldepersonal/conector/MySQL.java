@@ -122,6 +122,24 @@ public class MySQL {
         return elemento;
     }
       boolean guardaElementoNuevo(Elemento elementoNuevo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        statement = null;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException e) {
+            ecepcion = e;
+        }
+        // inicializacion de los resultados.
+        resultados = null;
+        HashMap<String, String> datosElemento = elementoNuevo.dameDatosElemento();
+        String qwerty = "INSERT INTO  empleados_nivel1 (";
+        datosElemento.keySet().stream().forEach((key) -> {
+            qwerty.concat(key+", ");
+        });
+        qwerty.concat(") VALUES (");
+        datosElemento.keySet().stream().forEach((key) -> {
+            qwerty.concat("'"+datosElemento.get(key)+"',");
+        });
+          System.out.println(qwerty);
+        return true;
     }
 }
