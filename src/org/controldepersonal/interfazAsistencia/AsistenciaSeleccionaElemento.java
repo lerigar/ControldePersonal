@@ -153,8 +153,7 @@ public class AsistenciaSeleccionaElemento extends javax.swing.JDialog {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         String nombreServicio = cbServicios.getSelectedItem().toString();
-        String apellidoElemento = cbElemento.getSelectedItem().toString();
-        System.out.println(nombreServicio+" "+apellidoElemento);
+        String apellidoElemento = cbElemento.getSelectedItem().toString();        
         AsistenciaElemento asistencia = new AsistenciaElemento(new javax.swing.JFrame(), false, conexionactual,nombreServicio, apellidoElemento);
         asistencia.setVisible(true);
         this.dispose();

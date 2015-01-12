@@ -15,6 +15,7 @@ import javax.swing.text.PlainDocument;
 import org.controldepersonal.conector.conector;
 import org.controldepersonal.controlerrores.administradorDeFallos;
 import org.controldepersonal.interfazAsistencia.AsistenciaSeleccionaElemento;
+import org.controldepersonal.interfazAsistencia.AsistenciaSeleccionaServicio;
 
 import org.controldepersonal.interfazClienteServicios.BuscaClienteServicio;
 import org.controldepersonal.interfazClienteServicios.NuevoClienteServicio;
@@ -342,7 +343,8 @@ public class framePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAsistenciaAsignarActionPerformed
 
     private void btnAsistenciaGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaGeneralActionPerformed
-        
+        AsistenciaSeleccionaServicio asistencia = new AsistenciaSeleccionaServicio(new javax.swing.JFrame(), false, conexionactual);
+        asistencia.setVisible(true);
     }//GEN-LAST:event_btnAsistenciaGeneralActionPerformed
 
  
