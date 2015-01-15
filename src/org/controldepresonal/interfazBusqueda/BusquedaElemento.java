@@ -979,7 +979,7 @@ public class BusquedaElemento extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     private void setValoresenCampos(Elemento elemento) {
-        if(elemento!=null){
+        if(elemento!=null){/*
     txtCESPOficio.setText(elemento.dameDato("Oficio Registro CESP"));
     txtCiudad.setText(elemento.dameDato("Ciudad"));
     txtEmpresa.setText(elemento.dameDato("Empresa"));
@@ -997,7 +997,7 @@ public class BusquedaElemento extends javax.swing.JDialog {
     txtSSPFOficio.setText(elemento.dameDato("Oficio Registro SSPF"));
     txtServicio.setText(elemento.dameDato("Servicio"));
     txtStatus.setText(elemento.dameDato("Status"));
-    txtVerificacion.setText(elemento.dameDato("Verificacion"));
+    txtVerificacion.setText(elemento.dameDato("Verificacion"));*/
         }
     }
 

@@ -5531,7 +5531,7 @@ public class RegistrarElemento extends javax.swing.JDialog {
 
     private Elemento creaElementoNuevo() {
         Elemento elementoNuevo = new Elemento();
-        elementoNuevo.insertaValor(resguardo, ife);
+        
         return null;
     }
 }

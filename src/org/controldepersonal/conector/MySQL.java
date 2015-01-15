@@ -113,7 +113,7 @@ public class MySQL {
             // Se almacenan los resultados en la variable de retorno.
             try {
                 for (int i = 0; resultados.next(); i++) {
-                    elemento.insertaValor(elemento.DatosNivel_1[c], resultados.getString(1));
+                    elemento.insertaValor_nivel1(elemento.DatosNivel_1[c], resultados.getString(1));
                 }
             } catch (SQLException e) {
                 ecepcion = e;
@@ -121,6 +121,9 @@ public class MySQL {
         }
         return elemento;
     }
+    /*
+    Funcion que guarda un elemento nuevo en la BD desde la clase RegistrarElemento.java
+    */
       boolean guardaElementoNuevo(Elemento elementoNuevo) {
         statement = null;
         try {
@@ -130,7 +133,7 @@ public class MySQL {
         }
         // inicializacion de los resultados.
         resultados = null;
-        HashMap<String, String> datosElemento = elementoNuevo.dameDatosElemento();
+        HashMap<String, String> datosElemento = elementoNuevo.dameDatosElemento_nivel1();
         String qwerty = "INSERT INTO  empleados_nivel1 (";
         datosElemento.keySet().stream().forEach((key) -> {
             qwerty.concat(key+", ");
