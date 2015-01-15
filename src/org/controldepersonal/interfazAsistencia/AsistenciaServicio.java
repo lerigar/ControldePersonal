@@ -6,6 +6,7 @@
 package org.controldepersonal.interfazAsistencia;
 
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.controldepersonal.conector.conector;
 
@@ -19,13 +20,19 @@ public class AsistenciaServicio extends javax.swing.JDialog {
      * Creates new form AsistenciaServicio
      */
     conector conexionactual;
-    private DefaultTableModel modeloAsistencia;
+    private final DefaultTableModel modeloAsistencia;
+    private final String Asistencia = "A";
+    private final String Justificada = "J";
+    private final String Falta = "F";
+    private final String nombreServicio;
     public AsistenciaServicio(java.awt.Frame parent, boolean modal,conector conexionactual,String nombreCliente,String nombreServicio) {
         super(parent, modal);
         this.conexionactual = conexionactual;
+        this.nombreServicio = nombreServicio;
         initComponents();
         setTitle("Asistencia por Servicio");
         modeloAsistencia = (DefaultTableModel)tAsistenciaServicio.getModel();
+        llenaTabla();
         obtenFecha(nombreCliente,nombreServicio);
     }
 
@@ -62,7 +69,7 @@ public class AsistenciaServicio extends javax.swing.JDialog {
 
         tAsistenciaServicio.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"PEREZ PEREZ PEREZ"}
+
             },
             new String [] {
                 "Elemento"
@@ -73,12 +80,32 @@ public class AsistenciaServicio extends javax.swing.JDialog {
         txtFecha.setEnabled(false);
 
         btnAsistencia.setText("Asistencia");
+        btnAsistencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsistenciaActionPerformed(evt);
+            }
+        });
 
         btnFalta.setText("Falta");
+        btnFalta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFaltaActionPerformed(evt);
+            }
+        });
 
-        btnJustificada.setText("Justificada");
+        btnJustificada.setText("Justificar");
+        btnJustificada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJustificadaActionPerformed(evt);
+            }
+        });
 
         btnExportar.setText("Exportar a Excel");
+        btnExportar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExportarActionPerformed(evt);
+            }
+        });
 
         lblCliente.setText("Cliente:");
 
@@ -154,11 +181,74 @@ public class AsistenciaServicio extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void btnAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaActionPerformed
+        int row = tAsistenciaServicio.getSelectedRow();
+        if(row >= 0){
+            String nombreEmpleado = modeloAsistencia.getValueAt(row, 0).toString();
+            int id_empleado = conexionactual.buscaIDElemento(nombreEmpleado);
+            String fecha = txtFecha.getText();
+            if(conexionactual.registraAsistencia(id_empleado,fecha,Asistencia)){
+                JOptionPane.showMessageDialog(rootPane, "Asistencia registrada");                
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "La asistencia ya ha sido tomada");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Selecciona al Elemento");
+        }
+    }//GEN-LAST:event_btnAsistenciaActionPerformed
+
+    private void btnFaltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFaltaActionPerformed
+        int row = tAsistenciaServicio.getSelectedRow();
+        if(row >= 0){
+            String nombreEmpleado = modeloAsistencia.getValueAt(row, 0).toString();
+            int id_empleado = conexionactual.buscaIDElemento(nombreEmpleado);
+            String fecha = txtFecha.getText();
+            if(conexionactual.registraAsistencia(id_empleado, fecha, Falta)){
+                JOptionPane.showMessageDialog(rootPane, "Asistencia registrada");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "La asistencia ya ha sido tomada");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Selecciona al Elemento");
+        }
+    }//GEN-LAST:event_btnFaltaActionPerformed
+
+    private void btnJustificadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJustificadaActionPerformed
+        int row = tAsistenciaServicio.getSelectedRow();
+        if(row >= 0){
+            String nombreEmpleado = modeloAsistencia.getValueAt(row, 0).toString();
+            int id_empleado = conexionactual.buscaIDElemento(nombreEmpleado);
+            AsistenciaJustificada justificada = new AsistenciaJustificada(new javax.swing.JFrame(), false, conexionactual,id_empleado,Justificada);
+            justificada.setVisible(true);            
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Selecciona al Elemento");
+        }
+        
+    }//GEN-LAST:event_btnJustificadaActionPerformed
+
+    private void btnExportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarActionPerformed
+        AsistenciaExportar exportar = new AsistenciaExportar(new javax.swing.JFrame(), false, conexionactual);
+        exportar.setVisible(true);
+    }//GEN-LAST:event_btnExportarActionPerformed
+
     private void obtenFecha(String nombreCliente,String nombreServicio){
         txtCliente.setText(nombreCliente.toUpperCase());
         txtServicio.setText(nombreServicio.toUpperCase());
         Calendar calendario = Calendar.getInstance();
         txtFecha.setText(Integer.toString(calendario.get(Calendar.DATE))+"/"+Integer.toString(calendario.get(Calendar.MONTH)+1)+"/"+Integer.toString(calendario.get(Calendar.YEAR)));
+    }
+    
+    private void llenaTabla(){
+        String[] elementos;
+        elementos = conexionactual.dameElementos(nombreServicio);
+        for (String elemento : elementos) {
+            modeloAsistencia.addRow(new Object[]{elemento});
+        }
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

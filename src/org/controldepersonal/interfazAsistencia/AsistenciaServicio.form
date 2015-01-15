@@ -110,10 +110,8 @@
         <Component class="javax.swing.JTable" name="tAsistenciaServicio">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="1" rowCount="1">
-                <Column editable="true" title="Elemento" type="java.lang.Object">
-                  <Data value="PEREZ PEREZ PEREZ"/>
-                </Column>
+              <Table columnCount="1" rowCount="0">
+                <Column editable="true" title="Elemento" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -141,21 +139,33 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Asistencia"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAsistenciaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnFalta">
       <Properties>
         <Property name="text" type="java.lang.String" value="Falta"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFaltaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnJustificada">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Justificada"/>
+        <Property name="text" type="java.lang.String" value="Justificar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnJustificadaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnExportar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Exportar a Excel"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExportarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCliente">
       <Properties>
