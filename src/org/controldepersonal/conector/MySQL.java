@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import org.controldepersonal.HasMaps.Elemento;
 
 /**
@@ -142,4 +143,169 @@ public class MySQL {
           System.out.println(qwerty);
         return true;
     }
+      
+      
+    /*     ******************************               CAMBIOS MIOS DE MI              */
+      
+    public int buscaIDElemento(String nombre){
+	statement = null;
+        int id_empleado = 0;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+	resultados = null;	
+	String query = "select id_empleado from empleados_nivel1 where nombre_empleado='"+nombre+"'";
+        try {
+            resultados = statement.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            if(resultados.next()==true){
+                id_empleado = resultados.getInt("id_empleado");                
+                return id_empleado;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id_empleado;
+    }
+    
+    public boolean registraAsistencia(int id_empleado,String fecha,String Asistencia){
+        statement = null;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        resultados = null;
+        if(revisaExistenciaAsistencia(id_empleado,fecha,Asistencia)){
+            return false;
+        }
+        else{
+            if(Asistencia.equals("A")){
+                String query = "insert into empleado_asistencia (id_empleado,dia,status) values ("+id_empleado+",'"+fecha+"','"+Asistencia+"')";
+                try {
+                    statement.executeUpdate(query);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            if(Asistencia.equals("F")){
+                String query = "insert into empleado_asistencia (id_empleado,dia,status) values ("+id_empleado+",'"+fecha+"','"+Asistencia+"')";
+                try {
+                    statement.executeUpdate(query);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            if(Asistencia.equals("J")){
+                String query = "update empleado_asistencia set status='"+Asistencia+"' where id_empleado="+id_empleado+" and dia='"+fecha+"'";
+                try {
+                    statement.executeUpdate(query);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                JOptionPane.showMessageDialog(null, "Falta justificada");
+            }
+            return true;
+        }
+    }
+    
+    private boolean revisaExistenciaAsistencia(int id_empleado,String fecha,String Asistencia){
+        statement = null;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        resultados = null;
+        String query;
+        if(Asistencia.equals("A")){
+            query = "select id_asistencia from empleado_asistencia where id_empleado="+id_empleado+" and dia='"+fecha+"'";
+            try {
+                resultados = statement.executeQuery(query);
+            } catch (SQLException ex) {
+                Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {                
+                return resultados.next() == true;
+            } catch (SQLException ex) {
+                Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(Asistencia.equals("J")){
+            int id_asistencia = buscaIDAsistencia(id_empleado,fecha);
+            return id_asistencia <= 0;
+        }
+        if(Asistencia.equals("F")){
+            query = "select id_asistencia from empleado_asistencia where id_empleado="+id_empleado+" and dia='"+fecha+"'";
+            try {
+                resultados = statement.executeQuery(query);
+            } catch (SQLException ex) {
+                Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                return resultados.next() == true;
+            } catch (SQLException ex) {
+                Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return true;
+    }
+    
+    public int buscaIDServicio(String servicio){
+	statement = null;
+        int id_servicio = 0;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+	resultados = null;	
+	String query = "select id_servicio from servicios_nivel1 where nombre_servicio='"+servicio+"'";
+        try {
+            resultados = statement.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            if(resultados.next()==true){
+                id_servicio = resultados.getInt("id_servicio");                
+                return id_servicio;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id_servicio;
+    }
+    
+    private int buscaIDAsistencia(int id_empleado,String fecha){
+        statement = null;
+        int id_asistencia = 0;
+        try {
+            statement = conexion.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+	resultados = null;	
+	String query = "select id_asistencia from empleado_asistencia where dia='"+fecha+"' and id_empleado="+id_empleado+" and status='F'";
+        try {
+            resultados = statement.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            if(resultados.next()==true){
+                id_asistencia = resultados.getInt("id_asistencia");
+                return id_asistencia;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id_asistencia;
+    }
+        
 }
