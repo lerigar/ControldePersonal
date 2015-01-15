@@ -156,6 +156,10 @@ public class conector {
         return libreriaSQL.dameArregloString("empresa_nivel1", "nombre_empresa");
     }
     
+    public String[] dameElementos(){
+        return libreriaSQL.dameArregloString("empleados_nivel1", "nombre_empleado");
+    }
+    
     public Object[] dameServicios(String cliente){
         return libreriaSQL.dameArregloString("empresa_nivel1,servicios_nivel1 where empresa_nivel1.id_empresa=servicios_nivel1.id_empresa and empresa_nivel1.nombre_empresa='"+cliente+"'", "servicios_nivel1.nombre_servicio");
     }
@@ -165,11 +169,30 @@ public class conector {
     }
     
     public String[] dameAsistenciaElementos(){
-        return libreriaSQL.dameArregloString("empleados_nivel1", "apellido_empleado");
+        return libreriaSQL.dameArregloString("empleados_nivel1", "nombre_empleado");
     }
     
-        public boolean guardaDatosElemento(Elemento elementoNuevo) {
+    public boolean guardaDatosElemento(Elemento elementoNuevo) {
         return libreriaSQL.guardaElementoNuevo(elementoNuevo);
+    }
+    
+    /*     *******************************               CAMBIOS MIOS DE MI              */
+    
+    public int buscaIDElemento(String nombre){
+        return libreriaSQL.buscaIDElemento(nombre);
+    }
+    
+    public boolean registraAsistencia(int id_empleado,String fecha,String Asistencia){
+        return libreriaSQL.registraAsistencia(id_empleado, fecha, Asistencia);
+    }
+    
+    public String[] dameElementos(String servicio){
+        int id_servicio = libreriaSQL.buscaIDServicio(servicio);
+        return libreriaSQL.dameArregloString("empleados_nivel1 where empleados_nivel1.id_servicios="+id_servicio+" ", "nombre_empleado");
+    }
+    
+    public boolean justificaAsistencia(int id_elemento,String fecha,String Asistencia){
+        return libreriaSQL.registraAsistencia(id_elemento, fecha, Asistencia);
     }
 
 }
