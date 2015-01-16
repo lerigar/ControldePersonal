@@ -61,6 +61,7 @@ public class MySQL {
         //Se arma el qwerty
         String qwerty = "SELECT " + columna + " FROM " + tabla;
         // se ejecuta el qwerty:
+        System.out.println(qwerty);
         try {
             resultados = statement.executeQuery(qwerty);
         } catch (SQLException e) {

@@ -165,7 +165,7 @@ public class conector {
     }
     
     public Object[] dameElemento(String servicio){
-        return libreriaSQL.dameArregloString("empleados_nivel1,servicios_nivel1 where empleados_nivel1.id_servicios=servicios_nivel1.id_servicio and servicios_nivel1.nombre_servicio='"+servicio+"'", "empleados_nivel1.apellido_empleado");
+        return libreriaSQL.dameArregloString("empleados_nivel1,servicios_nivel1 where empleados_nivel1.id_servicios=servicios_nivel1.id_servicio and servicios_nivel1.nombre_servicio='"+servicio+"'", "empleados_nivel1.nombre_empleado");
     }
     
     public String[] dameAsistenciaElementos(){
@@ -188,7 +188,8 @@ public class conector {
     
     public String[] dameElementos(String servicio){
         int id_servicio = libreriaSQL.buscaIDServicio(servicio);
-        return libreriaSQL.dameArregloString("empleados_nivel1 where empleados_nivel1.id_servicios="+id_servicio+" ", "nombre_empleado");
+        System.out.println(id_servicio);
+        return libreriaSQL.dameArregloString("empleados_nivel1,enlace_empleado_servicio where enlace_empleado_servicio.id_servicio="+id_servicio+" and enlace_empleado_servicio.id_empleado=empleados_nivel1.id_empleado ", "empleados_nivel1.nombre_empleado");
     }
     
     public boolean justificaAsistencia(int id_elemento,String fecha,String Asistencia){

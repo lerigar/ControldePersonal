@@ -70,6 +70,11 @@ public class AsistenciaSeleccionaServicio extends javax.swing.JDialog {
         });
 
         btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,6 +136,10 @@ public class AsistenciaSeleccionaServicio extends javax.swing.JDialog {
         JComboBox cbREF = (JComboBox) evt.getSource();
         cbServicios.setModel(new javax.swing.DefaultComboBoxModel(conexionactual.dameServicios(cbREF.getSelectedItem().toString())));        
     }//GEN-LAST:event_cbClientesActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
